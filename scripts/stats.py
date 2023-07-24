@@ -2,13 +2,14 @@ import pandas as pd
 
 
 class StatsParams:
-
     alpha = 0.05  # threshold for significance
     mult_comp = 'fdr_bh'  # type of correction for multiple comparison
     pval_precision = 3
 
 
 class StatsFormatter:
+
+    #TODO: check mult_comp: pvalues don't seem to change
 
     @staticmethod
     def fix0(pval):
@@ -22,7 +23,8 @@ class StatsFormatter:
             # pval = row['p-GG-corr'] if 'p-GG-corr' in row.keys() else row['p-unc']
             pval = row['p-unc']
             significance = '     *' if pval < StatsParams.alpha else ''
-            print(f"{row['Source']}: F({int(row['ddof1'])}, {int(row['ddof2'])}) = {row['F']:.2f}, p = {self.fix0(pval)}{significance}")
+            print(
+                f"{row['Source']}: F({int(row['ddof1'])}, {int(row['ddof2'])}) = {row['F']:.2f}, p = {self.fix0(pval)}{significance}")
 
         print("")
 
@@ -46,7 +48,8 @@ class StatsFormatter:
         print(f"{var} comparison (paired T-test):")
         for _, row in pairwise_results.iterrows():
             significance = '     *' if row['p-unc'] < StatsParams.alpha else ''
-            print(f"{row['A']} vs {row['B']}: T({int(row['dof'])}) = {row['T']:.2f}, p = {self.fix0(row['p-unc'])}{significance}")
+            print(
+                f"{row['A']} vs {row['B']}: T({int(row['dof'])}) = {row['T']:.2f}, p = {self.fix0(row['p-unc'])}{significance}")
 
         print("")
 
@@ -55,6 +58,7 @@ class StatsFormatter:
 
         for _, row in pairwise_results.iterrows():
             significance = '     *' if row['p-corr'] < StatsParams.alpha else ""
-            print(f"{row['Contrast']} / {row['A']} vs {row['B']}: T({int(row['dof'])}) = {row['T']:.2f}, p = {self.fix0(row['p-unc'])} ({StatsParams.mult_comp}: {self.fix0(row['p-unc'])}){significance}")
+            print(
+                f"{row['Contrast']} / {row['A']} vs {row['B']}: T({int(row['dof'])}) = {row['T']:.2f}, p = {self.fix0(row['p-unc'])} ({StatsParams.mult_comp}: {self.fix0(row['p-unc'])}){significance}")
 
         print("")

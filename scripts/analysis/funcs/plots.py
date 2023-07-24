@@ -1,12 +1,13 @@
-import itertools
 import math
 
 import numpy as np
 from matplotlib import gridspec
 from pandas import DataFrame
+
 import matplotlib.patches as mpatches
 
 from scripts.figure_params import *
+from scripts.stats import StatsParams
 from scripts.utils import translate_conditions
 
 
@@ -42,7 +43,7 @@ class Fig3Thresholds:
                                                               [frequencies_3afc, frequencies_100],
                                                               [audiogram_3afc, audiogram_bayes],
                                                               [error_3afc, error_bayes]):
-            self.plot_mean_audiogram(freqs, thresholds, error, paradigms_palette()[paradigm], label)
+            self.plot_mean_audiogram(freqs, thresholds, error, paradigms_palette(paradigm), label)
 
         plt.xscale('log')
         plt.xticks(frequencies_3afc, [125, 250, 500, 750, '1K', '1.5K', '2K', '3K', '4K', '6K', '8K'])
@@ -72,10 +73,10 @@ class Fig3Thresholds:
         plt.hlines(0, 0.25, 2.75, zorder=0, color='k', alpha=.5)
 
         # Barplot
-        plt.bar(1, threshold_bayes, color=paradigms_palette()['Bayesian'], width=.5)
+        plt.bar(1, threshold_bayes, color=paradigms_palette('Bayesian'), width=.5)
         plt.errorbar(1, threshold_bayes, yerr=error_bayes,
                      color='black', linewidth=3)  # , capsize=6)
-        plt.bar(2, threshold_3afc, color=paradigms_palette()['3AFC'], width=.5)
+        plt.bar(2, threshold_3afc, color=paradigms_palette('3AFC'), width=.5)
         plt.errorbar(2, threshold_3afc, yerr=error_3afc,
                      color='black', linewidth=3)  # , capsize=6)
 
@@ -302,7 +303,7 @@ class VisualChecksP50:
         plt.tight_layout()
 
     @staticmethod
-    def plot_all_sigmoids(pseudo_psychometric_curves, problematic_participants):
+    def plot_all_sigmoids(pseudo_psychometric_curves):
 
         paradigm_location = {'Bayesian': 4, 'Cluster': 9, 'Continuous': 5, '3AFC': 13}
         pred_location = {'both': 0, 'frequency': 1, 'time': 2, 'none': 3}
@@ -314,7 +315,9 @@ class VisualChecksP50:
         # Loop over paradigms
         for paradigm, paradigm_group in pseudo_psychometric_curves.groupby('paradigm'):
 
-            paradigm_group = paradigm_group[~paradigm_group.problematic]
+            problematic_participants= paradigm_group[paradigm_group.problematic].participant.unique()
+
+            paradigm_group = paradigm_group[~paradigm_group.participant.isin(problematic_participants)]
 
             xdistance = list(np.linspace(paradigm_group.random_distance.min(),
                                          paradigm_group.random_distance.max(), num=100))
@@ -356,7 +359,7 @@ class VisualChecksP50:
                 #             label="Actual data", zorder=2)
 
                 # Plot the mean p50 value for the current prediction condition (across participants)
-                plt.scatter(pred_group.distance_p50.drop_duplicates().mean(), .5,
+                plt.scatter(pred_group[['participant', 'distance_p50']].drop_duplicates().distance_p50.mean(), .5,
                             facecolors='black', edgecolors='None', s=30,
                             label="", zorder=5)
 
@@ -474,24 +477,25 @@ class Fig4p50:
         pass
 
     @staticmethod
-    def p50_barplot(paradigms_data, continuous_data, cluster_data):
+    def p50_barplot(var, paradigms_data, continuous_data, cluster_data):
         fig = plt.figure(figsize=(8, 5.33))
 
         # Define the grid
         gs = gridspec.GridSpec(1, 2, width_ratios=[1, 1.5])
+        ylims = [2, -12 if var == 'distance_p50' else -8]
 
         # Plot paradigm comparison
         ax1 = plt.subplot(gs[0])
         ax1.hlines(0, -0.5, 3.5, 'grey')
         for n, paradigm in enumerate(['Bayesian', 'Continuous', 'Cluster', '3AFC']):
-            ax1.bar(n, paradigms_data.loc[paradigms_data.paradigm == paradigm, 'distance_p50'].mean(), width=.5,
+            ax1.bar(n, paradigms_data.loc[paradigms_data.paradigm == paradigm, var].mean(), width=.5,
                     color=get_color(paradigm, 'none' if paradigm in ['Cluster', 'Continuous'] else None))
-            ax1.errorbar(n, paradigms_data.loc[paradigms_data.paradigm == paradigm, 'distance_p50'].mean(),
-                         paradigms_data.loc[paradigms_data.paradigm == paradigm, 'distance_p50'].sem(),
+            ax1.errorbar(n, paradigms_data.loc[paradigms_data.paradigm == paradigm, var].mean(),
+                         paradigms_data.loc[paradigms_data.paradigm == paradigm, var].sem(),
                          color='black', elinewidth=3)
-        ax1.set_ylim([2, -12])
+        ax1.set_ylim(ylims)
         ax1.set_xlim([-0.5, 3.5])
-        ax1.set_ylabel("p50 threshold distance")
+        ax1.set_ylabel('p50 threshold distance' if var == 'distance_p50' else 'Mean threshold')
         ax1.set_xticks([-0.25, 0.75, 1.75, 2.75])
         ax1.set_xticklabels(['Random', 'Continuous', 'Cluster', '3AFC'], rotation=25)
         ax1.tick_params(axis='x', which='both', length=0)
@@ -499,21 +503,89 @@ class Fig4p50:
 
         # Plot pred comparison
         ax2 = plt.subplot(gs[1])
+        ylims = [2, -12] if var == 'distance_p50' else [1, -4]
+
         ax2.hlines(0, -1, 9, 'grey')
         for n, (paradigm, paradigm_data) in enumerate(zip(['Continuous', 'Cluster'], [continuous_data, cluster_data])):
 
             for m, pred in enumerate(['none', 'time', 'frequency', 'both']):
                 ax2.bar(m + 5 * n,
-                        paradigm_data.loc[(paradigm_data.pred == pred), 'distance_p50'].mean(),
+                        paradigm_data.loc[(paradigm_data.pred == pred), var].mean(),
                         color=pred_palette(pred))
-                ax2.errorbar(m + 5 * n, paradigm_data.loc[(paradigm_data.pred == pred), 'distance_p50'].mean(),
-                             paradigm_data.loc[paradigm_data.pred == pred, 'distance_p50'].sem(),
+                ax2.errorbar(m + 5 * n, paradigm_data.loc[(paradigm_data.pred == pred), var].mean(),
+                             paradigm_data.loc[paradigm_data.pred == pred, var].sem(),
                              color='black', elinewidth=3)
-        ax2.set_ylim([2, -12])
+        ax2.set_ylim(ylims)
         ax2.set_xlim([-1, 9])
         ax2.set_xticks([1.5, 6.5])
         ax2.set_xticklabels(['Continuous', 'Cluster'])
 
         plt.tight_layout()
+
+        return fig
+
+
+    @staticmethod
+    def plot_correlation_subplot(fig, ax, corr, p_values, var):
+        """
+        Plot a correlation matrix subplot on a given axes.
+
+        Parameters:
+            ax (Axes): The axes on which to plot the correlation matrix.
+            corr (DataFrame): The correlation matrix.
+            p_values (DataFrame): The p-value matrix.
+            var (str): The variable ('mean_threshold' or 'distance_p50') to display in the title of the plot.
+
+        Returns:
+            None.
+        """
+        # Get the maximum absolute value of the correlations (rounded up to nearest 0.05)
+        cbar_max = np.ceil(corr.abs().max().max() / 0.05) * 0.05
+
+        # Display the correlation matrix
+        mappable = ax.imshow(corr, cmap='Spectral_r', vmin=-cbar_max, vmax=cbar_max)
+
+        # Set the x- and y-ticks
+        ax.set_yticks(np.arange(len(corr)), ['Randomized' if row[0] in ['Bayesian'] else row[1] for row in corr.index])
+        ax.set_xticks(np.arange(len(corr)), ['Randomized' if row[0] in ['Bayesian'] else row[1] for row in corr.index], rotation=40)
+
+        # Add a colorbar
+        cbar = fig.colorbar(mappable, ax=ax, fraction=0.046, pad=0.04)
+        cbar.ax.set_yticks([-cbar_max, 0, cbar_max])
+
+        # ax = plt.gca()
+
+        # Loop through each cell in the correlation matrix
+        for i in range(corr.shape[0]):
+            for j in range(corr.shape[1]):
+                # If the p-value is less than 0.05, add a scatter plot point
+                if p_values.iloc[i, j] < 0.05:
+                    ax.scatter(j, i, c='black', s=10, marker='o')
+
+        ax.set_title(f"{'p50' if var == 'distance_p50' else 'Mean threshold'} (Pearson's R)")
+
+
+    def plot_correlation_matrices(self, corr_threshold, p_values_threshold, corr_p50, p_values_p50):
+        """
+        Method to plot a correlation matrix of given datasets.
+
+        Parameters:
+            corr_threshold (DataFrame): Correlation matrix for the threshold data.
+            p_values_threshold (DataFrame): P-value matrix for the threshold data.
+            corr_p50 (DataFrame): Correlation matrix for the p50 data.
+            p_values_p50 (DataFrame): P-value matrix for the p50 data.
+
+        Returns:
+            Figure: A matplotlib Figure instance with the plot of the correlation matrix.
+        """
+
+        update_plot_params()
+        fig, axs = plt.subplots(1, 2, figsize=(8, 4))
+
+        # Plot the subplots
+        self.plot_correlation_subplot(fig, axs[0], corr_threshold, p_values_threshold, "mean_threshold")
+        self.plot_correlation_subplot(fig, axs[1], corr_p50, p_values_p50, "distance_p50")
+
+        fig.tight_layout()
 
         return fig

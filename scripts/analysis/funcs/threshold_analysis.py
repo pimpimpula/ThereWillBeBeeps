@@ -4,6 +4,7 @@ import glob
 import numpy as np
 
 from scripts.figure_params import *
+from scripts.utils import interp
 
 
 def audiograms_to_df(paradigm, audiograms_path, xfreqs, pred="Bayesian"):
@@ -47,26 +48,6 @@ def audiograms_to_df(paradigm, audiograms_path, xfreqs, pred="Bayesian"):
     return paradigm_df
 
 
-def interp_threshold(freq, frequencies, thresholds):
-
-    freqdist = np.array(frequencies) - freq
-
-    # look for the closest values in the log-spaced audiogram
-    valueup = np.min(freqdist[freqdist > 0])
-    indxup = np.where(freqdist == valueup)[0][0]
-    freq_up = frequencies[indxup]
-
-    valuedown = np.max(freqdist[freqdist < 0])
-    indxdown = np.where(freqdist == valuedown)[0][0]
-    freq_down = frequencies[indxdown]
-
-    # interpolate threshold
-    threshold = (freq - freq_down) / (freq_up - freq_down) * thresholds[indxup] + \
-                (freq_up - freq) / (freq_up - freq_down) * thresholds[indxdown]
-
-    return threshold
-
-
 def downsample_to_3AFC(data_3AFC, data_continuous, frequencies_3AFC, frequencies_100):
     for (paradigm, pred, participant), participant_audiogram in \
             data_continuous.groupby(["paradigm", "pred", "participant"]):
@@ -82,7 +63,7 @@ def downsample_to_3AFC(data_3AFC, data_continuous, frequencies_3AFC, frequencies
             # Otherwise interpolate using the closest values
             else:
 
-                thresholds_3AFC.append(interp_threshold(freq, frequencies_100, thresholds_100))
+                thresholds_3AFC.append(interp(freq, frequencies_100, thresholds_100))
 
         audiogram_df = pd.DataFrame(
             {'participant': [participant] * len(frequencies_3AFC),

@@ -9,6 +9,7 @@ import numpy as np
 from scipy.interpolate import interp1d
 
 from scripts.API_access import *
+from scripts.figure_params import get_color
 
 
 def set_audiograms_directory(aud_path, paradigm):
@@ -285,7 +286,7 @@ def resample_audiogram(audiogram_dict, xfreqs):
     for line in ['estimation', 'plus_line', 'minus_line']:
         interp = np.array(audiogram_dict['audiogram'][line])
         linear_interp = interp1d(interp[:, 0], interp[:, 1],
-                                 fill_value="extrapolate"  # fix lower bound issue (some values lie between 125 and 126)
+                                 fill_value="extrapolate"  # just to fix lower bound issue (some values lie between 125 and 126)
                                  )
         resampled_audiogram['audiogram'][line] = linear_interp(xfreqs)
 
@@ -366,14 +367,7 @@ def plot_resampled_audiograms(recomputed_audiograms, resampled_audiograms, xfreq
         None
     """
 
-    if pred == 'both':
-        color = '#EE2E31'  # '#FF6B6B'
-    elif pred == 'time':
-        color = '#4ECDC4'
-    elif pred == 'frequency':
-        color = '#EFC352'  # '#FCD7AD'
-    elif pred == 'none':
-        color = '#292F36'
+    color = get_color(paradigm, pred)
 
     for participant in list(resampled_audiograms.keys()):  # in ["rumszd"]:  # in list(bayes_data.keys()):
 

@@ -4,7 +4,7 @@ from scripts.stats import StatsParams, StatsFormatter
 from scripts.utils import *
 
 
-class P50DataDealer:
+class P50DataAnalyzer:
     def __init__(self, sigmoid_data):
         self.sigmoid_data = sigmoid_data
 

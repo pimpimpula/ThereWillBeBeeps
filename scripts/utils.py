@@ -1,4 +1,5 @@
 import os
+import numpy as np
 from pathlib import Path
 
 
@@ -38,3 +39,23 @@ def exclude_participants():
     """
 
     return ['tvzljm', 'lkbxgs', 'wquuex', 'bihhjl', 'tyrfqt', 'ikieoz', 'gtyzck', 'ttuwra', '.DS_Store']
+
+
+def interp(x, x_axis, y_values):
+
+    xdist = np.array(x_axis) - x
+
+    # look for the closest values to x in x_axis
+    valueup = np.min(xdist[xdist > 0])
+    indxup = np.where(xdist == valueup)[0][0]
+    x_up = x_axis[indxup]
+
+    valuedown = np.max(xdist[xdist < 0])
+    indxdown = np.where(xdist == valuedown)[0][0]
+    x_down = x_axis[indxdown]
+
+    # interpolate y
+    y = (x - x_down) / (x_up - x_down) * y_values[indxup] + \
+        (x_up - x) / (x_up - x_down) * y_values[indxdown]
+
+    return y
