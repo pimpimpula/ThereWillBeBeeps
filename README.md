@@ -1,8 +1,8 @@
 # ThereWillBeBeeps
 
-Repo for the data analysis of project 'There Will Be Beeps'.
+---
 
-## "Predictable sequential structure enhances auditory sensitivity in clinical audiograms"
+## Predictable sequential structure enhances auditory sensitivity in clinical audiograms
 
 #####  Nadège Marin<sup>1,2</sup>, Grégory Gérenton<sup>1</sup>, Hadrien Jean<sup>3</sup>, Nihaad Paraouty<sup>3</sup>, Nicolas Wallaert<sup>3</sup>, Diane S. Lazard<sup>1,4</sup>, Luc H. Arnal<sup>1*</sup>, Keith B. Doelling<sup>1*</sup>
 
@@ -26,6 +26,7 @@ Repo for the data analysis of project 'There Will Be Beeps'.
 > Our results raise important critiques regarding common practices in the assessment of sound sensitivity, 
 > both in fundamental research and in audiological clinical assessment.
 
+---
 
 ### This repo
 
@@ -87,7 +88,4 @@ Note that you need an extra python script `API_access.py` which contains private
         └── suppl_fig_example_data.ipynb
 
 ```
-
-
-
 
