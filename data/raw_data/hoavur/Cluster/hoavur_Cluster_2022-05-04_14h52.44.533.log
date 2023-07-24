@@ -1,0 +1,3713 @@
+9.2977 	WARNING 	User requested fullscreen with size [2560 1440], but screen is actually [3840, 2160]. Using actual size
+11.4520 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-0.63137255, -0.38039216, -0.38039216]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001C0EBC03AF0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001C0ED903460>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([3840, 2160]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+11.4523 	EXP 	window1: mouseVisible = True
+11.4523 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+11.4523 	EXP 	window1: recordFrameIntervals = False
+11.7588 	EXP 	window1: recordFrameIntervals = True
+12.3272 	EXP 	Screen (0) actual frame rate measured at 30.71Hz
+12.3272 	EXP 	window1: recordFrameIntervals = False
+13.8627 	EXP 	Created tStart_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='tStart_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.8646 	EXP 	Created tBlank_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='tBlank_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.8673 	EXP 	Created tCue_visual_cue = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='tCue_visual_cue', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.8712 	EXP 	Created tProbe_visual_cue = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='tProbe_visual_cue', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.8723 	EXP 	Created right_or_wrong = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='right_or_wrong', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.9137 	EXP 	Created more_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='more_instructions', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.9210 	EXP 	Created txt_rhythm = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='txt_rhythm', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='RYTHME', units='height', win=Window(...), wrapWidth=1)
+13.9653 	EXP 	Sound sound_1 set volume 0.002
+13.9657 	EXP 	Sound sound_2 set volume 0.002
+13.9660 	EXP 	Sound sound_3 set volume 0.002
+13.9663 	EXP 	Sound sound_4 set volume 0.002
+13.9683 	EXP 	Created cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cross', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9687 	EXP 	Sound sound_5 set volume 0.002
+13.9726 	EXP 	Created circle = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-8.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9737 	EXP 	Created rhytm_ready_txt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rhytm_ready_txt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.9789 	EXP 	Created txt_freq = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='txt_freq', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='HAUTEUR', units='height', win=Window(...), wrapWidth=1)
+13.9793 	EXP 	Sound sound_6 set volume 0.002
+13.9796 	EXP 	Sound sound_7 set volume 0.002
+13.9799 	EXP 	Sound sound_8 set volume 0.002
+13.9802 	EXP 	Sound sound_9 set volume 0.002
+13.9820 	EXP 	Created cross_2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cross_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9824 	EXP 	Sound sound_10 set volume 0.002
+13.9862 	EXP 	Created circle_2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-8.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='circle_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9872 	EXP 	Created freq_ready_txt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='freq_ready_txt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.9921 	EXP 	Created txt_freq_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='txt_freq_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='HAUTEUR\n\nRYTHME', units='height', win=Window(...), wrapWidth=1)
+13.9925 	EXP 	Sound sound_11 set volume 0.002
+13.9928 	EXP 	Sound sound_12 set volume 0.002
+13.9931 	EXP 	Sound sound_13 set volume 0.002
+13.9934 	EXP 	Sound sound_14 set volume 0.002
+13.9953 	EXP 	Created cross_3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cross_3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9960 	EXP 	Sound sound_15 set volume 0.002
+13.9997 	EXP 	Created circle_3 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-8.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='circle_3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+14.0007 	EXP 	Created freq_ready_txt_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-10.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='freq_ready_txt_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.0039 	EXP 	Created txt_freq_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='txt_freq_3', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='X', units='height', win=Window(...), wrapWidth=1)
+14.0042 	EXP 	Sound sound_16 set volume 0.002
+14.0045 	EXP 	Sound sound_17 set volume 0.002
+14.0049 	EXP 	Sound sound_18 set volume 0.002
+14.0052 	EXP 	Sound sound_19 set volume 0.002
+14.0070 	EXP 	Created cross_4 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cross_4', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+14.0074 	EXP 	Sound sound_20 set volume 0.002
+14.0111 	EXP 	Created circle_4 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-8.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='circle_4', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+14.0124 	EXP 	Created freq_ready_txt_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-9.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='freq_ready_txt_3', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.0137 	EXP 	Created tBlank_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='tBlank_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.0577 	EXP 	Created tStart_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='tStart_text_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+14.0736 	EXP 	Created blank_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blank_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.0746 	EXP 	Created this_trial_is = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='this_trial_is', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.4995 	EXP 	Created cue_visual_cue = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cue_visual_cue', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+14.5027 	EXP 	Created probe_visual_cue = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='probe_visual_cue', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+14.5039 	EXP 	Created blank_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blank_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.5050 	EXP 	Created break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='break_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+14.5248 	EXP 	Created goodbye_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='goodbye_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+14.5440 	EXP 	tStart_text: autoDraw = True
+35.1815 	DATA 	Keypress: space
+35.2128 	EXP 	tStart_text: autoDraw = False
+35.2128 	EXP 	tBlank_text: autoDraw = True
+35.6966 	EXP 	Created sequence: random, trialTypes=1, nReps=5, seed=None
+35.6967 	EXP 	New trial (rep=0, index=0): None
+36.1981 	EXP 	Sound  started
+36.2158 	EXP 	tBlank_text: autoDraw = False
+36.2158 	EXP 	tCue_visual_cue: autoDraw = True
+38.6470 	EXP 	tCue_visual_cue: autoDraw = False
+38.6470 	EXP 	tProbe_visual_cue: autoDraw = True
+39.0519 	DATA 	Keypress: space
+39.2622 	EXP 	Sound  reached end of file
+39.8833 	EXP 	tProbe_visual_cue: autoDraw = False
+41.7779 	EXP 	tCue_visual_cue: autoDraw = False
+41.7779 	EXP 	tProbe_visual_cue: autoDraw = False
+41.7779 	EXP 	right_or_wrong: height = 0.03
+41.7779 	EXP 	right_or_wrong: height = 0.03
+41.7779 	EXP 	right_or_wrong: text = "Bonne réponse ! \n\n Continuez d'appuyer sur la barre d'espace si vous entendez un son quand le CERCLE est visible à l'écran. \n\n Appuyez sur la barre d'espace pour continuer."
+41.7779 	EXP 	right_or_wrong: autoDraw = True
+50.2131 	EXP 	New trial (rep=1, index=0): None
+50.5145 	DATA 	Keypress: space
+50.7139 	EXP 	Sound  started
+50.7313 	EXP 	right_or_wrong: autoDraw = False
+50.7313 	EXP 	tCue_visual_cue: autoDraw = True
+53.4436 	EXP 	tCue_visual_cue: autoDraw = False
+53.4436 	EXP 	tProbe_visual_cue: autoDraw = True
+53.8969 	DATA 	Keypress: space
+54.1165 	EXP 	Sound  reached end of file
+54.6629 	EXP 	tProbe_visual_cue: autoDraw = False
+56.5847 	EXP 	tCue_visual_cue: autoDraw = False
+56.5847 	EXP 	tProbe_visual_cue: autoDraw = False
+56.5847 	EXP 	right_or_wrong: text = "Bonne réponse ! \n\n Continuez d'appuyer sur la barre d'espace si vous entendez un son quand le CERCLE est visible à l'écran. \n\n Appuyez sur la barre d'espace pour continuer."
+56.5847 	EXP 	right_or_wrong: autoDraw = True
+60.6386 	EXP 	New trial (rep=2, index=0): None
+60.9396 	DATA 	Keypress: space
+61.1390 	EXP 	Sound  started
+61.1561 	EXP 	right_or_wrong: autoDraw = False
+61.1561 	EXP 	tCue_visual_cue: autoDraw = True
+63.8060 	EXP 	tCue_visual_cue: autoDraw = False
+63.8060 	EXP 	tProbe_visual_cue: autoDraw = True
+64.2100 	DATA 	Keypress: space
+64.3410 	EXP 	Sound  reached end of file
+65.0090 	EXP 	tProbe_visual_cue: autoDraw = False
+67.0408 	EXP 	tCue_visual_cue: autoDraw = False
+67.0408 	EXP 	tProbe_visual_cue: autoDraw = False
+67.0408 	EXP 	right_or_wrong: height = 0.03
+67.0408 	EXP 	right_or_wrong: height = 0.03
+67.0408 	EXP 	right_or_wrong: text = "Mauvaise réponse. \n\n Merci d'uniquement appuyer sur la barre d'espace si vous entendez un son en même temps que le CERCLE apparaît à l'écran. \n\n Appuyez sur la barre d'espace pour continuer."
+67.0408 	EXP 	right_or_wrong: autoDraw = True
+71.5504 	EXP 	New trial (rep=3, index=0): None
+71.8523 	DATA 	Keypress: space
+72.0517 	EXP 	Sound  started
+72.0687 	EXP 	right_or_wrong: autoDraw = False
+72.0687 	EXP 	tCue_visual_cue: autoDraw = True
+74.2156 	EXP 	tCue_visual_cue: autoDraw = False
+74.2156 	EXP 	tProbe_visual_cue: autoDraw = True
+74.7597 	EXP 	Sound  reached end of file
+74.8853 	DATA 	Keypress: space
+75.4175 	EXP 	tProbe_visual_cue: autoDraw = False
+77.2657 	EXP 	tCue_visual_cue: autoDraw = False
+77.2657 	EXP 	tProbe_visual_cue: autoDraw = False
+77.2657 	EXP 	right_or_wrong: height = 0.03
+77.2657 	EXP 	right_or_wrong: height = 0.03
+77.2657 	EXP 	right_or_wrong: text = "Bonne réponse ! \n\n Continuez d'appuyer sur la barre d'espace si vous entendez un son quand le CERCLE est visible à l'écran. \n\n Appuyez sur la barre d'espace pour continuer."
+77.2657 	EXP 	right_or_wrong: autoDraw = True
+78.3907 	EXP 	New trial (rep=4, index=0): None
+78.6914 	DATA 	Keypress: space
+78.8913 	EXP 	Sound  started
+78.9079 	EXP 	right_or_wrong: autoDraw = False
+78.9079 	EXP 	tCue_visual_cue: autoDraw = True
+81.9270 	EXP 	tCue_visual_cue: autoDraw = False
+81.9270 	EXP 	tProbe_visual_cue: autoDraw = True
+82.5938 	EXP 	Sound  reached end of file
+83.1606 	EXP 	tProbe_visual_cue: autoDraw = False
+85.2845 	EXP 	tCue_visual_cue: autoDraw = False
+85.2845 	EXP 	tProbe_visual_cue: autoDraw = False
+85.2845 	EXP 	right_or_wrong: height = 0.03
+85.2845 	EXP 	right_or_wrong: height = 0.03
+85.2845 	EXP 	right_or_wrong: text = "Bonne réponse ! \n\n Aucun son n'était présenté en même temps que le CERCLE. \n\n Appuyez sur la barre d'espace pour continuer."
+85.2845 	EXP 	right_or_wrong: autoDraw = True
+87.3012 	DATA 	Keypress: space
+87.3329 	EXP 	right_or_wrong: autoDraw = False
+87.3329 	EXP 	more_instructions: autoDraw = True
+116.0748 	DATA 	Keypress: space
+116.1064 	EXP 	more_instructions: autoDraw = False
+116.1064 	EXP 	rhytm_ready_txt: height = 0.05
+116.1064 	EXP 	rhytm_ready_txt: height = 0.05
+116.1064 	EXP 	rhytm_ready_txt: text = "Appuyez sur n'importe quelle touche pour voir l'exemple suivant."
+116.1064 	EXP 	txt_rhythm: autoDraw = True
+117.1253 	EXP 	txt_rhythm: autoDraw = False
+117.4759 	EXP 	cross: autoDraw = True
+117.5619 	EXP 	Sound sound_1 started
+117.7606 	EXP 	Sound sound_1 reached end of file
+118.0782 	EXP 	Sound sound_2 started
+118.2725 	EXP 	Sound sound_2 stopped
+118.5588 	EXP 	Sound sound_3 started
+118.7525 	EXP 	Sound sound_3 stopped
+119.0716 	EXP 	Sound sound_4 started
+119.2613 	EXP 	cross: autoDraw = False
+119.2613 	EXP 	circle: autoDraw = True
+119.2718 	EXP 	Sound sound_4 reached end of file
+119.5723 	EXP 	Sound sound_5 started
+119.7606 	EXP 	Sound sound_5 stopped
+119.7853 	DATA 	Keypress: space
+120.0754 	EXP 	circle: autoDraw = False
+120.2520 	EXP 	rhytm_ready_txt: autoDraw = True
+121.6528 	DATA 	Keypress: space
+121.6815 	EXP 	txt_rhythm: autoDraw = False
+121.6815 	EXP 	cross: autoDraw = False
+121.6815 	EXP 	circle: autoDraw = False
+121.6815 	EXP 	rhytm_ready_txt: autoDraw = False
+121.6815 	EXP 	freq_ready_txt: height = 0.05
+121.6815 	EXP 	freq_ready_txt: height = 0.05
+121.6815 	EXP 	freq_ready_txt: text = "Appuyez sur n'importe quelle touche pour voir l'exemple suivant."
+121.6815 	EXP 	txt_freq: autoDraw = True
+122.7011 	EXP 	txt_freq: autoDraw = False
+123.0496 	EXP 	cross_2: autoDraw = True
+123.1412 	EXP 	Sound sound_6 started
+123.3442 	EXP 	Sound sound_6 reached end of file
+123.4357 	EXP 	Sound sound_7 started
+123.6205 	EXP 	Sound sound_7 stopped
+124.1363 	EXP 	Sound sound_8 started
+124.3209 	EXP 	Sound sound_8 stopped
+124.5412 	EXP 	Sound sound_9 started
+124.7406 	EXP 	Sound sound_9 reached end of file
+124.8398 	EXP 	cross_2: autoDraw = False
+124.8398 	EXP 	circle_2: autoDraw = True
+125.1404 	EXP 	Sound sound_10 started
+125.2089 	DATA 	Keypress: space
+125.3400 	EXP 	Sound sound_10 reached end of file
+125.6387 	EXP 	circle_2: autoDraw = False
+125.8344 	EXP 	freq_ready_txt: autoDraw = True
+127.6826 	DATA 	Keypress: space
+127.7157 	EXP 	txt_freq: autoDraw = False
+127.7157 	EXP 	cross_2: autoDraw = False
+127.7157 	EXP 	circle_2: autoDraw = False
+127.7157 	EXP 	freq_ready_txt: autoDraw = False
+127.7157 	EXP 	freq_ready_txt_2: height = 0.05
+127.7157 	EXP 	freq_ready_txt_2: height = 0.05
+127.7157 	EXP 	freq_ready_txt_2: text = "Appuyez sur n'importe quelle touche pour voir l'exemple suivant."
+127.7157 	EXP 	txt_freq_2: autoDraw = True
+128.7397 	EXP 	txt_freq_2: autoDraw = False
+129.0629 	EXP 	cross_3: autoDraw = True
+129.1806 	EXP 	Sound sound_11 started
+129.3805 	EXP 	Sound sound_11 reached end of file
+129.6707 	EXP 	Sound sound_12 started
+129.8605 	EXP 	Sound sound_12 stopped
+130.1839 	EXP 	Sound sound_13 started
+130.3805 	EXP 	Sound sound_13 stopped
+130.6724 	EXP 	Sound sound_14 started
+130.8687 	EXP 	cross_3: autoDraw = False
+130.8687 	EXP 	circle_3: autoDraw = True
+130.8721 	EXP 	Sound sound_14 reached end of file
+131.1686 	EXP 	Sound sound_15 started
+131.3608 	EXP 	Sound sound_15 stopped
+131.3671 	DATA 	Keypress: space
+131.6887 	EXP 	circle_3: autoDraw = False
+131.8652 	EXP 	freq_ready_txt_2: autoDraw = True
+133.1841 	DATA 	Keypress: space
+133.2155 	EXP 	txt_freq_2: autoDraw = False
+133.2155 	EXP 	cross_3: autoDraw = False
+133.2155 	EXP 	circle_3: autoDraw = False
+133.2155 	EXP 	freq_ready_txt_2: autoDraw = False
+133.2155 	EXP 	freq_ready_txt_3: text = ''
+133.2155 	EXP 	txt_freq_3: autoDraw = True
+134.2455 	EXP 	txt_freq_3: autoDraw = False
+134.5778 	EXP 	cross_4: autoDraw = True
+134.6640 	EXP 	Sound sound_16 started
+134.8605 	EXP 	Sound sound_16 stopped
+134.9685 	EXP 	Sound sound_17 started
+135.1605 	EXP 	Sound sound_17 stopped
+135.6681 	EXP 	Sound sound_18 started
+135.8605 	EXP 	Sound sound_18 stopped
+136.0750 	EXP 	Sound sound_19 started
+136.2604 	EXP 	Sound sound_19 stopped
+136.3840 	EXP 	cross_4: autoDraw = False
+136.3840 	EXP 	circle_4: autoDraw = True
+136.6786 	EXP 	Sound sound_20 started
+136.8788 	EXP 	Sound sound_20 reached end of file
+136.9007 	DATA 	Keypress: space
+137.2156 	EXP 	circle_4: autoDraw = False
+137.3656 	EXP 	freq_ready_txt_3: autoDraw = True
+137.8794 	EXP 	freq_ready_txt_3: autoDraw = False
+137.8794 	EXP 	txt_freq_3: autoDraw = False
+137.8794 	EXP 	cross_4: autoDraw = False
+137.8794 	EXP 	circle_4: autoDraw = False
+137.8794 	EXP 	freq_ready_txt_3: autoDraw = False
+137.8794 	EXP 	tBlank_text: autoDraw = True
+138.3841 	EXP 	tBlank_text: autoDraw = False
+138.3841 	EXP 	tBlank_text: autoDraw = False
+138.3841 	EXP 	tStart_text_2: autoDraw = True
+153.8746 	EXP 	Created sequence: random, trialTypes=1, nReps=99, seed=None
+153.8750 	EXP 	New trial (rep=0, index=0): None
+153.8763 	DATA 	Keypress: space
+153.9081 	EXP 	tStart_text_2: autoDraw = False
+153.9081 	EXP 	blank_text: autoDraw = True
+154.3839 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+154.3841 	EXP 	New trial (rep=0, index=0): None
+154.4150 	EXP 	blank_text: autoDraw = False
+154.4150 	EXP 	this_trial_is: height = 0.05
+154.4150 	EXP 	this_trial_is: height = 0.05
+154.4150 	EXP 	this_trial_is: text = 'X'
+154.4150 	EXP 	this_trial_is: autoDraw = True
+155.3976 	EXP 	Sound  started
+155.4151 	EXP 	this_trial_is: autoDraw = False
+155.4151 	EXP 	cue_visual_cue: autoDraw = True
+158.0034 	EXP 	cue_visual_cue: autoDraw = False
+158.0034 	EXP 	probe_visual_cue: autoDraw = True
+158.6447 	EXP 	Sound  reached end of file
+158.7773 	DATA 	Keypress: space
+159.2116 	EXP 	probe_visual_cue: autoDraw = False
+159.6221 	EXP 	New trial (rep=1, index=0): None
+159.6573 	EXP 	cue_visual_cue: autoDraw = False
+159.6573 	EXP 	probe_visual_cue: autoDraw = False
+159.6573 	EXP 	this_trial_is: text = 'X'
+159.6573 	EXP 	this_trial_is: autoDraw = True
+161.2736 	EXP 	Sound  started
+161.2908 	EXP 	this_trial_is: autoDraw = False
+161.2908 	EXP 	cue_visual_cue: autoDraw = True
+164.2842 	EXP 	cue_visual_cue: autoDraw = False
+164.2842 	EXP 	probe_visual_cue: autoDraw = True
+164.8815 	EXP 	Sound  reached end of file
+164.9490 	DATA 	Keypress: space
+165.5152 	EXP 	probe_visual_cue: autoDraw = False
+165.8376 	EXP 	New trial (rep=2, index=0): None
+165.8689 	EXP 	cue_visual_cue: autoDraw = False
+165.8689 	EXP 	probe_visual_cue: autoDraw = False
+165.8689 	EXP 	this_trial_is: height = 0.05
+165.8689 	EXP 	this_trial_is: height = 0.05
+165.8689 	EXP 	this_trial_is: text = 'Hauteur'
+165.8689 	EXP 	this_trial_is: autoDraw = True
+166.8468 	EXP 	Sound  started
+166.8637 	EXP 	this_trial_is: autoDraw = False
+166.8637 	EXP 	cue_visual_cue: autoDraw = True
+169.9523 	EXP 	cue_visual_cue: autoDraw = False
+169.9523 	EXP 	probe_visual_cue: autoDraw = True
+170.4886 	DATA 	Keypress: space
+170.5532 	EXP 	Sound  reached end of file
+171.1792 	EXP 	probe_visual_cue: autoDraw = False
+171.5078 	EXP 	New trial (rep=3, index=0): None
+171.5369 	EXP 	cue_visual_cue: autoDraw = False
+171.5369 	EXP 	probe_visual_cue: autoDraw = False
+171.5369 	EXP 	this_trial_is: height = 0.05
+171.5369 	EXP 	this_trial_is: height = 0.05
+171.5369 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+171.5369 	EXP 	this_trial_is: autoDraw = True
+172.5295 	EXP 	Sound  started
+172.5466 	EXP 	this_trial_is: autoDraw = False
+172.5466 	EXP 	cue_visual_cue: autoDraw = True
+175.7507 	EXP 	cue_visual_cue: autoDraw = False
+175.7507 	EXP 	probe_visual_cue: autoDraw = True
+176.2598 	DATA 	Keypress: space
+176.5588 	EXP 	Sound  reached end of file
+176.9568 	EXP 	probe_visual_cue: autoDraw = False
+177.4964 	EXP 	New trial (rep=4, index=0): None
+177.5299 	EXP 	cue_visual_cue: autoDraw = False
+177.5299 	EXP 	probe_visual_cue: autoDraw = False
+177.5299 	EXP 	this_trial_is: height = 0.05
+177.5299 	EXP 	this_trial_is: height = 0.05
+177.5299 	EXP 	this_trial_is: text = 'X'
+177.5299 	EXP 	this_trial_is: autoDraw = True
+178.5241 	EXP 	Sound  started
+178.5411 	EXP 	this_trial_is: autoDraw = False
+178.5411 	EXP 	cue_visual_cue: autoDraw = True
+181.5319 	EXP 	cue_visual_cue: autoDraw = False
+181.5319 	EXP 	probe_visual_cue: autoDraw = True
+181.9959 	EXP 	Sound  reached end of file
+182.1003 	DATA 	Keypress: space
+182.7360 	EXP 	probe_visual_cue: autoDraw = False
+183.1593 	EXP 	New trial (rep=5, index=0): None
+183.1898 	EXP 	cue_visual_cue: autoDraw = False
+183.1898 	EXP 	probe_visual_cue: autoDraw = False
+183.1898 	EXP 	this_trial_is: height = 0.05
+183.1898 	EXP 	this_trial_is: height = 0.05
+183.1898 	EXP 	this_trial_is: text = 'Rythme'
+183.1898 	EXP 	this_trial_is: autoDraw = True
+184.1671 	EXP 	Sound  started
+184.1845 	EXP 	this_trial_is: autoDraw = False
+184.1845 	EXP 	cue_visual_cue: autoDraw = True
+186.9655 	EXP 	cue_visual_cue: autoDraw = False
+186.9655 	EXP 	probe_visual_cue: autoDraw = True
+187.5848 	EXP 	Sound  reached end of file
+187.7693 	DATA 	Keypress: space
+188.1991 	EXP 	probe_visual_cue: autoDraw = False
+188.5567 	EXP 	New trial (rep=6, index=0): None
+188.5909 	EXP 	cue_visual_cue: autoDraw = False
+188.5909 	EXP 	probe_visual_cue: autoDraw = False
+188.5909 	EXP 	this_trial_is: height = 0.05
+188.5909 	EXP 	this_trial_is: height = 0.05
+188.5909 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+188.5909 	EXP 	this_trial_is: autoDraw = True
+189.5946 	EXP 	Sound  started
+189.6126 	EXP 	this_trial_is: autoDraw = False
+189.6126 	EXP 	cue_visual_cue: autoDraw = True
+191.9340 	EXP 	cue_visual_cue: autoDraw = False
+191.9340 	EXP 	probe_visual_cue: autoDraw = True
+192.4213 	EXP 	Sound  reached end of file
+192.6437 	DATA 	Keypress: space
+193.1407 	EXP 	probe_visual_cue: autoDraw = False
+193.3897 	EXP 	New trial (rep=7, index=0): None
+193.4211 	EXP 	cue_visual_cue: autoDraw = False
+193.4211 	EXP 	probe_visual_cue: autoDraw = False
+193.4211 	EXP 	this_trial_is: height = 0.05
+193.4211 	EXP 	this_trial_is: height = 0.05
+193.4211 	EXP 	this_trial_is: text = 'Rythme'
+193.4211 	EXP 	this_trial_is: autoDraw = True
+194.4299 	EXP 	Sound  started
+194.4479 	EXP 	this_trial_is: autoDraw = False
+194.4479 	EXP 	cue_visual_cue: autoDraw = True
+196.9269 	EXP 	cue_visual_cue: autoDraw = False
+196.9269 	EXP 	probe_visual_cue: autoDraw = True
+197.4542 	EXP 	Sound  reached end of file
+197.7497 	DATA 	Keypress: space
+198.1433 	EXP 	probe_visual_cue: autoDraw = False
+198.4248 	EXP 	New trial (rep=8, index=0): None
+198.4569 	EXP 	cue_visual_cue: autoDraw = False
+198.4569 	EXP 	probe_visual_cue: autoDraw = False
+198.4569 	EXP 	this_trial_is: text = 'Rythme'
+198.4569 	EXP 	this_trial_is: autoDraw = True
+199.4536 	EXP 	Sound  started
+199.4707 	EXP 	this_trial_is: autoDraw = False
+199.4707 	EXP 	cue_visual_cue: autoDraw = True
+201.8841 	EXP 	cue_visual_cue: autoDraw = False
+201.8841 	EXP 	probe_visual_cue: autoDraw = True
+202.4164 	EXP 	Sound  reached end of file
+202.5171 	DATA 	Keypress: space
+203.1128 	EXP 	probe_visual_cue: autoDraw = False
+203.3976 	EXP 	New trial (rep=9, index=0): None
+203.4195 	EXP 	cue_visual_cue: autoDraw = False
+203.4195 	EXP 	probe_visual_cue: autoDraw = False
+203.4195 	EXP 	this_trial_is: text = 'Rythme'
+203.4195 	EXP 	this_trial_is: autoDraw = True
+205.3739 	EXP 	Sound  started
+205.3911 	EXP 	this_trial_is: autoDraw = False
+205.3911 	EXP 	cue_visual_cue: autoDraw = True
+208.1559 	EXP 	cue_visual_cue: autoDraw = False
+208.1559 	EXP 	probe_visual_cue: autoDraw = True
+208.7874 	EXP 	Sound  reached end of file
+209.0281 	DATA 	Keypress: space
+209.3587 	EXP 	probe_visual_cue: autoDraw = False
+209.7386 	EXP 	New trial (rep=10, index=0): None
+209.7698 	EXP 	cue_visual_cue: autoDraw = False
+209.7698 	EXP 	probe_visual_cue: autoDraw = False
+209.7698 	EXP 	this_trial_is: text = 'Rythme'
+209.7698 	EXP 	this_trial_is: autoDraw = True
+210.7565 	EXP 	Sound  started
+210.7735 	EXP 	this_trial_is: autoDraw = False
+210.7735 	EXP 	cue_visual_cue: autoDraw = True
+213.0886 	EXP 	cue_visual_cue: autoDraw = False
+213.0886 	EXP 	probe_visual_cue: autoDraw = True
+213.3945 	EXP 	Sound  reached end of file
+214.2917 	EXP 	probe_visual_cue: autoDraw = False
+214.5367 	EXP 	New trial (rep=11, index=0): None
+214.5709 	EXP 	cue_visual_cue: autoDraw = False
+214.5709 	EXP 	probe_visual_cue: autoDraw = False
+214.5709 	EXP 	this_trial_is: height = 0.05
+214.5709 	EXP 	this_trial_is: height = 0.05
+214.5709 	EXP 	this_trial_is: text = 'X'
+214.5709 	EXP 	this_trial_is: autoDraw = True
+215.5628 	EXP 	Sound  started
+215.5799 	EXP 	this_trial_is: autoDraw = False
+215.5799 	EXP 	cue_visual_cue: autoDraw = True
+218.5997 	EXP 	cue_visual_cue: autoDraw = False
+218.5997 	EXP 	probe_visual_cue: autoDraw = True
+219.1386 	EXP 	Sound  reached end of file
+219.3388 	DATA 	Keypress: space
+219.8331 	EXP 	probe_visual_cue: autoDraw = False
+220.1308 	EXP 	New trial (rep=12, index=0): None
+220.1548 	EXP 	cue_visual_cue: autoDraw = False
+220.1548 	EXP 	probe_visual_cue: autoDraw = False
+220.1548 	EXP 	this_trial_is: height = 0.05
+220.1548 	EXP 	this_trial_is: height = 0.05
+220.1548 	EXP 	this_trial_is: text = 'Rythme'
+220.1548 	EXP 	this_trial_is: autoDraw = True
+221.1320 	EXP 	Sound  started
+221.1496 	EXP 	this_trial_is: autoDraw = False
+221.1496 	EXP 	this_trial_is: autoDraw = False
+221.1496 	EXP 	cue_visual_cue: autoDraw = True
+224.2937 	EXP 	cue_visual_cue: autoDraw = False
+224.2937 	EXP 	probe_visual_cue: autoDraw = True
+225.0477 	EXP 	Sound  reached end of file
+225.5077 	EXP 	probe_visual_cue: autoDraw = False
+225.5089 	DATA 	Keypress: space
+226.0592 	EXP 	New trial (rep=13, index=0): None
+226.0846 	EXP 	cue_visual_cue: autoDraw = False
+226.0846 	EXP 	probe_visual_cue: autoDraw = False
+226.0846 	EXP 	this_trial_is: height = 0.05
+226.0846 	EXP 	this_trial_is: height = 0.05
+226.0846 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+226.0846 	EXP 	this_trial_is: autoDraw = True
+227.0738 	EXP 	Sound  started
+227.0908 	EXP 	this_trial_is: autoDraw = False
+227.0908 	EXP 	cue_visual_cue: autoDraw = True
+229.9759 	EXP 	cue_visual_cue: autoDraw = False
+229.9759 	EXP 	probe_visual_cue: autoDraw = True
+230.6468 	EXP 	Sound  reached end of file
+230.7802 	DATA 	Keypress: space
+231.1773 	EXP 	probe_visual_cue: autoDraw = False
+231.6250 	EXP 	New trial (rep=14, index=0): None
+231.6536 	EXP 	cue_visual_cue: autoDraw = False
+231.6536 	EXP 	probe_visual_cue: autoDraw = False
+231.6536 	EXP 	this_trial_is: height = 0.05
+231.6536 	EXP 	this_trial_is: height = 0.05
+231.6536 	EXP 	this_trial_is: text = 'Rythme'
+231.6536 	EXP 	this_trial_is: autoDraw = True
+232.6481 	EXP 	Sound  started
+232.6651 	EXP 	this_trial_is: autoDraw = False
+232.6651 	EXP 	cue_visual_cue: autoDraw = True
+235.8162 	EXP 	cue_visual_cue: autoDraw = False
+235.8162 	EXP 	probe_visual_cue: autoDraw = True
+236.3851 	EXP 	Sound  reached end of file
+237.0369 	EXP 	probe_visual_cue: autoDraw = False
+237.5293 	EXP 	New trial (rep=15, index=0): None
+237.5627 	EXP 	cue_visual_cue: autoDraw = False
+237.5627 	EXP 	probe_visual_cue: autoDraw = False
+237.5627 	EXP 	this_trial_is: height = 0.05
+237.5627 	EXP 	this_trial_is: height = 0.05
+237.5627 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+237.5627 	EXP 	this_trial_is: autoDraw = True
+238.6355 	EXP 	Sound  started
+238.6525 	EXP 	this_trial_is: autoDraw = False
+238.6525 	EXP 	cue_visual_cue: autoDraw = True
+241.9461 	EXP 	cue_visual_cue: autoDraw = False
+241.9461 	EXP 	probe_visual_cue: autoDraw = True
+242.7333 	EXP 	Sound  reached end of file
+242.8014 	DATA 	Keypress: space
+243.1592 	EXP 	probe_visual_cue: autoDraw = False
+243.7249 	EXP 	New trial (rep=16, index=0): None
+243.7510 	EXP 	cue_visual_cue: autoDraw = False
+243.7510 	EXP 	probe_visual_cue: autoDraw = False
+243.7510 	EXP 	this_trial_is: height = 0.05
+243.7510 	EXP 	this_trial_is: height = 0.05
+243.7510 	EXP 	this_trial_is: text = 'Hauteur'
+243.7510 	EXP 	this_trial_is: autoDraw = True
+244.7427 	EXP 	Sound  started
+244.7600 	EXP 	this_trial_is: autoDraw = False
+244.7600 	EXP 	cue_visual_cue: autoDraw = True
+247.7588 	EXP 	cue_visual_cue: autoDraw = False
+247.7588 	EXP 	probe_visual_cue: autoDraw = True
+248.5698 	EXP 	Sound  reached end of file
+248.9017 	DATA 	Keypress: space
+248.9662 	EXP 	probe_visual_cue: autoDraw = False
+249.5709 	EXP 	New trial (rep=17, index=0): None
+249.6046 	EXP 	cue_visual_cue: autoDraw = False
+249.6046 	EXP 	probe_visual_cue: autoDraw = False
+249.6046 	EXP 	this_trial_is: text = 'Hauteur'
+249.6046 	EXP 	this_trial_is: autoDraw = True
+250.6034 	EXP 	Sound  started
+250.6208 	EXP 	this_trial_is: autoDraw = False
+250.6208 	EXP 	cue_visual_cue: autoDraw = True
+253.5002 	EXP 	cue_visual_cue: autoDraw = False
+253.5002 	EXP 	probe_visual_cue: autoDraw = True
+254.2327 	EXP 	Sound  reached end of file
+254.4227 	DATA 	Keypress: space
+254.7034 	EXP 	probe_visual_cue: autoDraw = False
+255.1923 	EXP 	New trial (rep=18, index=0): None
+255.2160 	EXP 	cue_visual_cue: autoDraw = False
+255.2160 	EXP 	probe_visual_cue: autoDraw = False
+255.2160 	EXP 	this_trial_is: text = 'Hauteur'
+255.2160 	EXP 	this_trial_is: autoDraw = True
+256.8831 	EXP 	Sound  started
+256.9004 	EXP 	this_trial_is: autoDraw = False
+256.9004 	EXP 	cue_visual_cue: autoDraw = True
+259.7460 	EXP 	cue_visual_cue: autoDraw = False
+259.7460 	EXP 	probe_visual_cue: autoDraw = True
+260.3474 	EXP 	Sound  reached end of file
+260.7086 	DATA 	Keypress: space
+260.9728 	EXP 	probe_visual_cue: autoDraw = False
+261.3162 	EXP 	New trial (rep=19, index=0): None
+261.3505 	EXP 	cue_visual_cue: autoDraw = False
+261.3505 	EXP 	probe_visual_cue: autoDraw = False
+261.3505 	EXP 	this_trial_is: height = 0.05
+261.3505 	EXP 	this_trial_is: height = 0.05
+261.3505 	EXP 	this_trial_is: text = 'X'
+261.3505 	EXP 	this_trial_is: autoDraw = True
+262.3653 	EXP 	Sound  started
+262.3823 	EXP 	this_trial_is: autoDraw = False
+262.3823 	EXP 	cue_visual_cue: autoDraw = True
+264.7476 	EXP 	cue_visual_cue: autoDraw = False
+264.7476 	EXP 	probe_visual_cue: autoDraw = True
+265.4434 	EXP 	Sound  reached end of file
+265.6093 	DATA 	Keypress: space
+265.9767 	EXP 	probe_visual_cue: autoDraw = False
+266.4481 	EXP 	cue_visual_cue: autoDraw = False
+266.4481 	EXP 	probe_visual_cue: autoDraw = False
+266.4481 	EXP 	blank_text: autoDraw = True
+266.9935 	EXP 	blank_text: autoDraw = False
+266.9935 	EXP 	break_text: height = 0.05
+266.9935 	EXP 	break_text: height = 0.05
+266.9935 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+266.9935 	EXP 	break_text: autoDraw = True
+290.3383 	EXP 	New trial (rep=1, index=0): None
+290.3397 	DATA 	Keypress: space
+290.3697 	EXP 	break_text: autoDraw = False
+290.3697 	EXP 	blank_text: autoDraw = True
+290.8602 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+290.8604 	EXP 	New trial (rep=0, index=0): None
+290.8923 	EXP 	blank_text: autoDraw = False
+290.8923 	EXP 	this_trial_is: height = 0.05
+290.8923 	EXP 	this_trial_is: height = 0.05
+290.8923 	EXP 	this_trial_is: text = 'Hauteur'
+290.8923 	EXP 	this_trial_is: autoDraw = True
+291.8481 	EXP 	Sound  started
+291.8651 	EXP 	this_trial_is: autoDraw = False
+291.8651 	EXP 	cue_visual_cue: autoDraw = True
+294.6505 	EXP 	cue_visual_cue: autoDraw = False
+294.6505 	EXP 	probe_visual_cue: autoDraw = True
+294.9746 	EXP 	Sound  reached end of file
+295.8737 	EXP 	probe_visual_cue: autoDraw = False
+296.1544 	EXP 	New trial (rep=1, index=0): None
+296.1894 	EXP 	cue_visual_cue: autoDraw = False
+296.1894 	EXP 	probe_visual_cue: autoDraw = False
+296.1894 	EXP 	this_trial_is: height = 0.05
+296.1894 	EXP 	this_trial_is: height = 0.05
+296.1894 	EXP 	this_trial_is: text = 'Rythme'
+296.1894 	EXP 	this_trial_is: autoDraw = True
+297.1953 	EXP 	Sound  started
+297.2138 	EXP 	this_trial_is: autoDraw = False
+297.2138 	EXP 	cue_visual_cue: autoDraw = True
+300.2313 	EXP 	cue_visual_cue: autoDraw = False
+300.2313 	EXP 	probe_visual_cue: autoDraw = True
+300.9555 	EXP 	Sound  reached end of file
+301.4368 	EXP 	probe_visual_cue: autoDraw = False
+301.9125 	EXP 	New trial (rep=2, index=0): None
+301.9407 	EXP 	cue_visual_cue: autoDraw = False
+301.9407 	EXP 	probe_visual_cue: autoDraw = False
+301.9407 	EXP 	this_trial_is: height = 0.05
+301.9407 	EXP 	this_trial_is: height = 0.05
+301.9407 	EXP 	this_trial_is: text = 'X'
+301.9407 	EXP 	this_trial_is: autoDraw = True
+302.9217 	EXP 	Sound  started
+302.9386 	EXP 	this_trial_is: autoDraw = False
+302.9386 	EXP 	cue_visual_cue: autoDraw = True
+305.4510 	EXP 	cue_visual_cue: autoDraw = False
+305.4510 	EXP 	probe_visual_cue: autoDraw = True
+305.9946 	EXP 	Sound  reached end of file
+306.1757 	DATA 	Keypress: space
+306.6665 	EXP 	probe_visual_cue: autoDraw = False
+306.9532 	EXP 	New trial (rep=3, index=0): None
+306.9768 	EXP 	cue_visual_cue: autoDraw = False
+306.9768 	EXP 	probe_visual_cue: autoDraw = False
+306.9768 	EXP 	this_trial_is: height = 0.05
+306.9768 	EXP 	this_trial_is: height = 0.05
+306.9768 	EXP 	this_trial_is: text = 'Hauteur'
+306.9768 	EXP 	this_trial_is: autoDraw = True
+307.9741 	EXP 	Sound  started
+307.9921 	EXP 	this_trial_is: autoDraw = False
+307.9921 	EXP 	cue_visual_cue: autoDraw = True
+310.8659 	EXP 	cue_visual_cue: autoDraw = False
+310.8659 	EXP 	probe_visual_cue: autoDraw = True
+311.6263 	EXP 	Sound  reached end of file
+311.7864 	DATA 	Keypress: space
+312.0736 	EXP 	probe_visual_cue: autoDraw = False
+312.6144 	EXP 	New trial (rep=4, index=0): None
+312.6428 	EXP 	cue_visual_cue: autoDraw = False
+312.6428 	EXP 	probe_visual_cue: autoDraw = False
+312.6428 	EXP 	this_trial_is: height = 0.05
+312.6428 	EXP 	this_trial_is: height = 0.05
+312.6428 	EXP 	this_trial_is: text = 'Rythme'
+312.6428 	EXP 	this_trial_is: autoDraw = True
+313.6211 	EXP 	Sound  started
+313.6387 	EXP 	this_trial_is: autoDraw = False
+313.6387 	EXP 	cue_visual_cue: autoDraw = True
+316.7967 	EXP 	cue_visual_cue: autoDraw = False
+316.7967 	EXP 	probe_visual_cue: autoDraw = True
+317.3466 	EXP 	Sound  reached end of file
+318.0253 	EXP 	probe_visual_cue: autoDraw = False
+318.5142 	EXP 	New trial (rep=5, index=0): None
+318.5497 	EXP 	cue_visual_cue: autoDraw = False
+318.5497 	EXP 	probe_visual_cue: autoDraw = False
+318.5497 	EXP 	this_trial_is: height = 0.05
+318.5497 	EXP 	this_trial_is: height = 0.05
+318.5497 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+318.5497 	EXP 	this_trial_is: autoDraw = True
+319.5402 	EXP 	Sound  started
+319.5575 	EXP 	this_trial_is: autoDraw = False
+319.5575 	EXP 	cue_visual_cue: autoDraw = True
+321.9278 	EXP 	cue_visual_cue: autoDraw = False
+321.9278 	EXP 	probe_visual_cue: autoDraw = True
+322.4462 	EXP 	Sound  reached end of file
+322.6163 	DATA 	Keypress: space
+323.1294 	EXP 	probe_visual_cue: autoDraw = False
+323.4140 	EXP 	New trial (rep=6, index=0): None
+323.4420 	EXP 	cue_visual_cue: autoDraw = False
+323.4420 	EXP 	probe_visual_cue: autoDraw = False
+323.4420 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+323.4420 	EXP 	this_trial_is: autoDraw = True
+325.4134 	EXP 	Sound  started
+325.4304 	EXP 	this_trial_is: autoDraw = False
+325.4304 	EXP 	cue_visual_cue: autoDraw = True
+328.6325 	EXP 	cue_visual_cue: autoDraw = False
+328.6325 	EXP 	probe_visual_cue: autoDraw = True
+329.3838 	EXP 	Sound  reached end of file
+329.6061 	DATA 	Keypress: space
+329.8376 	EXP 	probe_visual_cue: autoDraw = False
+330.3410 	EXP 	New trial (rep=7, index=0): None
+330.3691 	EXP 	cue_visual_cue: autoDraw = False
+330.3691 	EXP 	probe_visual_cue: autoDraw = False
+330.3691 	EXP 	this_trial_is: height = 0.05
+330.3691 	EXP 	this_trial_is: height = 0.05
+330.3691 	EXP 	this_trial_is: text = 'X'
+330.3691 	EXP 	this_trial_is: autoDraw = True
+331.3647 	EXP 	Sound  started
+331.3820 	EXP 	this_trial_is: autoDraw = False
+331.3820 	EXP 	cue_visual_cue: autoDraw = True
+334.1791 	EXP 	cue_visual_cue: autoDraw = False
+334.1791 	EXP 	probe_visual_cue: autoDraw = True
+334.9761 	EXP 	Sound  reached end of file
+335.1121 	DATA 	Keypress: space
+335.4090 	EXP 	probe_visual_cue: autoDraw = False
+335.9409 	EXP 	New trial (rep=8, index=0): None
+335.9634 	EXP 	cue_visual_cue: autoDraw = False
+335.9634 	EXP 	probe_visual_cue: autoDraw = False
+335.9634 	EXP 	this_trial_is: text = 'X'
+335.9634 	EXP 	this_trial_is: autoDraw = True
+336.9584 	EXP 	Sound  started
+336.9756 	EXP 	this_trial_is: autoDraw = False
+336.9756 	EXP 	cue_visual_cue: autoDraw = True
+339.7042 	EXP 	cue_visual_cue: autoDraw = False
+339.7042 	EXP 	probe_visual_cue: autoDraw = True
+340.2155 	EXP 	Sound  reached end of file
+340.3833 	DATA 	Keypress: space
+340.9164 	EXP 	probe_visual_cue: autoDraw = False
+341.2022 	EXP 	New trial (rep=9, index=0): None
+341.2253 	EXP 	cue_visual_cue: autoDraw = False
+341.2253 	EXP 	probe_visual_cue: autoDraw = False
+341.2253 	EXP 	this_trial_is: height = 0.05
+341.2253 	EXP 	this_trial_is: height = 0.05
+341.2253 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+341.2253 	EXP 	this_trial_is: autoDraw = True
+342.1971 	EXP 	Sound  started
+342.2144 	EXP 	this_trial_is: autoDraw = False
+342.2144 	EXP 	this_trial_is: autoDraw = False
+342.2144 	EXP 	cue_visual_cue: autoDraw = True
+344.5756 	EXP 	cue_visual_cue: autoDraw = False
+344.5756 	EXP 	probe_visual_cue: autoDraw = True
+344.8714 	EXP 	Sound  reached end of file
+345.3887 	DATA 	Keypress: space
+345.7870 	EXP 	probe_visual_cue: autoDraw = False
+346.0522 	EXP 	New trial (rep=10, index=0): None
+346.0838 	EXP 	cue_visual_cue: autoDraw = False
+346.0838 	EXP 	probe_visual_cue: autoDraw = False
+346.0838 	EXP 	this_trial_is: height = 0.05
+346.0838 	EXP 	this_trial_is: height = 0.05
+346.0838 	EXP 	this_trial_is: text = 'Rythme'
+346.0838 	EXP 	this_trial_is: autoDraw = True
+347.0580 	EXP 	Sound  started
+347.0792 	EXP 	this_trial_is: autoDraw = False
+347.0792 	EXP 	cue_visual_cue: autoDraw = True
+349.4933 	EXP 	cue_visual_cue: autoDraw = False
+349.4933 	EXP 	probe_visual_cue: autoDraw = True
+350.0026 	EXP 	Sound  reached end of file
+350.2885 	DATA 	Keypress: space
+350.7112 	EXP 	probe_visual_cue: autoDraw = False
+351.0116 	EXP 	New trial (rep=11, index=0): None
+351.0366 	EXP 	cue_visual_cue: autoDraw = False
+351.0366 	EXP 	probe_visual_cue: autoDraw = False
+351.0366 	EXP 	this_trial_is: height = 0.05
+351.0366 	EXP 	this_trial_is: height = 0.05
+351.0366 	EXP 	this_trial_is: text = 'Hauteur'
+351.0366 	EXP 	this_trial_is: autoDraw = True
+352.0316 	EXP 	Sound  started
+352.0484 	EXP 	this_trial_is: autoDraw = False
+352.0484 	EXP 	this_trial_is: autoDraw = False
+352.0484 	EXP 	cue_visual_cue: autoDraw = True
+354.7957 	EXP 	cue_visual_cue: autoDraw = False
+354.7957 	EXP 	probe_visual_cue: autoDraw = True
+355.3664 	EXP 	Sound  reached end of file
+355.9029 	DATA 	Keypress: space
+356.0334 	EXP 	probe_visual_cue: autoDraw = False
+356.3402 	EXP 	New trial (rep=12, index=0): None
+356.3675 	EXP 	cue_visual_cue: autoDraw = False
+356.3675 	EXP 	probe_visual_cue: autoDraw = False
+356.3675 	EXP 	this_trial_is: height = 0.05
+356.3675 	EXP 	this_trial_is: height = 0.05
+356.3675 	EXP 	this_trial_is: text = 'Rythme'
+356.3675 	EXP 	this_trial_is: autoDraw = True
+357.4467 	EXP 	Sound  started
+357.4638 	EXP 	this_trial_is: autoDraw = False
+357.4638 	EXP 	cue_visual_cue: autoDraw = True
+360.5652 	EXP 	cue_visual_cue: autoDraw = False
+360.5652 	EXP 	probe_visual_cue: autoDraw = True
+361.3077 	EXP 	Sound  reached end of file
+361.6291 	DATA 	Keypress: space
+361.7740 	EXP 	probe_visual_cue: autoDraw = False
+362.2797 	EXP 	New trial (rep=13, index=0): None
+362.3131 	EXP 	cue_visual_cue: autoDraw = False
+362.3131 	EXP 	probe_visual_cue: autoDraw = False
+362.3131 	EXP 	this_trial_is: text = 'Rythme'
+362.3131 	EXP 	this_trial_is: autoDraw = True
+363.3064 	EXP 	Sound  started
+363.3232 	EXP 	this_trial_is: autoDraw = False
+363.3232 	EXP 	cue_visual_cue: autoDraw = True
+365.8063 	EXP 	cue_visual_cue: autoDraw = False
+365.8063 	EXP 	probe_visual_cue: autoDraw = True
+366.1446 	EXP 	Sound  reached end of file
+367.0088 	EXP 	probe_visual_cue: autoDraw = False
+367.3150 	EXP 	New trial (rep=14, index=0): None
+367.3485 	EXP 	cue_visual_cue: autoDraw = False
+367.3485 	EXP 	probe_visual_cue: autoDraw = False
+367.3485 	EXP 	this_trial_is: height = 0.05
+367.3485 	EXP 	this_trial_is: height = 0.05
+367.3485 	EXP 	this_trial_is: text = 'X'
+367.3485 	EXP 	this_trial_is: autoDraw = True
+368.3501 	EXP 	Sound  started
+368.3671 	EXP 	this_trial_is: autoDraw = False
+368.3671 	EXP 	cue_visual_cue: autoDraw = True
+371.2050 	EXP 	cue_visual_cue: autoDraw = False
+371.2050 	EXP 	probe_visual_cue: autoDraw = True
+371.9287 	EXP 	Sound  reached end of file
+372.1498 	DATA 	Keypress: space
+372.4142 	EXP 	probe_visual_cue: autoDraw = False
+372.8962 	EXP 	New trial (rep=15, index=0): None
+372.9322 	EXP 	cue_visual_cue: autoDraw = False
+372.9322 	EXP 	probe_visual_cue: autoDraw = False
+372.9322 	EXP 	this_trial_is: height = 0.05
+372.9322 	EXP 	this_trial_is: height = 0.05
+372.9322 	EXP 	this_trial_is: text = 'Rythme'
+372.9322 	EXP 	this_trial_is: autoDraw = True
+373.9131 	EXP 	Sound  started
+373.9311 	EXP 	this_trial_is: autoDraw = False
+373.9311 	EXP 	cue_visual_cue: autoDraw = True
+376.2937 	EXP 	cue_visual_cue: autoDraw = False
+376.2937 	EXP 	probe_visual_cue: autoDraw = True
+376.7992 	EXP 	Sound  reached end of file
+377.5168 	EXP 	probe_visual_cue: autoDraw = False
+377.7764 	EXP 	New trial (rep=16, index=0): None
+377.7965 	EXP 	cue_visual_cue: autoDraw = False
+377.7965 	EXP 	probe_visual_cue: autoDraw = False
+377.7965 	EXP 	this_trial_is: text = 'Rythme'
+377.7965 	EXP 	this_trial_is: autoDraw = True
+379.6795 	EXP 	Sound  started
+379.6968 	EXP 	this_trial_is: autoDraw = False
+379.6968 	EXP 	this_trial_is: autoDraw = False
+379.6968 	EXP 	cue_visual_cue: autoDraw = True
+382.0566 	EXP 	cue_visual_cue: autoDraw = False
+382.0566 	EXP 	probe_visual_cue: autoDraw = True
+382.5591 	EXP 	Sound  reached end of file
+382.6951 	DATA 	Keypress: space
+383.2585 	EXP 	probe_visual_cue: autoDraw = False
+383.5449 	EXP 	New trial (rep=17, index=0): None
+383.5681 	EXP 	cue_visual_cue: autoDraw = False
+383.5681 	EXP 	probe_visual_cue: autoDraw = False
+383.5681 	EXP 	this_trial_is: height = 0.05
+383.5681 	EXP 	this_trial_is: height = 0.05
+383.5681 	EXP 	this_trial_is: text = 'Hauteur'
+383.5681 	EXP 	this_trial_is: autoDraw = True
+384.5404 	EXP 	Sound  started
+384.5576 	EXP 	this_trial_is: autoDraw = False
+384.5576 	EXP 	this_trial_is: autoDraw = False
+384.5576 	EXP 	cue_visual_cue: autoDraw = True
+387.1711 	EXP 	cue_visual_cue: autoDraw = False
+387.1711 	EXP 	probe_visual_cue: autoDraw = True
+387.7798 	EXP 	Sound  reached end of file
+388.3971 	EXP 	probe_visual_cue: autoDraw = False
+388.9694 	EXP 	New trial (rep=18, index=0): None
+388.9994 	EXP 	cue_visual_cue: autoDraw = False
+388.9994 	EXP 	probe_visual_cue: autoDraw = False
+388.9994 	EXP 	this_trial_is: height = 0.05
+388.9994 	EXP 	this_trial_is: height = 0.05
+388.9994 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+388.9994 	EXP 	this_trial_is: autoDraw = True
+389.9704 	EXP 	Sound  started
+389.9889 	EXP 	this_trial_is: autoDraw = False
+389.9889 	EXP 	this_trial_is: autoDraw = False
+389.9889 	EXP 	cue_visual_cue: autoDraw = True
+393.1068 	EXP 	cue_visual_cue: autoDraw = False
+393.1068 	EXP 	probe_visual_cue: autoDraw = True
+393.8459 	EXP 	Sound  reached end of file
+394.0354 	DATA 	Keypress: space
+394.3284 	EXP 	probe_visual_cue: autoDraw = False
+394.8481 	EXP 	New trial (rep=19, index=0): None
+394.8700 	EXP 	cue_visual_cue: autoDraw = False
+394.8700 	EXP 	probe_visual_cue: autoDraw = False
+394.8700 	EXP 	this_trial_is: height = 0.05
+394.8700 	EXP 	this_trial_is: height = 0.05
+394.8700 	EXP 	this_trial_is: text = 'Rythme'
+394.8700 	EXP 	this_trial_is: autoDraw = True
+395.8504 	EXP 	Sound  started
+395.8674 	EXP 	this_trial_is: autoDraw = False
+395.8674 	EXP 	cue_visual_cue: autoDraw = True
+398.2078 	EXP 	cue_visual_cue: autoDraw = False
+398.2078 	EXP 	probe_visual_cue: autoDraw = True
+398.7210 	EXP 	Sound  reached end of file
+399.0748 	DATA 	Keypress: space
+399.4289 	EXP 	probe_visual_cue: autoDraw = False
+399.7061 	EXP 	cue_visual_cue: autoDraw = False
+399.7061 	EXP 	probe_visual_cue: autoDraw = False
+399.7061 	EXP 	blank_text: autoDraw = True
+400.2304 	EXP 	blank_text: autoDraw = False
+400.2304 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+400.2304 	EXP 	break_text: autoDraw = True
+418.0645 	EXP 	New trial (rep=2, index=0): None
+418.0666 	DATA 	Keypress: space
+418.1007 	EXP 	break_text: autoDraw = False
+418.1007 	EXP 	blank_text: autoDraw = True
+418.5704 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+418.5705 	EXP 	New trial (rep=0, index=0): None
+418.6027 	EXP 	blank_text: autoDraw = False
+418.6027 	EXP 	this_trial_is: text = 'Rythme'
+418.6027 	EXP 	this_trial_is: autoDraw = True
+419.5901 	EXP 	Sound  started
+419.6072 	EXP 	this_trial_is: autoDraw = False
+419.6072 	EXP 	cue_visual_cue: autoDraw = True
+422.4410 	EXP 	cue_visual_cue: autoDraw = False
+422.4410 	EXP 	probe_visual_cue: autoDraw = True
+423.0801 	EXP 	Sound  reached end of file
+423.3370 	DATA 	Keypress: space
+423.6536 	EXP 	probe_visual_cue: autoDraw = False
+424.0842 	EXP 	New trial (rep=1, index=0): None
+424.1074 	EXP 	cue_visual_cue: autoDraw = False
+424.1074 	EXP 	probe_visual_cue: autoDraw = False
+424.1074 	EXP 	this_trial_is: height = 0.05
+424.1074 	EXP 	this_trial_is: height = 0.05
+424.1074 	EXP 	this_trial_is: text = 'X'
+424.1074 	EXP 	this_trial_is: autoDraw = True
+425.0804 	EXP 	Sound  started
+425.0982 	EXP 	this_trial_is: autoDraw = False
+425.0982 	EXP 	this_trial_is: autoDraw = False
+425.0982 	EXP 	cue_visual_cue: autoDraw = True
+427.7664 	EXP 	cue_visual_cue: autoDraw = False
+427.7664 	EXP 	probe_visual_cue: autoDraw = True
+428.4135 	EXP 	Sound  reached end of file
+428.5091 	DATA 	Keypress: space
+428.9721 	EXP 	probe_visual_cue: autoDraw = False
+429.3801 	EXP 	New trial (rep=2, index=0): None
+429.4002 	EXP 	cue_visual_cue: autoDraw = False
+429.4002 	EXP 	probe_visual_cue: autoDraw = False
+429.4002 	EXP 	this_trial_is: text = 'X'
+429.4002 	EXP 	this_trial_is: autoDraw = True
+431.0938 	EXP 	Sound  started
+431.1113 	EXP 	this_trial_is: autoDraw = False
+431.1113 	EXP 	cue_visual_cue: autoDraw = True
+433.7465 	EXP 	cue_visual_cue: autoDraw = False
+433.7465 	EXP 	probe_visual_cue: autoDraw = True
+434.4581 	EXP 	Sound  reached end of file
+434.5182 	DATA 	Keypress: space
+434.9785 	EXP 	probe_visual_cue: autoDraw = False
+435.4338 	EXP 	New trial (rep=3, index=0): None
+435.4632 	EXP 	cue_visual_cue: autoDraw = False
+435.4632 	EXP 	probe_visual_cue: autoDraw = False
+435.4632 	EXP 	this_trial_is: text = 'X'
+435.4632 	EXP 	this_trial_is: autoDraw = True
+436.4409 	EXP 	Sound  started
+436.4587 	EXP 	this_trial_is: autoDraw = False
+436.4587 	EXP 	cue_visual_cue: autoDraw = True
+439.2507 	EXP 	cue_visual_cue: autoDraw = False
+439.2507 	EXP 	probe_visual_cue: autoDraw = True
+439.8520 	EXP 	Sound  reached end of file
+440.0896 	DATA 	Keypress: space
+440.4847 	EXP 	probe_visual_cue: autoDraw = False
+440.8627 	EXP 	New trial (rep=4, index=0): None
+440.8890 	EXP 	cue_visual_cue: autoDraw = False
+440.8890 	EXP 	probe_visual_cue: autoDraw = False
+440.8890 	EXP 	this_trial_is: height = 0.05
+440.8890 	EXP 	this_trial_is: height = 0.05
+440.8890 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+440.8890 	EXP 	this_trial_is: autoDraw = True
+441.8790 	EXP 	Sound  started
+441.8957 	EXP 	this_trial_is: autoDraw = False
+441.8957 	EXP 	cue_visual_cue: autoDraw = True
+445.2223 	EXP 	cue_visual_cue: autoDraw = False
+445.2223 	EXP 	probe_visual_cue: autoDraw = True
+445.8241 	EXP 	Sound  reached end of file
+446.4253 	EXP 	probe_visual_cue: autoDraw = False
+447.0014 	EXP 	New trial (rep=5, index=0): None
+447.0262 	EXP 	cue_visual_cue: autoDraw = False
+447.0262 	EXP 	probe_visual_cue: autoDraw = False
+447.0262 	EXP 	this_trial_is: height = 0.05
+447.0262 	EXP 	this_trial_is: height = 0.05
+447.0262 	EXP 	this_trial_is: text = 'X'
+447.0262 	EXP 	this_trial_is: autoDraw = True
+448.0218 	EXP 	Sound  started
+448.0394 	EXP 	this_trial_is: autoDraw = False
+448.0394 	EXP 	cue_visual_cue: autoDraw = True
+450.9674 	EXP 	cue_visual_cue: autoDraw = False
+450.9674 	EXP 	probe_visual_cue: autoDraw = True
+451.5621 	EXP 	Sound  reached end of file
+452.1949 	EXP 	probe_visual_cue: autoDraw = False
+452.5350 	EXP 	New trial (rep=6, index=0): None
+452.5585 	EXP 	cue_visual_cue: autoDraw = False
+452.5585 	EXP 	probe_visual_cue: autoDraw = False
+452.5585 	EXP 	this_trial_is: height = 0.05
+452.5585 	EXP 	this_trial_is: height = 0.05
+452.5585 	EXP 	this_trial_is: text = 'Rythme'
+452.5585 	EXP 	this_trial_is: autoDraw = True
+453.5415 	EXP 	Sound  started
+453.5598 	EXP 	this_trial_is: autoDraw = False
+453.5598 	EXP 	cue_visual_cue: autoDraw = True
+456.2324 	EXP 	cue_visual_cue: autoDraw = False
+456.2324 	EXP 	probe_visual_cue: autoDraw = True
+456.8344 	EXP 	Sound  reached end of file
+457.1095 	DATA 	Keypress: space
+457.4354 	EXP 	probe_visual_cue: autoDraw = False
+457.8251 	EXP 	New trial (rep=7, index=0): None
+457.8489 	EXP 	cue_visual_cue: autoDraw = False
+457.8489 	EXP 	probe_visual_cue: autoDraw = False
+457.8489 	EXP 	this_trial_is: height = 0.05
+457.8489 	EXP 	this_trial_is: height = 0.05
+457.8489 	EXP 	this_trial_is: text = 'Hauteur'
+457.8489 	EXP 	this_trial_is: autoDraw = True
+458.8256 	EXP 	Sound  started
+458.8426 	EXP 	this_trial_is: autoDraw = False
+458.8426 	EXP 	this_trial_is: autoDraw = False
+458.8426 	EXP 	cue_visual_cue: autoDraw = True
+461.7443 	EXP 	cue_visual_cue: autoDraw = False
+461.7443 	EXP 	probe_visual_cue: autoDraw = True
+462.3528 	EXP 	Sound  reached end of file
+462.5791 	DATA 	Keypress: space
+462.9437 	EXP 	probe_visual_cue: autoDraw = False
+463.3304 	EXP 	New trial (rep=8, index=0): None
+463.3557 	EXP 	cue_visual_cue: autoDraw = False
+463.3557 	EXP 	probe_visual_cue: autoDraw = False
+463.3557 	EXP 	this_trial_is: text = 'Hauteur'
+463.3557 	EXP 	this_trial_is: autoDraw = True
+465.0339 	EXP 	Sound  started
+465.0510 	EXP 	this_trial_is: autoDraw = False
+465.0510 	EXP 	cue_visual_cue: autoDraw = True
+468.1786 	EXP 	cue_visual_cue: autoDraw = False
+468.1786 	EXP 	probe_visual_cue: autoDraw = True
+468.9277 	EXP 	Sound  reached end of file
+469.1152 	DATA 	Keypress: space
+469.3914 	EXP 	probe_visual_cue: autoDraw = False
+469.9020 	EXP 	New trial (rep=9, index=0): None
+469.9323 	EXP 	cue_visual_cue: autoDraw = False
+469.9323 	EXP 	probe_visual_cue: autoDraw = False
+469.9323 	EXP 	this_trial_is: height = 0.05
+469.9323 	EXP 	this_trial_is: height = 0.05
+469.9323 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+469.9323 	EXP 	this_trial_is: autoDraw = True
+470.9330 	EXP 	Sound  started
+470.9501 	EXP 	this_trial_is: autoDraw = False
+470.9501 	EXP 	cue_visual_cue: autoDraw = True
+473.6204 	EXP 	cue_visual_cue: autoDraw = False
+473.6204 	EXP 	probe_visual_cue: autoDraw = True
+474.2273 	EXP 	Sound  reached end of file
+474.4228 	DATA 	Keypress: space
+474.8527 	EXP 	probe_visual_cue: autoDraw = False
+475.2287 	EXP 	New trial (rep=10, index=0): None
+475.2517 	EXP 	cue_visual_cue: autoDraw = False
+475.2517 	EXP 	probe_visual_cue: autoDraw = False
+475.2517 	EXP 	this_trial_is: height = 0.05
+475.2517 	EXP 	this_trial_is: height = 0.05
+475.2517 	EXP 	this_trial_is: text = 'Rythme'
+475.2517 	EXP 	this_trial_is: autoDraw = True
+476.2379 	EXP 	Sound  started
+476.2550 	EXP 	this_trial_is: autoDraw = False
+476.2550 	EXP 	this_trial_is: autoDraw = False
+476.2550 	EXP 	cue_visual_cue: autoDraw = True
+478.8900 	EXP 	cue_visual_cue: autoDraw = False
+478.8900 	EXP 	probe_visual_cue: autoDraw = True
+479.4675 	EXP 	Sound  reached end of file
+479.6967 	DATA 	Keypress: space
+480.0926 	EXP 	probe_visual_cue: autoDraw = False
+480.4446 	EXP 	New trial (rep=11, index=0): None
+480.4718 	EXP 	cue_visual_cue: autoDraw = False
+480.4718 	EXP 	probe_visual_cue: autoDraw = False
+480.4718 	EXP 	this_trial_is: height = 0.05
+480.4718 	EXP 	this_trial_is: height = 0.05
+480.4718 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+480.4718 	EXP 	this_trial_is: autoDraw = True
+481.4559 	EXP 	Sound  started
+481.4738 	EXP 	this_trial_is: autoDraw = False
+481.4738 	EXP 	cue_visual_cue: autoDraw = True
+484.2256 	EXP 	cue_visual_cue: autoDraw = False
+484.2256 	EXP 	probe_visual_cue: autoDraw = True
+484.8589 	EXP 	Sound  reached end of file
+485.0683 	DATA 	Keypress: space
+485.4320 	EXP 	probe_visual_cue: autoDraw = False
+485.8248 	EXP 	New trial (rep=12, index=0): None
+485.8466 	EXP 	cue_visual_cue: autoDraw = False
+485.8466 	EXP 	probe_visual_cue: autoDraw = False
+485.8466 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+485.8466 	EXP 	this_trial_is: autoDraw = True
+487.6282 	EXP 	Sound  started
+487.6456 	EXP 	this_trial_is: autoDraw = False
+487.6456 	EXP 	this_trial_is: autoDraw = False
+487.6456 	EXP 	cue_visual_cue: autoDraw = True
+490.4020 	EXP 	cue_visual_cue: autoDraw = False
+490.4020 	EXP 	probe_visual_cue: autoDraw = True
+491.0408 	EXP 	Sound  reached end of file
+491.2760 	DATA 	Keypress: space
+491.6060 	EXP 	probe_visual_cue: autoDraw = False
+492.0266 	EXP 	New trial (rep=13, index=0): None
+492.0516 	EXP 	cue_visual_cue: autoDraw = False
+492.0516 	EXP 	probe_visual_cue: autoDraw = False
+492.0516 	EXP 	this_trial_is: height = 0.05
+492.0516 	EXP 	this_trial_is: height = 0.05
+492.0516 	EXP 	this_trial_is: text = 'Rythme'
+492.0516 	EXP 	this_trial_is: autoDraw = True
+493.0415 	EXP 	Sound  started
+493.0590 	EXP 	this_trial_is: autoDraw = False
+493.0590 	EXP 	cue_visual_cue: autoDraw = True
+495.5395 	EXP 	cue_visual_cue: autoDraw = False
+495.5395 	EXP 	probe_visual_cue: autoDraw = True
+496.0515 	EXP 	Sound  reached end of file
+496.3745 	DATA 	Keypress: space
+496.7431 	EXP 	probe_visual_cue: autoDraw = False
+497.0433 	EXP 	New trial (rep=14, index=0): None
+497.0664 	EXP 	cue_visual_cue: autoDraw = False
+497.0664 	EXP 	probe_visual_cue: autoDraw = False
+497.0664 	EXP 	this_trial_is: height = 0.05
+497.0664 	EXP 	this_trial_is: height = 0.05
+497.0664 	EXP 	this_trial_is: text = 'X'
+497.0664 	EXP 	this_trial_is: autoDraw = True
+498.0562 	EXP 	Sound  started
+498.0735 	EXP 	this_trial_is: autoDraw = False
+498.0735 	EXP 	cue_visual_cue: autoDraw = True
+500.9486 	EXP 	cue_visual_cue: autoDraw = False
+500.9486 	EXP 	probe_visual_cue: autoDraw = True
+501.5884 	EXP 	Sound  reached end of file
+501.8861 	DATA 	Keypress: space
+502.1517 	EXP 	probe_visual_cue: autoDraw = False
+502.5747 	EXP 	New trial (rep=15, index=0): None
+502.5986 	EXP 	cue_visual_cue: autoDraw = False
+502.5986 	EXP 	probe_visual_cue: autoDraw = False
+502.5986 	EXP 	this_trial_is: height = 0.05
+502.5986 	EXP 	this_trial_is: height = 0.05
+502.5986 	EXP 	this_trial_is: text = 'Hauteur'
+502.5986 	EXP 	this_trial_is: autoDraw = True
+503.5954 	EXP 	Sound  started
+503.6126 	EXP 	this_trial_is: autoDraw = False
+503.6126 	EXP 	cue_visual_cue: autoDraw = True
+506.4202 	EXP 	cue_visual_cue: autoDraw = False
+506.4202 	EXP 	probe_visual_cue: autoDraw = True
+507.0371 	EXP 	Sound  reached end of file
+507.3228 	DATA 	Keypress: space
+507.6513 	EXP 	probe_visual_cue: autoDraw = False
+508.0108 	EXP 	New trial (rep=16, index=0): None
+508.0391 	EXP 	cue_visual_cue: autoDraw = False
+508.0391 	EXP 	probe_visual_cue: autoDraw = False
+508.0391 	EXP 	this_trial_is: height = 0.05
+508.0391 	EXP 	this_trial_is: height = 0.05
+508.0391 	EXP 	this_trial_is: text = 'Rythme'
+508.0391 	EXP 	this_trial_is: autoDraw = True
+509.0248 	EXP 	Sound  started
+509.0419 	EXP 	this_trial_is: autoDraw = False
+509.0419 	EXP 	cue_visual_cue: autoDraw = True
+511.7754 	EXP 	cue_visual_cue: autoDraw = False
+511.7754 	EXP 	probe_visual_cue: autoDraw = True
+512.2023 	EXP 	Sound  reached end of file
+512.7889 	DATA 	Keypress: space
+512.9923 	EXP 	probe_visual_cue: autoDraw = False
+513.3735 	EXP 	New trial (rep=17, index=0): None
+513.4046 	EXP 	cue_visual_cue: autoDraw = False
+513.4046 	EXP 	probe_visual_cue: autoDraw = False
+513.4046 	EXP 	this_trial_is: text = 'Rythme'
+513.4046 	EXP 	this_trial_is: autoDraw = True
+514.4031 	EXP 	Sound  started
+514.4201 	EXP 	this_trial_is: autoDraw = False
+514.4201 	EXP 	cue_visual_cue: autoDraw = True
+516.8301 	EXP 	cue_visual_cue: autoDraw = False
+516.8301 	EXP 	probe_visual_cue: autoDraw = True
+517.3335 	EXP 	Sound  reached end of file
+518.0623 	EXP 	probe_visual_cue: autoDraw = False
+518.2862 	EXP 	New trial (rep=18, index=0): None
+518.3111 	EXP 	cue_visual_cue: autoDraw = False
+518.3111 	EXP 	probe_visual_cue: autoDraw = False
+518.3111 	EXP 	this_trial_is: height = 0.05
+518.3111 	EXP 	this_trial_is: height = 0.05
+518.3111 	EXP 	this_trial_is: text = 'Hauteur'
+518.3111 	EXP 	this_trial_is: autoDraw = True
+519.3136 	EXP 	Sound  started
+519.3308 	EXP 	this_trial_is: autoDraw = False
+519.3308 	EXP 	cue_visual_cue: autoDraw = True
+522.1727 	EXP 	cue_visual_cue: autoDraw = False
+522.1727 	EXP 	probe_visual_cue: autoDraw = True
+522.7368 	EXP 	Sound  reached end of file
+523.3930 	EXP 	probe_visual_cue: autoDraw = False
+523.7104 	EXP 	New trial (rep=19, index=0): None
+523.7354 	EXP 	cue_visual_cue: autoDraw = False
+523.7354 	EXP 	probe_visual_cue: autoDraw = False
+523.7354 	EXP 	this_trial_is: height = 0.05
+523.7354 	EXP 	this_trial_is: height = 0.05
+523.7354 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+523.7354 	EXP 	this_trial_is: autoDraw = True
+524.7358 	EXP 	Sound  started
+524.7530 	EXP 	this_trial_is: autoDraw = False
+524.7530 	EXP 	cue_visual_cue: autoDraw = True
+527.3192 	EXP 	cue_visual_cue: autoDraw = False
+527.3192 	EXP 	probe_visual_cue: autoDraw = True
+527.8766 	EXP 	Sound  reached end of file
+528.0117 	DATA 	Keypress: space
+528.5424 	EXP 	probe_visual_cue: autoDraw = False
+528.8637 	EXP 	cue_visual_cue: autoDraw = False
+528.8637 	EXP 	probe_visual_cue: autoDraw = False
+528.8637 	EXP 	blank_text: autoDraw = True
+529.3764 	EXP 	blank_text: autoDraw = False
+529.3764 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+529.3764 	EXP 	break_text: autoDraw = True
+544.6681 	EXP 	New trial (rep=3, index=0): None
+544.6696 	DATA 	Keypress: space
+544.7009 	EXP 	break_text: autoDraw = False
+544.7009 	EXP 	blank_text: autoDraw = True
+545.1938 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+545.1940 	EXP 	New trial (rep=0, index=0): None
+545.2285 	EXP 	blank_text: autoDraw = False
+545.2285 	EXP 	this_trial_is: height = 0.05
+545.2285 	EXP 	this_trial_is: height = 0.05
+545.2285 	EXP 	this_trial_is: text = 'X'
+545.2285 	EXP 	this_trial_is: autoDraw = True
+546.1966 	EXP 	Sound  started
+546.2135 	EXP 	this_trial_is: autoDraw = False
+546.2135 	EXP 	cue_visual_cue: autoDraw = True
+548.7000 	EXP 	cue_visual_cue: autoDraw = False
+548.7000 	EXP 	probe_visual_cue: autoDraw = True
+549.3346 	EXP 	Sound  reached end of file
+549.6654 	DATA 	Keypress: space
+549.9279 	EXP 	probe_visual_cue: autoDraw = False
+550.3093 	EXP 	New trial (rep=1, index=0): None
+550.3413 	EXP 	cue_visual_cue: autoDraw = False
+550.3413 	EXP 	probe_visual_cue: autoDraw = False
+550.3413 	EXP 	this_trial_is: text = 'X'
+550.3413 	EXP 	this_trial_is: autoDraw = True
+551.3103 	EXP 	Sound  started
+551.3284 	EXP 	this_trial_is: autoDraw = False
+551.3284 	EXP 	cue_visual_cue: autoDraw = True
+554.2661 	EXP 	cue_visual_cue: autoDraw = False
+554.2661 	EXP 	probe_visual_cue: autoDraw = True
+554.7435 	EXP 	Sound  reached end of file
+555.5000 	EXP 	probe_visual_cue: autoDraw = False
+555.9551 	EXP 	New trial (rep=2, index=0): None
+555.9788 	EXP 	cue_visual_cue: autoDraw = False
+555.9788 	EXP 	probe_visual_cue: autoDraw = False
+555.9788 	EXP 	this_trial_is: height = 0.05
+555.9788 	EXP 	this_trial_is: height = 0.05
+555.9788 	EXP 	this_trial_is: text = 'Hauteur'
+555.9788 	EXP 	this_trial_is: autoDraw = True
+556.9555 	EXP 	Sound  started
+556.9733 	EXP 	this_trial_is: autoDraw = False
+556.9733 	EXP 	cue_visual_cue: autoDraw = True
+560.0088 	EXP 	cue_visual_cue: autoDraw = False
+560.0088 	EXP 	probe_visual_cue: autoDraw = True
+560.7752 	EXP 	Sound  reached end of file
+561.0745 	DATA 	Keypress: space
+561.2383 	EXP 	probe_visual_cue: autoDraw = False
+561.7664 	EXP 	New trial (rep=3, index=0): None
+561.7877 	EXP 	cue_visual_cue: autoDraw = False
+561.7877 	EXP 	probe_visual_cue: autoDraw = False
+561.7877 	EXP 	this_trial_is: text = 'Hauteur'
+561.7877 	EXP 	this_trial_is: autoDraw = True
+563.6156 	EXP 	Sound  started
+563.6325 	EXP 	this_trial_is: autoDraw = False
+563.6325 	EXP 	cue_visual_cue: autoDraw = True
+566.4193 	EXP 	cue_visual_cue: autoDraw = False
+566.4193 	EXP 	probe_visual_cue: autoDraw = True
+567.1334 	EXP 	Sound  reached end of file
+567.4148 	DATA 	Keypress: space
+567.6462 	EXP 	probe_visual_cue: autoDraw = False
+568.1238 	EXP 	New trial (rep=4, index=0): None
+568.1469 	EXP 	cue_visual_cue: autoDraw = False
+568.1469 	EXP 	probe_visual_cue: autoDraw = False
+568.1469 	EXP 	this_trial_is: height = 0.05
+568.1469 	EXP 	this_trial_is: height = 0.05
+568.1469 	EXP 	this_trial_is: text = 'Rythme'
+568.1469 	EXP 	this_trial_is: autoDraw = True
+569.1218 	EXP 	Sound  started
+569.1393 	EXP 	this_trial_is: autoDraw = False
+569.1393 	EXP 	this_trial_is: autoDraw = False
+569.1393 	EXP 	cue_visual_cue: autoDraw = True
+571.4658 	EXP 	cue_visual_cue: autoDraw = False
+571.4658 	EXP 	probe_visual_cue: autoDraw = True
+571.9807 	EXP 	Sound  reached end of file
+572.6836 	EXP 	probe_visual_cue: autoDraw = False
+572.9501 	EXP 	New trial (rep=5, index=0): None
+572.9715 	EXP 	cue_visual_cue: autoDraw = False
+572.9715 	EXP 	probe_visual_cue: autoDraw = False
+572.9715 	EXP 	this_trial_is: text = 'Rythme'
+572.9715 	EXP 	this_trial_is: autoDraw = True
+574.9005 	EXP 	Sound  started
+574.9177 	EXP 	this_trial_is: autoDraw = False
+574.9177 	EXP 	cue_visual_cue: autoDraw = True
+577.9632 	EXP 	cue_visual_cue: autoDraw = False
+577.9632 	EXP 	probe_visual_cue: autoDraw = True
+578.7189 	EXP 	Sound  reached end of file
+579.1651 	EXP 	probe_visual_cue: autoDraw = False
+579.6964 	EXP 	New trial (rep=6, index=0): None
+579.7242 	EXP 	cue_visual_cue: autoDraw = False
+579.7242 	EXP 	probe_visual_cue: autoDraw = False
+579.7242 	EXP 	this_trial_is: height = 0.05
+579.7242 	EXP 	this_trial_is: height = 0.05
+579.7242 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+579.7242 	EXP 	this_trial_is: autoDraw = True
+580.7006 	EXP 	Sound  started
+580.7174 	EXP 	this_trial_is: autoDraw = False
+580.7174 	EXP 	cue_visual_cue: autoDraw = True
+583.6833 	EXP 	cue_visual_cue: autoDraw = False
+583.6833 	EXP 	probe_visual_cue: autoDraw = True
+584.1883 	EXP 	Sound  reached end of file
+584.8962 	EXP 	probe_visual_cue: autoDraw = False
+585.3566 	EXP 	New trial (rep=7, index=0): None
+585.3804 	EXP 	cue_visual_cue: autoDraw = False
+585.3804 	EXP 	probe_visual_cue: autoDraw = False
+585.3804 	EXP 	this_trial_is: height = 0.05
+585.3804 	EXP 	this_trial_is: height = 0.05
+585.3804 	EXP 	this_trial_is: text = 'Hauteur'
+585.3804 	EXP 	this_trial_is: autoDraw = True
+586.3708 	EXP 	Sound  started
+586.3875 	EXP 	this_trial_is: autoDraw = False
+586.3875 	EXP 	cue_visual_cue: autoDraw = True
+589.1644 	EXP 	cue_visual_cue: autoDraw = False
+589.1644 	EXP 	probe_visual_cue: autoDraw = True
+589.7749 	EXP 	Sound  reached end of file
+589.9880 	DATA 	Keypress: space
+590.3753 	EXP 	probe_visual_cue: autoDraw = False
+590.7940 	EXP 	New trial (rep=8, index=0): None
+590.8195 	EXP 	cue_visual_cue: autoDraw = False
+590.8195 	EXP 	probe_visual_cue: autoDraw = False
+590.8195 	EXP 	this_trial_is: height = 0.05
+590.8195 	EXP 	this_trial_is: height = 0.05
+590.8195 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+590.8195 	EXP 	this_trial_is: autoDraw = True
+591.8619 	EXP 	Sound  started
+591.8790 	EXP 	this_trial_is: autoDraw = False
+591.8790 	EXP 	cue_visual_cue: autoDraw = True
+594.4515 	EXP 	cue_visual_cue: autoDraw = False
+594.4515 	EXP 	probe_visual_cue: autoDraw = True
+595.0509 	EXP 	Sound  reached end of file
+595.2867 	DATA 	Keypress: space
+595.6613 	EXP 	probe_visual_cue: autoDraw = False
+596.0224 	EXP 	New trial (rep=9, index=0): None
+596.0548 	EXP 	cue_visual_cue: autoDraw = False
+596.0548 	EXP 	probe_visual_cue: autoDraw = False
+596.0548 	EXP 	this_trial_is: height = 0.05
+596.0548 	EXP 	this_trial_is: height = 0.05
+596.0548 	EXP 	this_trial_is: text = 'X'
+596.0548 	EXP 	this_trial_is: autoDraw = True
+597.0284 	EXP 	Sound  started
+597.0460 	EXP 	this_trial_is: autoDraw = False
+597.0460 	EXP 	cue_visual_cue: autoDraw = True
+599.7061 	EXP 	cue_visual_cue: autoDraw = False
+599.7061 	EXP 	probe_visual_cue: autoDraw = True
+600.2573 	EXP 	Sound  reached end of file
+600.5309 	DATA 	Keypress: space
+600.9178 	EXP 	probe_visual_cue: autoDraw = False
+601.2416 	EXP 	New trial (rep=10, index=0): None
+601.2656 	EXP 	cue_visual_cue: autoDraw = False
+601.2656 	EXP 	probe_visual_cue: autoDraw = False
+601.2656 	EXP 	this_trial_is: height = 0.05
+601.2656 	EXP 	this_trial_is: height = 0.05
+601.2656 	EXP 	this_trial_is: text = 'Hauteur'
+601.2656 	EXP 	this_trial_is: autoDraw = True
+602.2419 	EXP 	Sound  started
+602.2584 	EXP 	this_trial_is: autoDraw = False
+602.2584 	EXP 	this_trial_is: autoDraw = False
+602.2584 	EXP 	cue_visual_cue: autoDraw = True
+605.2016 	EXP 	cue_visual_cue: autoDraw = False
+605.2016 	EXP 	probe_visual_cue: autoDraw = True
+605.7703 	EXP 	Sound  reached end of file
+606.4391 	EXP 	probe_visual_cue: autoDraw = False
+606.9552 	EXP 	New trial (rep=11, index=0): None
+606.9851 	EXP 	cue_visual_cue: autoDraw = False
+606.9851 	EXP 	probe_visual_cue: autoDraw = False
+606.9851 	EXP 	this_trial_is: height = 0.05
+606.9851 	EXP 	this_trial_is: height = 0.05
+606.9851 	EXP 	this_trial_is: text = 'Rythme'
+606.9851 	EXP 	this_trial_is: autoDraw = True
+607.9624 	EXP 	Sound  started
+607.9798 	EXP 	this_trial_is: autoDraw = False
+607.9798 	EXP 	cue_visual_cue: autoDraw = True
+610.2847 	EXP 	cue_visual_cue: autoDraw = False
+610.2847 	EXP 	probe_visual_cue: autoDraw = True
+610.7713 	EXP 	Sound  reached end of file
+611.5123 	EXP 	probe_visual_cue: autoDraw = False
+611.7433 	EXP 	New trial (rep=12, index=0): None
+611.7658 	EXP 	cue_visual_cue: autoDraw = False
+611.7658 	EXP 	probe_visual_cue: autoDraw = False
+611.7658 	EXP 	this_trial_is: text = 'Rythme'
+611.7658 	EXP 	this_trial_is: autoDraw = True
+613.7055 	EXP 	Sound  started
+613.7224 	EXP 	this_trial_is: autoDraw = False
+613.7224 	EXP 	cue_visual_cue: autoDraw = True
+616.9670 	EXP 	cue_visual_cue: autoDraw = False
+616.9670 	EXP 	probe_visual_cue: autoDraw = True
+617.7899 	EXP 	Sound  reached end of file
+618.1898 	EXP 	probe_visual_cue: autoDraw = False
+618.7577 	EXP 	New trial (rep=13, index=0): None
+618.7822 	EXP 	cue_visual_cue: autoDraw = False
+618.7822 	EXP 	probe_visual_cue: autoDraw = False
+618.7822 	EXP 	this_trial_is: height = 0.05
+618.7822 	EXP 	this_trial_is: height = 0.05
+618.7822 	EXP 	this_trial_is: text = 'X'
+618.7822 	EXP 	this_trial_is: autoDraw = True
+619.8525 	EXP 	Sound  started
+619.8694 	EXP 	this_trial_is: autoDraw = False
+619.8694 	EXP 	cue_visual_cue: autoDraw = True
+622.6069 	EXP 	cue_visual_cue: autoDraw = False
+622.6069 	EXP 	probe_visual_cue: autoDraw = True
+623.2643 	EXP 	Sound  reached end of file
+623.4994 	DATA 	Keypress: space
+623.8306 	EXP 	probe_visual_cue: autoDraw = False
+624.2360 	EXP 	New trial (rep=14, index=0): None
+624.2639 	EXP 	cue_visual_cue: autoDraw = False
+624.2639 	EXP 	probe_visual_cue: autoDraw = False
+624.2639 	EXP 	this_trial_is: height = 0.05
+624.2639 	EXP 	this_trial_is: height = 0.05
+624.2639 	EXP 	this_trial_is: text = 'Hauteur'
+624.2639 	EXP 	this_trial_is: autoDraw = True
+625.2688 	EXP 	Sound  started
+625.2859 	EXP 	this_trial_is: autoDraw = False
+625.2859 	EXP 	cue_visual_cue: autoDraw = True
+627.8751 	EXP 	cue_visual_cue: autoDraw = False
+627.8751 	EXP 	probe_visual_cue: autoDraw = True
+628.4344 	EXP 	Sound  reached end of file
+629.0873 	EXP 	probe_visual_cue: autoDraw = False
+629.4021 	EXP 	New trial (rep=15, index=0): None
+629.4271 	EXP 	cue_visual_cue: autoDraw = False
+629.4271 	EXP 	probe_visual_cue: autoDraw = False
+629.4271 	EXP 	this_trial_is: height = 0.05
+629.4271 	EXP 	this_trial_is: height = 0.05
+629.4271 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+629.4271 	EXP 	this_trial_is: autoDraw = True
+630.4036 	EXP 	Sound  started
+630.4207 	EXP 	this_trial_is: autoDraw = False
+630.4207 	EXP 	cue_visual_cue: autoDraw = True
+633.5523 	EXP 	cue_visual_cue: autoDraw = False
+633.5523 	EXP 	probe_visual_cue: autoDraw = True
+634.1160 	EXP 	Sound  reached end of file
+634.7608 	EXP 	probe_visual_cue: autoDraw = False
+635.2848 	EXP 	New trial (rep=16, index=0): None
+635.3088 	EXP 	cue_visual_cue: autoDraw = False
+635.3088 	EXP 	probe_visual_cue: autoDraw = False
+635.3088 	EXP 	this_trial_is: height = 0.05
+635.3088 	EXP 	this_trial_is: height = 0.05
+635.3088 	EXP 	this_trial_is: text = 'Rythme'
+635.3088 	EXP 	this_trial_is: autoDraw = True
+636.2809 	EXP 	Sound  started
+636.2979 	EXP 	this_trial_is: autoDraw = False
+636.2979 	EXP 	this_trial_is: autoDraw = False
+636.2979 	EXP 	cue_visual_cue: autoDraw = True
+639.5651 	EXP 	cue_visual_cue: autoDraw = False
+639.5651 	EXP 	probe_visual_cue: autoDraw = True
+640.3874 	EXP 	Sound  reached end of file
+640.7679 	EXP 	probe_visual_cue: autoDraw = False
+641.3950 	EXP 	New trial (rep=17, index=0): None
+641.4154 	EXP 	cue_visual_cue: autoDraw = False
+641.4154 	EXP 	probe_visual_cue: autoDraw = False
+641.4154 	EXP 	this_trial_is: height = 0.05
+641.4154 	EXP 	this_trial_is: height = 0.05
+641.4154 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+641.4154 	EXP 	this_trial_is: autoDraw = True
+642.3862 	EXP 	Sound  started
+642.4031 	EXP 	this_trial_is: autoDraw = False
+642.4031 	EXP 	this_trial_is: autoDraw = False
+642.4031 	EXP 	cue_visual_cue: autoDraw = True
+645.2175 	EXP 	cue_visual_cue: autoDraw = False
+645.2175 	EXP 	probe_visual_cue: autoDraw = True
+645.8700 	EXP 	Sound  reached end of file
+646.1894 	DATA 	Keypress: space
+646.4216 	EXP 	probe_visual_cue: autoDraw = False
+646.8461 	EXP 	New trial (rep=18, index=0): None
+646.8668 	EXP 	cue_visual_cue: autoDraw = False
+646.8668 	EXP 	probe_visual_cue: autoDraw = False
+646.8668 	EXP 	this_trial_is: height = 0.05
+646.8668 	EXP 	this_trial_is: height = 0.05
+646.8668 	EXP 	this_trial_is: text = 'X'
+646.8668 	EXP 	this_trial_is: autoDraw = True
+647.8536 	EXP 	Sound  started
+647.8709 	EXP 	this_trial_is: autoDraw = False
+647.8709 	EXP 	cue_visual_cue: autoDraw = True
+650.8139 	EXP 	cue_visual_cue: autoDraw = False
+650.8139 	EXP 	probe_visual_cue: autoDraw = True
+651.3361 	EXP 	Sound  reached end of file
+651.7631 	DATA 	Keypress: space
+652.0299 	EXP 	probe_visual_cue: autoDraw = False
+652.3155 	EXP 	New trial (rep=19, index=0): None
+652.3470 	EXP 	cue_visual_cue: autoDraw = False
+652.3470 	EXP 	probe_visual_cue: autoDraw = False
+652.3470 	EXP 	this_trial_is: height = 0.05
+652.3470 	EXP 	this_trial_is: height = 0.05
+652.3470 	EXP 	this_trial_is: text = 'Hauteur'
+652.3470 	EXP 	this_trial_is: autoDraw = True
+653.3581 	EXP 	Sound  started
+653.3752 	EXP 	this_trial_is: autoDraw = False
+653.3752 	EXP 	cue_visual_cue: autoDraw = True
+656.1253 	EXP 	cue_visual_cue: autoDraw = False
+656.1253 	EXP 	probe_visual_cue: autoDraw = True
+656.8666 	EXP 	Sound  reached end of file
+656.9677 	DATA 	Keypress: space
+657.3318 	EXP 	probe_visual_cue: autoDraw = False
+657.8588 	EXP 	cue_visual_cue: autoDraw = False
+657.8588 	EXP 	probe_visual_cue: autoDraw = False
+657.8588 	EXP 	blank_text: autoDraw = True
+658.3906 	EXP 	blank_text: autoDraw = False
+658.3906 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+658.3906 	EXP 	break_text: autoDraw = True
+723.9755 	EXP 	New trial (rep=4, index=0): None
+723.9768 	DATA 	Keypress: space
+724.0069 	EXP 	break_text: autoDraw = False
+724.0069 	EXP 	blank_text: autoDraw = True
+724.4802 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+724.4804 	EXP 	New trial (rep=0, index=0): None
+724.5150 	EXP 	blank_text: autoDraw = False
+724.5150 	EXP 	this_trial_is: height = 0.05
+724.5150 	EXP 	this_trial_is: height = 0.05
+724.5150 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+724.5150 	EXP 	this_trial_is: autoDraw = True
+725.4938 	EXP 	Sound  started
+725.5113 	EXP 	this_trial_is: autoDraw = False
+725.5113 	EXP 	cue_visual_cue: autoDraw = True
+728.9220 	EXP 	cue_visual_cue: autoDraw = False
+728.9220 	EXP 	probe_visual_cue: autoDraw = True
+729.7747 	EXP 	Sound  reached end of file
+730.1084 	DATA 	Keypress: space
+730.1405 	EXP 	probe_visual_cue: autoDraw = False
+730.7517 	EXP 	New trial (rep=1, index=0): None
+730.7799 	EXP 	cue_visual_cue: autoDraw = False
+730.7799 	EXP 	probe_visual_cue: autoDraw = False
+730.7799 	EXP 	this_trial_is: height = 0.05
+730.7799 	EXP 	this_trial_is: height = 0.05
+730.7799 	EXP 	this_trial_is: text = 'Rythme'
+730.7799 	EXP 	this_trial_is: autoDraw = True
+731.7626 	EXP 	Sound  started
+731.7799 	EXP 	this_trial_is: autoDraw = False
+731.7799 	EXP 	cue_visual_cue: autoDraw = True
+734.8735 	EXP 	cue_visual_cue: autoDraw = False
+734.8735 	EXP 	probe_visual_cue: autoDraw = True
+735.4126 	EXP 	Sound  reached end of file
+736.0806 	EXP 	probe_visual_cue: autoDraw = False
+736.5988 	EXP 	New trial (rep=2, index=0): None
+736.6336 	EXP 	cue_visual_cue: autoDraw = False
+736.6336 	EXP 	probe_visual_cue: autoDraw = False
+736.6336 	EXP 	this_trial_is: height = 0.05
+736.6336 	EXP 	this_trial_is: height = 0.05
+736.6336 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+736.6336 	EXP 	this_trial_is: autoDraw = True
+737.6173 	EXP 	Sound  started
+737.6342 	EXP 	this_trial_is: autoDraw = False
+737.6342 	EXP 	cue_visual_cue: autoDraw = True
+739.9875 	EXP 	cue_visual_cue: autoDraw = False
+739.9875 	EXP 	probe_visual_cue: autoDraw = True
+740.4884 	EXP 	Sound  reached end of file
+740.5571 	DATA 	Keypress: space
+741.2175 	EXP 	probe_visual_cue: autoDraw = False
+741.5157 	EXP 	New trial (rep=3, index=0): None
+741.5350 	EXP 	cue_visual_cue: autoDraw = False
+741.5350 	EXP 	probe_visual_cue: autoDraw = False
+741.5350 	EXP 	this_trial_is: height = 0.05
+741.5350 	EXP 	this_trial_is: height = 0.05
+741.5350 	EXP 	this_trial_is: text = 'X'
+741.5350 	EXP 	this_trial_is: autoDraw = True
+742.5464 	EXP 	Sound  started
+742.5635 	EXP 	this_trial_is: autoDraw = False
+742.5635 	EXP 	cue_visual_cue: autoDraw = True
+745.5543 	EXP 	cue_visual_cue: autoDraw = False
+745.5543 	EXP 	probe_visual_cue: autoDraw = True
+746.1896 	EXP 	Sound  reached end of file
+746.7563 	EXP 	probe_visual_cue: autoDraw = False
+747.1630 	EXP 	New trial (rep=4, index=0): None
+747.1933 	EXP 	cue_visual_cue: autoDraw = False
+747.1933 	EXP 	probe_visual_cue: autoDraw = False
+747.1933 	EXP 	this_trial_is: height = 0.05
+747.1933 	EXP 	this_trial_is: height = 0.05
+747.1933 	EXP 	this_trial_is: text = 'Rythme'
+747.1933 	EXP 	this_trial_is: autoDraw = True
+748.1832 	EXP 	Sound  started
+748.2004 	EXP 	this_trial_is: autoDraw = False
+748.2004 	EXP 	cue_visual_cue: autoDraw = True
+750.6269 	EXP 	cue_visual_cue: autoDraw = False
+750.6269 	EXP 	probe_visual_cue: autoDraw = True
+751.1383 	EXP 	Sound  reached end of file
+751.2635 	DATA 	Keypress: space
+751.8495 	EXP 	probe_visual_cue: autoDraw = False
+752.1364 	EXP 	New trial (rep=5, index=0): None
+752.1565 	EXP 	cue_visual_cue: autoDraw = False
+752.1565 	EXP 	probe_visual_cue: autoDraw = False
+752.1565 	EXP 	this_trial_is: text = 'Rythme'
+752.1565 	EXP 	this_trial_is: autoDraw = True
+753.1314 	EXP 	Sound  started
+753.1484 	EXP 	this_trial_is: autoDraw = False
+753.1484 	EXP 	this_trial_is: autoDraw = False
+753.1484 	EXP 	cue_visual_cue: autoDraw = True
+756.0164 	EXP 	cue_visual_cue: autoDraw = False
+756.0164 	EXP 	probe_visual_cue: autoDraw = True
+756.5011 	EXP 	Sound  reached end of file
+756.9191 	DATA 	Keypress: space
+757.2199 	EXP 	probe_visual_cue: autoDraw = False
+757.6508 	EXP 	New trial (rep=6, index=0): None
+757.6823 	EXP 	cue_visual_cue: autoDraw = False
+757.6823 	EXP 	probe_visual_cue: autoDraw = False
+757.6823 	EXP 	this_trial_is: text = 'Rythme'
+757.6823 	EXP 	this_trial_is: autoDraw = True
+758.6662 	EXP 	Sound  started
+758.6833 	EXP 	this_trial_is: autoDraw = False
+758.6833 	EXP 	cue_visual_cue: autoDraw = True
+762.0564 	EXP 	cue_visual_cue: autoDraw = False
+762.0564 	EXP 	probe_visual_cue: autoDraw = True
+762.8752 	EXP 	Sound  reached end of file
+763.0417 	DATA 	Keypress: space
+763.2830 	EXP 	probe_visual_cue: autoDraw = False
+763.8964 	EXP 	New trial (rep=7, index=0): None
+763.9184 	EXP 	cue_visual_cue: autoDraw = False
+763.9184 	EXP 	probe_visual_cue: autoDraw = False
+763.9184 	EXP 	this_trial_is: height = 0.05
+763.9184 	EXP 	this_trial_is: height = 0.05
+763.9184 	EXP 	this_trial_is: text = 'X'
+763.9184 	EXP 	this_trial_is: autoDraw = True
+764.8984 	EXP 	Sound  started
+764.9154 	EXP 	this_trial_is: autoDraw = False
+764.9154 	EXP 	cue_visual_cue: autoDraw = True
+767.8124 	EXP 	cue_visual_cue: autoDraw = False
+767.8124 	EXP 	probe_visual_cue: autoDraw = True
+768.6121 	EXP 	Sound  reached end of file
+769.0446 	EXP 	probe_visual_cue: autoDraw = False
+769.5780 	EXP 	New trial (rep=8, index=0): None
+769.6025 	EXP 	cue_visual_cue: autoDraw = False
+769.6025 	EXP 	probe_visual_cue: autoDraw = False
+769.6025 	EXP 	this_trial_is: height = 0.05
+769.6025 	EXP 	this_trial_is: height = 0.05
+769.6025 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+769.6025 	EXP 	this_trial_is: autoDraw = True
+770.5941 	EXP 	Sound  started
+770.6113 	EXP 	this_trial_is: autoDraw = False
+770.6113 	EXP 	cue_visual_cue: autoDraw = True
+773.4617 	EXP 	cue_visual_cue: autoDraw = False
+773.4617 	EXP 	probe_visual_cue: autoDraw = True
+774.1453 	EXP 	Sound  reached end of file
+774.6852 	EXP 	probe_visual_cue: autoDraw = False
+775.1018 	EXP 	New trial (rep=9, index=0): None
+775.1332 	EXP 	cue_visual_cue: autoDraw = False
+775.1332 	EXP 	probe_visual_cue: autoDraw = False
+775.1332 	EXP 	this_trial_is: height = 0.05
+775.1332 	EXP 	this_trial_is: height = 0.05
+775.1332 	EXP 	this_trial_is: text = 'X'
+775.1332 	EXP 	this_trial_is: autoDraw = True
+776.1114 	EXP 	Sound  started
+776.1292 	EXP 	this_trial_is: autoDraw = False
+776.1292 	EXP 	cue_visual_cue: autoDraw = True
+778.9908 	EXP 	cue_visual_cue: autoDraw = False
+778.9908 	EXP 	probe_visual_cue: autoDraw = True
+779.4027 	EXP 	Sound  reached end of file
+780.2237 	EXP 	probe_visual_cue: autoDraw = False
+780.6004 	EXP 	New trial (rep=10, index=0): None
+780.6237 	EXP 	cue_visual_cue: autoDraw = False
+780.6237 	EXP 	probe_visual_cue: autoDraw = False
+780.6237 	EXP 	this_trial_is: height = 0.05
+780.6237 	EXP 	this_trial_is: height = 0.05
+780.6237 	EXP 	this_trial_is: text = 'Rythme'
+780.6237 	EXP 	this_trial_is: autoDraw = True
+781.6173 	EXP 	Sound  started
+781.6344 	EXP 	this_trial_is: autoDraw = False
+781.6344 	EXP 	cue_visual_cue: autoDraw = True
+784.7074 	EXP 	cue_visual_cue: autoDraw = False
+784.7074 	EXP 	probe_visual_cue: autoDraw = True
+785.4387 	EXP 	Sound  reached end of file
+785.9313 	EXP 	probe_visual_cue: autoDraw = False
+786.4349 	EXP 	New trial (rep=11, index=0): None
+786.4607 	EXP 	cue_visual_cue: autoDraw = False
+786.4607 	EXP 	probe_visual_cue: autoDraw = False
+786.4607 	EXP 	this_trial_is: height = 0.05
+786.4607 	EXP 	this_trial_is: height = 0.05
+786.4607 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+786.4607 	EXP 	this_trial_is: autoDraw = True
+787.4342 	EXP 	Sound  started
+787.4514 	EXP 	this_trial_is: autoDraw = False
+787.4514 	EXP 	this_trial_is: autoDraw = False
+787.4514 	EXP 	cue_visual_cue: autoDraw = True
+790.3012 	EXP 	cue_visual_cue: autoDraw = False
+790.3012 	EXP 	probe_visual_cue: autoDraw = True
+790.9753 	EXP 	Sound  reached end of file
+791.1093 	DATA 	Keypress: space
+791.5058 	EXP 	probe_visual_cue: autoDraw = False
+791.9672 	EXP 	New trial (rep=12, index=0): None
+791.9903 	EXP 	cue_visual_cue: autoDraw = False
+791.9903 	EXP 	probe_visual_cue: autoDraw = False
+791.9903 	EXP 	this_trial_is: height = 0.05
+791.9903 	EXP 	this_trial_is: height = 0.05
+791.9903 	EXP 	this_trial_is: text = 'X'
+791.9903 	EXP 	this_trial_is: autoDraw = True
+792.9958 	EXP 	Sound  started
+793.0131 	EXP 	this_trial_is: autoDraw = False
+793.0131 	EXP 	cue_visual_cue: autoDraw = True
+795.8392 	EXP 	cue_visual_cue: autoDraw = False
+795.8392 	EXP 	probe_visual_cue: autoDraw = True
+796.6456 	EXP 	Sound  reached end of file
+797.0410 	EXP 	probe_visual_cue: autoDraw = False
+797.6563 	EXP 	New trial (rep=13, index=0): None
+797.6813 	EXP 	cue_visual_cue: autoDraw = False
+797.6813 	EXP 	probe_visual_cue: autoDraw = False
+797.6813 	EXP 	this_trial_is: height = 0.05
+797.6813 	EXP 	this_trial_is: height = 0.05
+797.6813 	EXP 	this_trial_is: text = 'Rythme'
+797.6813 	EXP 	this_trial_is: autoDraw = True
+798.6796 	EXP 	Sound  started
+798.6966 	EXP 	this_trial_is: autoDraw = False
+798.6966 	EXP 	cue_visual_cue: autoDraw = True
+801.5790 	EXP 	cue_visual_cue: autoDraw = False
+801.5790 	EXP 	probe_visual_cue: autoDraw = True
+802.2506 	EXP 	Sound  reached end of file
+802.3520 	DATA 	Keypress: space
+802.8126 	EXP 	probe_visual_cue: autoDraw = False
+803.2424 	EXP 	New trial (rep=14, index=0): None
+803.2679 	EXP 	cue_visual_cue: autoDraw = False
+803.2679 	EXP 	probe_visual_cue: autoDraw = False
+803.2679 	EXP 	this_trial_is: height = 0.05
+803.2679 	EXP 	this_trial_is: height = 0.05
+803.2679 	EXP 	this_trial_is: text = 'Hauteur'
+803.2679 	EXP 	this_trial_is: autoDraw = True
+804.3337 	EXP 	Sound  started
+804.3509 	EXP 	this_trial_is: autoDraw = False
+804.3509 	EXP 	cue_visual_cue: autoDraw = True
+807.1203 	EXP 	cue_visual_cue: autoDraw = False
+807.1203 	EXP 	probe_visual_cue: autoDraw = True
+807.7552 	EXP 	Sound  reached end of file
+807.8879 	DATA 	Keypress: space
+808.3221 	EXP 	probe_visual_cue: autoDraw = False
+808.7449 	EXP 	New trial (rep=15, index=0): None
+808.7727 	EXP 	cue_visual_cue: autoDraw = False
+808.7727 	EXP 	probe_visual_cue: autoDraw = False
+808.7727 	EXP 	this_trial_is: height = 0.05
+808.7727 	EXP 	this_trial_is: height = 0.05
+808.7727 	EXP 	this_trial_is: text = 'Rythme'
+808.7727 	EXP 	this_trial_is: autoDraw = True
+809.7570 	EXP 	Sound  started
+809.7745 	EXP 	this_trial_is: autoDraw = False
+809.7745 	EXP 	cue_visual_cue: autoDraw = True
+812.8242 	EXP 	cue_visual_cue: autoDraw = False
+812.8242 	EXP 	probe_visual_cue: autoDraw = True
+813.3413 	EXP 	Sound  reached end of file
+814.0540 	EXP 	probe_visual_cue: autoDraw = False
+814.5145 	EXP 	New trial (rep=16, index=0): None
+814.5392 	EXP 	cue_visual_cue: autoDraw = False
+814.5392 	EXP 	probe_visual_cue: autoDraw = False
+814.5392 	EXP 	this_trial_is: text = 'Rythme'
+814.5392 	EXP 	this_trial_is: autoDraw = True
+815.5453 	EXP 	Sound  started
+815.5624 	EXP 	this_trial_is: autoDraw = False
+815.5624 	EXP 	cue_visual_cue: autoDraw = True
+818.6326 	EXP 	cue_visual_cue: autoDraw = False
+818.6326 	EXP 	probe_visual_cue: autoDraw = True
+819.3396 	EXP 	Sound  reached end of file
+819.5416 	DATA 	Keypress: space
+819.8347 	EXP 	probe_visual_cue: autoDraw = False
+820.3576 	EXP 	New trial (rep=17, index=0): None
+820.3779 	EXP 	cue_visual_cue: autoDraw = False
+820.3779 	EXP 	probe_visual_cue: autoDraw = False
+820.3779 	EXP 	this_trial_is: text = 'Rythme'
+820.3779 	EXP 	this_trial_is: autoDraw = True
+821.3707 	EXP 	Sound  started
+821.3879 	EXP 	this_trial_is: autoDraw = False
+821.3879 	EXP 	cue_visual_cue: autoDraw = True
+824.0150 	EXP 	cue_visual_cue: autoDraw = False
+824.0150 	EXP 	probe_visual_cue: autoDraw = True
+824.1428 	DATA 	Keypress: space
+824.6090 	EXP 	Sound  reached end of file
+825.2357 	EXP 	probe_visual_cue: autoDraw = False
+825.4483 	DATA 	Keypress: space
+825.6363 	EXP 	New trial (rep=18, index=0): None
+825.6588 	EXP 	cue_visual_cue: autoDraw = False
+825.6588 	EXP 	probe_visual_cue: autoDraw = False
+825.6588 	EXP 	this_trial_is: height = 0.05
+825.6588 	EXP 	this_trial_is: height = 0.05
+825.6588 	EXP 	this_trial_is: text = 'X'
+825.6588 	EXP 	this_trial_is: autoDraw = True
+826.6403 	EXP 	Sound  started
+826.6573 	EXP 	this_trial_is: autoDraw = False
+826.6573 	EXP 	cue_visual_cue: autoDraw = True
+829.5736 	EXP 	cue_visual_cue: autoDraw = False
+829.5736 	EXP 	probe_visual_cue: autoDraw = True
+830.3871 	EXP 	Sound  reached end of file
+830.6162 	DATA 	Keypress: space
+830.7801 	EXP 	probe_visual_cue: autoDraw = False
+831.4050 	EXP 	New trial (rep=19, index=0): None
+831.4303 	EXP 	cue_visual_cue: autoDraw = False
+831.4303 	EXP 	probe_visual_cue: autoDraw = False
+831.4303 	EXP 	this_trial_is: height = 0.05
+831.4303 	EXP 	this_trial_is: height = 0.05
+831.4303 	EXP 	this_trial_is: text = 'Hauteur'
+831.4303 	EXP 	this_trial_is: autoDraw = True
+832.4133 	EXP 	Sound  started
+832.4304 	EXP 	this_trial_is: autoDraw = False
+832.4304 	EXP 	cue_visual_cue: autoDraw = True
+835.2470 	EXP 	cue_visual_cue: autoDraw = False
+835.2470 	EXP 	probe_visual_cue: autoDraw = True
+836.0523 	EXP 	Sound  reached end of file
+836.2186 	DATA 	Keypress: space
+836.4811 	EXP 	probe_visual_cue: autoDraw = False
+837.0660 	EXP 	cue_visual_cue: autoDraw = False
+837.0660 	EXP 	probe_visual_cue: autoDraw = False
+837.0660 	EXP 	blank_text: autoDraw = True
+837.5819 	EXP 	blank_text: autoDraw = False
+837.5819 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+837.5819 	EXP 	break_text: autoDraw = True
+843.4009 	EXP 	New trial (rep=5, index=0): None
+843.4022 	DATA 	Keypress: space
+843.4325 	EXP 	break_text: autoDraw = False
+843.4325 	EXP 	blank_text: autoDraw = True
+843.9236 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+843.9238 	EXP 	New trial (rep=0, index=0): None
+843.9567 	EXP 	blank_text: autoDraw = False
+843.9567 	EXP 	this_trial_is: text = 'Hauteur'
+843.9567 	EXP 	this_trial_is: autoDraw = True
+844.9111 	EXP 	Sound  started
+844.9283 	EXP 	this_trial_is: autoDraw = False
+844.9283 	EXP 	cue_visual_cue: autoDraw = True
+847.8640 	EXP 	cue_visual_cue: autoDraw = False
+847.8640 	EXP 	probe_visual_cue: autoDraw = True
+848.2943 	EXP 	Sound  reached end of file
+849.0953 	EXP 	probe_visual_cue: autoDraw = False
+849.4587 	EXP 	New trial (rep=1, index=0): None
+849.4831 	EXP 	cue_visual_cue: autoDraw = False
+849.4831 	EXP 	probe_visual_cue: autoDraw = False
+849.4831 	EXP 	this_trial_is: height = 0.05
+849.4831 	EXP 	this_trial_is: height = 0.05
+849.4831 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+849.4831 	EXP 	this_trial_is: autoDraw = True
+850.4762 	EXP 	Sound  started
+850.4933 	EXP 	this_trial_is: autoDraw = False
+850.4933 	EXP 	cue_visual_cue: autoDraw = True
+853.0978 	EXP 	cue_visual_cue: autoDraw = False
+853.0978 	EXP 	probe_visual_cue: autoDraw = True
+853.6971 	EXP 	Sound  reached end of file
+853.9245 	DATA 	Keypress: space
+854.3305 	EXP 	probe_visual_cue: autoDraw = False
+854.6839 	EXP 	New trial (rep=2, index=0): None
+854.7138 	EXP 	cue_visual_cue: autoDraw = False
+854.7138 	EXP 	probe_visual_cue: autoDraw = False
+854.7138 	EXP 	this_trial_is: height = 0.05
+854.7138 	EXP 	this_trial_is: height = 0.05
+854.7138 	EXP 	this_trial_is: text = 'X'
+854.7138 	EXP 	this_trial_is: autoDraw = True
+855.7199 	EXP 	Sound  started
+855.7374 	EXP 	this_trial_is: autoDraw = False
+855.7374 	EXP 	cue_visual_cue: autoDraw = True
+858.6366 	EXP 	cue_visual_cue: autoDraw = False
+858.6366 	EXP 	probe_visual_cue: autoDraw = True
+859.1683 	EXP 	Sound  reached end of file
+859.8473 	EXP 	probe_visual_cue: autoDraw = False
+860.1645 	EXP 	New trial (rep=3, index=0): None
+860.1886 	EXP 	cue_visual_cue: autoDraw = False
+860.1886 	EXP 	probe_visual_cue: autoDraw = False
+860.1886 	EXP 	this_trial_is: height = 0.05
+860.1886 	EXP 	this_trial_is: height = 0.05
+860.1886 	EXP 	this_trial_is: text = 'Rythme'
+860.1886 	EXP 	this_trial_is: autoDraw = True
+861.1875 	EXP 	Sound  started
+861.2048 	EXP 	this_trial_is: autoDraw = False
+861.2048 	EXP 	this_trial_is: autoDraw = False
+861.2048 	EXP 	cue_visual_cue: autoDraw = True
+863.5307 	EXP 	cue_visual_cue: autoDraw = False
+863.5307 	EXP 	probe_visual_cue: autoDraw = True
+864.0299 	EXP 	Sound  reached end of file
+864.3111 	DATA 	Keypress: space
+864.7528 	EXP 	probe_visual_cue: autoDraw = False
+865.0184 	EXP 	New trial (rep=4, index=0): None
+865.0404 	EXP 	cue_visual_cue: autoDraw = False
+865.0404 	EXP 	probe_visual_cue: autoDraw = False
+865.0404 	EXP 	this_trial_is: height = 0.05
+865.0404 	EXP 	this_trial_is: height = 0.05
+865.0404 	EXP 	this_trial_is: text = 'X'
+865.0404 	EXP 	this_trial_is: autoDraw = True
+866.0165 	EXP 	Sound  started
+866.0339 	EXP 	this_trial_is: autoDraw = False
+866.0339 	EXP 	this_trial_is: autoDraw = False
+866.0339 	EXP 	cue_visual_cue: autoDraw = True
+868.9169 	EXP 	cue_visual_cue: autoDraw = False
+868.9169 	EXP 	probe_visual_cue: autoDraw = True
+869.5812 	EXP 	Sound  reached end of file
+869.7647 	DATA 	Keypress: space
+870.1237 	EXP 	probe_visual_cue: autoDraw = False
+870.5762 	EXP 	New trial (rep=5, index=0): None
+870.5970 	EXP 	cue_visual_cue: autoDraw = False
+870.5970 	EXP 	probe_visual_cue: autoDraw = False
+870.5970 	EXP 	this_trial_is: text = 'X'
+870.5970 	EXP 	this_trial_is: autoDraw = True
+872.7187 	EXP 	Sound  started
+872.7369 	EXP 	this_trial_is: autoDraw = False
+872.7369 	EXP 	this_trial_is: autoDraw = False
+872.7369 	EXP 	cue_visual_cue: autoDraw = True
+875.9032 	EXP 	cue_visual_cue: autoDraw = False
+875.9032 	EXP 	probe_visual_cue: autoDraw = True
+876.6749 	EXP 	Sound  reached end of file
+876.9747 	DATA 	Keypress: space
+877.1332 	EXP 	probe_visual_cue: autoDraw = False
+877.6688 	EXP 	New trial (rep=6, index=0): None
+877.6907 	EXP 	cue_visual_cue: autoDraw = False
+877.6907 	EXP 	probe_visual_cue: autoDraw = False
+877.6907 	EXP 	this_trial_is: height = 0.05
+877.6907 	EXP 	this_trial_is: height = 0.05
+877.6907 	EXP 	this_trial_is: text = 'Hauteur'
+877.6907 	EXP 	this_trial_is: autoDraw = True
+878.6822 	EXP 	Sound  started
+878.6994 	EXP 	this_trial_is: autoDraw = False
+878.6994 	EXP 	this_trial_is: autoDraw = False
+878.6994 	EXP 	cue_visual_cue: autoDraw = True
+881.2992 	EXP 	cue_visual_cue: autoDraw = False
+881.2992 	EXP 	probe_visual_cue: autoDraw = True
+881.7841 	EXP 	Sound  reached end of file
+882.5154 	EXP 	probe_visual_cue: autoDraw = False
+882.7702 	EXP 	New trial (rep=7, index=0): None
+882.7924 	EXP 	cue_visual_cue: autoDraw = False
+882.7924 	EXP 	probe_visual_cue: autoDraw = False
+882.7924 	EXP 	this_trial_is: height = 0.05
+882.7924 	EXP 	this_trial_is: height = 0.05
+882.7924 	EXP 	this_trial_is: text = 'X'
+882.7924 	EXP 	this_trial_is: autoDraw = True
+883.7685 	EXP 	Sound  started
+883.7864 	EXP 	this_trial_is: autoDraw = False
+883.7864 	EXP 	this_trial_is: autoDraw = False
+883.7864 	EXP 	cue_visual_cue: autoDraw = True
+886.6382 	EXP 	cue_visual_cue: autoDraw = False
+886.6382 	EXP 	probe_visual_cue: autoDraw = True
+886.9447 	EXP 	Sound  reached end of file
+887.8503 	EXP 	probe_visual_cue: autoDraw = False
+888.1398 	EXP 	New trial (rep=8, index=0): None
+888.1660 	EXP 	cue_visual_cue: autoDraw = False
+888.1660 	EXP 	probe_visual_cue: autoDraw = False
+888.1660 	EXP 	this_trial_is: height = 0.05
+888.1660 	EXP 	this_trial_is: height = 0.05
+888.1660 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+888.1660 	EXP 	this_trial_is: autoDraw = True
+889.1416 	EXP 	Sound  started
+889.1588 	EXP 	this_trial_is: autoDraw = False
+889.1588 	EXP 	cue_visual_cue: autoDraw = True
+892.3912 	EXP 	cue_visual_cue: autoDraw = False
+892.3912 	EXP 	probe_visual_cue: autoDraw = True
+893.1764 	EXP 	Sound  reached end of file
+893.3893 	DATA 	Keypress: space
+893.5963 	EXP 	probe_visual_cue: autoDraw = False
+894.1682 	EXP 	New trial (rep=9, index=0): None
+894.1915 	EXP 	cue_visual_cue: autoDraw = False
+894.1915 	EXP 	probe_visual_cue: autoDraw = False
+894.1915 	EXP 	this_trial_is: height = 0.05
+894.1915 	EXP 	this_trial_is: height = 0.05
+894.1915 	EXP 	this_trial_is: text = 'X'
+894.1915 	EXP 	this_trial_is: autoDraw = True
+895.1633 	EXP 	Sound  started
+895.1810 	EXP 	this_trial_is: autoDraw = False
+895.1810 	EXP 	this_trial_is: autoDraw = False
+895.1810 	EXP 	cue_visual_cue: autoDraw = True
+898.0340 	EXP 	cue_visual_cue: autoDraw = False
+898.0340 	EXP 	probe_visual_cue: autoDraw = True
+898.5152 	EXP 	Sound  reached end of file
+898.8456 	DATA 	Keypress: space
+899.2647 	EXP 	probe_visual_cue: autoDraw = False
+899.5018 	EXP 	New trial (rep=10, index=0): None
+899.5282 	EXP 	cue_visual_cue: autoDraw = False
+899.5282 	EXP 	probe_visual_cue: autoDraw = False
+899.5282 	EXP 	this_trial_is: height = 0.05
+899.5282 	EXP 	this_trial_is: height = 0.05
+899.5282 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+899.5282 	EXP 	this_trial_is: autoDraw = True
+900.5257 	EXP 	Sound  started
+900.5432 	EXP 	this_trial_is: autoDraw = False
+900.5432 	EXP 	cue_visual_cue: autoDraw = True
+902.7691 	EXP 	cue_visual_cue: autoDraw = False
+902.7691 	EXP 	probe_visual_cue: autoDraw = True
+903.2425 	EXP 	Sound  reached end of file
+903.9998 	EXP 	probe_visual_cue: autoDraw = False
+904.2082 	EXP 	New trial (rep=11, index=0): None
+904.2351 	EXP 	cue_visual_cue: autoDraw = False
+904.2351 	EXP 	probe_visual_cue: autoDraw = False
+904.2351 	EXP 	this_trial_is: height = 0.05
+904.2351 	EXP 	this_trial_is: height = 0.05
+904.2351 	EXP 	this_trial_is: text = 'Rythme'
+904.2351 	EXP 	this_trial_is: autoDraw = True
+905.2182 	EXP 	Sound  started
+905.2359 	EXP 	this_trial_is: autoDraw = False
+905.2359 	EXP 	cue_visual_cue: autoDraw = True
+907.8986 	EXP 	cue_visual_cue: autoDraw = False
+907.8986 	EXP 	probe_visual_cue: autoDraw = True
+908.5468 	EXP 	Sound  reached end of file
+908.8268 	DATA 	Keypress: space
+909.1154 	EXP 	probe_visual_cue: autoDraw = False
+909.5103 	EXP 	New trial (rep=12, index=0): None
+909.5368 	EXP 	cue_visual_cue: autoDraw = False
+909.5368 	EXP 	probe_visual_cue: autoDraw = False
+909.5368 	EXP 	this_trial_is: height = 0.05
+909.5368 	EXP 	this_trial_is: height = 0.05
+909.5368 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+909.5368 	EXP 	this_trial_is: autoDraw = True
+910.5455 	EXP 	Sound  started
+910.5624 	EXP 	this_trial_is: autoDraw = False
+910.5624 	EXP 	cue_visual_cue: autoDraw = True
+913.7216 	EXP 	cue_visual_cue: autoDraw = False
+913.7216 	EXP 	probe_visual_cue: autoDraw = True
+914.4864 	EXP 	Sound  reached end of file
+914.6906 	DATA 	Keypress: space
+914.9534 	EXP 	probe_visual_cue: autoDraw = False
+915.4734 	EXP 	New trial (rep=13, index=0): None
+915.4967 	EXP 	cue_visual_cue: autoDraw = False
+915.4967 	EXP 	probe_visual_cue: autoDraw = False
+915.4967 	EXP 	this_trial_is: height = 0.05
+915.4967 	EXP 	this_trial_is: height = 0.05
+915.4967 	EXP 	this_trial_is: text = 'Rythme'
+915.4967 	EXP 	this_trial_is: autoDraw = True
+916.5471 	EXP 	Sound  started
+916.5643 	EXP 	this_trial_is: autoDraw = False
+916.5643 	EXP 	cue_visual_cue: autoDraw = True
+919.8108 	EXP 	cue_visual_cue: autoDraw = False
+919.8108 	EXP 	probe_visual_cue: autoDraw = True
+920.5978 	EXP 	Sound  reached end of file
+920.9005 	DATA 	Keypress: space
+921.0503 	EXP 	probe_visual_cue: autoDraw = False
+921.5794 	EXP 	New trial (rep=14, index=0): None
+921.6119 	EXP 	cue_visual_cue: autoDraw = False
+921.6119 	EXP 	probe_visual_cue: autoDraw = False
+921.6119 	EXP 	this_trial_is: text = 'Rythme'
+921.6119 	EXP 	this_trial_is: autoDraw = True
+922.5950 	EXP 	Sound  started
+922.6122 	EXP 	this_trial_is: autoDraw = False
+922.6122 	EXP 	cue_visual_cue: autoDraw = True
+925.1963 	EXP 	cue_visual_cue: autoDraw = False
+925.1963 	EXP 	probe_visual_cue: autoDraw = True
+925.7974 	EXP 	Sound  reached end of file
+925.9201 	DATA 	Keypress: space
+926.4312 	EXP 	probe_visual_cue: autoDraw = False
+926.7851 	EXP 	New trial (rep=15, index=0): None
+926.8085 	EXP 	cue_visual_cue: autoDraw = False
+926.8085 	EXP 	probe_visual_cue: autoDraw = False
+926.8085 	EXP 	this_trial_is: height = 0.05
+926.8085 	EXP 	this_trial_is: height = 0.05
+926.8085 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+926.8085 	EXP 	this_trial_is: autoDraw = True
+927.8073 	EXP 	Sound  started
+927.8242 	EXP 	this_trial_is: autoDraw = False
+927.8242 	EXP 	cue_visual_cue: autoDraw = True
+931.1225 	EXP 	cue_visual_cue: autoDraw = False
+931.1225 	EXP 	probe_visual_cue: autoDraw = True
+931.9264 	EXP 	Sound  reached end of file
+932.1359 	DATA 	Keypress: space
+932.3366 	EXP 	probe_visual_cue: autoDraw = False
+932.9266 	EXP 	New trial (rep=16, index=0): None
+932.9480 	EXP 	cue_visual_cue: autoDraw = False
+932.9480 	EXP 	probe_visual_cue: autoDraw = False
+932.9480 	EXP 	this_trial_is: height = 0.05
+932.9480 	EXP 	this_trial_is: height = 0.05
+932.9480 	EXP 	this_trial_is: text = 'X'
+932.9480 	EXP 	this_trial_is: autoDraw = True
+933.9182 	EXP 	Sound  started
+933.9355 	EXP 	this_trial_is: autoDraw = False
+933.9355 	EXP 	this_trial_is: autoDraw = False
+933.9355 	EXP 	cue_visual_cue: autoDraw = True
+936.6905 	EXP 	cue_visual_cue: autoDraw = False
+936.6905 	EXP 	probe_visual_cue: autoDraw = True
+937.0452 	EXP 	Sound  reached end of file
+937.9099 	EXP 	probe_visual_cue: autoDraw = False
+938.2441 	EXP 	New trial (rep=17, index=0): None
+938.2664 	EXP 	cue_visual_cue: autoDraw = False
+938.2664 	EXP 	probe_visual_cue: autoDraw = False
+938.2664 	EXP 	this_trial_is: height = 0.05
+938.2664 	EXP 	this_trial_is: height = 0.05
+938.2664 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+938.2664 	EXP 	this_trial_is: autoDraw = True
+939.2755 	EXP 	Sound  started
+939.2926 	EXP 	this_trial_is: autoDraw = False
+939.2926 	EXP 	cue_visual_cue: autoDraw = True
+941.8153 	EXP 	cue_visual_cue: autoDraw = False
+941.8153 	EXP 	probe_visual_cue: autoDraw = True
+942.3839 	EXP 	Sound  reached end of file
+943.0199 	EXP 	probe_visual_cue: autoDraw = False
+943.3832 	EXP 	New trial (rep=18, index=0): None
+943.4020 	EXP 	cue_visual_cue: autoDraw = False
+943.4020 	EXP 	probe_visual_cue: autoDraw = False
+943.4020 	EXP 	this_trial_is: height = 0.05
+943.4020 	EXP 	this_trial_is: height = 0.05
+943.4020 	EXP 	this_trial_is: text = 'Hauteur'
+943.4020 	EXP 	this_trial_is: autoDraw = True
+944.4033 	EXP 	Sound  started
+944.4210 	EXP 	this_trial_is: autoDraw = False
+944.4210 	EXP 	cue_visual_cue: autoDraw = True
+947.2399 	EXP 	cue_visual_cue: autoDraw = False
+947.2399 	EXP 	probe_visual_cue: autoDraw = True
+947.8733 	EXP 	Sound  reached end of file
+947.9888 	DATA 	Keypress: space
+948.4557 	EXP 	probe_visual_cue: autoDraw = False
+948.8629 	EXP 	New trial (rep=19, index=0): None
+948.8826 	EXP 	cue_visual_cue: autoDraw = False
+948.8826 	EXP 	probe_visual_cue: autoDraw = False
+948.8826 	EXP 	this_trial_is: text = 'Hauteur'
+948.8826 	EXP 	this_trial_is: autoDraw = True
+950.8005 	EXP 	Sound  started
+950.8174 	EXP 	this_trial_is: autoDraw = False
+950.8174 	EXP 	this_trial_is: autoDraw = False
+950.8174 	EXP 	cue_visual_cue: autoDraw = True
+953.3083 	EXP 	cue_visual_cue: autoDraw = False
+953.3083 	EXP 	probe_visual_cue: autoDraw = True
+954.1218 	EXP 	Sound  reached end of file
+954.5325 	EXP 	probe_visual_cue: autoDraw = False
+955.1334 	EXP 	cue_visual_cue: autoDraw = False
+955.1334 	EXP 	probe_visual_cue: autoDraw = False
+955.1334 	EXP 	blank_text: autoDraw = True
+955.6384 	EXP 	blank_text: autoDraw = False
+955.6384 	EXP 	blank_text: autoDraw = False
+955.6384 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+955.6384 	EXP 	break_text: autoDraw = True
+982.7966 	DATA 	Keypress: space
+982.8296 	EXP 	New trial (rep=6, index=0): None
+982.8619 	EXP 	break_text: autoDraw = False
+982.8619 	EXP 	blank_text: autoDraw = True
+983.3506 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+983.3508 	EXP 	New trial (rep=0, index=0): None
+983.3831 	EXP 	blank_text: autoDraw = False
+983.3831 	EXP 	this_trial_is: height = 0.05
+983.3831 	EXP 	this_trial_is: height = 0.05
+983.3831 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+983.3831 	EXP 	this_trial_is: autoDraw = True
+984.3606 	EXP 	Sound  started
+984.3778 	EXP 	this_trial_is: autoDraw = False
+984.3778 	EXP 	cue_visual_cue: autoDraw = True
+987.3308 	EXP 	cue_visual_cue: autoDraw = False
+987.3308 	EXP 	probe_visual_cue: autoDraw = True
+987.8429 	EXP 	Sound  reached end of file
+988.5596 	EXP 	probe_visual_cue: autoDraw = False
+989.0566 	EXP 	New trial (rep=1, index=0): None
+989.0801 	EXP 	cue_visual_cue: autoDraw = False
+989.0801 	EXP 	probe_visual_cue: autoDraw = False
+989.0801 	EXP 	this_trial_is: height = 0.05
+989.0801 	EXP 	this_trial_is: height = 0.05
+989.0801 	EXP 	this_trial_is: text = 'Rythme'
+989.0801 	EXP 	this_trial_is: autoDraw = True
+990.0796 	EXP 	Sound  started
+990.0967 	EXP 	this_trial_is: autoDraw = False
+990.0967 	EXP 	cue_visual_cue: autoDraw = True
+992.5292 	EXP 	cue_visual_cue: autoDraw = False
+992.5292 	EXP 	probe_visual_cue: autoDraw = True
+993.0492 	EXP 	Sound  reached end of file
+993.7333 	EXP 	probe_visual_cue: autoDraw = False
+994.0550 	EXP 	New trial (rep=2, index=0): None
+994.0748 	EXP 	cue_visual_cue: autoDraw = False
+994.0748 	EXP 	probe_visual_cue: autoDraw = False
+994.0748 	EXP 	this_trial_is: height = 0.05
+994.0748 	EXP 	this_trial_is: height = 0.05
+994.0748 	EXP 	this_trial_is: text = 'Hauteur'
+994.0748 	EXP 	this_trial_is: autoDraw = True
+995.0493 	EXP 	Sound  started
+995.0661 	EXP 	this_trial_is: autoDraw = False
+995.0661 	EXP 	this_trial_is: autoDraw = False
+995.0661 	EXP 	cue_visual_cue: autoDraw = True
+998.1022 	EXP 	cue_visual_cue: autoDraw = False
+998.1022 	EXP 	probe_visual_cue: autoDraw = True
+998.9462 	EXP 	Sound  reached end of file
+999.2434 	DATA 	Keypress: space
+999.3083 	EXP 	probe_visual_cue: autoDraw = False
+999.9447 	EXP 	New trial (rep=3, index=0): None
+999.9631 	EXP 	cue_visual_cue: autoDraw = False
+999.9631 	EXP 	probe_visual_cue: autoDraw = False
+999.9631 	EXP 	this_trial_is: height = 0.05
+999.9631 	EXP 	this_trial_is: height = 0.05
+999.9631 	EXP 	this_trial_is: text = 'X'
+999.9631 	EXP 	this_trial_is: autoDraw = True
+1000.9767 	EXP 	Sound  started
+1000.9937 	EXP 	this_trial_is: autoDraw = False
+1000.9937 	EXP 	cue_visual_cue: autoDraw = True
+1003.7448 	EXP 	cue_visual_cue: autoDraw = False
+1003.7448 	EXP 	probe_visual_cue: autoDraw = True
+1004.2470 	EXP 	Sound  reached end of file
+1004.9717 	EXP 	probe_visual_cue: autoDraw = False
+1005.2362 	EXP 	New trial (rep=4, index=0): None
+1005.2595 	EXP 	cue_visual_cue: autoDraw = False
+1005.2595 	EXP 	probe_visual_cue: autoDraw = False
+1005.2595 	EXP 	this_trial_is: height = 0.05
+1005.2595 	EXP 	this_trial_is: height = 0.05
+1005.2595 	EXP 	this_trial_is: text = 'Hauteur'
+1005.2595 	EXP 	this_trial_is: autoDraw = True
+1006.2576 	EXP 	Sound  started
+1006.2745 	EXP 	this_trial_is: autoDraw = False
+1006.2745 	EXP 	cue_visual_cue: autoDraw = True
+1008.7165 	EXP 	cue_visual_cue: autoDraw = False
+1008.7165 	EXP 	probe_visual_cue: autoDraw = True
+1009.2463 	EXP 	Sound  reached end of file
+1009.9328 	EXP 	probe_visual_cue: autoDraw = False
+1010.4356 	EXP 	New trial (rep=5, index=0): None
+1010.4541 	EXP 	cue_visual_cue: autoDraw = False
+1010.4541 	EXP 	probe_visual_cue: autoDraw = False
+1010.4541 	EXP 	this_trial_is: height = 0.05
+1010.4541 	EXP 	this_trial_is: height = 0.05
+1010.4541 	EXP 	this_trial_is: text = 'X'
+1010.4541 	EXP 	this_trial_is: autoDraw = True
+1011.4371 	EXP 	Sound  started
+1011.4541 	EXP 	this_trial_is: autoDraw = False
+1011.4541 	EXP 	cue_visual_cue: autoDraw = True
+1014.6278 	EXP 	cue_visual_cue: autoDraw = False
+1014.6278 	EXP 	probe_visual_cue: autoDraw = True
+1015.1046 	EXP 	Sound  reached end of file
+1015.2929 	DATA 	Keypress: space
+1015.8501 	EXP 	probe_visual_cue: autoDraw = False
+1016.1249 	EXP 	New trial (rep=6, index=0): None
+1016.1488 	EXP 	cue_visual_cue: autoDraw = False
+1016.1488 	EXP 	probe_visual_cue: autoDraw = False
+1016.1488 	EXP 	this_trial_is: height = 0.05
+1016.1488 	EXP 	this_trial_is: height = 0.05
+1016.1488 	EXP 	this_trial_is: text = 'Hauteur'
+1016.1488 	EXP 	this_trial_is: autoDraw = True
+1017.1482 	EXP 	Sound  started
+1017.1661 	EXP 	this_trial_is: autoDraw = False
+1017.1661 	EXP 	this_trial_is: autoDraw = False
+1017.1661 	EXP 	cue_visual_cue: autoDraw = True
+1020.0061 	EXP 	cue_visual_cue: autoDraw = False
+1020.0061 	EXP 	probe_visual_cue: autoDraw = True
+1020.4591 	EXP 	Sound  reached end of file
+1020.6364 	DATA 	Keypress: space
+1021.2305 	EXP 	probe_visual_cue: autoDraw = False
+1021.4313 	EXP 	New trial (rep=7, index=0): None
+1021.4562 	EXP 	cue_visual_cue: autoDraw = False
+1021.4562 	EXP 	probe_visual_cue: autoDraw = False
+1021.4562 	EXP 	this_trial_is: height = 0.05
+1021.4562 	EXP 	this_trial_is: height = 0.05
+1021.4562 	EXP 	this_trial_is: text = 'Rythme'
+1021.4562 	EXP 	this_trial_is: autoDraw = True
+1022.4418 	EXP 	Sound  started
+1022.4596 	EXP 	this_trial_is: autoDraw = False
+1022.4596 	EXP 	cue_visual_cue: autoDraw = True
+1025.6212 	EXP 	cue_visual_cue: autoDraw = False
+1025.6212 	EXP 	probe_visual_cue: autoDraw = True
+1026.1733 	DATA 	Keypress: space
+1026.3837 	EXP 	Sound  reached end of file
+1026.8367 	EXP 	probe_visual_cue: autoDraw = False
+1027.3770 	EXP 	New trial (rep=8, index=0): None
+1027.4011 	EXP 	cue_visual_cue: autoDraw = False
+1027.4011 	EXP 	probe_visual_cue: autoDraw = False
+1027.4011 	EXP 	this_trial_is: height = 0.05
+1027.4011 	EXP 	this_trial_is: height = 0.05
+1027.4011 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1027.4011 	EXP 	this_trial_is: autoDraw = True
+1028.3851 	EXP 	Sound  started
+1028.4021 	EXP 	this_trial_is: autoDraw = False
+1028.4021 	EXP 	this_trial_is: autoDraw = False
+1028.4021 	EXP 	cue_visual_cue: autoDraw = True
+1031.6086 	EXP 	cue_visual_cue: autoDraw = False
+1031.6086 	EXP 	probe_visual_cue: autoDraw = True
+1032.4175 	EXP 	Sound  reached end of file
+1032.8335 	EXP 	probe_visual_cue: autoDraw = False
+1033.3876 	EXP 	New trial (rep=9, index=0): None
+1033.4094 	EXP 	cue_visual_cue: autoDraw = False
+1033.4094 	EXP 	probe_visual_cue: autoDraw = False
+1033.4094 	EXP 	this_trial_is: height = 0.05
+1033.4094 	EXP 	this_trial_is: height = 0.05
+1033.4094 	EXP 	this_trial_is: text = 'Rythme'
+1033.4094 	EXP 	this_trial_is: autoDraw = True
+1034.4326 	EXP 	Sound  started
+1034.4498 	EXP 	this_trial_is: autoDraw = False
+1034.4498 	EXP 	cue_visual_cue: autoDraw = True
+1036.8801 	EXP 	cue_visual_cue: autoDraw = False
+1036.8801 	EXP 	probe_visual_cue: autoDraw = True
+1037.4155 	EXP 	Sound  reached end of file
+1037.5836 	DATA 	Keypress: space
+1038.1139 	EXP 	probe_visual_cue: autoDraw = False
+1038.3798 	EXP 	New trial (rep=10, index=0): None
+1038.4019 	EXP 	cue_visual_cue: autoDraw = False
+1038.4019 	EXP 	probe_visual_cue: autoDraw = False
+1038.4019 	EXP 	this_trial_is: text = 'Rythme'
+1038.4019 	EXP 	this_trial_is: autoDraw = True
+1039.3829 	EXP 	Sound  started
+1039.4006 	EXP 	this_trial_is: autoDraw = False
+1039.4006 	EXP 	cue_visual_cue: autoDraw = True
+1042.2180 	EXP 	cue_visual_cue: autoDraw = False
+1042.2180 	EXP 	probe_visual_cue: autoDraw = True
+1042.8700 	EXP 	Sound  reached end of file
+1043.0212 	DATA 	Keypress: space
+1043.4412 	EXP 	probe_visual_cue: autoDraw = False
+1043.8553 	EXP 	New trial (rep=11, index=0): None
+1043.8805 	EXP 	cue_visual_cue: autoDraw = False
+1043.8805 	EXP 	probe_visual_cue: autoDraw = False
+1043.8805 	EXP 	this_trial_is: height = 0.05
+1043.8805 	EXP 	this_trial_is: height = 0.05
+1043.8805 	EXP 	this_trial_is: text = 'Hauteur'
+1043.8805 	EXP 	this_trial_is: autoDraw = True
+1044.8559 	EXP 	Sound  started
+1044.8728 	EXP 	this_trial_is: autoDraw = False
+1044.8728 	EXP 	this_trial_is: autoDraw = False
+1044.8728 	EXP 	cue_visual_cue: autoDraw = True
+1047.7899 	EXP 	cue_visual_cue: autoDraw = False
+1047.7899 	EXP 	probe_visual_cue: autoDraw = True
+1048.1758 	EXP 	Sound  reached end of file
+1049.0128 	EXP 	probe_visual_cue: autoDraw = False
+1049.3325 	EXP 	New trial (rep=12, index=0): None
+1049.3558 	EXP 	cue_visual_cue: autoDraw = False
+1049.3558 	EXP 	probe_visual_cue: autoDraw = False
+1049.3558 	EXP 	this_trial_is: height = 0.05
+1049.3558 	EXP 	this_trial_is: height = 0.05
+1049.3558 	EXP 	this_trial_is: text = 'Rythme'
+1049.3558 	EXP 	this_trial_is: autoDraw = True
+1050.3413 	EXP 	Sound  started
+1050.3586 	EXP 	this_trial_is: autoDraw = False
+1050.3586 	EXP 	this_trial_is: autoDraw = False
+1050.3586 	EXP 	cue_visual_cue: autoDraw = True
+1053.4471 	EXP 	cue_visual_cue: autoDraw = False
+1053.4471 	EXP 	probe_visual_cue: autoDraw = True
+1054.1992 	EXP 	Sound  reached end of file
+1054.3668 	DATA 	Keypress: space
+1054.6637 	EXP 	probe_visual_cue: autoDraw = False
+1055.1586 	EXP 	New trial (rep=13, index=0): None
+1055.1833 	EXP 	cue_visual_cue: autoDraw = False
+1055.1833 	EXP 	probe_visual_cue: autoDraw = False
+1055.1833 	EXP 	this_trial_is: height = 0.05
+1055.1833 	EXP 	this_trial_is: height = 0.05
+1055.1833 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1055.1833 	EXP 	this_trial_is: autoDraw = True
+1056.1685 	EXP 	Sound  started
+1056.1856 	EXP 	this_trial_is: autoDraw = False
+1056.1856 	EXP 	cue_visual_cue: autoDraw = True
+1058.4599 	EXP 	cue_visual_cue: autoDraw = False
+1058.4599 	EXP 	probe_visual_cue: autoDraw = True
+1058.9432 	EXP 	Sound  reached end of file
+1059.2405 	DATA 	Keypress: space
+1059.6689 	EXP 	probe_visual_cue: autoDraw = False
+1059.9385 	EXP 	New trial (rep=14, index=0): None
+1059.9600 	EXP 	cue_visual_cue: autoDraw = False
+1059.9600 	EXP 	probe_visual_cue: autoDraw = False
+1059.9600 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1059.9600 	EXP 	this_trial_is: autoDraw = True
+1062.1774 	EXP 	Sound  started
+1062.1942 	EXP 	this_trial_is: autoDraw = False
+1062.1942 	EXP 	this_trial_is: autoDraw = False
+1062.1942 	EXP 	cue_visual_cue: autoDraw = True
+1065.4724 	EXP 	cue_visual_cue: autoDraw = False
+1065.4724 	EXP 	probe_visual_cue: autoDraw = True
+1066.2555 	EXP 	Sound  reached end of file
+1066.6802 	EXP 	probe_visual_cue: autoDraw = False
+1067.2423 	EXP 	New trial (rep=15, index=0): None
+1067.2640 	EXP 	cue_visual_cue: autoDraw = False
+1067.2640 	EXP 	probe_visual_cue: autoDraw = False
+1067.2640 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1067.2640 	EXP 	this_trial_is: autoDraw = True
+1068.2388 	EXP 	Sound  started
+1068.2560 	EXP 	this_trial_is: autoDraw = False
+1068.2560 	EXP 	this_trial_is: autoDraw = False
+1068.2560 	EXP 	cue_visual_cue: autoDraw = True
+1070.6977 	EXP 	cue_visual_cue: autoDraw = False
+1070.6977 	EXP 	probe_visual_cue: autoDraw = True
+1071.2213 	EXP 	Sound  reached end of file
+1071.4841 	DATA 	Keypress: space
+1071.9055 	EXP 	probe_visual_cue: autoDraw = False
+1072.2067 	EXP 	New trial (rep=16, index=0): None
+1072.2255 	EXP 	cue_visual_cue: autoDraw = False
+1072.2255 	EXP 	probe_visual_cue: autoDraw = False
+1072.2255 	EXP 	this_trial_is: height = 0.05
+1072.2255 	EXP 	this_trial_is: height = 0.05
+1072.2255 	EXP 	this_trial_is: text = 'X'
+1072.2255 	EXP 	this_trial_is: autoDraw = True
+1073.2296 	EXP 	Sound  started
+1073.2466 	EXP 	this_trial_is: autoDraw = False
+1073.2466 	EXP 	cue_visual_cue: autoDraw = True
+1075.9854 	EXP 	cue_visual_cue: autoDraw = False
+1075.9854 	EXP 	probe_visual_cue: autoDraw = True
+1076.4864 	EXP 	Sound  reached end of file
+1076.6436 	DATA 	Keypress: space
+1077.1896 	EXP 	probe_visual_cue: autoDraw = False
+1077.4657 	EXP 	New trial (rep=17, index=0): None
+1077.4884 	EXP 	cue_visual_cue: autoDraw = False
+1077.4884 	EXP 	probe_visual_cue: autoDraw = False
+1077.4884 	EXP 	this_trial_is: height = 0.05
+1077.4884 	EXP 	this_trial_is: height = 0.05
+1077.4884 	EXP 	this_trial_is: text = 'Rythme'
+1077.4884 	EXP 	this_trial_is: autoDraw = True
+1078.4892 	EXP 	Sound  started
+1078.5063 	EXP 	this_trial_is: autoDraw = False
+1078.5063 	EXP 	cue_visual_cue: autoDraw = True
+1081.3312 	EXP 	cue_visual_cue: autoDraw = False
+1081.3312 	EXP 	probe_visual_cue: autoDraw = True
+1082.0108 	EXP 	Sound  reached end of file
+1082.5582 	EXP 	probe_visual_cue: autoDraw = False
+1082.9863 	EXP 	New trial (rep=18, index=0): None
+1083.0084 	EXP 	cue_visual_cue: autoDraw = False
+1083.0084 	EXP 	probe_visual_cue: autoDraw = False
+1083.0084 	EXP 	this_trial_is: height = 0.05
+1083.0084 	EXP 	this_trial_is: height = 0.05
+1083.0084 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1083.0084 	EXP 	this_trial_is: autoDraw = True
+1084.0070 	EXP 	Sound  started
+1084.0241 	EXP 	this_trial_is: autoDraw = False
+1084.0241 	EXP 	cue_visual_cue: autoDraw = True
+1086.9960 	EXP 	cue_visual_cue: autoDraw = False
+1086.9960 	EXP 	probe_visual_cue: autoDraw = True
+1087.6727 	EXP 	Sound  reached end of file
+1087.8378 	DATA 	Keypress: space
+1088.2004 	EXP 	probe_visual_cue: autoDraw = False
+1088.6743 	EXP 	New trial (rep=19, index=0): None
+1088.6955 	EXP 	cue_visual_cue: autoDraw = False
+1088.6955 	EXP 	probe_visual_cue: autoDraw = False
+1088.6955 	EXP 	this_trial_is: height = 0.05
+1088.6955 	EXP 	this_trial_is: height = 0.05
+1088.6955 	EXP 	this_trial_is: text = 'X'
+1088.6955 	EXP 	this_trial_is: autoDraw = True
+1089.6921 	EXP 	Sound  started
+1089.7095 	EXP 	this_trial_is: autoDraw = False
+1089.7095 	EXP 	cue_visual_cue: autoDraw = True
+1092.5373 	EXP 	cue_visual_cue: autoDraw = False
+1092.5373 	EXP 	probe_visual_cue: autoDraw = True
+1093.0830 	EXP 	Sound  reached end of file
+1093.6017 	DATA 	Keypress: space
+1093.7469 	EXP 	probe_visual_cue: autoDraw = False
+1094.3080 	EXP 	cue_visual_cue: autoDraw = False
+1094.3080 	EXP 	probe_visual_cue: autoDraw = False
+1094.3080 	EXP 	blank_text: autoDraw = True
+1094.8216 	EXP 	blank_text: autoDraw = False
+1094.8216 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+1094.8216 	EXP 	break_text: autoDraw = True
+1184.4864 	EXP 	New trial (rep=7, index=0): None
+1184.4878 	DATA 	Keypress: space
+1184.5133 	EXP 	break_text: autoDraw = False
+1184.5133 	EXP 	blank_text: autoDraw = True
+1184.9904 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+1184.9906 	EXP 	New trial (rep=0, index=0): None
+1185.0229 	EXP 	blank_text: autoDraw = False
+1185.0229 	EXP 	this_trial_is: text = 'X'
+1185.0229 	EXP 	this_trial_is: autoDraw = True
+1185.9987 	EXP 	Sound  started
+1186.0164 	EXP 	this_trial_is: autoDraw = False
+1186.0164 	EXP 	cue_visual_cue: autoDraw = True
+1188.8209 	EXP 	cue_visual_cue: autoDraw = False
+1188.8209 	EXP 	probe_visual_cue: autoDraw = True
+1189.4242 	EXP 	Sound  reached end of file
+1189.6358 	DATA 	Keypress: space
+1190.0559 	EXP 	probe_visual_cue: autoDraw = False
+1190.4174 	EXP 	New trial (rep=1, index=0): None
+1190.4390 	EXP 	cue_visual_cue: autoDraw = False
+1190.4390 	EXP 	probe_visual_cue: autoDraw = False
+1190.4390 	EXP 	this_trial_is: height = 0.05
+1190.4390 	EXP 	this_trial_is: height = 0.05
+1190.4390 	EXP 	this_trial_is: text = 'Rythme'
+1190.4390 	EXP 	this_trial_is: autoDraw = True
+1191.4279 	EXP 	Sound  started
+1191.4451 	EXP 	this_trial_is: autoDraw = False
+1191.4451 	EXP 	this_trial_is: autoDraw = False
+1191.4451 	EXP 	cue_visual_cue: autoDraw = True
+1194.6463 	EXP 	cue_visual_cue: autoDraw = False
+1194.6463 	EXP 	probe_visual_cue: autoDraw = True
+1195.4310 	EXP 	Sound  reached end of file
+1195.8484 	EXP 	probe_visual_cue: autoDraw = False
+1196.4217 	EXP 	New trial (rep=2, index=0): None
+1196.4459 	EXP 	cue_visual_cue: autoDraw = False
+1196.4459 	EXP 	probe_visual_cue: autoDraw = False
+1196.4459 	EXP 	this_trial_is: height = 0.05
+1196.4459 	EXP 	this_trial_is: height = 0.05
+1196.4459 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1196.4459 	EXP 	this_trial_is: autoDraw = True
+1197.4292 	EXP 	Sound  started
+1197.4466 	EXP 	this_trial_is: autoDraw = False
+1197.4466 	EXP 	cue_visual_cue: autoDraw = True
+1200.4453 	EXP 	cue_visual_cue: autoDraw = False
+1200.4453 	EXP 	probe_visual_cue: autoDraw = True
+1201.1487 	EXP 	Sound  reached end of file
+1201.6598 	EXP 	probe_visual_cue: autoDraw = False
+1202.1414 	EXP 	New trial (rep=3, index=0): None
+1202.1663 	EXP 	cue_visual_cue: autoDraw = False
+1202.1663 	EXP 	probe_visual_cue: autoDraw = False
+1202.1663 	EXP 	this_trial_is: height = 0.05
+1202.1663 	EXP 	this_trial_is: height = 0.05
+1202.1663 	EXP 	this_trial_is: text = 'Rythme'
+1202.1663 	EXP 	this_trial_is: autoDraw = True
+1203.1518 	EXP 	Sound  started
+1203.1687 	EXP 	this_trial_is: autoDraw = False
+1203.1687 	EXP 	cue_visual_cue: autoDraw = True
+1206.4291 	EXP 	cue_visual_cue: autoDraw = False
+1206.4291 	EXP 	probe_visual_cue: autoDraw = True
+1207.0553 	EXP 	Sound  reached end of file
+1207.6452 	EXP 	probe_visual_cue: autoDraw = False
+1208.2627 	EXP 	New trial (rep=4, index=0): None
+1208.2841 	EXP 	cue_visual_cue: autoDraw = False
+1208.2841 	EXP 	probe_visual_cue: autoDraw = False
+1208.2841 	EXP 	this_trial_is: text = 'Rythme'
+1208.2841 	EXP 	this_trial_is: autoDraw = True
+1209.2563 	EXP 	Sound  started
+1209.2728 	EXP 	this_trial_is: autoDraw = False
+1209.2728 	EXP 	this_trial_is: autoDraw = False
+1209.2728 	EXP 	cue_visual_cue: autoDraw = True
+1212.5645 	EXP 	cue_visual_cue: autoDraw = False
+1212.5645 	EXP 	probe_visual_cue: autoDraw = True
+1213.3827 	EXP 	Sound  reached end of file
+1213.5826 	DATA 	Keypress: space
+1213.7847 	EXP 	probe_visual_cue: autoDraw = False
+1214.3854 	EXP 	New trial (rep=5, index=0): None
+1214.4125 	EXP 	cue_visual_cue: autoDraw = False
+1214.4125 	EXP 	probe_visual_cue: autoDraw = False
+1214.4125 	EXP 	this_trial_is: height = 0.05
+1214.4125 	EXP 	this_trial_is: height = 0.05
+1214.4125 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1214.4125 	EXP 	this_trial_is: autoDraw = True
+1215.3999 	EXP 	Sound  started
+1215.4168 	EXP 	this_trial_is: autoDraw = False
+1215.4168 	EXP 	cue_visual_cue: autoDraw = True
+1217.8996 	EXP 	cue_visual_cue: autoDraw = False
+1217.8996 	EXP 	probe_visual_cue: autoDraw = True
+1218.4592 	EXP 	Sound  reached end of file
+1219.1251 	EXP 	probe_visual_cue: autoDraw = False
+1219.4517 	EXP 	New trial (rep=6, index=0): None
+1219.4723 	EXP 	cue_visual_cue: autoDraw = False
+1219.4723 	EXP 	probe_visual_cue: autoDraw = False
+1219.4723 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1219.4723 	EXP 	this_trial_is: autoDraw = True
+1220.4716 	EXP 	Sound  started
+1220.4886 	EXP 	this_trial_is: autoDraw = False
+1220.4886 	EXP 	cue_visual_cue: autoDraw = True
+1223.3911 	EXP 	cue_visual_cue: autoDraw = False
+1223.3911 	EXP 	probe_visual_cue: autoDraw = True
+1224.0710 	EXP 	Sound  reached end of file
+1224.1641 	DATA 	Keypress: space
+1224.6151 	EXP 	probe_visual_cue: autoDraw = False
+1225.0672 	EXP 	New trial (rep=7, index=0): None
+1225.0933 	EXP 	cue_visual_cue: autoDraw = False
+1225.0933 	EXP 	probe_visual_cue: autoDraw = False
+1225.0933 	EXP 	this_trial_is: height = 0.05
+1225.0933 	EXP 	this_trial_is: height = 0.05
+1225.0933 	EXP 	this_trial_is: text = 'Rythme'
+1225.0933 	EXP 	this_trial_is: autoDraw = True
+1226.0823 	EXP 	Sound  started
+1226.0993 	EXP 	this_trial_is: autoDraw = False
+1226.0993 	EXP 	cue_visual_cue: autoDraw = True
+1229.2881 	EXP 	cue_visual_cue: autoDraw = False
+1229.2881 	EXP 	probe_visual_cue: autoDraw = True
+1230.0703 	EXP 	Sound  reached end of file
+1230.3378 	DATA 	Keypress: space
+1230.5033 	EXP 	probe_visual_cue: autoDraw = False
+1231.0788 	EXP 	New trial (rep=8, index=0): None
+1231.1022 	EXP 	cue_visual_cue: autoDraw = False
+1231.1022 	EXP 	probe_visual_cue: autoDraw = False
+1231.1022 	EXP 	this_trial_is: height = 0.05
+1231.1022 	EXP 	this_trial_is: height = 0.05
+1231.1022 	EXP 	this_trial_is: text = 'X'
+1231.1022 	EXP 	this_trial_is: autoDraw = True
+1232.0840 	EXP 	Sound  started
+1232.1009 	EXP 	this_trial_is: autoDraw = False
+1232.1009 	EXP 	cue_visual_cue: autoDraw = True
+1234.5298 	EXP 	cue_visual_cue: autoDraw = False
+1234.5298 	EXP 	probe_visual_cue: autoDraw = True
+1235.0430 	EXP 	Sound  reached end of file
+1235.7441 	EXP 	probe_visual_cue: autoDraw = False
+1236.2175 	EXP 	New trial (rep=9, index=0): None
+1236.2404 	EXP 	cue_visual_cue: autoDraw = False
+1236.2404 	EXP 	probe_visual_cue: autoDraw = False
+1236.2404 	EXP 	this_trial_is: height = 0.05
+1236.2404 	EXP 	this_trial_is: height = 0.05
+1236.2404 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1236.2404 	EXP 	this_trial_is: autoDraw = True
+1237.2567 	EXP 	Sound  started
+1237.2738 	EXP 	this_trial_is: autoDraw = False
+1237.2738 	EXP 	cue_visual_cue: autoDraw = True
+1240.2239 	EXP 	cue_visual_cue: autoDraw = False
+1240.2239 	EXP 	probe_visual_cue: autoDraw = True
+1240.9289 	EXP 	Sound  reached end of file
+1241.1493 	DATA 	Keypress: space
+1241.4478 	EXP 	probe_visual_cue: autoDraw = False
+1241.9366 	EXP 	New trial (rep=10, index=0): None
+1241.9588 	EXP 	cue_visual_cue: autoDraw = False
+1241.9588 	EXP 	probe_visual_cue: autoDraw = False
+1241.9588 	EXP 	this_trial_is: height = 0.05
+1241.9588 	EXP 	this_trial_is: height = 0.05
+1241.9588 	EXP 	this_trial_is: text = 'X'
+1241.9588 	EXP 	this_trial_is: autoDraw = True
+1242.9481 	EXP 	Sound  started
+1242.9652 	EXP 	this_trial_is: autoDraw = False
+1242.9652 	EXP 	this_trial_is: autoDraw = False
+1242.9652 	EXP 	cue_visual_cue: autoDraw = True
+1245.3965 	EXP 	cue_visual_cue: autoDraw = False
+1245.3965 	EXP 	probe_visual_cue: autoDraw = True
+1245.8962 	EXP 	Sound  reached end of file
+1246.1217 	DATA 	Keypress: space
+1246.6190 	EXP 	probe_visual_cue: autoDraw = False
+1246.8903 	EXP 	New trial (rep=11, index=0): None
+1246.9152 	EXP 	cue_visual_cue: autoDraw = False
+1246.9152 	EXP 	probe_visual_cue: autoDraw = False
+1246.9152 	EXP 	this_trial_is: height = 0.05
+1246.9152 	EXP 	this_trial_is: height = 0.05
+1246.9152 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1246.9152 	EXP 	this_trial_is: autoDraw = True
+1247.8890 	EXP 	Sound  started
+1247.9059 	EXP 	this_trial_is: autoDraw = False
+1247.9059 	EXP 	this_trial_is: autoDraw = False
+1247.9059 	EXP 	cue_visual_cue: autoDraw = True
+1250.5889 	EXP 	cue_visual_cue: autoDraw = False
+1250.5889 	EXP 	probe_visual_cue: autoDraw = True
+1251.1916 	EXP 	Sound  reached end of file
+1251.3277 	DATA 	Keypress: space
+1251.7925 	EXP 	probe_visual_cue: autoDraw = False
+1252.1972 	EXP 	New trial (rep=12, index=0): None
+1252.2159 	EXP 	cue_visual_cue: autoDraw = False
+1252.2159 	EXP 	probe_visual_cue: autoDraw = False
+1252.2159 	EXP 	this_trial_is: height = 0.05
+1252.2159 	EXP 	this_trial_is: height = 0.05
+1252.2159 	EXP 	this_trial_is: text = 'Hauteur'
+1252.2159 	EXP 	this_trial_is: autoDraw = True
+1253.1936 	EXP 	Sound  started
+1253.2109 	EXP 	this_trial_is: autoDraw = False
+1253.2109 	EXP 	this_trial_is: autoDraw = False
+1253.2109 	EXP 	cue_visual_cue: autoDraw = True
+1255.9989 	EXP 	cue_visual_cue: autoDraw = False
+1255.9989 	EXP 	probe_visual_cue: autoDraw = True
+1256.5759 	EXP 	Sound  reached end of file
+1257.2063 	EXP 	probe_visual_cue: autoDraw = False
+1257.7683 	EXP 	New trial (rep=13, index=0): None
+1257.7901 	EXP 	cue_visual_cue: autoDraw = False
+1257.7901 	EXP 	probe_visual_cue: autoDraw = False
+1257.7901 	EXP 	this_trial_is: height = 0.05
+1257.7901 	EXP 	this_trial_is: height = 0.05
+1257.7901 	EXP 	this_trial_is: text = 'X'
+1257.7901 	EXP 	this_trial_is: autoDraw = True
+1258.7741 	EXP 	Sound  started
+1258.7910 	EXP 	this_trial_is: autoDraw = False
+1258.7910 	EXP 	cue_visual_cue: autoDraw = True
+1261.8339 	EXP 	cue_visual_cue: autoDraw = False
+1261.8339 	EXP 	probe_visual_cue: autoDraw = True
+1262.3107 	EXP 	Sound  reached end of file
+1262.4697 	DATA 	Keypress: space
+1263.0364 	EXP 	probe_visual_cue: autoDraw = False
+1263.3202 	EXP 	New trial (rep=14, index=0): None
+1263.3434 	EXP 	cue_visual_cue: autoDraw = False
+1263.3434 	EXP 	probe_visual_cue: autoDraw = False
+1263.3434 	EXP 	this_trial_is: height = 0.05
+1263.3434 	EXP 	this_trial_is: height = 0.05
+1263.3434 	EXP 	this_trial_is: text = 'Rythme'
+1263.3434 	EXP 	this_trial_is: autoDraw = True
+1264.3376 	EXP 	Sound  started
+1264.3554 	EXP 	this_trial_is: autoDraw = False
+1264.3554 	EXP 	cue_visual_cue: autoDraw = True
+1266.6716 	EXP 	cue_visual_cue: autoDraw = False
+1266.6716 	EXP 	probe_visual_cue: autoDraw = True
+1267.1746 	EXP 	Sound  reached end of file
+1267.6782 	DATA 	Keypress: space
+1267.8754 	EXP 	probe_visual_cue: autoDraw = False
+1268.1544 	EXP 	New trial (rep=15, index=0): None
+1268.1736 	EXP 	cue_visual_cue: autoDraw = False
+1268.1736 	EXP 	probe_visual_cue: autoDraw = False
+1268.1736 	EXP 	this_trial_is: height = 0.05
+1268.1736 	EXP 	this_trial_is: height = 0.05
+1268.1736 	EXP 	this_trial_is: text = 'X'
+1268.1736 	EXP 	this_trial_is: autoDraw = True
+1269.2284 	EXP 	Sound  started
+1269.2453 	EXP 	this_trial_is: autoDraw = False
+1269.2453 	EXP 	this_trial_is: autoDraw = False
+1269.2453 	EXP 	cue_visual_cue: autoDraw = True
+1271.8785 	EXP 	cue_visual_cue: autoDraw = False
+1271.8785 	EXP 	probe_visual_cue: autoDraw = True
+1272.7272 	EXP 	Sound  reached end of file
+1272.9172 	DATA 	Keypress: space
+1273.0804 	EXP 	probe_visual_cue: autoDraw = False
+1273.7124 	EXP 	New trial (rep=16, index=0): None
+1273.7333 	EXP 	cue_visual_cue: autoDraw = False
+1273.7333 	EXP 	probe_visual_cue: autoDraw = False
+1273.7333 	EXP 	this_trial_is: height = 0.05
+1273.7333 	EXP 	this_trial_is: height = 0.05
+1273.7333 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1273.7333 	EXP 	this_trial_is: autoDraw = True
+1274.7058 	EXP 	Sound  started
+1274.7238 	EXP 	this_trial_is: autoDraw = False
+1274.7238 	EXP 	this_trial_is: autoDraw = False
+1274.7238 	EXP 	cue_visual_cue: autoDraw = True
+1277.0795 	EXP 	cue_visual_cue: autoDraw = False
+1277.0795 	EXP 	probe_visual_cue: autoDraw = True
+1277.3549 	EXP 	Sound  reached end of file
+1278.3012 	EXP 	probe_visual_cue: autoDraw = False
+1278.5540 	EXP 	New trial (rep=17, index=0): None
+1278.5734 	EXP 	cue_visual_cue: autoDraw = False
+1278.5734 	EXP 	probe_visual_cue: autoDraw = False
+1278.5734 	EXP 	this_trial_is: height = 0.05
+1278.5734 	EXP 	this_trial_is: height = 0.05
+1278.5734 	EXP 	this_trial_is: text = 'Hauteur'
+1278.5734 	EXP 	this_trial_is: autoDraw = True
+1279.5561 	EXP 	Sound  started
+1279.5738 	EXP 	this_trial_is: autoDraw = False
+1279.5738 	EXP 	cue_visual_cue: autoDraw = True
+1281.9942 	EXP 	cue_visual_cue: autoDraw = False
+1281.9942 	EXP 	probe_visual_cue: autoDraw = True
+1282.7961 	EXP 	Sound  reached end of file
+1282.8964 	DATA 	Keypress: space
+1283.1934 	EXP 	probe_visual_cue: autoDraw = False
+1283.8007 	EXP 	New trial (rep=18, index=0): None
+1283.8253 	EXP 	cue_visual_cue: autoDraw = False
+1283.8253 	EXP 	probe_visual_cue: autoDraw = False
+1283.8253 	EXP 	this_trial_is: height = 0.05
+1283.8253 	EXP 	this_trial_is: height = 0.05
+1283.8253 	EXP 	this_trial_is: text = 'Rythme'
+1283.8253 	EXP 	this_trial_is: autoDraw = True
+1284.8135 	EXP 	Sound  started
+1284.8307 	EXP 	this_trial_is: autoDraw = False
+1284.8307 	EXP 	this_trial_is: autoDraw = False
+1284.8307 	EXP 	cue_visual_cue: autoDraw = True
+1287.6379 	EXP 	cue_visual_cue: autoDraw = False
+1287.6379 	EXP 	probe_visual_cue: autoDraw = True
+1288.2686 	EXP 	Sound  reached end of file
+1288.8600 	EXP 	probe_visual_cue: autoDraw = False
+1289.2864 	EXP 	New trial (rep=19, index=0): None
+1289.3065 	EXP 	cue_visual_cue: autoDraw = False
+1289.3065 	EXP 	probe_visual_cue: autoDraw = False
+1289.3065 	EXP 	this_trial_is: height = 0.05
+1289.3065 	EXP 	this_trial_is: height = 0.05
+1289.3065 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1289.3065 	EXP 	this_trial_is: autoDraw = True
+1290.3364 	EXP 	Sound  started
+1290.3533 	EXP 	this_trial_is: autoDraw = False
+1290.3533 	EXP 	cue_visual_cue: autoDraw = True
+1293.2336 	EXP 	cue_visual_cue: autoDraw = False
+1293.2336 	EXP 	probe_visual_cue: autoDraw = True
+1293.9171 	EXP 	Sound  reached end of file
+1294.1343 	DATA 	Keypress: space
+1294.4690 	EXP 	probe_visual_cue: autoDraw = False
+1294.9326 	EXP 	cue_visual_cue: autoDraw = False
+1294.9326 	EXP 	probe_visual_cue: autoDraw = False
+1294.9326 	EXP 	blank_text: autoDraw = True
+1295.4455 	EXP 	blank_text: autoDraw = False
+1295.4455 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+1295.4455 	EXP 	break_text: autoDraw = True
+1300.0162 	EXP 	New trial (rep=8, index=0): None
+1300.0175 	DATA 	Keypress: space
+1300.0483 	EXP 	break_text: autoDraw = False
+1300.0483 	EXP 	blank_text: autoDraw = True
+1300.5331 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+1300.5332 	EXP 	New trial (rep=0, index=0): None
+1300.5654 	EXP 	blank_text: autoDraw = False
+1300.5654 	EXP 	this_trial_is: height = 0.05
+1300.5654 	EXP 	this_trial_is: height = 0.05
+1300.5654 	EXP 	this_trial_is: text = 'Hauteur'
+1300.5654 	EXP 	this_trial_is: autoDraw = True
+1301.5557 	EXP 	Sound  started
+1301.5723 	EXP 	this_trial_is: autoDraw = False
+1301.5723 	EXP 	cue_visual_cue: autoDraw = True
+1304.5124 	EXP 	cue_visual_cue: autoDraw = False
+1304.5124 	EXP 	probe_visual_cue: autoDraw = True
+1305.1155 	EXP 	Sound  reached end of file
+1305.7273 	EXP 	probe_visual_cue: autoDraw = False
+1306.0769 	EXP 	New trial (rep=1, index=0): None
+1306.1032 	EXP 	cue_visual_cue: autoDraw = False
+1306.1032 	EXP 	probe_visual_cue: autoDraw = False
+1306.1032 	EXP 	this_trial_is: height = 0.05
+1306.1032 	EXP 	this_trial_is: height = 0.05
+1306.1032 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1306.1032 	EXP 	this_trial_is: autoDraw = True
+1307.0815 	EXP 	Sound  started
+1307.0994 	EXP 	this_trial_is: autoDraw = False
+1307.0994 	EXP 	cue_visual_cue: autoDraw = True
+1309.6515 	EXP 	cue_visual_cue: autoDraw = False
+1309.6515 	EXP 	probe_visual_cue: autoDraw = True
+1310.0256 	EXP 	Sound  reached end of file
+1310.8835 	EXP 	probe_visual_cue: autoDraw = False
+1311.2346 	EXP 	New trial (rep=2, index=0): None
+1311.2535 	EXP 	cue_visual_cue: autoDraw = False
+1311.2535 	EXP 	probe_visual_cue: autoDraw = False
+1311.2535 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1311.2535 	EXP 	this_trial_is: autoDraw = True
+1312.2324 	EXP 	Sound  started
+1312.2494 	EXP 	this_trial_is: autoDraw = False
+1312.2494 	EXP 	this_trial_is: autoDraw = False
+1312.2494 	EXP 	cue_visual_cue: autoDraw = True
+1314.9325 	EXP 	cue_visual_cue: autoDraw = False
+1314.9325 	EXP 	probe_visual_cue: autoDraw = True
+1315.5325 	EXP 	Sound  reached end of file
+1315.6615 	DATA 	Keypress: space
+1316.1313 	EXP 	probe_visual_cue: autoDraw = False
+1316.5520 	EXP 	New trial (rep=3, index=0): None
+1316.5691 	EXP 	cue_visual_cue: autoDraw = False
+1316.5691 	EXP 	probe_visual_cue: autoDraw = False
+1316.5691 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1316.5691 	EXP 	this_trial_is: autoDraw = True
+1319.1881 	EXP 	Sound  started
+1319.2051 	EXP 	this_trial_is: autoDraw = False
+1319.2051 	EXP 	this_trial_is: autoDraw = False
+1319.2051 	EXP 	cue_visual_cue: autoDraw = True
+1322.3826 	EXP 	cue_visual_cue: autoDraw = False
+1322.3826 	EXP 	probe_visual_cue: autoDraw = True
+1323.1663 	EXP 	Sound  reached end of file
+1323.2724 	DATA 	Keypress: space
+1323.5827 	EXP 	probe_visual_cue: autoDraw = False
+1324.1406 	EXP 	New trial (rep=4, index=0): None
+1324.1636 	EXP 	cue_visual_cue: autoDraw = False
+1324.1636 	EXP 	probe_visual_cue: autoDraw = False
+1324.1636 	EXP 	this_trial_is: height = 0.05
+1324.1636 	EXP 	this_trial_is: height = 0.05
+1324.1636 	EXP 	this_trial_is: text = 'Rythme'
+1324.1636 	EXP 	this_trial_is: autoDraw = True
+1325.1337 	EXP 	Sound  started
+1325.1523 	EXP 	this_trial_is: autoDraw = False
+1325.1523 	EXP 	this_trial_is: autoDraw = False
+1325.1523 	EXP 	cue_visual_cue: autoDraw = True
+1327.8854 	EXP 	cue_visual_cue: autoDraw = False
+1327.8854 	EXP 	probe_visual_cue: autoDraw = True
+1328.4964 	EXP 	Sound  reached end of file
+1328.8118 	DATA 	Keypress: space
+1329.1012 	EXP 	probe_visual_cue: autoDraw = False
+1329.5166 	EXP 	New trial (rep=5, index=0): None
+1329.5402 	EXP 	cue_visual_cue: autoDraw = False
+1329.5402 	EXP 	probe_visual_cue: autoDraw = False
+1329.5402 	EXP 	this_trial_is: height = 0.05
+1329.5402 	EXP 	this_trial_is: height = 0.05
+1329.5402 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1329.5402 	EXP 	this_trial_is: autoDraw = True
+1330.5400 	EXP 	Sound  started
+1330.5569 	EXP 	this_trial_is: autoDraw = False
+1330.5569 	EXP 	cue_visual_cue: autoDraw = True
+1333.3089 	EXP 	cue_visual_cue: autoDraw = False
+1333.3089 	EXP 	probe_visual_cue: autoDraw = True
+1333.9484 	EXP 	Sound  reached end of file
+1334.0797 	DATA 	Keypress: space
+1334.5102 	EXP 	probe_visual_cue: autoDraw = False
+1334.9469 	EXP 	New trial (rep=6, index=0): None
+1334.9663 	EXP 	cue_visual_cue: autoDraw = False
+1334.9663 	EXP 	probe_visual_cue: autoDraw = False
+1334.9663 	EXP 	this_trial_is: height = 0.05
+1334.9663 	EXP 	this_trial_is: height = 0.05
+1334.9663 	EXP 	this_trial_is: text = 'Rythme'
+1334.9663 	EXP 	this_trial_is: autoDraw = True
+1335.9833 	EXP 	Sound  started
+1336.0002 	EXP 	this_trial_is: autoDraw = False
+1336.0002 	EXP 	cue_visual_cue: autoDraw = True
+1338.5717 	EXP 	cue_visual_cue: autoDraw = False
+1338.5717 	EXP 	probe_visual_cue: autoDraw = True
+1339.1605 	EXP 	Sound  reached end of file
+1339.4843 	DATA 	Keypress: space
+1339.7819 	EXP 	probe_visual_cue: autoDraw = False
+1340.1792 	EXP 	New trial (rep=7, index=0): None
+1340.2022 	EXP 	cue_visual_cue: autoDraw = False
+1340.2022 	EXP 	probe_visual_cue: autoDraw = False
+1340.2022 	EXP 	this_trial_is: height = 0.05
+1340.2022 	EXP 	this_trial_is: height = 0.05
+1340.2022 	EXP 	this_trial_is: text = 'Hauteur'
+1340.2022 	EXP 	this_trial_is: autoDraw = True
+1341.1893 	EXP 	Sound  started
+1341.2061 	EXP 	this_trial_is: autoDraw = False
+1341.2061 	EXP 	cue_visual_cue: autoDraw = True
+1344.0789 	EXP 	cue_visual_cue: autoDraw = False
+1344.0789 	EXP 	probe_visual_cue: autoDraw = True
+1344.5328 	EXP 	Sound  reached end of file
+1345.2898 	EXP 	probe_visual_cue: autoDraw = False
+1345.7428 	EXP 	New trial (rep=8, index=0): None
+1345.7618 	EXP 	cue_visual_cue: autoDraw = False
+1345.7618 	EXP 	probe_visual_cue: autoDraw = False
+1345.7618 	EXP 	this_trial_is: height = 0.05
+1345.7618 	EXP 	this_trial_is: height = 0.05
+1345.7618 	EXP 	this_trial_is: text = 'X'
+1345.7618 	EXP 	this_trial_is: autoDraw = True
+1346.7413 	EXP 	Sound  started
+1346.7585 	EXP 	this_trial_is: autoDraw = False
+1346.7585 	EXP 	this_trial_is: autoDraw = False
+1346.7585 	EXP 	cue_visual_cue: autoDraw = True
+1349.1958 	EXP 	cue_visual_cue: autoDraw = False
+1349.1958 	EXP 	probe_visual_cue: autoDraw = True
+1349.7284 	EXP 	Sound  reached end of file
+1350.0338 	DATA 	Keypress: space
+1350.4039 	EXP 	probe_visual_cue: autoDraw = False
+1350.7135 	EXP 	New trial (rep=9, index=0): None
+1350.7357 	EXP 	cue_visual_cue: autoDraw = False
+1350.7357 	EXP 	probe_visual_cue: autoDraw = False
+1350.7357 	EXP 	this_trial_is: height = 0.05
+1350.7357 	EXP 	this_trial_is: height = 0.05
+1350.7357 	EXP 	this_trial_is: text = 'Hauteur'
+1350.7357 	EXP 	this_trial_is: autoDraw = True
+1351.7362 	EXP 	Sound  started
+1351.7533 	EXP 	this_trial_is: autoDraw = False
+1351.7533 	EXP 	cue_visual_cue: autoDraw = True
+1354.8520 	EXP 	cue_visual_cue: autoDraw = False
+1354.8520 	EXP 	probe_visual_cue: autoDraw = True
+1355.3142 	EXP 	Sound  reached end of file
+1355.6058 	DATA 	Keypress: space
+1356.0680 	EXP 	probe_visual_cue: autoDraw = False
+1356.2998 	EXP 	New trial (rep=10, index=0): None
+1356.3194 	EXP 	cue_visual_cue: autoDraw = False
+1356.3194 	EXP 	probe_visual_cue: autoDraw = False
+1356.3194 	EXP 	this_trial_is: height = 0.05
+1356.3194 	EXP 	this_trial_is: height = 0.05
+1356.3194 	EXP 	this_trial_is: text = 'Rythme'
+1356.3194 	EXP 	this_trial_is: autoDraw = True
+1357.3013 	EXP 	Sound  started
+1357.3183 	EXP 	this_trial_is: autoDraw = False
+1357.3183 	EXP 	cue_visual_cue: autoDraw = True
+1359.6318 	EXP 	cue_visual_cue: autoDraw = False
+1359.6318 	EXP 	probe_visual_cue: autoDraw = True
+1360.1036 	EXP 	Sound  reached end of file
+1360.4045 	DATA 	Keypress: space
+1360.8377 	EXP 	probe_visual_cue: autoDraw = False
+1361.0978 	EXP 	New trial (rep=11, index=0): None
+1361.1181 	EXP 	cue_visual_cue: autoDraw = False
+1361.1181 	EXP 	probe_visual_cue: autoDraw = False
+1361.1181 	EXP 	this_trial_is: height = 0.05
+1361.1181 	EXP 	this_trial_is: height = 0.05
+1361.1181 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1361.1181 	EXP 	this_trial_is: autoDraw = True
+1362.1250 	EXP 	Sound  started
+1362.1419 	EXP 	this_trial_is: autoDraw = False
+1362.1419 	EXP 	cue_visual_cue: autoDraw = True
+1364.8423 	EXP 	cue_visual_cue: autoDraw = False
+1364.8423 	EXP 	probe_visual_cue: autoDraw = True
+1365.4549 	EXP 	Sound  reached end of file
+1366.0753 	EXP 	probe_visual_cue: autoDraw = False
+1366.4346 	EXP 	New trial (rep=12, index=0): None
+1366.4588 	EXP 	cue_visual_cue: autoDraw = False
+1366.4588 	EXP 	probe_visual_cue: autoDraw = False
+1366.4588 	EXP 	this_trial_is: height = 0.05
+1366.4588 	EXP 	this_trial_is: height = 0.05
+1366.4588 	EXP 	this_trial_is: text = 'Rythme'
+1366.4588 	EXP 	this_trial_is: autoDraw = True
+1367.4406 	EXP 	Sound  started
+1367.4581 	EXP 	this_trial_is: autoDraw = False
+1367.4581 	EXP 	cue_visual_cue: autoDraw = True
+1369.8123 	EXP 	cue_visual_cue: autoDraw = False
+1369.8123 	EXP 	probe_visual_cue: autoDraw = True
+1370.1282 	EXP 	Sound  reached end of file
+1370.6867 	DATA 	Keypress: space
+1371.0136 	EXP 	probe_visual_cue: autoDraw = False
+1371.3130 	EXP 	New trial (rep=13, index=0): None
+1371.3359 	EXP 	cue_visual_cue: autoDraw = False
+1371.3359 	EXP 	probe_visual_cue: autoDraw = False
+1371.3359 	EXP 	this_trial_is: height = 0.05
+1371.3359 	EXP 	this_trial_is: height = 0.05
+1371.3359 	EXP 	this_trial_is: text = 'X'
+1371.3359 	EXP 	this_trial_is: autoDraw = True
+1372.3300 	EXP 	Sound  started
+1372.3474 	EXP 	this_trial_is: autoDraw = False
+1372.3474 	EXP 	cue_visual_cue: autoDraw = True
+1375.0536 	EXP 	cue_visual_cue: autoDraw = False
+1375.0536 	EXP 	probe_visual_cue: autoDraw = True
+1375.7854 	EXP 	Sound  reached end of file
+1376.2766 	EXP 	probe_visual_cue: autoDraw = False
+1376.7929 	EXP 	New trial (rep=14, index=0): None
+1376.8129 	EXP 	cue_visual_cue: autoDraw = False
+1376.8129 	EXP 	probe_visual_cue: autoDraw = False
+1376.8129 	EXP 	this_trial_is: height = 0.05
+1376.8129 	EXP 	this_trial_is: height = 0.05
+1376.8129 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1376.8129 	EXP 	this_trial_is: autoDraw = True
+1377.7977 	EXP 	Sound  started
+1377.8148 	EXP 	this_trial_is: autoDraw = False
+1377.8148 	EXP 	cue_visual_cue: autoDraw = True
+1380.7360 	EXP 	cue_visual_cue: autoDraw = False
+1380.7360 	EXP 	probe_visual_cue: autoDraw = True
+1381.4275 	EXP 	Sound  reached end of file
+1381.5625 	DATA 	Keypress: space
+1381.9570 	EXP 	probe_visual_cue: autoDraw = False
+1382.4216 	EXP 	New trial (rep=15, index=0): None
+1382.4386 	EXP 	cue_visual_cue: autoDraw = False
+1382.4386 	EXP 	probe_visual_cue: autoDraw = False
+1382.4386 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1382.4386 	EXP 	this_trial_is: autoDraw = True
+1385.1221 	EXP 	Sound  started
+1385.1393 	EXP 	this_trial_is: autoDraw = False
+1385.1393 	EXP 	cue_visual_cue: autoDraw = True
+1387.7398 	EXP 	cue_visual_cue: autoDraw = False
+1387.7398 	EXP 	probe_visual_cue: autoDraw = True
+1388.3090 	EXP 	Sound  reached end of file
+1388.9677 	EXP 	probe_visual_cue: autoDraw = False
+1389.3070 	EXP 	New trial (rep=16, index=0): None
+1389.3289 	EXP 	cue_visual_cue: autoDraw = False
+1389.3289 	EXP 	probe_visual_cue: autoDraw = False
+1389.3289 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1389.3289 	EXP 	this_trial_is: autoDraw = True
+1390.3004 	EXP 	Sound  started
+1390.3173 	EXP 	this_trial_is: autoDraw = False
+1390.3173 	EXP 	this_trial_is: autoDraw = False
+1390.3173 	EXP 	cue_visual_cue: autoDraw = True
+1393.3373 	EXP 	cue_visual_cue: autoDraw = False
+1393.3373 	EXP 	probe_visual_cue: autoDraw = True
+1394.0377 	EXP 	Sound  reached end of file
+1394.2388 	DATA 	Keypress: space
+1394.5501 	EXP 	probe_visual_cue: autoDraw = False
+1395.0127 	EXP 	New trial (rep=17, index=0): None
+1395.0343 	EXP 	cue_visual_cue: autoDraw = False
+1395.0343 	EXP 	probe_visual_cue: autoDraw = False
+1395.0343 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1395.0343 	EXP 	this_trial_is: autoDraw = True
+1397.7285 	EXP 	Sound  started
+1397.7460 	EXP 	this_trial_is: autoDraw = False
+1397.7460 	EXP 	cue_visual_cue: autoDraw = True
+1400.7514 	EXP 	cue_visual_cue: autoDraw = False
+1400.7514 	EXP 	probe_visual_cue: autoDraw = True
+1401.4748 	EXP 	Sound  reached end of file
+1401.6535 	DATA 	Keypress: space
+1401.9809 	EXP 	probe_visual_cue: autoDraw = False
+1402.4438 	EXP 	New trial (rep=18, index=0): None
+1402.4675 	EXP 	cue_visual_cue: autoDraw = False
+1402.4675 	EXP 	probe_visual_cue: autoDraw = False
+1402.4675 	EXP 	this_trial_is: height = 0.05
+1402.4675 	EXP 	this_trial_is: height = 0.05
+1402.4675 	EXP 	this_trial_is: text = 'Hauteur'
+1402.4675 	EXP 	this_trial_is: autoDraw = True
+1403.4732 	EXP 	Sound  started
+1403.4907 	EXP 	this_trial_is: autoDraw = False
+1403.4907 	EXP 	cue_visual_cue: autoDraw = True
+1406.5153 	EXP 	cue_visual_cue: autoDraw = False
+1406.5153 	EXP 	probe_visual_cue: autoDraw = True
+1407.0184 	EXP 	Sound  reached end of file
+1407.7212 	EXP 	probe_visual_cue: autoDraw = False
+1408.0023 	EXP 	New trial (rep=19, index=0): None
+1408.0229 	EXP 	cue_visual_cue: autoDraw = False
+1408.0229 	EXP 	probe_visual_cue: autoDraw = False
+1408.0229 	EXP 	this_trial_is: height = 0.05
+1408.0229 	EXP 	this_trial_is: height = 0.05
+1408.0229 	EXP 	this_trial_is: text = 'Rythme'
+1408.0229 	EXP 	this_trial_is: autoDraw = True
+1409.0286 	EXP 	Sound  started
+1409.0463 	EXP 	this_trial_is: autoDraw = False
+1409.0463 	EXP 	cue_visual_cue: autoDraw = True
+1411.4414 	EXP 	cue_visual_cue: autoDraw = False
+1411.4414 	EXP 	probe_visual_cue: autoDraw = True
+1411.9593 	EXP 	Sound  reached end of file
+1412.1290 	DATA 	Keypress: space
+1412.6547 	EXP 	probe_visual_cue: autoDraw = False
+1412.9773 	EXP 	cue_visual_cue: autoDraw = False
+1412.9773 	EXP 	probe_visual_cue: autoDraw = False
+1412.9773 	EXP 	blank_text: autoDraw = True
+1413.4900 	EXP 	blank_text: autoDraw = False
+1413.4900 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+1413.4900 	EXP 	break_text: autoDraw = True
+1420.0412 	EXP 	New trial (rep=9, index=0): None
+1420.0428 	DATA 	Keypress: space
+1420.0744 	EXP 	break_text: autoDraw = False
+1420.0744 	EXP 	blank_text: autoDraw = True
+1420.5680 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+1420.5682 	EXP 	New trial (rep=0, index=0): None
+1420.6064 	EXP 	blank_text: autoDraw = False
+1420.6064 	EXP 	this_trial_is: height = 0.05
+1420.6064 	EXP 	this_trial_is: height = 0.05
+1420.6064 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1420.6064 	EXP 	this_trial_is: autoDraw = True
+1421.5710 	EXP 	Sound  started
+1421.5882 	EXP 	this_trial_is: autoDraw = False
+1421.5882 	EXP 	cue_visual_cue: autoDraw = True
+1423.9148 	EXP 	cue_visual_cue: autoDraw = False
+1423.9148 	EXP 	probe_visual_cue: autoDraw = True
+1424.2040 	EXP 	Sound  reached end of file
+1425.1401 	EXP 	probe_visual_cue: autoDraw = False
+1425.4041 	EXP 	New trial (rep=1, index=0): None
+1425.4256 	EXP 	cue_visual_cue: autoDraw = False
+1425.4256 	EXP 	probe_visual_cue: autoDraw = False
+1425.4256 	EXP 	this_trial_is: height = 0.05
+1425.4256 	EXP 	this_trial_is: height = 0.05
+1425.4256 	EXP 	this_trial_is: text = 'Hauteur'
+1425.4256 	EXP 	this_trial_is: autoDraw = True
+1426.4056 	EXP 	Sound  started
+1426.4227 	EXP 	this_trial_is: autoDraw = False
+1426.4227 	EXP 	cue_visual_cue: autoDraw = True
+1429.3383 	EXP 	cue_visual_cue: autoDraw = False
+1429.3383 	EXP 	probe_visual_cue: autoDraw = True
+1430.1445 	EXP 	Sound  reached end of file
+1430.3109 	DATA 	Keypress: space
+1430.5722 	EXP 	probe_visual_cue: autoDraw = False
+1431.1295 	EXP 	New trial (rep=2, index=0): None
+1431.1502 	EXP 	cue_visual_cue: autoDraw = False
+1431.1502 	EXP 	probe_visual_cue: autoDraw = False
+1431.1502 	EXP 	this_trial_is: height = 0.05
+1431.1502 	EXP 	this_trial_is: height = 0.05
+1431.1502 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1431.1502 	EXP 	this_trial_is: autoDraw = True
+1432.1412 	EXP 	Sound  started
+1432.1583 	EXP 	this_trial_is: autoDraw = False
+1432.1583 	EXP 	cue_visual_cue: autoDraw = True
+1435.5410 	EXP 	cue_visual_cue: autoDraw = False
+1435.5410 	EXP 	probe_visual_cue: autoDraw = True
+1436.3673 	EXP 	Sound  reached end of file
+1436.7491 	EXP 	probe_visual_cue: autoDraw = False
+1437.3480 	EXP 	New trial (rep=3, index=0): None
+1437.3686 	EXP 	cue_visual_cue: autoDraw = False
+1437.3686 	EXP 	probe_visual_cue: autoDraw = False
+1437.3686 	EXP 	this_trial_is: height = 0.05
+1437.3686 	EXP 	this_trial_is: height = 0.05
+1437.3686 	EXP 	this_trial_is: text = 'Rythme'
+1437.3686 	EXP 	this_trial_is: autoDraw = True
+1438.3556 	EXP 	Sound  started
+1438.3725 	EXP 	this_trial_is: autoDraw = False
+1438.3725 	EXP 	cue_visual_cue: autoDraw = True
+1441.3175 	EXP 	cue_visual_cue: autoDraw = False
+1441.3175 	EXP 	probe_visual_cue: autoDraw = True
+1442.0244 	EXP 	Sound  reached end of file
+1442.1875 	DATA 	Keypress: space
+1442.5519 	EXP 	probe_visual_cue: autoDraw = False
+1443.0258 	EXP 	New trial (rep=4, index=0): None
+1443.0496 	EXP 	cue_visual_cue: autoDraw = False
+1443.0496 	EXP 	probe_visual_cue: autoDraw = False
+1443.0496 	EXP 	this_trial_is: height = 0.05
+1443.0496 	EXP 	this_trial_is: height = 0.05
+1443.0496 	EXP 	this_trial_is: text = 'Hauteur'
+1443.0496 	EXP 	this_trial_is: autoDraw = True
+1444.0342 	EXP 	Sound  started
+1444.0520 	EXP 	this_trial_is: autoDraw = False
+1444.0520 	EXP 	this_trial_is: autoDraw = False
+1444.0520 	EXP 	cue_visual_cue: autoDraw = True
+1446.8265 	EXP 	cue_visual_cue: autoDraw = False
+1446.8265 	EXP 	probe_visual_cue: autoDraw = True
+1447.3283 	EXP 	Sound  reached end of file
+1447.4634 	DATA 	Keypress: space
+1448.0449 	EXP 	probe_visual_cue: autoDraw = False
+1448.3471 	EXP 	New trial (rep=5, index=0): None
+1448.3692 	EXP 	cue_visual_cue: autoDraw = False
+1448.3692 	EXP 	probe_visual_cue: autoDraw = False
+1448.3692 	EXP 	this_trial_is: height = 0.05
+1448.3692 	EXP 	this_trial_is: height = 0.05
+1448.3692 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1448.3692 	EXP 	this_trial_is: autoDraw = True
+1449.3596 	EXP 	Sound  started
+1449.3773 	EXP 	this_trial_is: autoDraw = False
+1449.3773 	EXP 	cue_visual_cue: autoDraw = True
+1452.2587 	EXP 	cue_visual_cue: autoDraw = False
+1452.2587 	EXP 	probe_visual_cue: autoDraw = True
+1452.7186 	EXP 	Sound  reached end of file
+1453.4659 	EXP 	probe_visual_cue: autoDraw = False
+1453.9293 	EXP 	New trial (rep=6, index=0): None
+1453.9487 	EXP 	cue_visual_cue: autoDraw = False
+1453.9487 	EXP 	probe_visual_cue: autoDraw = False
+1453.9487 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1453.9487 	EXP 	this_trial_is: autoDraw = True
+1454.9474 	EXP 	Sound  started
+1454.9645 	EXP 	this_trial_is: autoDraw = False
+1454.9645 	EXP 	this_trial_is: autoDraw = False
+1454.9645 	EXP 	cue_visual_cue: autoDraw = True
+1457.8984 	EXP 	cue_visual_cue: autoDraw = False
+1457.8984 	EXP 	probe_visual_cue: autoDraw = True
+1458.5684 	EXP 	Sound  reached end of file
+1459.1135 	EXP 	probe_visual_cue: autoDraw = False
+1459.6036 	EXP 	New trial (rep=7, index=0): None
+1459.6245 	EXP 	cue_visual_cue: autoDraw = False
+1459.6245 	EXP 	probe_visual_cue: autoDraw = False
+1459.6245 	EXP 	this_trial_is: height = 0.05
+1459.6245 	EXP 	this_trial_is: height = 0.05
+1459.6245 	EXP 	this_trial_is: text = 'Rythme'
+1459.6245 	EXP 	this_trial_is: autoDraw = True
+1460.5981 	EXP 	Sound  started
+1460.6155 	EXP 	this_trial_is: autoDraw = False
+1460.6155 	EXP 	this_trial_is: autoDraw = False
+1460.6155 	EXP 	cue_visual_cue: autoDraw = True
+1463.4163 	EXP 	cue_visual_cue: autoDraw = False
+1463.4163 	EXP 	probe_visual_cue: autoDraw = True
+1463.8533 	EXP 	Sound  reached end of file
+1464.6431 	EXP 	probe_visual_cue: autoDraw = False
+1465.0681 	EXP 	New trial (rep=8, index=0): None
+1465.0885 	EXP 	cue_visual_cue: autoDraw = False
+1465.0885 	EXP 	probe_visual_cue: autoDraw = False
+1465.0885 	EXP 	this_trial_is: height = 0.05
+1465.0885 	EXP 	this_trial_is: height = 0.05
+1465.0885 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1465.0885 	EXP 	this_trial_is: autoDraw = True
+1466.0659 	EXP 	Sound  started
+1466.0829 	EXP 	this_trial_is: autoDraw = False
+1466.0829 	EXP 	this_trial_is: autoDraw = False
+1466.0829 	EXP 	cue_visual_cue: autoDraw = True
+1468.9170 	EXP 	cue_visual_cue: autoDraw = False
+1468.9170 	EXP 	probe_visual_cue: autoDraw = True
+1469.5859 	EXP 	Sound  reached end of file
+1469.7332 	DATA 	Keypress: space
+1470.1296 	EXP 	probe_visual_cue: autoDraw = False
+1470.5846 	EXP 	New trial (rep=9, index=0): None
+1470.6016 	EXP 	cue_visual_cue: autoDraw = False
+1470.6016 	EXP 	probe_visual_cue: autoDraw = False
+1470.6016 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1470.6016 	EXP 	this_trial_is: autoDraw = True
+1473.5213 	EXP 	Sound  started
+1473.5385 	EXP 	this_trial_is: autoDraw = False
+1473.5385 	EXP 	this_trial_is: autoDraw = False
+1473.5385 	EXP 	cue_visual_cue: autoDraw = True
+1476.8539 	EXP 	cue_visual_cue: autoDraw = False
+1476.8539 	EXP 	probe_visual_cue: autoDraw = True
+1477.6819 	EXP 	Sound  reached end of file
+1477.9482 	DATA 	Keypress: space
+1478.0651 	EXP 	probe_visual_cue: autoDraw = False
+1478.6911 	EXP 	New trial (rep=10, index=0): None
+1478.7130 	EXP 	cue_visual_cue: autoDraw = False
+1478.7130 	EXP 	probe_visual_cue: autoDraw = False
+1478.7130 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1478.7130 	EXP 	this_trial_is: autoDraw = True
+1479.6928 	EXP 	Sound  started
+1479.7099 	EXP 	this_trial_is: autoDraw = False
+1479.7099 	EXP 	this_trial_is: autoDraw = False
+1479.7099 	EXP 	cue_visual_cue: autoDraw = True
+1482.3124 	EXP 	cue_visual_cue: autoDraw = False
+1482.3124 	EXP 	probe_visual_cue: autoDraw = True
+1482.8899 	EXP 	Sound  reached end of file
+1483.1629 	DATA 	Keypress: space
+1483.5075 	EXP 	probe_visual_cue: autoDraw = False
+1483.8815 	EXP 	New trial (rep=11, index=0): None
+1483.9037 	EXP 	cue_visual_cue: autoDraw = False
+1483.9037 	EXP 	probe_visual_cue: autoDraw = False
+1483.9037 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1483.9037 	EXP 	this_trial_is: autoDraw = True
+1484.8810 	EXP 	Sound  started
+1484.8981 	EXP 	this_trial_is: autoDraw = False
+1484.8981 	EXP 	this_trial_is: autoDraw = False
+1484.8981 	EXP 	cue_visual_cue: autoDraw = True
+1487.5737 	EXP 	cue_visual_cue: autoDraw = False
+1487.5737 	EXP 	probe_visual_cue: autoDraw = True
+1487.9581 	EXP 	Sound  reached end of file
+1488.7887 	EXP 	probe_visual_cue: autoDraw = False
+1489.1543 	EXP 	New trial (rep=12, index=0): None
+1489.1745 	EXP 	cue_visual_cue: autoDraw = False
+1489.1745 	EXP 	probe_visual_cue: autoDraw = False
+1489.1745 	EXP 	this_trial_is: height = 0.05
+1489.1745 	EXP 	this_trial_is: height = 0.05
+1489.1745 	EXP 	this_trial_is: text = 'Rythme'
+1489.1745 	EXP 	this_trial_is: autoDraw = True
+1490.1666 	EXP 	Sound  started
+1490.1836 	EXP 	this_trial_is: autoDraw = False
+1490.1836 	EXP 	this_trial_is: autoDraw = False
+1490.1836 	EXP 	cue_visual_cue: autoDraw = True
+1493.3185 	EXP 	cue_visual_cue: autoDraw = False
+1493.3185 	EXP 	probe_visual_cue: autoDraw = True
+1494.0819 	EXP 	Sound  reached end of file
+1494.4156 	DATA 	Keypress: space
+1494.5352 	EXP 	probe_visual_cue: autoDraw = False
+1495.1014 	EXP 	New trial (rep=13, index=0): None
+1495.1260 	EXP 	cue_visual_cue: autoDraw = False
+1495.1260 	EXP 	probe_visual_cue: autoDraw = False
+1495.1260 	EXP 	this_trial_is: height = 0.05
+1495.1260 	EXP 	this_trial_is: height = 0.05
+1495.1260 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1495.1260 	EXP 	this_trial_is: autoDraw = True
+1496.1215 	EXP 	Sound  started
+1496.1386 	EXP 	this_trial_is: autoDraw = False
+1496.1386 	EXP 	cue_visual_cue: autoDraw = True
+1499.4031 	EXP 	cue_visual_cue: autoDraw = False
+1499.4031 	EXP 	probe_visual_cue: autoDraw = True
+1500.1905 	EXP 	Sound  reached end of file
+1500.4685 	DATA 	Keypress: space
+1500.6149 	EXP 	probe_visual_cue: autoDraw = False
+1501.1811 	EXP 	New trial (rep=14, index=0): None
+1501.2567 	EXP 	cue_visual_cue: autoDraw = False
+1501.2567 	EXP 	probe_visual_cue: autoDraw = False
+1501.2567 	EXP 	this_trial_is: height = 0.05
+1501.2567 	EXP 	this_trial_is: height = 0.05
+1501.2567 	EXP 	this_trial_is: text = 'Rythme'
+1501.2567 	EXP 	this_trial_is: autoDraw = True
+1502.1958 	EXP 	Sound  started
+1502.2130 	EXP 	this_trial_is: autoDraw = False
+1502.2130 	EXP 	cue_visual_cue: autoDraw = True
+1505.4616 	EXP 	cue_visual_cue: autoDraw = False
+1505.4616 	EXP 	probe_visual_cue: autoDraw = True
+1506.0775 	EXP 	Sound  reached end of file
+1506.6650 	EXP 	probe_visual_cue: autoDraw = False
+1507.2812 	EXP 	New trial (rep=15, index=0): None
+1507.3061 	EXP 	cue_visual_cue: autoDraw = False
+1507.3061 	EXP 	probe_visual_cue: autoDraw = False
+1507.3061 	EXP 	this_trial_is: height = 0.05
+1507.3061 	EXP 	this_trial_is: height = 0.05
+1507.3061 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1507.3061 	EXP 	this_trial_is: autoDraw = True
+1508.2835 	EXP 	Sound  started
+1508.3009 	EXP 	this_trial_is: autoDraw = False
+1508.3009 	EXP 	cue_visual_cue: autoDraw = True
+1511.7113 	EXP 	cue_visual_cue: autoDraw = False
+1511.7113 	EXP 	probe_visual_cue: autoDraw = True
+1512.5509 	EXP 	Sound  reached end of file
+1512.7188 	DATA 	Keypress: space
+1512.9179 	EXP 	probe_visual_cue: autoDraw = False
+1513.5465 	EXP 	New trial (rep=16, index=0): None
+1513.5680 	EXP 	cue_visual_cue: autoDraw = False
+1513.5680 	EXP 	probe_visual_cue: autoDraw = False
+1513.5680 	EXP 	this_trial_is: height = 0.05
+1513.5680 	EXP 	this_trial_is: height = 0.05
+1513.5680 	EXP 	this_trial_is: text = 'Rythme'
+1513.5680 	EXP 	this_trial_is: autoDraw = True
+1514.5530 	EXP 	Sound  started
+1514.5699 	EXP 	this_trial_is: autoDraw = False
+1514.5699 	EXP 	cue_visual_cue: autoDraw = True
+1517.4456 	EXP 	cue_visual_cue: autoDraw = False
+1517.4456 	EXP 	probe_visual_cue: autoDraw = True
+1518.0873 	EXP 	Sound  reached end of file
+1518.2874 	DATA 	Keypress: space
+1518.6560 	EXP 	probe_visual_cue: autoDraw = False
+1519.0647 	EXP 	New trial (rep=17, index=0): None
+1519.0856 	EXP 	cue_visual_cue: autoDraw = False
+1519.0856 	EXP 	probe_visual_cue: autoDraw = False
+1519.0856 	EXP 	this_trial_is: height = 0.05
+1519.0856 	EXP 	this_trial_is: height = 0.05
+1519.0856 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1519.0856 	EXP 	this_trial_is: autoDraw = True
+1520.0598 	EXP 	Sound  started
+1520.0768 	EXP 	this_trial_is: autoDraw = False
+1520.0768 	EXP 	this_trial_is: autoDraw = False
+1520.0768 	EXP 	cue_visual_cue: autoDraw = True
+1522.7792 	EXP 	cue_visual_cue: autoDraw = False
+1522.7792 	EXP 	probe_visual_cue: autoDraw = True
+1523.1954 	EXP 	Sound  reached end of file
+1523.9941 	EXP 	probe_visual_cue: autoDraw = False
+1524.4128 	EXP 	New trial (rep=18, index=0): None
+1524.4339 	EXP 	cue_visual_cue: autoDraw = False
+1524.4339 	EXP 	probe_visual_cue: autoDraw = False
+1524.4339 	EXP 	this_trial_is: height = 0.05
+1524.4339 	EXP 	this_trial_is: height = 0.05
+1524.4339 	EXP 	this_trial_is: text = 'Rythme'
+1524.4339 	EXP 	this_trial_is: autoDraw = True
+1525.4284 	EXP 	Sound  started
+1525.4456 	EXP 	this_trial_is: autoDraw = False
+1525.4456 	EXP 	this_trial_is: autoDraw = False
+1525.4456 	EXP 	cue_visual_cue: autoDraw = True
+1528.3568 	EXP 	cue_visual_cue: autoDraw = False
+1528.3568 	EXP 	probe_visual_cue: autoDraw = True
+1529.0356 	EXP 	Sound  reached end of file
+1529.3360 	DATA 	Keypress: space
+1529.5675 	EXP 	probe_visual_cue: autoDraw = False
+1530.0238 	EXP 	New trial (rep=19, index=0): None
+1530.0408 	EXP 	cue_visual_cue: autoDraw = False
+1530.0408 	EXP 	probe_visual_cue: autoDraw = False
+1530.0408 	EXP 	this_trial_is: text = 'Rythme'
+1530.0408 	EXP 	this_trial_is: autoDraw = True
+1531.0125 	EXP 	Sound  started
+1531.0293 	EXP 	this_trial_is: autoDraw = False
+1531.0293 	EXP 	this_trial_is: autoDraw = False
+1531.0293 	EXP 	cue_visual_cue: autoDraw = True
+1533.7920 	EXP 	cue_visual_cue: autoDraw = False
+1533.7920 	EXP 	probe_visual_cue: autoDraw = True
+1534.4436 	EXP 	Sound  reached end of file
+1534.6098 	DATA 	Keypress: space
+1535.0077 	EXP 	probe_visual_cue: autoDraw = False
+1535.4725 	EXP 	cue_visual_cue: autoDraw = False
+1535.4725 	EXP 	probe_visual_cue: autoDraw = False
+1535.4725 	EXP 	blank_text: autoDraw = True
+1535.9990 	EXP 	blank_text: autoDraw = False
+1535.9990 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+1535.9990 	EXP 	break_text: autoDraw = True
+1557.8397 	EXP 	New trial (rep=10, index=0): None
+1557.8411 	DATA 	Keypress: space
+1557.8726 	EXP 	break_text: autoDraw = False
+1557.8726 	EXP 	blank_text: autoDraw = True
+1558.3487 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+1558.3489 	EXP 	New trial (rep=0, index=0): None
+1558.3783 	EXP 	blank_text: autoDraw = False
+1558.3783 	EXP 	this_trial_is: text = 'Rythme'
+1558.3783 	EXP 	this_trial_is: autoDraw = True
+1559.3726 	EXP 	Sound  started
+1559.3895 	EXP 	this_trial_is: autoDraw = False
+1559.3895 	EXP 	cue_visual_cue: autoDraw = True
+1562.5052 	EXP 	cue_visual_cue: autoDraw = False
+1562.5052 	EXP 	probe_visual_cue: autoDraw = True
+1563.2707 	EXP 	Sound  reached end of file
+1563.4393 	DATA 	Keypress: space
+1563.7385 	EXP 	probe_visual_cue: autoDraw = False
+1564.2600 	EXP 	New trial (rep=1, index=0): None
+1564.2797 	EXP 	cue_visual_cue: autoDraw = False
+1564.2797 	EXP 	probe_visual_cue: autoDraw = False
+1564.2797 	EXP 	this_trial_is: height = 0.05
+1564.2797 	EXP 	this_trial_is: height = 0.05
+1564.2797 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1564.2797 	EXP 	this_trial_is: autoDraw = True
+1565.2862 	EXP 	Sound  started
+1565.3033 	EXP 	this_trial_is: autoDraw = False
+1565.3033 	EXP 	cue_visual_cue: autoDraw = True
+1568.6778 	EXP 	cue_visual_cue: autoDraw = False
+1568.6778 	EXP 	probe_visual_cue: autoDraw = True
+1569.5128 	EXP 	Sound  reached end of file
+1569.6938 	DATA 	Keypress: space
+1569.9112 	EXP 	probe_visual_cue: autoDraw = False
+1570.5184 	EXP 	New trial (rep=2, index=0): None
+1570.5399 	EXP 	cue_visual_cue: autoDraw = False
+1570.5399 	EXP 	probe_visual_cue: autoDraw = False
+1570.5399 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1570.5399 	EXP 	this_trial_is: autoDraw = True
+1571.5140 	EXP 	Sound  started
+1571.5307 	EXP 	this_trial_is: autoDraw = False
+1571.5307 	EXP 	this_trial_is: autoDraw = False
+1571.5307 	EXP 	cue_visual_cue: autoDraw = True
+1573.9129 	EXP 	cue_visual_cue: autoDraw = False
+1573.9129 	EXP 	probe_visual_cue: autoDraw = True
+1574.4155 	EXP 	Sound  reached end of file
+1574.6496 	DATA 	Keypress: space
+1575.1268 	EXP 	probe_visual_cue: autoDraw = False
+1575.4090 	EXP 	New trial (rep=3, index=0): None
+1575.4263 	EXP 	cue_visual_cue: autoDraw = False
+1575.4263 	EXP 	probe_visual_cue: autoDraw = False
+1575.4263 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1575.4263 	EXP 	this_trial_is: autoDraw = True
+1576.4162 	EXP 	Sound  started
+1576.4333 	EXP 	this_trial_is: autoDraw = False
+1576.4333 	EXP 	cue_visual_cue: autoDraw = True
+1578.9188 	EXP 	cue_visual_cue: autoDraw = False
+1578.9188 	EXP 	probe_visual_cue: autoDraw = True
+1579.2546 	EXP 	Sound  reached end of file
+1580.1362 	EXP 	probe_visual_cue: autoDraw = False
+1580.4352 	EXP 	New trial (rep=4, index=0): None
+1580.4551 	EXP 	cue_visual_cue: autoDraw = False
+1580.4551 	EXP 	probe_visual_cue: autoDraw = False
+1580.4551 	EXP 	this_trial_is: height = 0.05
+1580.4551 	EXP 	this_trial_is: height = 0.05
+1580.4551 	EXP 	this_trial_is: text = 'Rythme'
+1580.4551 	EXP 	this_trial_is: autoDraw = True
+1581.4563 	EXP 	Sound  started
+1581.4733 	EXP 	this_trial_is: autoDraw = False
+1581.4733 	EXP 	cue_visual_cue: autoDraw = True
+1584.3981 	EXP 	cue_visual_cue: autoDraw = False
+1584.3981 	EXP 	probe_visual_cue: autoDraw = True
+1585.0950 	EXP 	Sound  reached end of file
+1585.6269 	EXP 	probe_visual_cue: autoDraw = False
+1586.1148 	EXP 	New trial (rep=5, index=0): None
+1586.1360 	EXP 	cue_visual_cue: autoDraw = False
+1586.1360 	EXP 	probe_visual_cue: autoDraw = False
+1586.1360 	EXP 	this_trial_is: height = 0.05
+1586.1360 	EXP 	this_trial_is: height = 0.05
+1586.1360 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1586.1360 	EXP 	this_trial_is: autoDraw = True
+1587.1282 	EXP 	Sound  started
+1587.1462 	EXP 	this_trial_is: autoDraw = False
+1587.1462 	EXP 	this_trial_is: autoDraw = False
+1587.1462 	EXP 	cue_visual_cue: autoDraw = True
+1590.0275 	EXP 	cue_visual_cue: autoDraw = False
+1590.0275 	EXP 	probe_visual_cue: autoDraw = True
+1590.6848 	EXP 	Sound  reached end of file
+1591.2315 	EXP 	probe_visual_cue: autoDraw = False
+1591.6766 	EXP 	New trial (rep=6, index=0): None
+1591.6957 	EXP 	cue_visual_cue: autoDraw = False
+1591.6957 	EXP 	probe_visual_cue: autoDraw = False
+1591.6957 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1591.6957 	EXP 	this_trial_is: autoDraw = True
+1592.6674 	EXP 	Sound  started
+1592.6846 	EXP 	this_trial_is: autoDraw = False
+1592.6846 	EXP 	this_trial_is: autoDraw = False
+1592.6846 	EXP 	cue_visual_cue: autoDraw = True
+1594.9686 	EXP 	cue_visual_cue: autoDraw = False
+1594.9686 	EXP 	probe_visual_cue: autoDraw = True
+1595.4500 	EXP 	Sound  reached end of file
+1596.1709 	EXP 	probe_visual_cue: autoDraw = False
+1596.4546 	EXP 	New trial (rep=7, index=0): None
+1596.4760 	EXP 	cue_visual_cue: autoDraw = False
+1596.4760 	EXP 	probe_visual_cue: autoDraw = False
+1596.4760 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1596.4760 	EXP 	this_trial_is: autoDraw = True
+1600.0927 	EXP 	Sound  started
+1600.1100 	EXP 	this_trial_is: autoDraw = False
+1600.1100 	EXP 	this_trial_is: autoDraw = False
+1600.1100 	EXP 	cue_visual_cue: autoDraw = True
+1603.4768 	EXP 	cue_visual_cue: autoDraw = False
+1603.4768 	EXP 	probe_visual_cue: autoDraw = True
+1604.3177 	EXP 	Sound  reached end of file
+1604.6802 	EXP 	probe_visual_cue: autoDraw = False
+1605.3090 	EXP 	New trial (rep=8, index=0): None
+1605.3310 	EXP 	cue_visual_cue: autoDraw = False
+1605.3310 	EXP 	probe_visual_cue: autoDraw = False
+1605.3310 	EXP 	this_trial_is: height = 0.05
+1605.3310 	EXP 	this_trial_is: height = 0.05
+1605.3310 	EXP 	this_trial_is: text = 'Rythme'
+1605.3310 	EXP 	this_trial_is: autoDraw = True
+1606.3302 	EXP 	Sound  started
+1606.3474 	EXP 	this_trial_is: autoDraw = False
+1606.3474 	EXP 	cue_visual_cue: autoDraw = True
+1608.6623 	EXP 	cue_visual_cue: autoDraw = False
+1608.6623 	EXP 	probe_visual_cue: autoDraw = True
+1609.1420 	EXP 	Sound  reached end of file
+1609.8849 	EXP 	probe_visual_cue: autoDraw = False
+1610.1268 	EXP 	New trial (rep=9, index=0): None
+1610.1486 	EXP 	cue_visual_cue: autoDraw = False
+1610.1486 	EXP 	probe_visual_cue: autoDraw = False
+1610.1486 	EXP 	this_trial_is: text = 'Rythme'
+1610.1486 	EXP 	this_trial_is: autoDraw = True
+1611.1237 	EXP 	Sound  started
+1611.1406 	EXP 	this_trial_is: autoDraw = False
+1611.1406 	EXP 	this_trial_is: autoDraw = False
+1611.1406 	EXP 	cue_visual_cue: autoDraw = True
+1613.3911 	EXP 	cue_visual_cue: autoDraw = False
+1613.3911 	EXP 	probe_visual_cue: autoDraw = True
+1613.8716 	EXP 	Sound  reached end of file
+1614.0923 	DATA 	Keypress: space
+1614.6226 	EXP 	probe_visual_cue: autoDraw = False
+1614.8461 	EXP 	New trial (rep=10, index=0): None
+1614.8658 	EXP 	cue_visual_cue: autoDraw = False
+1614.8658 	EXP 	probe_visual_cue: autoDraw = False
+1614.8658 	EXP 	this_trial_is: height = 0.05
+1614.8658 	EXP 	this_trial_is: height = 0.05
+1614.8658 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1614.8658 	EXP 	this_trial_is: autoDraw = True
+1615.8372 	EXP 	Sound  started
+1615.8551 	EXP 	this_trial_is: autoDraw = False
+1615.8551 	EXP 	this_trial_is: autoDraw = False
+1615.8551 	EXP 	cue_visual_cue: autoDraw = True
+1618.4022 	EXP 	cue_visual_cue: autoDraw = False
+1618.4022 	EXP 	probe_visual_cue: autoDraw = True
+1618.9626 	EXP 	Sound  reached end of file
+1619.1961 	DATA 	Keypress: space
+1619.6272 	EXP 	probe_visual_cue: autoDraw = False
+1619.9905 	EXP 	New trial (rep=11, index=0): None
+1620.0125 	EXP 	cue_visual_cue: autoDraw = False
+1620.0125 	EXP 	probe_visual_cue: autoDraw = False
+1620.0125 	EXP 	this_trial_is: height = 0.05
+1620.0125 	EXP 	this_trial_is: height = 0.05
+1620.0125 	EXP 	this_trial_is: text = 'Rythme'
+1620.0125 	EXP 	this_trial_is: autoDraw = True
+1621.0100 	EXP 	Sound  started
+1621.0272 	EXP 	this_trial_is: autoDraw = False
+1621.0272 	EXP 	cue_visual_cue: autoDraw = True
+1624.1304 	EXP 	cue_visual_cue: autoDraw = False
+1624.1304 	EXP 	probe_visual_cue: autoDraw = True
+1624.8693 	EXP 	Sound  reached end of file
+1625.1691 	DATA 	Keypress: space
+1625.3332 	EXP 	probe_visual_cue: autoDraw = False
+1625.8373 	EXP 	New trial (rep=12, index=0): None
+1625.8587 	EXP 	cue_visual_cue: autoDraw = False
+1625.8587 	EXP 	probe_visual_cue: autoDraw = False
+1625.8587 	EXP 	this_trial_is: text = 'Rythme'
+1625.8587 	EXP 	this_trial_is: autoDraw = True
+1626.8526 	EXP 	Sound  started
+1626.8696 	EXP 	this_trial_is: autoDraw = False
+1626.8696 	EXP 	cue_visual_cue: autoDraw = True
+1630.1709 	EXP 	cue_visual_cue: autoDraw = False
+1630.1709 	EXP 	probe_visual_cue: autoDraw = True
+1631.0082 	EXP 	Sound  reached end of file
+1631.3722 	EXP 	probe_visual_cue: autoDraw = False
+1632.0083 	EXP 	New trial (rep=13, index=0): None
+1632.0259 	EXP 	cue_visual_cue: autoDraw = False
+1632.0259 	EXP 	probe_visual_cue: autoDraw = False
+1632.0259 	EXP 	this_trial_is: text = 'Rythme'
+1632.0259 	EXP 	this_trial_is: autoDraw = True
+1635.1177 	EXP 	Sound  started
+1635.1348 	EXP 	this_trial_is: autoDraw = False
+1635.1348 	EXP 	this_trial_is: autoDraw = False
+1635.1348 	EXP 	cue_visual_cue: autoDraw = True
+1638.3936 	EXP 	cue_visual_cue: autoDraw = False
+1638.3936 	EXP 	probe_visual_cue: autoDraw = True
+1639.1880 	EXP 	Sound  reached end of file
+1639.6220 	EXP 	probe_visual_cue: autoDraw = False
+1640.1580 	EXP 	New trial (rep=14, index=0): None
+1640.1805 	EXP 	cue_visual_cue: autoDraw = False
+1640.1805 	EXP 	probe_visual_cue: autoDraw = False
+1640.1805 	EXP 	this_trial_is: text = 'Rythme'
+1640.1805 	EXP 	this_trial_is: autoDraw = True
+1641.1565 	EXP 	Sound  started
+1641.1740 	EXP 	this_trial_is: autoDraw = False
+1641.1740 	EXP 	this_trial_is: autoDraw = False
+1641.1740 	EXP 	cue_visual_cue: autoDraw = True
+1643.9276 	EXP 	cue_visual_cue: autoDraw = False
+1643.9276 	EXP 	probe_visual_cue: autoDraw = True
+1644.3661 	EXP 	Sound  reached end of file
+1645.1572 	EXP 	probe_visual_cue: autoDraw = False
+1645.5594 	EXP 	New trial (rep=15, index=0): None
+1645.5852 	EXP 	cue_visual_cue: autoDraw = False
+1645.5852 	EXP 	probe_visual_cue: autoDraw = False
+1645.5852 	EXP 	this_trial_is: height = 0.05
+1645.5852 	EXP 	this_trial_is: height = 0.05
+1645.5852 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1645.5852 	EXP 	this_trial_is: autoDraw = True
+1646.6433 	EXP 	Sound  started
+1646.6604 	EXP 	this_trial_is: autoDraw = False
+1646.6604 	EXP 	cue_visual_cue: autoDraw = True
+1649.7908 	EXP 	cue_visual_cue: autoDraw = False
+1649.7908 	EXP 	probe_visual_cue: autoDraw = True
+1650.5621 	EXP 	Sound  reached end of file
+1650.8290 	DATA 	Keypress: space
+1651.0268 	EXP 	probe_visual_cue: autoDraw = False
+1651.5482 	EXP 	New trial (rep=16, index=0): None
+1651.5650 	EXP 	cue_visual_cue: autoDraw = False
+1651.5650 	EXP 	probe_visual_cue: autoDraw = False
+1651.5650 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1651.5650 	EXP 	this_trial_is: autoDraw = True
+1652.5620 	EXP 	Sound  started
+1652.5791 	EXP 	this_trial_is: autoDraw = False
+1652.5791 	EXP 	cue_visual_cue: autoDraw = True
+1655.7889 	EXP 	cue_visual_cue: autoDraw = False
+1655.7889 	EXP 	probe_visual_cue: autoDraw = True
+1656.3992 	EXP 	Sound  reached end of file
+1656.9999 	EXP 	probe_visual_cue: autoDraw = False
+1657.5707 	EXP 	New trial (rep=17, index=0): None
+1657.5978 	EXP 	cue_visual_cue: autoDraw = False
+1657.5978 	EXP 	probe_visual_cue: autoDraw = False
+1657.5978 	EXP 	this_trial_is: height = 0.05
+1657.5978 	EXP 	this_trial_is: height = 0.05
+1657.5978 	EXP 	this_trial_is: text = 'Rythme'
+1657.5978 	EXP 	this_trial_is: autoDraw = True
+1658.5904 	EXP 	Sound  started
+1658.6074 	EXP 	this_trial_is: autoDraw = False
+1658.6074 	EXP 	cue_visual_cue: autoDraw = True
+1661.4031 	EXP 	cue_visual_cue: autoDraw = False
+1661.4031 	EXP 	probe_visual_cue: autoDraw = True
+1662.0441 	EXP 	Sound  reached end of file
+1662.2472 	DATA 	Keypress: space
+1662.6048 	EXP 	probe_visual_cue: autoDraw = False
+1663.0513 	EXP 	New trial (rep=18, index=0): None
+1663.0728 	EXP 	cue_visual_cue: autoDraw = False
+1663.0728 	EXP 	probe_visual_cue: autoDraw = False
+1663.0728 	EXP 	this_trial_is: height = 0.05
+1663.0728 	EXP 	this_trial_is: height = 0.05
+1663.0728 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1663.0728 	EXP 	this_trial_is: autoDraw = True
+1664.0600 	EXP 	Sound  started
+1664.0777 	EXP 	this_trial_is: autoDraw = False
+1664.0777 	EXP 	cue_visual_cue: autoDraw = True
+1666.7769 	EXP 	cue_visual_cue: autoDraw = False
+1666.7769 	EXP 	probe_visual_cue: autoDraw = True
+1667.3826 	EXP 	Sound  reached end of file
+1667.5159 	DATA 	Keypress: space
+1668.0085 	EXP 	probe_visual_cue: autoDraw = False
+1668.3854 	EXP 	New trial (rep=19, index=0): None
+1668.4023 	EXP 	cue_visual_cue: autoDraw = False
+1668.4023 	EXP 	probe_visual_cue: autoDraw = False
+1668.4023 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1668.4023 	EXP 	this_trial_is: autoDraw = True
+1669.4007 	EXP 	Sound  started
+1669.4177 	EXP 	this_trial_is: autoDraw = False
+1669.4177 	EXP 	cue_visual_cue: autoDraw = True
+1672.5819 	EXP 	cue_visual_cue: autoDraw = False
+1672.5819 	EXP 	probe_visual_cue: autoDraw = True
+1673.1523 	EXP 	Sound  reached end of file
+1673.8157 	EXP 	probe_visual_cue: autoDraw = False
+1674.3504 	EXP 	cue_visual_cue: autoDraw = False
+1674.3504 	EXP 	probe_visual_cue: autoDraw = False
+1674.3504 	EXP 	blank_text: autoDraw = True
+1674.8752 	EXP 	blank_text: autoDraw = False
+1674.8752 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+1674.8752 	EXP 	break_text: autoDraw = True
+1702.8566 	EXP 	New trial (rep=11, index=0): None
+1702.8579 	DATA 	Keypress: space
+1702.8890 	EXP 	break_text: autoDraw = False
+1702.8890 	EXP 	blank_text: autoDraw = True
+1703.3783 	EXP 	Created sequence: random, trialTypes=1, nReps=20, seed=None
+1703.3785 	EXP 	New trial (rep=0, index=0): None
+1703.4154 	EXP 	blank_text: autoDraw = False
+1703.4154 	EXP 	this_trial_is: height = 0.05
+1703.4154 	EXP 	this_trial_is: height = 0.05
+1703.4154 	EXP 	this_trial_is: text = 'Rythme'
+1703.4154 	EXP 	this_trial_is: autoDraw = True
+1704.3983 	EXP 	Sound  started
+1704.4158 	EXP 	this_trial_is: autoDraw = False
+1704.4158 	EXP 	cue_visual_cue: autoDraw = True
+1706.7787 	EXP 	cue_visual_cue: autoDraw = False
+1706.7787 	EXP 	probe_visual_cue: autoDraw = True
+1707.2885 	EXP 	Sound  reached end of file
+1708.0036 	EXP 	probe_visual_cue: autoDraw = False
+1708.3169 	EXP 	New trial (rep=1, index=0): None
+1708.3358 	EXP 	cue_visual_cue: autoDraw = False
+1708.3358 	EXP 	probe_visual_cue: autoDraw = False
+1708.3358 	EXP 	this_trial_is: text = 'Rythme'
+1708.3358 	EXP 	this_trial_is: autoDraw = True
+1709.3210 	EXP 	Sound  started
+1709.3382 	EXP 	this_trial_is: autoDraw = False
+1709.3382 	EXP 	cue_visual_cue: autoDraw = True
+1711.9454 	EXP 	cue_visual_cue: autoDraw = False
+1711.9454 	EXP 	probe_visual_cue: autoDraw = True
+1712.5252 	EXP 	Sound  reached end of file
+1713.1687 	EXP 	probe_visual_cue: autoDraw = False
+1713.5182 	EXP 	New trial (rep=2, index=0): None
+1713.5384 	EXP 	cue_visual_cue: autoDraw = False
+1713.5384 	EXP 	probe_visual_cue: autoDraw = False
+1713.5384 	EXP 	this_trial_is: height = 0.05
+1713.5384 	EXP 	this_trial_is: height = 0.05
+1713.5384 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1713.5384 	EXP 	this_trial_is: autoDraw = True
+1714.5387 	EXP 	Sound  started
+1714.5556 	EXP 	this_trial_is: autoDraw = False
+1714.5556 	EXP 	cue_visual_cue: autoDraw = True
+1717.7625 	EXP 	cue_visual_cue: autoDraw = False
+1717.7625 	EXP 	probe_visual_cue: autoDraw = True
+1718.5670 	EXP 	Sound  reached end of file
+1718.6698 	DATA 	Keypress: space
+1718.9647 	EXP 	probe_visual_cue: autoDraw = False
+1719.5669 	EXP 	New trial (rep=3, index=0): None
+1719.5885 	EXP 	cue_visual_cue: autoDraw = False
+1719.5885 	EXP 	probe_visual_cue: autoDraw = False
+1719.5885 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1719.5885 	EXP 	this_trial_is: autoDraw = True
+1720.5692 	EXP 	Sound  started
+1720.5871 	EXP 	this_trial_is: autoDraw = False
+1720.5871 	EXP 	cue_visual_cue: autoDraw = True
+1723.1309 	EXP 	cue_visual_cue: autoDraw = False
+1723.1309 	EXP 	probe_visual_cue: autoDraw = True
+1723.4767 	EXP 	Sound  reached end of file
+1723.9401 	DATA 	Keypress: space
+1724.3351 	EXP 	probe_visual_cue: autoDraw = False
+1724.6793 	EXP 	New trial (rep=4, index=0): None
+1724.6992 	EXP 	cue_visual_cue: autoDraw = False
+1724.6992 	EXP 	probe_visual_cue: autoDraw = False
+1724.6992 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1724.6992 	EXP 	this_trial_is: autoDraw = True
+1725.6754 	EXP 	Sound  started
+1725.6924 	EXP 	this_trial_is: autoDraw = False
+1725.6924 	EXP 	this_trial_is: autoDraw = False
+1725.6924 	EXP 	cue_visual_cue: autoDraw = True
+1729.0368 	EXP 	cue_visual_cue: autoDraw = False
+1729.0368 	EXP 	probe_visual_cue: autoDraw = True
+1729.6456 	EXP 	Sound  reached end of file
+1730.2632 	EXP 	probe_visual_cue: autoDraw = False
+1730.8362 	EXP 	New trial (rep=5, index=0): None
+1730.8534 	EXP 	cue_visual_cue: autoDraw = False
+1730.8534 	EXP 	probe_visual_cue: autoDraw = False
+1730.8534 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1730.8534 	EXP 	this_trial_is: autoDraw = True
+1731.8408 	EXP 	Sound  started
+1731.8581 	EXP 	this_trial_is: autoDraw = False
+1731.8581 	EXP 	cue_visual_cue: autoDraw = True
+1734.6755 	EXP 	cue_visual_cue: autoDraw = False
+1734.6755 	EXP 	probe_visual_cue: autoDraw = True
+1735.3215 	EXP 	Sound  reached end of file
+1735.4896 	DATA 	Keypress: space
+1735.8790 	EXP 	probe_visual_cue: autoDraw = False
+1736.3357 	EXP 	New trial (rep=6, index=0): None
+1736.3572 	EXP 	cue_visual_cue: autoDraw = False
+1736.3572 	EXP 	probe_visual_cue: autoDraw = False
+1736.3572 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1736.3572 	EXP 	this_trial_is: autoDraw = True
+1737.3492 	EXP 	Sound  started
+1737.3661 	EXP 	this_trial_is: autoDraw = False
+1737.3661 	EXP 	cue_visual_cue: autoDraw = True
+1739.8521 	EXP 	cue_visual_cue: autoDraw = False
+1739.8521 	EXP 	probe_visual_cue: autoDraw = True
+1740.1824 	EXP 	Sound  reached end of file
+1741.0845 	EXP 	probe_visual_cue: autoDraw = False
+1741.4090 	EXP 	New trial (rep=7, index=0): None
+1741.4259 	EXP 	cue_visual_cue: autoDraw = False
+1741.4259 	EXP 	probe_visual_cue: autoDraw = False
+1741.4259 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1741.4259 	EXP 	this_trial_is: autoDraw = True
+1742.4027 	EXP 	Sound  started
+1742.4198 	EXP 	this_trial_is: autoDraw = False
+1742.4198 	EXP 	this_trial_is: autoDraw = False
+1742.4198 	EXP 	cue_visual_cue: autoDraw = True
+1744.7869 	EXP 	cue_visual_cue: autoDraw = False
+1744.7869 	EXP 	probe_visual_cue: autoDraw = True
+1745.0896 	EXP 	Sound  reached end of file
+1746.0091 	EXP 	probe_visual_cue: autoDraw = False
+1746.2903 	EXP 	New trial (rep=8, index=0): None
+1746.3074 	EXP 	cue_visual_cue: autoDraw = False
+1746.3074 	EXP 	probe_visual_cue: autoDraw = False
+1746.3074 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1746.3074 	EXP 	this_trial_is: autoDraw = True
+1747.3049 	EXP 	Sound  started
+1747.3220 	EXP 	this_trial_is: autoDraw = False
+1747.3220 	EXP 	this_trial_is: autoDraw = False
+1747.3220 	EXP 	cue_visual_cue: autoDraw = True
+1750.2668 	EXP 	cue_visual_cue: autoDraw = False
+1750.2668 	EXP 	probe_visual_cue: autoDraw = True
+1750.9607 	EXP 	Sound  reached end of file
+1751.4771 	EXP 	probe_visual_cue: autoDraw = False
+1751.9328 	EXP 	New trial (rep=9, index=0): None
+1751.9547 	EXP 	cue_visual_cue: autoDraw = False
+1751.9547 	EXP 	probe_visual_cue: autoDraw = False
+1751.9547 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1751.9547 	EXP 	this_trial_is: autoDraw = True
+1752.9355 	EXP 	Sound  started
+1752.9524 	EXP 	this_trial_is: autoDraw = False
+1752.9524 	EXP 	cue_visual_cue: autoDraw = True
+1755.4391 	EXP 	cue_visual_cue: autoDraw = False
+1755.4391 	EXP 	probe_visual_cue: autoDraw = True
+1755.7774 	EXP 	Sound  reached end of file
+1756.6637 	EXP 	probe_visual_cue: autoDraw = False
+1756.9970 	EXP 	New trial (rep=10, index=0): None
+1757.0141 	EXP 	cue_visual_cue: autoDraw = False
+1757.0141 	EXP 	probe_visual_cue: autoDraw = False
+1757.0141 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1757.0141 	EXP 	this_trial_is: autoDraw = True
+1757.9902 	EXP 	Sound  started
+1758.0075 	EXP 	this_trial_is: autoDraw = False
+1758.0075 	EXP 	this_trial_is: autoDraw = False
+1758.0075 	EXP 	cue_visual_cue: autoDraw = True
+1760.3007 	EXP 	cue_visual_cue: autoDraw = False
+1760.3007 	EXP 	probe_visual_cue: autoDraw = True
+1760.7885 	EXP 	Sound  reached end of file
+1760.9719 	DATA 	Keypress: space
+1761.5202 	EXP 	probe_visual_cue: autoDraw = False
+1761.7804 	EXP 	New trial (rep=11, index=0): None
+1761.7974 	EXP 	cue_visual_cue: autoDraw = False
+1761.7974 	EXP 	probe_visual_cue: autoDraw = False
+1761.7974 	EXP 	this_trial_is: text = 'Rythme \n\nHauteur'
+1761.7974 	EXP 	this_trial_is: autoDraw = True
+1765.6559 	EXP 	Sound  started
+1765.6732 	EXP 	this_trial_is: autoDraw = False
+1765.6732 	EXP 	this_trial_is: autoDraw = False
+1765.6732 	EXP 	cue_visual_cue: autoDraw = True
+1768.1475 	EXP 	cue_visual_cue: autoDraw = False
+1768.1475 	EXP 	probe_visual_cue: autoDraw = True
+1768.6725 	EXP 	Sound  reached end of file
+1768.9151 	DATA 	Keypress: space
+1769.3618 	EXP 	probe_visual_cue: autoDraw = False
+1769.7050 	EXP 	cue_visual_cue: autoDraw = False
+1769.7050 	EXP 	probe_visual_cue: autoDraw = False
+1769.7050 	EXP 	blank_text: autoDraw = True
+1770.2342 	EXP 	blank_text: autoDraw = False
+1770.2342 	EXP 	break_text: text = "Appuyez sur n'importe quelle touche lorsque vous êtes prêt.e à démarrer le bloc suivant. Comme précédemment, une croix va apparaître à l'écran, suivie d'un cercle.\n\nAppuyez sur la barre d'espace si vous entendez un son pendant que le CERCLE est affiché."
+1770.2342 	EXP 	break_text: autoDraw = True
+1809.1194 	DATA 	Keypress: space
+1809.1523 	EXP 	break_text: autoDraw = False
+1809.1523 	EXP 	goodbye_text: autoDraw = True
+1811.4208 	DATA 	Keypress: space
+1811.4495 	EXP 	goodbye_text: autoDraw = False
+1811.7131 	EXP 	window1: mouseVisible = True

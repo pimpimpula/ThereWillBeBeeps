@@ -1,0 +1,2631 @@
+11.0790 	WARNING 	User requested fullscreen with size [2560 1440], but screen is actually [3840, 2160]. Using actual size
+15.1505 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+15.1519 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([ 0.6078, -0.2784, -0.2784]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000020263C19B20>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000202658C50A0>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([3840, 2160]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+15.1526 	EXP 	window1: mouseVisible = True
+15.1527 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+15.1527 	EXP 	window1: recordFrameIntervals = False
+15.4296 	EXP 	window1: recordFrameIntervals = True
+15.4831 	WARNING 	t of last frame was 27.23ms (=1/36)
+15.5405 	WARNING 	t of last frame was 40.05ms (=1/24)
+15.5684 	WARNING 	t of last frame was 27.94ms (=1/35)
+15.5963 	WARNING 	t of last frame was 27.83ms (=1/35)
+15.6516 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+17.0124 	EXP 	Screen (0) actual frame rate measured at 36.16Hz
+17.0124 	EXP 	window1: recordFrameIntervals = True
+18.7967 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+18.7967 	EXP 	window1: recordFrameIntervals = False
+19.0702 	EXP 	window1: recordFrameIntervals = True
+20.7001 	EXP 	Screen (0) actual frame rate measured at 35.18Hz
+20.7002 	EXP 	window1: recordFrameIntervals = True
+20.8198 	EXP 	Created instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='instructions', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.8217 	EXP 	Created blank_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blank_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+20.8285 	EXP 	Created fixation_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_cross', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.15, 0.15]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+20.8295 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+20.8962 	EXP 	Sound probe set volume 1.000
+20.8977 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+20.9132 	EXP 	Created break_txt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='break_txt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.9147 	EXP 	Created blank_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blank_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+20.9356 	EXP 	Created end_txt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_txt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.9536 	EXP 	instructions: autoDraw = True
+96.6075 	DATA 	Keypress: space
+96.6383 	EXP 	instructions: autoDraw = False
+96.6383 	EXP 	blank_text: autoDraw = True
+97.6230 	EXP 	Created sequence: fullRandom, trialTypes=1, nReps=999, seed=None
+97.6255 	EXP 	New trial (rep=0, index=0): None
+98.5910 	EXP 	blank_text: autoDraw = False
+98.5910 	EXP 	text: height = 0.05
+98.5910 	EXP 	text: height = 0.05
+98.5910 	EXP 	text: text = 'RHYTHM\n\nPITCH'
+98.5910 	EXP 	text: autoDraw = True
+99.5946 	EXP 	Created sequence: sequential, trialTypes=1, nReps=11, seed=None
+99.5947 	EXP 	New trial (rep=0, index=0): None
+99.5970 	EXP 	Sound probe started
+99.6276 	EXP 	text: autoDraw = False
+99.6276 	EXP 	text: autoDraw = False
+99.8107 	EXP 	Sound probe reached end of file
+99.8111 	EXP 	window1: recordFrameIntervals = False
+99.8428 	EXP 	text_2: autoDraw = True
+99.8440 	EXP 	window1: recordFrameIntervals = True
+101.5046 	EXP 	New trial (rep=1, index=0): None
+101.5056 	EXP 	Sound probe started
+101.5305 	EXP 	text_2: autoDraw = False
+101.5305 	EXP 	text_2: autoDraw = False
+101.7186 	EXP 	Sound probe reached end of file
+101.7191 	EXP 	window1: recordFrameIntervals = False
+101.7511 	EXP 	text_2: autoDraw = True
+101.7522 	EXP 	window1: recordFrameIntervals = True
+103.4120 	EXP 	New trial (rep=2, index=0): None
+103.4131 	EXP 	Sound probe started
+103.4393 	EXP 	text_2: autoDraw = False
+103.4393 	EXP 	text_2: autoDraw = False
+103.6306 	EXP 	Sound probe reached end of file
+103.6326 	EXP 	window1: recordFrameIntervals = False
+103.6506 	EXP 	text_2: autoDraw = True
+103.6519 	EXP 	window1: recordFrameIntervals = True
+105.3262 	EXP 	New trial (rep=3, index=0): None
+105.3272 	EXP 	Sound probe started
+105.3529 	EXP 	text_2: autoDraw = False
+105.3529 	EXP 	text_2: autoDraw = False
+105.5388 	EXP 	Sound probe reached end of file
+105.5410 	EXP 	window1: recordFrameIntervals = False
+105.5675 	EXP 	text_2: autoDraw = True
+105.5687 	EXP 	window1: recordFrameIntervals = True
+107.0131 	DATA 	Keypress: space
+107.2333 	EXP 	New trial (rep=4, index=0): None
+107.2344 	EXP 	Sound probe started
+107.2599 	EXP 	text_2: autoDraw = False
+107.2599 	EXP 	text_2: autoDraw = False
+107.4506 	EXP 	Sound probe reached end of file
+107.4511 	EXP 	window1: recordFrameIntervals = False
+107.4717 	EXP 	text_2: autoDraw = True
+107.4731 	EXP 	window1: recordFrameIntervals = True
+108.9226 	DATA 	Keypress: space
+109.1516 	EXP 	New trial (rep=5, index=0): None
+109.1527 	EXP 	Sound probe started
+109.1726 	EXP 	text_2: autoDraw = False
+109.1726 	EXP 	text_2: autoDraw = False
+109.3587 	EXP 	Sound probe stopped
+109.3603 	EXP 	window1: recordFrameIntervals = False
+109.3835 	EXP 	text_2: autoDraw = True
+109.3847 	EXP 	window1: recordFrameIntervals = True
+111.0540 	EXP 	New trial (rep=6, index=0): None
+111.0550 	EXP 	Sound probe started
+111.0803 	EXP 	text_2: autoDraw = False
+111.0803 	EXP 	text_2: autoDraw = False
+111.2706 	EXP 	Sound probe reached end of file
+111.2726 	EXP 	window1: recordFrameIntervals = False
+111.2950 	EXP 	text_2: autoDraw = True
+111.2963 	EXP 	window1: recordFrameIntervals = True
+112.7454 	DATA 	Keypress: space
+112.9658 	EXP 	New trial (rep=7, index=0): None
+112.9668 	EXP 	Sound probe started
+112.9921 	EXP 	text_2: autoDraw = False
+112.9921 	EXP 	text_2: autoDraw = False
+113.1786 	EXP 	Sound probe reached end of file
+113.1801 	EXP 	window1: recordFrameIntervals = False
+113.2088 	EXP 	text_2: autoDraw = True
+113.2102 	EXP 	window1: recordFrameIntervals = True
+114.6528 	DATA 	Keypress: space
+114.8735 	EXP 	New trial (rep=8, index=0): None
+114.8745 	EXP 	Sound probe started
+114.9012 	EXP 	text_2: autoDraw = False
+114.9012 	EXP 	text_2: autoDraw = False
+115.0905 	EXP 	Sound probe reached end of file
+115.0909 	EXP 	window1: recordFrameIntervals = False
+115.1104 	EXP 	text_2: autoDraw = True
+115.1115 	EXP 	window1: recordFrameIntervals = True
+116.5623 	DATA 	Keypress: space
+116.7846 	EXP 	New trial (rep=9, index=0): None
+116.7880 	EXP 	Sound probe started
+116.8095 	EXP 	text_2: autoDraw = False
+116.8095 	EXP 	text_2: autoDraw = False
+116.9987 	EXP 	Sound probe reached end of file
+116.9991 	EXP 	window1: recordFrameIntervals = False
+117.0247 	EXP 	text_2: autoDraw = True
+117.0264 	EXP 	window1: recordFrameIntervals = True
+118.4723 	DATA 	Keypress: space
+118.6938 	EXP 	New trial (rep=10, index=0): None
+118.6946 	EXP 	Sound probe started
+118.7203 	EXP 	text_2: autoDraw = False
+118.7203 	EXP 	text_2: autoDraw = False
+118.9109 	EXP 	Sound probe reached end of file
+118.9113 	EXP 	window1: recordFrameIntervals = False
+118.9388 	EXP 	text_2: autoDraw = True
+118.9400 	EXP 	window1: recordFrameIntervals = True
+120.6312 	EXP 	text_2: autoDraw = False
+120.6312 	EXP 	text_2: autoDraw = False
+120.6312 	EXP 	break_txt: autoDraw = True
+121.8720 	EXP 	New trial (rep=1, index=0): None
+122.8938 	DATA 	Keypress: space
+122.9101 	EXP 	break_txt: autoDraw = False
+122.9101 	EXP 	text: height = 0.05
+122.9101 	EXP 	text: height = 0.05
+122.9101 	EXP 	text: text = 'RHYTHM'
+122.9101 	EXP 	text: autoDraw = True
+123.9100 	EXP 	Created sequence: sequential, trialTypes=1, nReps=15, seed=None
+123.9101 	EXP 	New trial (rep=0, index=0): None
+123.9119 	EXP 	Sound probe started
+123.9379 	EXP 	text: autoDraw = False
+123.9379 	EXP 	text: autoDraw = False
+124.1323 	EXP 	Sound probe reached end of file
+124.1327 	EXP 	window1: recordFrameIntervals = False
+124.1643 	EXP 	text_2: autoDraw = True
+124.1655 	EXP 	window1: recordFrameIntervals = True
+126.5535 	EXP 	New trial (rep=1, index=0): None
+126.5545 	EXP 	Sound probe started
+126.5798 	EXP 	text_2: autoDraw = False
+126.5798 	EXP 	text_2: autoDraw = False
+126.7668 	EXP 	Sound probe reached end of file
+126.7687 	EXP 	window1: recordFrameIntervals = False
+126.7912 	EXP 	text_2: autoDraw = True
+126.7924 	EXP 	window1: recordFrameIntervals = True
+128.9678 	DATA 	Keypress: space
+129.1887 	EXP 	New trial (rep=2, index=0): None
+129.1896 	EXP 	Sound probe started
+129.2158 	EXP 	text_2: autoDraw = False
+129.2158 	EXP 	text_2: autoDraw = False
+129.4066 	EXP 	Sound probe reached end of file
+129.4071 	EXP 	window1: recordFrameIntervals = False
+129.4280 	EXP 	text_2: autoDraw = True
+129.4292 	EXP 	window1: recordFrameIntervals = True
+131.6051 	DATA 	Keypress: space
+131.8266 	EXP 	New trial (rep=3, index=0): None
+131.8275 	EXP 	Sound probe started
+131.8530 	EXP 	text_2: autoDraw = False
+131.8530 	EXP 	text_2: autoDraw = False
+132.0466 	EXP 	Sound probe reached end of file
+132.0471 	EXP 	window1: recordFrameIntervals = False
+132.0670 	EXP 	text_2: autoDraw = True
+132.0680 	EXP 	window1: recordFrameIntervals = True
+134.4663 	EXP 	New trial (rep=4, index=0): None
+134.4673 	EXP 	Sound probe started
+134.4938 	EXP 	text_2: autoDraw = False
+134.4938 	EXP 	text_2: autoDraw = False
+134.6867 	EXP 	Sound probe reached end of file
+134.6872 	EXP 	window1: recordFrameIntervals = False
+134.7079 	EXP 	text_2: autoDraw = True
+134.7091 	EXP 	window1: recordFrameIntervals = True
+136.8848 	DATA 	Keypress: space
+137.1127 	EXP 	New trial (rep=5, index=0): None
+137.1143 	EXP 	Sound probe started
+137.1335 	EXP 	text_2: autoDraw = False
+137.1335 	EXP 	text_2: autoDraw = False
+137.3266 	EXP 	Sound probe reached end of file
+137.3290 	EXP 	window1: recordFrameIntervals = False
+137.3531 	EXP 	text_2: autoDraw = True
+137.3568 	EXP 	window1: recordFrameIntervals = True
+139.5269 	DATA 	Keypress: space
+139.7485 	EXP 	New trial (rep=6, index=0): None
+139.7495 	EXP 	Sound probe started
+139.7762 	EXP 	text_2: autoDraw = False
+139.7762 	EXP 	text_2: autoDraw = False
+139.9667 	EXP 	Sound probe reached end of file
+139.9687 	EXP 	window1: recordFrameIntervals = False
+139.9923 	EXP 	text_2: autoDraw = True
+139.9936 	EXP 	window1: recordFrameIntervals = True
+142.1672 	DATA 	Keypress: space
+142.3886 	EXP 	New trial (rep=7, index=0): None
+142.3896 	EXP 	Sound probe started
+142.4166 	EXP 	text_2: autoDraw = False
+142.4166 	EXP 	text_2: autoDraw = False
+142.6067 	EXP 	Sound probe reached end of file
+142.6075 	EXP 	window1: recordFrameIntervals = False
+142.6283 	EXP 	text_2: autoDraw = True
+142.6295 	EXP 	window1: recordFrameIntervals = True
+145.0274 	EXP 	New trial (rep=8, index=0): None
+145.0284 	EXP 	Sound probe started
+145.0549 	EXP 	text_2: autoDraw = False
+145.0549 	EXP 	text_2: autoDraw = False
+145.2465 	EXP 	Sound probe reached end of file
+145.2479 	EXP 	window1: recordFrameIntervals = False
+145.2718 	EXP 	text_2: autoDraw = True
+145.2731 	EXP 	window1: recordFrameIntervals = True
+147.4469 	DATA 	Keypress: space
+147.6752 	EXP 	New trial (rep=9, index=0): None
+147.6764 	EXP 	Sound probe started
+147.6961 	EXP 	text_2: autoDraw = False
+147.6961 	EXP 	text_2: autoDraw = False
+147.8867 	EXP 	Sound probe stopped
+147.8886 	EXP 	window1: recordFrameIntervals = False
+147.9119 	EXP 	text_2: autoDraw = True
+147.9131 	EXP 	window1: recordFrameIntervals = True
+150.3091 	EXP 	New trial (rep=10, index=0): None
+150.3101 	EXP 	Sound probe started
+150.3358 	EXP 	text_2: autoDraw = False
+150.3358 	EXP 	text_2: autoDraw = False
+150.4572 	DATA 	Keypress: space
+150.5265 	EXP 	Sound probe reached end of file
+150.5269 	EXP 	window1: recordFrameIntervals = False
+150.5457 	EXP 	text_2: autoDraw = True
+150.5470 	EXP 	window1: recordFrameIntervals = True
+152.9472 	EXP 	New trial (rep=11, index=0): None
+152.9482 	EXP 	Sound probe started
+152.9742 	EXP 	text_2: autoDraw = False
+152.9742 	EXP 	text_2: autoDraw = False
+153.1666 	EXP 	Sound probe reached end of file
+153.1672 	EXP 	window1: recordFrameIntervals = False
+153.1875 	EXP 	text_2: autoDraw = True
+153.1886 	EXP 	window1: recordFrameIntervals = True
+155.3659 	DATA 	Keypress: space
+155.5876 	EXP 	New trial (rep=12, index=0): None
+155.5886 	EXP 	Sound probe started
+155.6156 	EXP 	text_2: autoDraw = False
+155.6156 	EXP 	text_2: autoDraw = False
+155.8066 	EXP 	Sound probe reached end of file
+155.8071 	EXP 	window1: recordFrameIntervals = False
+155.8269 	EXP 	text_2: autoDraw = True
+155.8280 	EXP 	window1: recordFrameIntervals = True
+158.2290 	EXP 	New trial (rep=13, index=0): None
+158.2329 	EXP 	Sound probe started
+158.2534 	EXP 	text_2: autoDraw = False
+158.2534 	EXP 	text_2: autoDraw = False
+158.4463 	EXP 	Sound probe reached end of file
+158.4467 	EXP 	window1: recordFrameIntervals = False
+158.4674 	EXP 	text_2: autoDraw = True
+158.4686 	EXP 	window1: recordFrameIntervals = True
+160.6455 	DATA 	Keypress: space
+160.8742 	EXP 	New trial (rep=14, index=0): None
+160.8752 	EXP 	Sound probe started
+160.8957 	EXP 	text_2: autoDraw = False
+160.8957 	EXP 	text_2: autoDraw = False
+161.0865 	EXP 	Sound probe stopped
+161.0885 	EXP 	window1: recordFrameIntervals = False
+161.1132 	EXP 	text_2: autoDraw = True
+161.1145 	EXP 	window1: recordFrameIntervals = True
+163.5353 	EXP 	text_2: autoDraw = False
+163.5353 	EXP 	text_2: autoDraw = False
+163.5353 	EXP 	break_txt: autoDraw = True
+188.9730 	EXP 	New trial (rep=2, index=0): None
+190.3509 	DATA 	Keypress: space
+190.3671 	EXP 	break_txt: autoDraw = False
+190.3671 	EXP 	text: text = 'RHYTHM'
+190.3671 	EXP 	text: autoDraw = True
+191.3558 	EXP 	Created sequence: sequential, trialTypes=1, nReps=9, seed=None
+191.3560 	EXP 	New trial (rep=0, index=0): None
+191.3572 	EXP 	Sound probe started
+191.3857 	EXP 	text: autoDraw = False
+191.3857 	EXP 	text: autoDraw = False
+191.5745 	EXP 	Sound probe reached end of file
+191.5750 	EXP 	window1: recordFrameIntervals = False
+191.6032 	EXP 	text_2: autoDraw = True
+191.6045 	EXP 	window1: recordFrameIntervals = True
+194.0803 	EXP 	New trial (rep=1, index=0): None
+194.0823 	EXP 	Sound probe started
+194.1084 	EXP 	text_2: autoDraw = False
+194.1084 	EXP 	text_2: autoDraw = False
+194.3005 	EXP 	Sound probe reached end of file
+194.3031 	EXP 	window1: recordFrameIntervals = False
+194.3298 	EXP 	text_2: autoDraw = True
+194.3347 	EXP 	window1: recordFrameIntervals = True
+196.8081 	EXP 	New trial (rep=2, index=0): None
+196.8089 	EXP 	Sound probe started
+196.8348 	EXP 	text_2: autoDraw = False
+196.8348 	EXP 	text_2: autoDraw = False
+197.0226 	EXP 	Sound probe reached end of file
+197.0246 	EXP 	window1: recordFrameIntervals = False
+197.0477 	EXP 	text_2: autoDraw = True
+197.0490 	EXP 	window1: recordFrameIntervals = True
+199.5282 	EXP 	New trial (rep=3, index=0): None
+199.5291 	EXP 	Sound probe started
+199.5554 	EXP 	text_2: autoDraw = False
+199.5554 	EXP 	text_2: autoDraw = False
+199.7424 	EXP 	Sound probe reached end of file
+199.7444 	EXP 	window1: recordFrameIntervals = False
+199.7669 	EXP 	text_2: autoDraw = True
+199.7682 	EXP 	window1: recordFrameIntervals = True
+202.0279 	DATA 	Keypress: space
+202.2498 	EXP 	New trial (rep=4, index=0): None
+202.2508 	EXP 	Sound probe started
+202.2767 	EXP 	text_2: autoDraw = False
+202.2767 	EXP 	text_2: autoDraw = False
+202.4703 	EXP 	Sound probe reached end of file
+202.4707 	EXP 	window1: recordFrameIntervals = False
+202.4912 	EXP 	text_2: autoDraw = True
+202.4923 	EXP 	window1: recordFrameIntervals = True
+204.9757 	EXP 	New trial (rep=5, index=0): None
+204.9781 	EXP 	Sound probe started
+205.0027 	EXP 	text_2: autoDraw = False
+205.0027 	EXP 	text_2: autoDraw = False
+205.1905 	EXP 	Sound probe reached end of file
+205.1910 	EXP 	window1: recordFrameIntervals = False
+205.2181 	EXP 	text_2: autoDraw = True
+205.2193 	EXP 	window1: recordFrameIntervals = True
+207.7075 	EXP 	New trial (rep=6, index=0): None
+207.7092 	EXP 	Sound probe started
+207.7293 	EXP 	text_2: autoDraw = False
+207.7293 	EXP 	text_2: autoDraw = False
+207.9225 	EXP 	Sound probe reached end of file
+207.9230 	EXP 	window1: recordFrameIntervals = False
+207.9433 	EXP 	text_2: autoDraw = True
+207.9445 	EXP 	window1: recordFrameIntervals = True
+210.2059 	DATA 	Keypress: space
+210.4278 	EXP 	New trial (rep=7, index=0): None
+210.4288 	EXP 	Sound probe started
+210.4558 	EXP 	text_2: autoDraw = False
+210.4558 	EXP 	text_2: autoDraw = False
+210.6425 	EXP 	Sound probe reached end of file
+210.6430 	EXP 	window1: recordFrameIntervals = False
+210.6627 	EXP 	text_2: autoDraw = True
+210.6641 	EXP 	window1: recordFrameIntervals = True
+213.1492 	EXP 	New trial (rep=8, index=0): None
+213.1503 	EXP 	Sound probe started
+213.1787 	EXP 	text_2: autoDraw = False
+213.1787 	EXP 	text_2: autoDraw = False
+213.3705 	EXP 	Sound probe reached end of file
+213.3726 	EXP 	window1: recordFrameIntervals = False
+213.3993 	EXP 	text_2: autoDraw = True
+213.4005 	EXP 	window1: recordFrameIntervals = True
+215.9040 	EXP 	text_2: autoDraw = False
+215.9040 	EXP 	text_2: autoDraw = False
+215.9040 	EXP 	break_txt: autoDraw = True
+216.5746 	EXP 	New trial (rep=3, index=0): None
+217.5123 	DATA 	Keypress: space
+217.5285 	EXP 	break_txt: autoDraw = False
+217.5285 	EXP 	text: height = 0.05
+217.5285 	EXP 	text: height = 0.05
+217.5285 	EXP 	text: text = 'PITCH'
+217.5285 	EXP 	text: autoDraw = True
+218.5229 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+218.5230 	EXP 	New trial (rep=0, index=0): None
+218.5243 	EXP 	Sound probe started
+218.5542 	EXP 	text: autoDraw = False
+218.5542 	EXP 	text: autoDraw = False
+218.7427 	EXP 	Sound probe reached end of file
+218.7447 	EXP 	window1: recordFrameIntervals = False
+218.7814 	EXP 	text_2: autoDraw = True
+218.7827 	EXP 	window1: recordFrameIntervals = True
+220.8013 	EXP 	New trial (rep=1, index=0): None
+220.8023 	EXP 	Sound probe started
+220.8293 	EXP 	text_2: autoDraw = False
+220.8293 	EXP 	text_2: autoDraw = False
+221.0224 	EXP 	Sound probe reached end of file
+221.0229 	EXP 	window1: recordFrameIntervals = False
+221.0507 	EXP 	text_2: autoDraw = True
+221.0520 	EXP 	window1: recordFrameIntervals = True
+223.1506 	DATA 	Keypress: space
+223.3730 	EXP 	New trial (rep=2, index=0): None
+223.3740 	EXP 	Sound probe started
+223.3995 	EXP 	text_2: autoDraw = False
+223.3995 	EXP 	text_2: autoDraw = False
+223.5904 	EXP 	Sound probe reached end of file
+223.5909 	EXP 	window1: recordFrameIntervals = False
+223.6117 	EXP 	text_2: autoDraw = True
+223.6128 	EXP 	window1: recordFrameIntervals = True
+224.4860 	DATA 	Keypress: space
+224.7083 	EXP 	New trial (rep=3, index=0): None
+224.7093 	EXP 	Sound probe started
+224.7349 	EXP 	text_2: autoDraw = False
+224.7349 	EXP 	text_2: autoDraw = False
+224.9185 	EXP 	Sound probe reached end of file
+224.9209 	EXP 	window1: recordFrameIntervals = False
+224.9448 	EXP 	text_2: autoDraw = True
+224.9461 	EXP 	window1: recordFrameIntervals = True
+226.5981 	DATA 	Keypress: space
+226.8278 	EXP 	New trial (rep=4, index=0): None
+226.8290 	EXP 	Sound probe started
+226.8490 	EXP 	text_2: autoDraw = False
+226.8490 	EXP 	text_2: autoDraw = False
+227.0384 	EXP 	Sound probe reached end of file
+227.0404 	EXP 	window1: recordFrameIntervals = False
+227.0624 	EXP 	text_2: autoDraw = True
+227.0637 	EXP 	window1: recordFrameIntervals = True
+227.9320 	DATA 	Keypress: space
+228.1609 	EXP 	New trial (rep=5, index=0): None
+228.1621 	EXP 	Sound probe started
+228.1827 	EXP 	text_2: autoDraw = False
+228.1827 	EXP 	text_2: autoDraw = False
+228.3704 	EXP 	Sound probe stopped
+228.3724 	EXP 	window1: recordFrameIntervals = False
+228.3967 	EXP 	text_2: autoDraw = True
+228.3981 	EXP 	window1: recordFrameIntervals = True
+229.7127 	EXP 	New trial (rep=6, index=0): None
+229.7138 	EXP 	Sound probe started
+229.7338 	EXP 	text_2: autoDraw = False
+229.7338 	EXP 	text_2: autoDraw = False
+229.9185 	EXP 	Sound probe stopped
+229.9200 	EXP 	window1: recordFrameIntervals = False
+229.9483 	EXP 	text_2: autoDraw = True
+229.9497 	EXP 	window1: recordFrameIntervals = True
+230.9467 	EXP 	New trial (rep=7, index=0): None
+230.9477 	EXP 	Sound probe started
+230.9729 	EXP 	text_2: autoDraw = False
+230.9729 	EXP 	text_2: autoDraw = False
+231.1585 	EXP 	Sound probe reached end of file
+231.1607 	EXP 	window1: recordFrameIntervals = False
+231.1836 	EXP 	text_2: autoDraw = True
+231.1849 	EXP 	window1: recordFrameIntervals = True
+232.2269 	EXP 	New trial (rep=8, index=0): None
+232.2298 	EXP 	Sound probe started
+232.2491 	EXP 	text_2: autoDraw = False
+232.2491 	EXP 	text_2: autoDraw = False
+232.4386 	EXP 	Sound probe reached end of file
+232.4390 	EXP 	window1: recordFrameIntervals = False
+232.4595 	EXP 	text_2: autoDraw = True
+232.4607 	EXP 	window1: recordFrameIntervals = True
+235.4230 	EXP 	New trial (rep=9, index=0): None
+235.4240 	EXP 	Sound probe started
+235.4511 	EXP 	text_2: autoDraw = False
+235.4511 	EXP 	text_2: autoDraw = False
+235.6385 	EXP 	Sound probe reached end of file
+235.6389 	EXP 	window1: recordFrameIntervals = False
+235.6602 	EXP 	text_2: autoDraw = True
+235.6614 	EXP 	window1: recordFrameIntervals = True
+238.3383 	EXP 	text_2: autoDraw = False
+238.3383 	EXP 	text_2: autoDraw = False
+238.3383 	EXP 	break_txt: autoDraw = True
+239.0353 	EXP 	New trial (rep=4, index=0): None
+240.4860 	DATA 	Keypress: space
+240.5020 	EXP 	break_txt: autoDraw = False
+240.5020 	EXP 	text: text = 'PITCH'
+240.5020 	EXP 	text: autoDraw = True
+241.5016 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+241.5017 	EXP 	New trial (rep=0, index=0): None
+241.5031 	EXP 	Sound probe started
+241.5300 	EXP 	text: autoDraw = False
+241.5300 	EXP 	text: autoDraw = False
+241.7186 	EXP 	Sound probe reached end of file
+241.7191 	EXP 	window1: recordFrameIntervals = False
+241.7397 	EXP 	text_2: autoDraw = True
+241.7410 	EXP 	window1: recordFrameIntervals = True
+243.6733 	EXP 	New trial (rep=1, index=0): None
+243.6757 	EXP 	Sound probe started
+243.6950 	EXP 	text_2: autoDraw = False
+243.6950 	EXP 	text_2: autoDraw = False
+243.8784 	EXP 	Sound probe stopped
+243.8789 	EXP 	window1: recordFrameIntervals = False
+243.9044 	EXP 	text_2: autoDraw = True
+243.9055 	EXP 	window1: recordFrameIntervals = True
+246.3503 	EXP 	New trial (rep=2, index=0): None
+246.3514 	EXP 	Sound probe started
+246.3787 	EXP 	text_2: autoDraw = False
+246.3787 	EXP 	text_2: autoDraw = False
+246.5705 	EXP 	Sound probe reached end of file
+246.5722 	EXP 	window1: recordFrameIntervals = False
+246.5953 	EXP 	text_2: autoDraw = True
+246.5965 	EXP 	window1: recordFrameIntervals = True
+249.1502 	EXP 	New trial (rep=3, index=0): None
+249.1512 	EXP 	Sound probe started
+249.1760 	EXP 	text_2: autoDraw = False
+249.1760 	EXP 	text_2: autoDraw = False
+249.3665 	EXP 	Sound probe reached end of file
+249.3670 	EXP 	window1: recordFrameIntervals = False
+249.3982 	EXP 	text_2: autoDraw = True
+249.3996 	EXP 	window1: recordFrameIntervals = True
+251.1467 	EXP 	New trial (rep=4, index=0): None
+251.1497 	EXP 	Sound probe started
+251.1689 	EXP 	text_2: autoDraw = False
+251.1689 	EXP 	text_2: autoDraw = False
+251.3585 	EXP 	Sound probe stopped
+251.3603 	EXP 	window1: recordFrameIntervals = False
+251.3847 	EXP 	text_2: autoDraw = True
+251.3868 	EXP 	window1: recordFrameIntervals = True
+252.7012 	EXP 	New trial (rep=5, index=0): None
+252.7022 	EXP 	Sound probe started
+252.7278 	EXP 	text_2: autoDraw = False
+252.7278 	EXP 	text_2: autoDraw = False
+252.9187 	EXP 	Sound probe reached end of file
+252.9202 	EXP 	window1: recordFrameIntervals = False
+252.9407 	EXP 	text_2: autoDraw = True
+252.9419 	EXP 	window1: recordFrameIntervals = True
+255.5192 	DATA 	Keypress: space
+255.7424 	EXP 	New trial (rep=6, index=0): None
+255.7434 	EXP 	Sound probe started
+255.7706 	EXP 	text_2: autoDraw = False
+255.7706 	EXP 	text_2: autoDraw = False
+255.9583 	EXP 	Sound probe reached end of file
+255.9589 	EXP 	window1: recordFrameIntervals = False
+255.9874 	EXP 	text_2: autoDraw = True
+255.9888 	EXP 	window1: recordFrameIntervals = True
+257.3626 	EXP 	New trial (rep=7, index=0): None
+257.3636 	EXP 	Sound probe started
+257.3902 	EXP 	text_2: autoDraw = False
+257.3902 	EXP 	text_2: autoDraw = False
+257.5784 	EXP 	Sound probe reached end of file
+257.5804 	EXP 	window1: recordFrameIntervals = False
+257.6038 	EXP 	text_2: autoDraw = True
+257.6051 	EXP 	window1: recordFrameIntervals = True
+259.1736 	DATA 	Keypress: space
+259.3965 	EXP 	New trial (rep=8, index=0): None
+259.3974 	EXP 	Sound probe started
+259.4243 	EXP 	text_2: autoDraw = False
+259.4243 	EXP 	text_2: autoDraw = False
+259.6062 	EXP 	Sound probe reached end of file
+259.6067 	EXP 	window1: recordFrameIntervals = False
+259.6336 	EXP 	text_2: autoDraw = True
+259.6348 	EXP 	window1: recordFrameIntervals = True
+261.4244 	DATA 	Keypress: space
+261.6479 	EXP 	New trial (rep=9, index=0): None
+261.6489 	EXP 	Sound probe started
+261.6761 	EXP 	text_2: autoDraw = False
+261.6761 	EXP 	text_2: autoDraw = False
+261.8664 	EXP 	Sound probe reached end of file
+261.8668 	EXP 	window1: recordFrameIntervals = False
+261.8879 	EXP 	text_2: autoDraw = True
+261.8890 	EXP 	window1: recordFrameIntervals = True
+263.4042 	EXP 	New trial (rep=10, index=0): None
+263.4074 	EXP 	Sound probe started
+263.4308 	EXP 	text_2: autoDraw = False
+263.4308 	EXP 	text_2: autoDraw = False
+263.6184 	EXP 	Sound probe stopped
+263.6189 	EXP 	window1: recordFrameIntervals = False
+263.6466 	EXP 	text_2: autoDraw = True
+263.6479 	EXP 	window1: recordFrameIntervals = True
+264.5556 	DATA 	Keypress: space
+264.7802 	EXP 	New trial (rep=11, index=0): None
+264.7811 	EXP 	Sound probe started
+264.8063 	EXP 	text_2: autoDraw = False
+264.8063 	EXP 	text_2: autoDraw = False
+264.9984 	EXP 	Sound probe reached end of file
+264.9989 	EXP 	window1: recordFrameIntervals = False
+265.0183 	EXP 	text_2: autoDraw = True
+265.0196 	EXP 	window1: recordFrameIntervals = True
+266.8007 	EXP 	text_2: autoDraw = False
+266.8007 	EXP 	text_2: autoDraw = False
+266.8007 	EXP 	break_txt: autoDraw = True
+270.7137 	EXP 	New trial (rep=5, index=0): None
+274.5615 	DATA 	Keypress: space
+274.5617 	DATA 	Keypress: space
+274.5778 	EXP 	break_txt: autoDraw = False
+274.5778 	EXP 	text: height = 0.05
+274.5778 	EXP 	text: height = 0.05
+274.5778 	EXP 	text: text = 'RHYTHM'
+274.5778 	EXP 	text: autoDraw = True
+275.5743 	EXP 	Created sequence: sequential, trialTypes=1, nReps=14, seed=None
+275.5744 	EXP 	New trial (rep=0, index=0): None
+275.5757 	EXP 	Sound probe started
+275.6026 	EXP 	text: autoDraw = False
+275.6026 	EXP 	text: autoDraw = False
+275.7944 	EXP 	Sound probe reached end of file
+275.7948 	EXP 	window1: recordFrameIntervals = False
+275.8260 	EXP 	text_2: autoDraw = True
+275.8274 	EXP 	window1: recordFrameIntervals = True
+277.6660 	EXP 	New trial (rep=1, index=0): None
+277.6672 	EXP 	Sound probe started
+277.6871 	EXP 	text_2: autoDraw = False
+277.6871 	EXP 	text_2: autoDraw = False
+277.8863 	EXP 	Sound probe reached end of file
+277.8868 	EXP 	window1: recordFrameIntervals = False
+277.9062 	EXP 	text_2: autoDraw = True
+277.9073 	EXP 	window1: recordFrameIntervals = True
+279.7504 	EXP 	New trial (rep=2, index=0): None
+279.7512 	EXP 	Sound probe started
+279.7786 	EXP 	text_2: autoDraw = False
+279.7786 	EXP 	text_2: autoDraw = False
+279.9663 	EXP 	Sound probe reached end of file
+279.9668 	EXP 	window1: recordFrameIntervals = False
+279.9926 	EXP 	text_2: autoDraw = True
+279.9939 	EXP 	window1: recordFrameIntervals = True
+281.6075 	DATA 	Keypress: space
+281.8318 	EXP 	New trial (rep=3, index=0): None
+281.8328 	EXP 	Sound probe started
+281.8585 	EXP 	text_2: autoDraw = False
+281.8585 	EXP 	text_2: autoDraw = False
+282.0464 	EXP 	Sound probe reached end of file
+282.0488 	EXP 	window1: recordFrameIntervals = False
+282.0717 	EXP 	text_2: autoDraw = True
+282.0730 	EXP 	window1: recordFrameIntervals = True
+283.6888 	DATA 	Keypress: space
+283.9150 	EXP 	New trial (rep=4, index=0): None
+283.9179 	EXP 	Sound probe started
+283.9369 	EXP 	text_2: autoDraw = False
+283.9369 	EXP 	text_2: autoDraw = False
+284.1263 	EXP 	Sound probe stopped
+284.1278 	EXP 	window1: recordFrameIntervals = False
+284.1513 	EXP 	text_2: autoDraw = True
+284.1525 	EXP 	window1: recordFrameIntervals = True
+285.9915 	EXP 	New trial (rep=5, index=0): None
+285.9925 	EXP 	Sound probe started
+286.0199 	EXP 	text_2: autoDraw = False
+286.0199 	EXP 	text_2: autoDraw = False
+286.2064 	EXP 	Sound probe reached end of file
+286.2068 	EXP 	window1: recordFrameIntervals = False
+286.2324 	EXP 	text_2: autoDraw = True
+286.2335 	EXP 	window1: recordFrameIntervals = True
+288.0706 	EXP 	New trial (rep=6, index=0): None
+288.0716 	EXP 	Sound probe started
+288.0966 	EXP 	text_2: autoDraw = False
+288.0966 	EXP 	text_2: autoDraw = False
+288.2864 	EXP 	Sound probe reached end of file
+288.2882 	EXP 	window1: recordFrameIntervals = False
+288.3106 	EXP 	text_2: autoDraw = True
+288.3118 	EXP 	window1: recordFrameIntervals = True
+289.9280 	DATA 	Keypress: space
+290.1542 	EXP 	New trial (rep=7, index=0): None
+290.1572 	EXP 	Sound probe started
+290.1763 	EXP 	text_2: autoDraw = False
+290.1763 	EXP 	text_2: autoDraw = False
+290.3664 	EXP 	Sound probe stopped
+290.3682 	EXP 	window1: recordFrameIntervals = False
+290.3910 	EXP 	text_2: autoDraw = True
+290.3923 	EXP 	window1: recordFrameIntervals = True
+292.0086 	DATA 	Keypress: space
+292.2308 	EXP 	New trial (rep=8, index=0): None
+292.2318 	EXP 	Sound probe started
+292.2597 	EXP 	text_2: autoDraw = False
+292.2597 	EXP 	text_2: autoDraw = False
+292.4464 	EXP 	Sound probe reached end of file
+292.4478 	EXP 	window1: recordFrameIntervals = False
+292.4756 	EXP 	text_2: autoDraw = True
+292.4768 	EXP 	window1: recordFrameIntervals = True
+294.0871 	DATA 	Keypress: space
+294.3118 	EXP 	New trial (rep=9, index=0): None
+294.3128 	EXP 	Sound probe started
+294.3389 	EXP 	text_2: autoDraw = False
+294.3389 	EXP 	text_2: autoDraw = False
+294.5265 	EXP 	Sound probe reached end of file
+294.5286 	EXP 	window1: recordFrameIntervals = False
+294.5508 	EXP 	text_2: autoDraw = True
+294.5523 	EXP 	window1: recordFrameIntervals = True
+296.1678 	DATA 	Keypress: space
+296.3977 	EXP 	New trial (rep=10, index=0): None
+296.3989 	EXP 	Sound probe started
+296.4187 	EXP 	text_2: autoDraw = False
+296.4187 	EXP 	text_2: autoDraw = False
+296.6064 	EXP 	Sound probe stopped
+296.6082 	EXP 	window1: recordFrameIntervals = False
+296.6316 	EXP 	text_2: autoDraw = True
+296.6329 	EXP 	window1: recordFrameIntervals = True
+298.2464 	DATA 	Keypress: space
+298.4729 	EXP 	New trial (rep=11, index=0): None
+298.4742 	EXP 	Sound probe started
+298.5001 	EXP 	text_2: autoDraw = False
+298.5001 	EXP 	text_2: autoDraw = False
+298.6944 	EXP 	Sound probe reached end of file
+298.6953 	EXP 	window1: recordFrameIntervals = False
+298.7160 	EXP 	text_2: autoDraw = True
+298.7172 	EXP 	window1: recordFrameIntervals = True
+300.3352 	DATA 	Keypress: space
+300.5606 	EXP 	New trial (rep=12, index=0): None
+300.5645 	EXP 	Sound probe started
+300.5879 	EXP 	text_2: autoDraw = False
+300.5879 	EXP 	text_2: autoDraw = False
+300.7825 	EXP 	Sound probe reached end of file
+300.7848 	EXP 	window1: recordFrameIntervals = False
+300.8075 	EXP 	text_2: autoDraw = True
+300.8087 	EXP 	window1: recordFrameIntervals = True
+302.4247 	DATA 	Keypress: space
+302.6527 	EXP 	New trial (rep=13, index=0): None
+302.6548 	EXP 	Sound probe started
+302.6742 	EXP 	text_2: autoDraw = False
+302.6742 	EXP 	text_2: autoDraw = False
+302.8624 	EXP 	Sound probe stopped
+302.8640 	EXP 	window1: recordFrameIntervals = False
+302.8879 	EXP 	text_2: autoDraw = True
+302.8892 	EXP 	window1: recordFrameIntervals = True
+304.5046 	DATA 	Keypress: space
+304.7572 	EXP 	text_2: autoDraw = False
+304.7572 	EXP 	text_2: autoDraw = False
+304.7572 	EXP 	break_txt: autoDraw = True
+313.1425 	EXP 	New trial (rep=6, index=0): None
+314.1346 	DATA 	Keypress: space
+314.1506 	EXP 	break_txt: autoDraw = False
+314.1506 	EXP 	text: height = 0.05
+314.1506 	EXP 	text: height = 0.05
+314.1506 	EXP 	text: text = 'X'
+314.1506 	EXP 	text: autoDraw = True
+315.1451 	EXP 	Created sequence: sequential, trialTypes=1, nReps=8, seed=None
+315.1456 	EXP 	New trial (rep=0, index=0): None
+315.1498 	EXP 	Sound probe started
+315.1724 	EXP 	text: autoDraw = False
+315.1724 	EXP 	text: autoDraw = False
+315.3625 	EXP 	Sound probe reached end of file
+315.3640 	EXP 	window1: recordFrameIntervals = False
+315.3849 	EXP 	text_2: autoDraw = True
+315.3861 	EXP 	window1: recordFrameIntervals = True
+317.4158 	DATA 	Keypress: space
+317.6401 	EXP 	New trial (rep=1, index=0): None
+317.6412 	EXP 	Sound probe started
+317.6684 	EXP 	text_2: autoDraw = False
+317.6684 	EXP 	text_2: autoDraw = False
+317.8544 	EXP 	Sound probe reached end of file
+317.8548 	EXP 	window1: recordFrameIntervals = False
+317.8740 	EXP 	text_2: autoDraw = True
+317.8753 	EXP 	window1: recordFrameIntervals = True
+318.8235 	DATA 	Keypress: space
+319.0501 	EXP 	New trial (rep=2, index=0): None
+319.0535 	EXP 	Sound probe started
+319.0745 	EXP 	text_2: autoDraw = False
+319.0745 	EXP 	text_2: autoDraw = False
+319.2623 	EXP 	Sound probe reached end of file
+319.2628 	EXP 	window1: recordFrameIntervals = False
+319.2923 	EXP 	text_2: autoDraw = True
+319.2936 	EXP 	window1: recordFrameIntervals = True
+321.5014 	EXP 	New trial (rep=3, index=0): None
+321.5049 	EXP 	Sound probe started
+321.5249 	EXP 	text_2: autoDraw = False
+321.5249 	EXP 	text_2: autoDraw = False
+321.7222 	EXP 	Sound probe reached end of file
+321.7237 	EXP 	window1: recordFrameIntervals = False
+321.7424 	EXP 	text_2: autoDraw = True
+321.7436 	EXP 	window1: recordFrameIntervals = True
+324.0646 	DATA 	Keypress: space
+324.2921 	EXP 	New trial (rep=4, index=0): None
+324.2941 	EXP 	Sound probe started
+324.3130 	EXP 	text_2: autoDraw = False
+324.3130 	EXP 	text_2: autoDraw = False
+324.3415 	DATA 	Keypress: space
+324.5024 	EXP 	Sound probe stopped
+324.5043 	EXP 	window1: recordFrameIntervals = False
+324.5316 	EXP 	text_2: autoDraw = True
+324.5329 	EXP 	window1: recordFrameIntervals = True
+325.9460 	EXP 	New trial (rep=5, index=0): None
+325.9470 	EXP 	Sound probe started
+325.9737 	EXP 	text_2: autoDraw = False
+325.9737 	EXP 	text_2: autoDraw = False
+326.1626 	EXP 	Sound probe reached end of file
+326.1644 	EXP 	window1: recordFrameIntervals = False
+326.1847 	EXP 	text_2: autoDraw = True
+326.1859 	EXP 	window1: recordFrameIntervals = True
+327.7739 	EXP 	New trial (rep=6, index=0): None
+327.7771 	EXP 	Sound probe started
+327.7981 	EXP 	text_2: autoDraw = False
+327.7981 	EXP 	text_2: autoDraw = False
+327.9905 	EXP 	Sound probe reached end of file
+327.9917 	EXP 	window1: recordFrameIntervals = False
+328.0091 	EXP 	text_2: autoDraw = True
+328.0103 	EXP 	window1: recordFrameIntervals = True
+329.7439 	DATA 	Keypress: space
+329.9684 	EXP 	New trial (rep=7, index=0): None
+329.9695 	EXP 	Sound probe started
+329.9960 	EXP 	text_2: autoDraw = False
+329.9960 	EXP 	text_2: autoDraw = False
+330.1822 	EXP 	Sound probe reached end of file
+330.1826 	EXP 	window1: recordFrameIntervals = False
+330.2102 	EXP 	text_2: autoDraw = True
+330.2115 	EXP 	window1: recordFrameIntervals = True
+331.8630 	EXP 	text_2: autoDraw = False
+331.8630 	EXP 	text_2: autoDraw = False
+331.8630 	EXP 	break_txt: autoDraw = True
+336.3948 	EXP 	New trial (rep=7, index=0): None
+337.6007 	DATA 	Keypress: space
+337.6169 	EXP 	break_txt: autoDraw = False
+337.6169 	EXP 	text: text = 'X'
+337.6169 	EXP 	text: autoDraw = True
+338.6150 	EXP 	Created sequence: sequential, trialTypes=1, nReps=15, seed=None
+338.6155 	EXP 	New trial (rep=0, index=0): None
+338.6194 	EXP 	Sound probe started
+338.6396 	EXP 	text: autoDraw = False
+338.6396 	EXP 	text: autoDraw = False
+338.8304 	EXP 	Sound probe reached end of file
+338.8325 	EXP 	window1: recordFrameIntervals = False
+338.8513 	EXP 	text_2: autoDraw = True
+338.8526 	EXP 	window1: recordFrameIntervals = True
+341.3890 	DATA 	Keypress: space
+341.3897 	DATA 	Keypress: space
+341.6139 	EXP 	New trial (rep=1, index=0): None
+341.6149 	EXP 	Sound probe started
+341.6411 	EXP 	text_2: autoDraw = False
+341.6411 	EXP 	text_2: autoDraw = False
+341.8304 	EXP 	Sound probe reached end of file
+341.8328 	EXP 	window1: recordFrameIntervals = False
+341.8545 	EXP 	text_2: autoDraw = True
+341.8558 	EXP 	window1: recordFrameIntervals = True
+344.5678 	DATA 	Keypress: space
+344.7949 	EXP 	New trial (rep=2, index=0): None
+344.7983 	EXP 	Sound probe started
+344.8173 	EXP 	text_2: autoDraw = False
+344.8173 	EXP 	text_2: autoDraw = False
+345.0105 	EXP 	Sound probe reached end of file
+345.0122 	EXP 	window1: recordFrameIntervals = False
+345.0323 	EXP 	text_2: autoDraw = True
+345.0336 	EXP 	window1: recordFrameIntervals = True
+345.7886 	DATA 	Keypress: space
+346.0172 	EXP 	New trial (rep=3, index=0): None
+346.0183 	EXP 	Sound probe started
+346.0375 	EXP 	text_2: autoDraw = False
+346.0375 	EXP 	text_2: autoDraw = False
+346.2304 	EXP 	Sound probe reached end of file
+346.2324 	EXP 	window1: recordFrameIntervals = False
+346.2548 	EXP 	text_2: autoDraw = True
+346.2561 	EXP 	window1: recordFrameIntervals = True
+348.6202 	EXP 	New trial (rep=4, index=0): None
+348.6213 	EXP 	Sound probe started
+348.6474 	EXP 	text_2: autoDraw = False
+348.6474 	EXP 	text_2: autoDraw = False
+348.8302 	EXP 	Sound probe reached end of file
+348.8307 	EXP 	window1: recordFrameIntervals = False
+348.8620 	EXP 	text_2: autoDraw = True
+348.8633 	EXP 	window1: recordFrameIntervals = True
+350.9770 	EXP 	New trial (rep=5, index=0): None
+350.9780 	EXP 	Sound probe started
+351.0053 	EXP 	text_2: autoDraw = False
+351.0053 	EXP 	text_2: autoDraw = False
+351.1903 	EXP 	Sound probe reached end of file
+351.1908 	EXP 	window1: recordFrameIntervals = False
+351.2169 	EXP 	text_2: autoDraw = True
+351.2181 	EXP 	window1: recordFrameIntervals = True
+352.7795 	EXP 	New trial (rep=6, index=0): None
+352.7806 	EXP 	Sound probe started
+352.8012 	EXP 	text_2: autoDraw = False
+352.8012 	EXP 	text_2: autoDraw = False
+352.9903 	EXP 	Sound probe stopped
+352.9922 	EXP 	window1: recordFrameIntervals = False
+353.0128 	EXP 	text_2: autoDraw = True
+353.0140 	EXP 	window1: recordFrameIntervals = True
+355.6533 	DATA 	Keypress: space
+355.8783 	EXP 	New trial (rep=7, index=0): None
+355.8793 	EXP 	Sound probe started
+355.9054 	EXP 	text_2: autoDraw = False
+355.9054 	EXP 	text_2: autoDraw = False
+356.0983 	EXP 	Sound probe reached end of file
+356.0987 	EXP 	window1: recordFrameIntervals = False
+356.1189 	EXP 	text_2: autoDraw = True
+356.1200 	EXP 	window1: recordFrameIntervals = True
+358.1045 	DATA 	Keypress: space
+358.3306 	EXP 	New trial (rep=8, index=0): None
+358.3317 	EXP 	Sound probe started
+358.3576 	EXP 	text_2: autoDraw = False
+358.3576 	EXP 	text_2: autoDraw = False
+358.5504 	EXP 	Sound probe reached end of file
+358.5508 	EXP 	window1: recordFrameIntervals = False
+358.5819 	EXP 	text_2: autoDraw = True
+358.5831 	EXP 	window1: recordFrameIntervals = True
+359.6983 	EXP 	New trial (rep=9, index=0): None
+359.6995 	EXP 	Sound probe started
+359.7197 	EXP 	text_2: autoDraw = False
+359.7197 	EXP 	text_2: autoDraw = False
+359.9184 	EXP 	Sound probe reached end of file
+359.9188 	EXP 	window1: recordFrameIntervals = False
+359.9398 	EXP 	text_2: autoDraw = True
+359.9409 	EXP 	window1: recordFrameIntervals = True
+362.1649 	DATA 	Keypress: space
+362.3900 	EXP 	New trial (rep=10, index=0): None
+362.3910 	EXP 	Sound probe started
+362.4179 	EXP 	text_2: autoDraw = False
+362.4179 	EXP 	text_2: autoDraw = False
+362.6103 	EXP 	Sound probe reached end of file
+362.6108 	EXP 	window1: recordFrameIntervals = False
+362.6325 	EXP 	text_2: autoDraw = True
+362.6337 	EXP 	window1: recordFrameIntervals = True
+365.2911 	EXP 	New trial (rep=11, index=0): None
+365.2921 	EXP 	Sound probe started
+365.3201 	EXP 	text_2: autoDraw = False
+365.3201 	EXP 	text_2: autoDraw = False
+365.5101 	EXP 	Sound probe reached end of file
+365.5106 	EXP 	window1: recordFrameIntervals = False
+365.5302 	EXP 	text_2: autoDraw = True
+365.5313 	EXP 	window1: recordFrameIntervals = True
+367.9157 	DATA 	Keypress: space
+368.0692 	EXP 	New trial (rep=12, index=0): None
+368.0722 	EXP 	Sound probe started
+368.0914 	EXP 	text_2: autoDraw = False
+368.0914 	EXP 	text_2: autoDraw = False
+368.2914 	EXP 	Sound probe reached end of file
+368.2919 	EXP 	window1: recordFrameIntervals = False
+368.3218 	EXP 	text_2: autoDraw = True
+368.3228 	EXP 	window1: recordFrameIntervals = True
+369.3602 	EXP 	New trial (rep=13, index=0): None
+369.3612 	EXP 	Sound probe started
+369.3866 	EXP 	text_2: autoDraw = False
+369.3866 	EXP 	text_2: autoDraw = False
+369.5782 	EXP 	Sound probe reached end of file
+369.5787 	EXP 	window1: recordFrameIntervals = False
+369.6002 	EXP 	text_2: autoDraw = True
+369.6013 	EXP 	window1: recordFrameIntervals = True
+371.6687 	EXP 	New trial (rep=14, index=0): None
+371.6720 	EXP 	Sound probe started
+371.6942 	EXP 	text_2: autoDraw = False
+371.6942 	EXP 	text_2: autoDraw = False
+371.8902 	EXP 	Sound probe reached end of file
+371.8919 	EXP 	window1: recordFrameIntervals = False
+371.9117 	EXP 	text_2: autoDraw = True
+371.9129 	EXP 	window1: recordFrameIntervals = True
+373.5516 	DATA 	Keypress: space
+373.8036 	EXP 	text_2: autoDraw = False
+373.8036 	EXP 	text_2: autoDraw = False
+373.8036 	EXP 	break_txt: autoDraw = True
+374.7520 	EXP 	New trial (rep=8, index=0): None
+376.2119 	DATA 	Keypress: space
+376.2279 	EXP 	break_txt: autoDraw = False
+376.2279 	EXP 	text: height = 0.05
+376.2279 	EXP 	text: height = 0.05
+376.2279 	EXP 	text: text = 'PITCH'
+376.2279 	EXP 	text: autoDraw = True
+377.2176 	EXP 	Created sequence: sequential, trialTypes=1, nReps=11, seed=None
+377.2178 	EXP 	New trial (rep=0, index=0): None
+377.2190 	EXP 	Sound probe started
+377.2500 	EXP 	text: autoDraw = False
+377.2500 	EXP 	text: autoDraw = False
+377.4391 	EXP 	Sound probe reached end of file
+377.4395 	EXP 	window1: recordFrameIntervals = False
+377.4704 	EXP 	text_2: autoDraw = True
+377.4717 	EXP 	window1: recordFrameIntervals = True
+379.3548 	EXP 	New trial (rep=1, index=0): None
+379.3558 	EXP 	Sound probe started
+379.3809 	EXP 	text_2: autoDraw = False
+379.3809 	EXP 	text_2: autoDraw = False
+379.5662 	EXP 	Sound probe reached end of file
+379.5668 	EXP 	window1: recordFrameIntervals = False
+379.5917 	EXP 	text_2: autoDraw = True
+379.5931 	EXP 	window1: recordFrameIntervals = True
+381.9236 	DATA 	Keypress: space
+382.1514 	EXP 	New trial (rep=2, index=0): None
+382.1546 	EXP 	Sound probe started
+382.1752 	EXP 	text_2: autoDraw = False
+382.1752 	EXP 	text_2: autoDraw = False
+382.3665 	EXP 	Sound probe reached end of file
+382.3681 	EXP 	window1: recordFrameIntervals = False
+382.3889 	EXP 	text_2: autoDraw = True
+382.3904 	EXP 	window1: recordFrameIntervals = True
+384.4513 	DATA 	Keypress: space
+384.6767 	EXP 	New trial (rep=3, index=0): None
+384.6777 	EXP 	Sound probe started
+384.7036 	EXP 	text_2: autoDraw = False
+384.7036 	EXP 	text_2: autoDraw = False
+384.8962 	EXP 	Sound probe reached end of file
+384.8967 	EXP 	window1: recordFrameIntervals = False
+384.9233 	EXP 	text_2: autoDraw = True
+384.9246 	EXP 	window1: recordFrameIntervals = True
+386.8623 	DATA 	Keypress: space
+387.0915 	EXP 	New trial (rep=4, index=0): None
+387.0936 	EXP 	Sound probe started
+387.1124 	EXP 	text_2: autoDraw = False
+387.1124 	EXP 	text_2: autoDraw = False
+387.3064 	EXP 	Sound probe reached end of file
+387.3083 	EXP 	window1: recordFrameIntervals = False
+387.3310 	EXP 	text_2: autoDraw = True
+387.3323 	EXP 	window1: recordFrameIntervals = True
+389.9821 	EXP 	New trial (rep=5, index=0): None
+389.9831 	EXP 	Sound probe started
+390.0086 	EXP 	text_2: autoDraw = False
+390.0086 	EXP 	text_2: autoDraw = False
+390.1983 	EXP 	Sound probe reached end of file
+390.1989 	EXP 	window1: recordFrameIntervals = False
+390.2192 	EXP 	text_2: autoDraw = True
+390.2204 	EXP 	window1: recordFrameIntervals = True
+392.1708 	DATA 	Keypress: space
+392.4019 	EXP 	New trial (rep=6, index=0): None
+392.4031 	EXP 	Sound probe started
+392.4234 	EXP 	text_2: autoDraw = False
+392.4234 	EXP 	text_2: autoDraw = False
+392.6184 	EXP 	Sound probe reached end of file
+392.6206 	EXP 	window1: recordFrameIntervals = False
+392.6438 	EXP 	text_2: autoDraw = True
+392.6450 	EXP 	window1: recordFrameIntervals = True
+395.3187 	EXP 	New trial (rep=7, index=0): None
+395.3199 	EXP 	Sound probe started
+395.3398 	EXP 	text_2: autoDraw = False
+395.3398 	EXP 	text_2: autoDraw = False
+395.5262 	EXP 	Sound probe stopped
+395.5275 	EXP 	window1: recordFrameIntervals = False
+395.5562 	EXP 	text_2: autoDraw = True
+395.5576 	EXP 	window1: recordFrameIntervals = True
+397.5033 	DATA 	Keypress: space
+397.7312 	EXP 	New trial (rep=8, index=0): None
+397.7346 	EXP 	Sound probe started
+397.7549 	EXP 	text_2: autoDraw = False
+397.7549 	EXP 	text_2: autoDraw = False
+397.9464 	EXP 	Sound probe reached end of file
+397.9480 	EXP 	window1: recordFrameIntervals = False
+397.9711 	EXP 	text_2: autoDraw = True
+397.9724 	EXP 	window1: recordFrameIntervals = True
+399.8265 	DATA 	Keypress: space
+400.0561 	EXP 	New trial (rep=9, index=0): None
+400.0572 	EXP 	Sound probe started
+400.0766 	EXP 	text_2: autoDraw = False
+400.0766 	EXP 	text_2: autoDraw = False
+400.2662 	EXP 	Sound probe stopped
+400.2680 	EXP 	window1: recordFrameIntervals = False
+400.2905 	EXP 	text_2: autoDraw = True
+400.2917 	EXP 	window1: recordFrameIntervals = True
+402.9060 	DATA 	Keypress: space
+403.1308 	EXP 	New trial (rep=10, index=0): None
+403.1318 	EXP 	Sound probe started
+403.1587 	EXP 	text_2: autoDraw = False
+403.1587 	EXP 	text_2: autoDraw = False
+403.3463 	EXP 	Sound probe reached end of file
+403.3468 	EXP 	window1: recordFrameIntervals = False
+403.3669 	EXP 	text_2: autoDraw = True
+403.3686 	EXP 	window1: recordFrameIntervals = True
+404.8091 	DATA 	Keypress: space
+405.0641 	EXP 	text_2: autoDraw = False
+405.0641 	EXP 	text_2: autoDraw = False
+405.0641 	EXP 	break_txt: autoDraw = True
+417.1956 	DATA 	Keypress: space
+417.2318 	EXP 	New trial (rep=9, index=0): None
+421.6214 	DATA 	Keypress: space
+421.6383 	EXP 	break_txt: autoDraw = False
+421.6383 	EXP 	text: height = 0.05
+421.6383 	EXP 	text: height = 0.05
+421.6383 	EXP 	text: text = 'RHYTHM'
+421.6383 	EXP 	text: autoDraw = True
+422.6340 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+422.6342 	EXP 	New trial (rep=0, index=0): None
+422.6354 	EXP 	Sound probe started
+422.6662 	EXP 	text: autoDraw = False
+422.6662 	EXP 	text: autoDraw = False
+422.8607 	EXP 	Sound probe reached end of file
+422.8611 	EXP 	window1: recordFrameIntervals = False
+422.8925 	EXP 	text_2: autoDraw = True
+422.8938 	EXP 	window1: recordFrameIntervals = True
+425.6684 	EXP 	New trial (rep=1, index=0): None
+425.6693 	EXP 	Sound probe started
+425.6952 	EXP 	text_2: autoDraw = False
+425.6952 	EXP 	text_2: autoDraw = False
+425.8824 	EXP 	Sound probe reached end of file
+425.8845 	EXP 	window1: recordFrameIntervals = False
+425.9104 	EXP 	text_2: autoDraw = True
+425.9117 	EXP 	window1: recordFrameIntervals = True
+428.4657 	DATA 	Keypress: space
+428.6914 	EXP 	New trial (rep=2, index=0): None
+428.6924 	EXP 	Sound probe started
+428.7198 	EXP 	text_2: autoDraw = False
+428.7198 	EXP 	text_2: autoDraw = False
+428.9023 	EXP 	Sound probe reached end of file
+428.9043 	EXP 	window1: recordFrameIntervals = False
+428.9260 	EXP 	text_2: autoDraw = True
+428.9272 	EXP 	window1: recordFrameIntervals = True
+431.7108 	EXP 	New trial (rep=3, index=0): None
+431.7118 	EXP 	Sound probe started
+431.7393 	EXP 	text_2: autoDraw = False
+431.7393 	EXP 	text_2: autoDraw = False
+431.9224 	EXP 	Sound probe reached end of file
+431.9243 	EXP 	window1: recordFrameIntervals = False
+431.9490 	EXP 	text_2: autoDraw = True
+431.9502 	EXP 	window1: recordFrameIntervals = True
+434.5050 	DATA 	Keypress: space
+434.7308 	EXP 	New trial (rep=4, index=0): None
+434.7318 	EXP 	Sound probe started
+434.7589 	EXP 	text_2: autoDraw = False
+434.7589 	EXP 	text_2: autoDraw = False
+434.9423 	EXP 	Sound probe reached end of file
+434.9444 	EXP 	window1: recordFrameIntervals = False
+434.9655 	EXP 	text_2: autoDraw = True
+434.9668 	EXP 	window1: recordFrameIntervals = True
+437.7523 	EXP 	New trial (rep=5, index=0): None
+437.7533 	EXP 	Sound probe started
+437.7808 	EXP 	text_2: autoDraw = False
+437.7808 	EXP 	text_2: autoDraw = False
+437.9622 	EXP 	Sound probe reached end of file
+437.9626 	EXP 	window1: recordFrameIntervals = False
+437.9897 	EXP 	text_2: autoDraw = True
+437.9909 	EXP 	window1: recordFrameIntervals = True
+440.5441 	DATA 	Keypress: space
+440.7702 	EXP 	New trial (rep=6, index=0): None
+440.7710 	EXP 	Sound probe started
+440.7963 	EXP 	text_2: autoDraw = False
+440.7963 	EXP 	text_2: autoDraw = False
+440.9862 	EXP 	Sound probe reached end of file
+440.9874 	EXP 	window1: recordFrameIntervals = False
+441.0169 	EXP 	text_2: autoDraw = True
+441.0210 	EXP 	window1: recordFrameIntervals = True
+443.7944 	EXP 	New trial (rep=7, index=0): None
+443.7973 	EXP 	Sound probe started
+443.8208 	EXP 	text_2: autoDraw = False
+443.8208 	EXP 	text_2: autoDraw = False
+444.0144 	EXP 	Sound probe reached end of file
+444.0160 	EXP 	window1: recordFrameIntervals = False
+444.0370 	EXP 	text_2: autoDraw = True
+444.0382 	EXP 	window1: recordFrameIntervals = True
+446.5968 	DATA 	Keypress: space
+446.8300 	EXP 	New trial (rep=8, index=0): None
+446.8312 	EXP 	Sound probe started
+446.8506 	EXP 	text_2: autoDraw = False
+446.8506 	EXP 	text_2: autoDraw = False
+446.8787 	DATA 	Keypress: space
+447.0423 	EXP 	Sound probe reached end of file
+447.0443 	EXP 	window1: recordFrameIntervals = False
+447.0659 	EXP 	text_2: autoDraw = True
+447.0671 	EXP 	window1: recordFrameIntervals = True
+449.8516 	EXP 	New trial (rep=9, index=0): None
+449.8552 	EXP 	Sound probe started
+449.8769 	EXP 	text_2: autoDraw = False
+449.8769 	EXP 	text_2: autoDraw = False
+450.0703 	EXP 	Sound probe reached end of file
+450.0707 	EXP 	window1: recordFrameIntervals = False
+450.0918 	EXP 	text_2: autoDraw = True
+450.0930 	EXP 	window1: recordFrameIntervals = True
+452.9056 	EXP 	text_2: autoDraw = False
+452.9056 	EXP 	text_2: autoDraw = False
+452.9056 	EXP 	break_txt: autoDraw = True
+454.3148 	EXP 	New trial (rep=10, index=0): None
+458.4506 	DATA 	Keypress: space
+458.4668 	EXP 	break_txt: autoDraw = False
+458.4668 	EXP 	text: text = 'RHYTHM'
+458.4668 	EXP 	text: autoDraw = True
+458.7298 	DATA 	Keypress: space
+459.4801 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+459.4804 	EXP 	New trial (rep=0, index=0): None
+459.4842 	EXP 	Sound probe started
+459.5097 	EXP 	text: autoDraw = False
+459.5097 	EXP 	text: autoDraw = False
+459.7026 	EXP 	Sound probe reached end of file
+459.7030 	EXP 	window1: recordFrameIntervals = False
+459.7328 	EXP 	text_2: autoDraw = True
+459.7339 	EXP 	window1: recordFrameIntervals = True
+460.7161 	EXP 	New trial (rep=1, index=0): None
+460.7197 	EXP 	Sound probe started
+460.7389 	EXP 	text_2: autoDraw = False
+460.7389 	EXP 	text_2: autoDraw = False
+460.9303 	EXP 	Sound probe reached end of file
+460.9319 	EXP 	window1: recordFrameIntervals = False
+460.9543 	EXP 	text_2: autoDraw = True
+460.9556 	EXP 	window1: recordFrameIntervals = True
+461.9438 	EXP 	New trial (rep=2, index=0): None
+461.9448 	EXP 	Sound probe started
+461.9725 	EXP 	text_2: autoDraw = False
+461.9725 	EXP 	text_2: autoDraw = False
+462.1619 	EXP 	Sound probe reached end of file
+462.1624 	EXP 	window1: recordFrameIntervals = False
+462.1828 	EXP 	text_2: autoDraw = True
+462.1840 	EXP 	window1: recordFrameIntervals = True
+462.9477 	DATA 	Keypress: space
+463.1812 	EXP 	New trial (rep=3, index=0): None
+463.1825 	EXP 	Sound probe started
+463.2019 	EXP 	text_2: autoDraw = False
+463.2019 	EXP 	text_2: autoDraw = False
+463.4082 	EXP 	Sound probe reached end of file
+463.4087 	EXP 	window1: recordFrameIntervals = False
+463.4382 	EXP 	text_2: autoDraw = True
+463.4393 	EXP 	window1: recordFrameIntervals = True
+464.4236 	EXP 	New trial (rep=4, index=0): None
+464.4254 	EXP 	Sound probe started
+464.4445 	EXP 	text_2: autoDraw = False
+464.4445 	EXP 	text_2: autoDraw = False
+464.6302 	EXP 	Sound probe stopped
+464.6306 	EXP 	window1: recordFrameIntervals = False
+464.6589 	EXP 	text_2: autoDraw = True
+464.6600 	EXP 	window1: recordFrameIntervals = True
+465.6484 	EXP 	New trial (rep=5, index=0): None
+465.6495 	EXP 	Sound probe started
+465.6694 	EXP 	text_2: autoDraw = False
+465.6694 	EXP 	text_2: autoDraw = False
+465.8622 	EXP 	Sound probe reached end of file
+465.8627 	EXP 	window1: recordFrameIntervals = False
+465.8833 	EXP 	text_2: autoDraw = True
+465.8845 	EXP 	window1: recordFrameIntervals = True
+466.6483 	DATA 	Keypress: space
+466.8783 	EXP 	New trial (rep=6, index=0): None
+466.8795 	EXP 	Sound probe started
+466.8990 	EXP 	text_2: autoDraw = False
+466.8990 	EXP 	text_2: autoDraw = False
+467.0902 	EXP 	Sound probe reached end of file
+467.0923 	EXP 	window1: recordFrameIntervals = False
+467.1154 	EXP 	text_2: autoDraw = True
+467.1168 	EXP 	window1: recordFrameIntervals = True
+468.1043 	EXP 	New trial (rep=7, index=0): None
+468.1076 	EXP 	Sound probe started
+468.1295 	EXP 	text_2: autoDraw = False
+468.1295 	EXP 	text_2: autoDraw = False
+468.3222 	EXP 	Sound probe reached end of file
+468.3227 	EXP 	window1: recordFrameIntervals = False
+468.3435 	EXP 	text_2: autoDraw = True
+468.3449 	EXP 	window1: recordFrameIntervals = True
+469.1069 	DATA 	Keypress: space
+469.3341 	EXP 	New trial (rep=8, index=0): None
+469.3352 	EXP 	Sound probe started
+469.3623 	EXP 	text_2: autoDraw = False
+469.3623 	EXP 	text_2: autoDraw = False
+469.5502 	EXP 	Sound probe reached end of file
+469.5506 	EXP 	window1: recordFrameIntervals = False
+469.5713 	EXP 	text_2: autoDraw = True
+469.5726 	EXP 	window1: recordFrameIntervals = True
+470.5666 	EXP 	New trial (rep=9, index=0): None
+470.5676 	EXP 	Sound probe started
+470.5885 	EXP 	text_2: autoDraw = False
+470.5885 	EXP 	text_2: autoDraw = False
+470.7821 	EXP 	Sound probe reached end of file
+470.7832 	EXP 	window1: recordFrameIntervals = False
+470.8045 	EXP 	text_2: autoDraw = True
+470.8057 	EXP 	window1: recordFrameIntervals = True
+471.8190 	EXP 	text_2: autoDraw = False
+471.8190 	EXP 	text_2: autoDraw = False
+471.8190 	EXP 	break_txt: autoDraw = True
+481.1764 	EXP 	New trial (rep=11, index=0): None
+485.2398 	DATA 	Keypress: space
+485.2399 	DATA 	Keypress: space
+485.2562 	EXP 	break_txt: autoDraw = False
+485.2562 	EXP 	text: text = 'RHYTHM'
+485.2562 	EXP 	text: autoDraw = True
+486.2631 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+486.2632 	EXP 	New trial (rep=0, index=0): None
+486.2644 	EXP 	Sound probe started
+486.2929 	EXP 	text: autoDraw = False
+486.2929 	EXP 	text: autoDraw = False
+486.4781 	EXP 	Sound probe reached end of file
+486.4800 	EXP 	window1: recordFrameIntervals = False
+486.5033 	EXP 	text_2: autoDraw = True
+486.5050 	EXP 	window1: recordFrameIntervals = True
+487.9968 	EXP 	New trial (rep=1, index=0): None
+487.9996 	EXP 	Sound probe started
+488.0184 	EXP 	text_2: autoDraw = False
+488.0184 	EXP 	text_2: autoDraw = False
+488.2101 	EXP 	Sound probe stopped
+488.2125 	EXP 	window1: recordFrameIntervals = False
+488.2171 	DATA 	Keypress: space
+488.2383 	EXP 	text_2: autoDraw = True
+488.2396 	EXP 	window1: recordFrameIntervals = True
+489.7265 	EXP 	New trial (rep=2, index=0): None
+489.7296 	EXP 	Sound probe started
+489.7523 	EXP 	text_2: autoDraw = False
+489.7523 	EXP 	text_2: autoDraw = False
+489.9383 	EXP 	Sound probe reached end of file
+489.9386 	EXP 	window1: recordFrameIntervals = False
+489.9698 	EXP 	text_2: autoDraw = True
+489.9710 	EXP 	window1: recordFrameIntervals = True
+491.2265 	DATA 	Keypress: space
+491.4599 	EXP 	New trial (rep=3, index=0): None
+491.4611 	EXP 	Sound probe started
+491.4810 	EXP 	text_2: autoDraw = False
+491.4810 	EXP 	text_2: autoDraw = False
+491.6861 	EXP 	Sound probe reached end of file
+491.6865 	EXP 	window1: recordFrameIntervals = False
+491.7152 	EXP 	text_2: autoDraw = True
+491.7162 	EXP 	window1: recordFrameIntervals = True
+493.2053 	EXP 	New trial (rep=4, index=0): None
+493.2063 	EXP 	Sound probe started
+493.2259 	EXP 	text_2: autoDraw = False
+493.2259 	EXP 	text_2: autoDraw = False
+493.4182 	EXP 	Sound probe reached end of file
+493.4199 	EXP 	window1: recordFrameIntervals = False
+493.4396 	EXP 	text_2: autoDraw = True
+493.4409 	EXP 	window1: recordFrameIntervals = True
+494.7068 	DATA 	Keypress: space
+494.9362 	EXP 	New trial (rep=5, index=0): None
+494.9397 	EXP 	Sound probe started
+494.9587 	EXP 	text_2: autoDraw = False
+494.9587 	EXP 	text_2: autoDraw = False
+495.1503 	EXP 	Sound probe stopped
+495.1521 	EXP 	window1: recordFrameIntervals = False
+495.1743 	EXP 	text_2: autoDraw = True
+495.1756 	EXP 	window1: recordFrameIntervals = True
+496.6673 	EXP 	New trial (rep=6, index=0): None
+496.6709 	EXP 	Sound probe started
+496.6937 	EXP 	text_2: autoDraw = False
+496.6937 	EXP 	text_2: autoDraw = False
+496.8900 	EXP 	Sound probe reached end of file
+496.8917 	EXP 	window1: recordFrameIntervals = False
+496.9108 	EXP 	text_2: autoDraw = True
+496.9122 	EXP 	window1: recordFrameIntervals = True
+498.1794 	DATA 	Keypress: space
+498.4111 	EXP 	New trial (rep=7, index=0): None
+498.4122 	EXP 	Sound probe started
+498.4318 	EXP 	text_2: autoDraw = False
+498.4318 	EXP 	text_2: autoDraw = False
+498.6301 	EXP 	Sound probe reached end of file
+498.6306 	EXP 	window1: recordFrameIntervals = False
+498.6562 	EXP 	text_2: autoDraw = True
+498.6572 	EXP 	window1: recordFrameIntervals = True
+499.9945 	DATA 	Keypress: space
+500.1524 	EXP 	New trial (rep=8, index=0): None
+500.1537 	EXP 	Sound probe started
+500.1736 	EXP 	text_2: autoDraw = False
+500.1736 	EXP 	text_2: autoDraw = False
+500.3701 	EXP 	Sound probe reached end of file
+500.3706 	EXP 	window1: recordFrameIntervals = False
+500.3903 	EXP 	text_2: autoDraw = True
+500.3914 	EXP 	window1: recordFrameIntervals = True
+501.8867 	EXP 	New trial (rep=9, index=0): None
+501.8875 	EXP 	Sound probe started
+501.9147 	EXP 	text_2: autoDraw = False
+501.9147 	EXP 	text_2: autoDraw = False
+502.1061 	EXP 	Sound probe reached end of file
+502.1065 	EXP 	window1: recordFrameIntervals = False
+502.1259 	EXP 	text_2: autoDraw = True
+502.1269 	EXP 	window1: recordFrameIntervals = True
+503.6475 	EXP 	text_2: autoDraw = False
+503.6475 	EXP 	text_2: autoDraw = False
+503.6475 	EXP 	break_txt: autoDraw = True
+505.1522 	EXP 	New trial (rep=12, index=0): None
+506.8806 	DATA 	Keypress: space
+506.8964 	EXP 	break_txt: autoDraw = False
+506.8964 	EXP 	text: height = 0.05
+506.8964 	EXP 	text: height = 0.05
+506.8964 	EXP 	text: text = 'PITCH'
+506.8964 	EXP 	text: autoDraw = True
+507.8966 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+507.8970 	EXP 	New trial (rep=0, index=0): None
+507.9013 	EXP 	Sound probe started
+507.9249 	EXP 	text: autoDraw = False
+507.9249 	EXP 	text: autoDraw = False
+508.1182 	EXP 	Sound probe reached end of file
+508.1198 	EXP 	window1: recordFrameIntervals = False
+508.1388 	EXP 	text_2: autoDraw = True
+508.1400 	EXP 	window1: recordFrameIntervals = True
+509.6107 	DATA 	Keypress: space
+509.8021 	EXP 	New trial (rep=1, index=0): None
+509.8055 	EXP 	Sound probe started
+509.8248 	EXP 	text_2: autoDraw = False
+509.8248 	EXP 	text_2: autoDraw = False
+510.0181 	EXP 	Sound probe reached end of file
+510.0198 	EXP 	window1: recordFrameIntervals = False
+510.0395 	EXP 	text_2: autoDraw = True
+510.0407 	EXP 	window1: recordFrameIntervals = True
+512.4032 	DATA 	Keypress: space
+512.6316 	EXP 	New trial (rep=2, index=0): None
+512.6326 	EXP 	Sound probe started
+512.6594 	EXP 	text_2: autoDraw = False
+512.6594 	EXP 	text_2: autoDraw = False
+512.8462 	EXP 	Sound probe reached end of file
+512.8466 	EXP 	window1: recordFrameIntervals = False
+512.8667 	EXP 	text_2: autoDraw = True
+512.8679 	EXP 	window1: recordFrameIntervals = True
+515.5874 	DATA 	Keypress: space
+515.8157 	EXP 	New trial (rep=3, index=0): None
+515.8167 	EXP 	Sound probe started
+515.8439 	EXP 	text_2: autoDraw = False
+515.8439 	EXP 	text_2: autoDraw = False
+516.0261 	EXP 	Sound probe reached end of file
+516.0280 	EXP 	window1: recordFrameIntervals = False
+516.0508 	EXP 	text_2: autoDraw = True
+516.0520 	EXP 	window1: recordFrameIntervals = True
+517.8874 	DATA 	Keypress: space
+518.1235 	EXP 	New trial (rep=4, index=0): None
+518.1246 	EXP 	Sound probe started
+518.1439 	EXP 	text_2: autoDraw = False
+518.1439 	EXP 	text_2: autoDraw = False
+518.3382 	EXP 	Sound probe reached end of file
+518.3386 	EXP 	window1: recordFrameIntervals = False
+518.3584 	EXP 	text_2: autoDraw = True
+518.3595 	EXP 	window1: recordFrameIntervals = True
+520.9061 	EXP 	New trial (rep=5, index=0): None
+520.9073 	EXP 	Sound probe started
+520.9276 	EXP 	text_2: autoDraw = False
+520.9276 	EXP 	text_2: autoDraw = False
+521.1181 	EXP 	Sound probe stopped
+521.1210 	EXP 	window1: recordFrameIntervals = False
+521.1421 	EXP 	text_2: autoDraw = True
+521.1432 	EXP 	window1: recordFrameIntervals = True
+522.6023 	DATA 	Keypress: space
+522.8338 	EXP 	New trial (rep=6, index=0): None
+522.8363 	EXP 	Sound probe started
+522.8553 	EXP 	text_2: autoDraw = False
+522.8553 	EXP 	text_2: autoDraw = False
+523.0462 	EXP 	Sound probe reached end of file
+523.0483 	EXP 	window1: recordFrameIntervals = False
+523.0744 	EXP 	text_2: autoDraw = True
+523.0756 	EXP 	window1: recordFrameIntervals = True
+524.4288 	DATA 	Keypress: space
+524.6644 	EXP 	New trial (rep=7, index=0): None
+524.6656 	EXP 	Sound probe started
+524.6846 	EXP 	text_2: autoDraw = False
+524.6846 	EXP 	text_2: autoDraw = False
+524.8783 	EXP 	Sound probe reached end of file
+524.8787 	EXP 	window1: recordFrameIntervals = False
+524.8986 	EXP 	text_2: autoDraw = True
+524.8998 	EXP 	window1: recordFrameIntervals = True
+525.8432 	DATA 	Keypress: space
+526.0747 	EXP 	New trial (rep=8, index=0): None
+526.0759 	EXP 	Sound probe started
+526.0955 	EXP 	text_2: autoDraw = False
+526.0955 	EXP 	text_2: autoDraw = False
+526.2863 	EXP 	Sound probe stopped
+526.2883 	EXP 	window1: recordFrameIntervals = False
+526.3114 	EXP 	text_2: autoDraw = True
+526.3126 	EXP 	window1: recordFrameIntervals = True
+527.8125 	DATA 	Keypress: space
+528.0441 	EXP 	New trial (rep=9, index=0): None
+528.0452 	EXP 	Sound probe started
+528.0658 	EXP 	text_2: autoDraw = False
+528.0658 	EXP 	text_2: autoDraw = False
+528.2542 	EXP 	Sound probe reached end of file
+528.2561 	EXP 	window1: recordFrameIntervals = False
+528.2798 	EXP 	text_2: autoDraw = True
+528.2811 	EXP 	window1: recordFrameIntervals = True
+530.0026 	DATA 	Keypress: space
+530.2598 	EXP 	text_2: autoDraw = False
+530.2598 	EXP 	text_2: autoDraw = False
+530.2598 	EXP 	break_txt: autoDraw = True
+533.5053 	EXP 	New trial (rep=13, index=0): None
+536.5894 	DATA 	Keypress: space
+536.6053 	EXP 	break_txt: autoDraw = False
+536.6053 	EXP 	text: height = 0.05
+536.6053 	EXP 	text: height = 0.05
+536.6053 	EXP 	text: text = 'X'
+536.6053 	EXP 	text: autoDraw = True
+537.6033 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+537.6034 	EXP 	New trial (rep=0, index=0): None
+537.6047 	EXP 	Sound probe started
+537.6302 	EXP 	text: autoDraw = False
+537.6302 	EXP 	text: autoDraw = False
+537.8140 	EXP 	Sound probe reached end of file
+537.8145 	EXP 	window1: recordFrameIntervals = False
+537.8413 	EXP 	text_2: autoDraw = True
+537.8425 	EXP 	window1: recordFrameIntervals = True
+539.2611 	EXP 	New trial (rep=1, index=0): None
+539.2634 	EXP 	Sound probe started
+539.2879 	EXP 	text_2: autoDraw = False
+539.2879 	EXP 	text_2: autoDraw = False
+539.4741 	EXP 	Sound probe reached end of file
+539.4745 	EXP 	window1: recordFrameIntervals = False
+539.5034 	EXP 	text_2: autoDraw = True
+539.5045 	EXP 	window1: recordFrameIntervals = True
+540.8026 	EXP 	New trial (rep=2, index=0): None
+540.8052 	EXP 	Sound probe started
+540.8242 	EXP 	text_2: autoDraw = False
+540.8242 	EXP 	text_2: autoDraw = False
+541.0142 	EXP 	Sound probe reached end of file
+541.0157 	EXP 	window1: recordFrameIntervals = False
+541.0388 	EXP 	text_2: autoDraw = True
+541.0401 	EXP 	window1: recordFrameIntervals = True
+542.6759 	EXP 	New trial (rep=3, index=0): None
+542.6770 	EXP 	Sound probe started
+542.6969 	EXP 	text_2: autoDraw = False
+542.6969 	EXP 	text_2: autoDraw = False
+542.8862 	EXP 	Sound probe stopped
+542.8882 	EXP 	window1: recordFrameIntervals = False
+542.9116 	EXP 	text_2: autoDraw = True
+542.9129 	EXP 	window1: recordFrameIntervals = True
+544.0806 	EXP 	New trial (rep=4, index=0): None
+544.0818 	EXP 	Sound probe started
+544.1015 	EXP 	text_2: autoDraw = False
+544.1015 	EXP 	text_2: autoDraw = False
+544.2940 	EXP 	Sound probe reached end of file
+544.2944 	EXP 	window1: recordFrameIntervals = False
+544.3140 	EXP 	text_2: autoDraw = True
+544.3152 	EXP 	window1: recordFrameIntervals = True
+546.6309 	EXP 	New trial (rep=5, index=0): None
+546.6320 	EXP 	Sound probe started
+546.6523 	EXP 	text_2: autoDraw = False
+546.6523 	EXP 	text_2: autoDraw = False
+546.8340 	EXP 	Sound probe stopped
+546.8344 	EXP 	window1: recordFrameIntervals = False
+546.8631 	EXP 	text_2: autoDraw = True
+546.8642 	EXP 	window1: recordFrameIntervals = True
+549.4702 	EXP 	New trial (rep=6, index=0): None
+549.4714 	EXP 	Sound probe started
+549.4984 	EXP 	text_2: autoDraw = False
+549.4984 	EXP 	text_2: autoDraw = False
+549.6860 	EXP 	Sound probe reached end of file
+549.6865 	EXP 	window1: recordFrameIntervals = False
+549.7064 	EXP 	text_2: autoDraw = True
+549.7075 	EXP 	window1: recordFrameIntervals = True
+550.8191 	EXP 	New trial (rep=7, index=0): None
+550.8201 	EXP 	Sound probe started
+550.8471 	EXP 	text_2: autoDraw = False
+550.8471 	EXP 	text_2: autoDraw = False
+551.0341 	EXP 	Sound probe reached end of file
+551.0345 	EXP 	window1: recordFrameIntervals = False
+551.0605 	EXP 	text_2: autoDraw = True
+551.0616 	EXP 	window1: recordFrameIntervals = True
+552.7718 	EXP 	New trial (rep=8, index=0): None
+552.7729 	EXP 	Sound probe started
+552.7930 	EXP 	text_2: autoDraw = False
+552.7930 	EXP 	text_2: autoDraw = False
+552.9822 	EXP 	Sound probe reached end of file
+552.9842 	EXP 	window1: recordFrameIntervals = False
+553.0063 	EXP 	text_2: autoDraw = True
+553.0075 	EXP 	window1: recordFrameIntervals = True
+555.8587 	EXP 	New trial (rep=9, index=0): None
+555.8597 	EXP 	Sound probe started
+555.8797 	EXP 	text_2: autoDraw = False
+555.8797 	EXP 	text_2: autoDraw = False
+556.0738 	EXP 	Sound probe reached end of file
+556.0743 	EXP 	window1: recordFrameIntervals = False
+556.0947 	EXP 	text_2: autoDraw = True
+556.0966 	EXP 	window1: recordFrameIntervals = True
+558.3572 	EXP 	New trial (rep=10, index=0): None
+558.3586 	EXP 	Sound probe started
+558.3784 	EXP 	text_2: autoDraw = False
+558.3784 	EXP 	text_2: autoDraw = False
+558.5620 	EXP 	Sound probe stopped
+558.5625 	EXP 	window1: recordFrameIntervals = False
+558.5909 	EXP 	text_2: autoDraw = True
+558.5921 	EXP 	window1: recordFrameIntervals = True
+560.5144 	EXP 	New trial (rep=11, index=0): None
+560.5154 	EXP 	Sound probe started
+560.5431 	EXP 	text_2: autoDraw = False
+560.5431 	EXP 	text_2: autoDraw = False
+560.7341 	EXP 	Sound probe reached end of file
+560.7346 	EXP 	window1: recordFrameIntervals = False
+560.7553 	EXP 	text_2: autoDraw = True
+560.7566 	EXP 	window1: recordFrameIntervals = True
+562.0479 	EXP 	text_2: autoDraw = False
+562.0479 	EXP 	text_2: autoDraw = False
+562.0479 	EXP 	break_txt: autoDraw = True
+562.1398 	EXP 	New trial (rep=14, index=0): None
+566.0939 	DATA 	Keypress: space
+566.1102 	EXP 	break_txt: autoDraw = False
+566.1102 	EXP 	text: text = 'X'
+566.1102 	EXP 	text: autoDraw = True
+567.1034 	EXP 	Created sequence: sequential, trialTypes=1, nReps=9, seed=None
+567.1036 	EXP 	New trial (rep=0, index=0): None
+567.1048 	EXP 	Sound probe started
+567.1363 	EXP 	text: autoDraw = False
+567.1363 	EXP 	text: autoDraw = False
+567.3220 	EXP 	Sound probe reached end of file
+567.3224 	EXP 	window1: recordFrameIntervals = False
+567.3509 	EXP 	text_2: autoDraw = True
+567.3521 	EXP 	window1: recordFrameIntervals = True
+569.9913 	EXP 	New trial (rep=1, index=0): None
+569.9923 	EXP 	Sound probe started
+570.0201 	EXP 	text_2: autoDraw = False
+570.0201 	EXP 	text_2: autoDraw = False
+570.2023 	EXP 	Sound probe reached end of file
+570.2033 	EXP 	window1: recordFrameIntervals = False
+570.2227 	EXP 	text_2: autoDraw = True
+570.2240 	EXP 	window1: recordFrameIntervals = True
+571.9696 	EXP 	New trial (rep=2, index=0): None
+571.9718 	EXP 	Sound probe started
+571.9909 	EXP 	text_2: autoDraw = False
+571.9909 	EXP 	text_2: autoDraw = False
+572.1821 	EXP 	Sound probe reached end of file
+572.1837 	EXP 	window1: recordFrameIntervals = False
+572.2047 	EXP 	text_2: autoDraw = True
+572.2062 	EXP 	window1: recordFrameIntervals = True
+574.9580 	EXP 	New trial (rep=3, index=0): None
+574.9590 	EXP 	Sound probe started
+574.9785 	EXP 	text_2: autoDraw = False
+574.9785 	EXP 	text_2: autoDraw = False
+575.1620 	EXP 	Sound probe stopped
+575.1624 	EXP 	window1: recordFrameIntervals = False
+575.1898 	EXP 	text_2: autoDraw = True
+575.1910 	EXP 	window1: recordFrameIntervals = True
+576.1177 	DATA 	Keypress: space
+576.3464 	EXP 	New trial (rep=4, index=0): None
+576.3475 	EXP 	Sound probe started
+576.3726 	EXP 	text_2: autoDraw = False
+576.3726 	EXP 	text_2: autoDraw = False
+576.5622 	EXP 	Sound probe reached end of file
+576.5627 	EXP 	window1: recordFrameIntervals = False
+576.5925 	EXP 	text_2: autoDraw = True
+576.5938 	EXP 	window1: recordFrameIntervals = True
+579.0013 	DATA 	Keypress: space
+579.2346 	EXP 	New trial (rep=5, index=0): None
+579.2356 	EXP 	Sound probe started
+579.2566 	EXP 	text_2: autoDraw = False
+579.2566 	EXP 	text_2: autoDraw = False
+579.4500 	EXP 	Sound probe reached end of file
+579.4505 	EXP 	window1: recordFrameIntervals = False
+579.4716 	EXP 	text_2: autoDraw = True
+579.4727 	EXP 	window1: recordFrameIntervals = True
+581.9887 	DATA 	Keypress: space
+582.2244 	EXP 	New trial (rep=6, index=0): None
+582.2256 	EXP 	Sound probe started
+582.2449 	EXP 	text_2: autoDraw = False
+582.2449 	EXP 	text_2: autoDraw = False
+582.4481 	EXP 	Sound probe reached end of file
+582.4485 	EXP 	window1: recordFrameIntervals = False
+582.4771 	EXP 	text_2: autoDraw = True
+582.4782 	EXP 	window1: recordFrameIntervals = True
+585.1908 	DATA 	Keypress: space
+585.4235 	EXP 	New trial (rep=7, index=0): None
+585.4247 	EXP 	Sound probe started
+585.4447 	EXP 	text_2: autoDraw = False
+585.4447 	EXP 	text_2: autoDraw = False
+585.6421 	EXP 	Sound probe reached end of file
+585.6443 	EXP 	window1: recordFrameIntervals = False
+585.6687 	EXP 	text_2: autoDraw = True
+585.6704 	EXP 	window1: recordFrameIntervals = True
+586.7795 	EXP 	New trial (rep=8, index=0): None
+586.7830 	EXP 	Sound probe started
+586.8052 	EXP 	text_2: autoDraw = False
+586.8052 	EXP 	text_2: autoDraw = False
+586.9901 	EXP 	Sound probe stopped
+586.9906 	EXP 	window1: recordFrameIntervals = False
+587.0111 	EXP 	text_2: autoDraw = True
+587.0141 	EXP 	window1: recordFrameIntervals = True
+588.1584 	EXP 	text_2: autoDraw = False
+588.1584 	EXP 	text_2: autoDraw = False
+588.1584 	EXP 	break_txt: autoDraw = True
+649.9691 	EXP 	New trial (rep=15, index=0): None
+653.9504 	DATA 	Keypress: space
+653.9681 	EXP 	break_txt: autoDraw = False
+653.9681 	EXP 	text: text = 'X'
+653.9681 	EXP 	text: autoDraw = True
+654.9795 	EXP 	Created sequence: sequential, trialTypes=1, nReps=15, seed=None
+654.9797 	EXP 	New trial (rep=0, index=0): None
+654.9809 	EXP 	Sound probe started
+655.0127 	EXP 	text: autoDraw = False
+655.0127 	EXP 	text: autoDraw = False
+655.2037 	EXP 	Sound probe reached end of file
+655.2041 	EXP 	window1: recordFrameIntervals = False
+655.2372 	EXP 	text_2: autoDraw = True
+655.2387 	EXP 	window1: recordFrameIntervals = True
+657.5648 	EXP 	New trial (rep=1, index=0): None
+657.5661 	EXP 	Sound probe started
+657.5879 	EXP 	text_2: autoDraw = False
+657.5879 	EXP 	text_2: autoDraw = False
+657.7860 	EXP 	Sound probe reached end of file
+657.7871 	EXP 	window1: recordFrameIntervals = False
+657.8192 	EXP 	text_2: autoDraw = True
+657.8204 	EXP 	window1: recordFrameIntervals = True
+658.8330 	DATA 	Keypress: space
+659.0698 	EXP 	New trial (rep=2, index=0): None
+659.0714 	EXP 	Sound probe started
+659.0921 	EXP 	text_2: autoDraw = False
+659.0921 	EXP 	text_2: autoDraw = False
+659.2860 	EXP 	Sound probe reached end of file
+659.2864 	EXP 	window1: recordFrameIntervals = False
+659.3185 	EXP 	text_2: autoDraw = True
+659.3198 	EXP 	window1: recordFrameIntervals = True
+661.4249 	DATA 	Keypress: space
+661.6665 	EXP 	New trial (rep=3, index=0): None
+661.6690 	EXP 	Sound probe started
+661.6942 	EXP 	text_2: autoDraw = False
+661.6942 	EXP 	text_2: autoDraw = False
+661.8859 	EXP 	Sound probe reached end of file
+661.8865 	EXP 	window1: recordFrameIntervals = False
+661.9096 	EXP 	text_2: autoDraw = True
+661.9111 	EXP 	window1: recordFrameIntervals = True
+663.5746 	EXP 	New trial (rep=4, index=0): None
+663.5765 	EXP 	Sound probe started
+663.6048 	EXP 	text_2: autoDraw = False
+663.6048 	EXP 	text_2: autoDraw = False
+663.7944 	EXP 	Sound probe reached end of file
+663.7949 	EXP 	window1: recordFrameIntervals = False
+663.8233 	EXP 	text_2: autoDraw = True
+663.8245 	EXP 	window1: recordFrameIntervals = True
+664.9163 	DATA 	Keypress: space
+665.1525 	EXP 	New trial (rep=5, index=0): None
+665.1542 	EXP 	Sound probe started
+665.1752 	EXP 	text_2: autoDraw = False
+665.1752 	EXP 	text_2: autoDraw = False
+665.3739 	EXP 	Sound probe reached end of file
+665.3743 	EXP 	window1: recordFrameIntervals = False
+665.4049 	EXP 	text_2: autoDraw = True
+665.4061 	EXP 	window1: recordFrameIntervals = True
+667.6141 	DATA 	Keypress: space
+667.8477 	EXP 	New trial (rep=6, index=0): None
+667.8520 	EXP 	Sound probe started
+667.8772 	EXP 	text_2: autoDraw = False
+667.8772 	EXP 	text_2: autoDraw = False
+668.0750 	EXP 	Sound probe reached end of file
+668.0754 	EXP 	window1: recordFrameIntervals = False
+668.1078 	EXP 	text_2: autoDraw = True
+668.1090 	EXP 	window1: recordFrameIntervals = True
+669.1813 	EXP 	New trial (rep=7, index=0): None
+669.1827 	EXP 	Sound probe started
+669.2048 	EXP 	text_2: autoDraw = False
+669.2048 	EXP 	text_2: autoDraw = False
+669.4015 	EXP 	Sound probe reached end of file
+669.4021 	EXP 	window1: recordFrameIntervals = False
+669.4330 	EXP 	text_2: autoDraw = True
+669.4344 	EXP 	window1: recordFrameIntervals = True
+671.5430 	DATA 	Keypress: space
+671.7810 	EXP 	New trial (rep=8, index=0): None
+671.7822 	EXP 	Sound probe started
+671.8043 	EXP 	text_2: autoDraw = False
+671.8043 	EXP 	text_2: autoDraw = False
+672.0027 	EXP 	Sound probe reached end of file
+672.0031 	EXP 	window1: recordFrameIntervals = False
+672.0317 	EXP 	text_2: autoDraw = True
+672.0329 	EXP 	window1: recordFrameIntervals = True
+674.6300 	EXP 	New trial (rep=9, index=0): None
+674.6312 	EXP 	Sound probe started
+674.6515 	EXP 	text_2: autoDraw = False
+674.6515 	EXP 	text_2: autoDraw = False
+674.8458 	EXP 	Sound probe reached end of file
+674.8480 	EXP 	window1: recordFrameIntervals = False
+674.8699 	EXP 	text_2: autoDraw = True
+674.8720 	EXP 	window1: recordFrameIntervals = True
+677.4828 	DATA 	Keypress: space
+677.7177 	EXP 	New trial (rep=10, index=0): None
+677.7189 	EXP 	Sound probe started
+677.7389 	EXP 	text_2: autoDraw = False
+677.7389 	EXP 	text_2: autoDraw = False
+677.9340 	EXP 	Sound probe reached end of file
+677.9345 	EXP 	window1: recordFrameIntervals = False
+677.9549 	EXP 	text_2: autoDraw = True
+677.9561 	EXP 	window1: recordFrameIntervals = True
+678.9765 	DATA 	Keypress: space
+679.2070 	EXP 	New trial (rep=11, index=0): None
+679.2080 	EXP 	Sound probe started
+679.2352 	EXP 	text_2: autoDraw = False
+679.2352 	EXP 	text_2: autoDraw = False
+679.4220 	EXP 	Sound probe reached end of file
+679.4225 	EXP 	window1: recordFrameIntervals = False
+679.4496 	EXP 	text_2: autoDraw = True
+679.4509 	EXP 	window1: recordFrameIntervals = True
+681.6333 	DATA 	Keypress: space
+681.8665 	EXP 	New trial (rep=12, index=0): None
+681.8698 	EXP 	Sound probe started
+681.8889 	EXP 	text_2: autoDraw = False
+681.8889 	EXP 	text_2: autoDraw = False
+682.0819 	EXP 	Sound probe reached end of file
+682.0824 	EXP 	window1: recordFrameIntervals = False
+682.1029 	EXP 	text_2: autoDraw = True
+682.1042 	EXP 	window1: recordFrameIntervals = True
+683.5970 	DATA 	Keypress: space
+683.8348 	EXP 	New trial (rep=13, index=0): None
+683.8360 	EXP 	Sound probe started
+683.8545 	EXP 	text_2: autoDraw = False
+683.8545 	EXP 	text_2: autoDraw = False
+684.0420 	EXP 	Sound probe stopped
+684.0440 	EXP 	window1: recordFrameIntervals = False
+684.0629 	EXP 	text_2: autoDraw = True
+684.0642 	EXP 	window1: recordFrameIntervals = True
+685.7798 	DATA 	Keypress: space
+686.0168 	EXP 	New trial (rep=14, index=0): None
+686.0180 	EXP 	Sound probe started
+686.0376 	EXP 	text_2: autoDraw = False
+686.0376 	EXP 	text_2: autoDraw = False
+686.2339 	EXP 	Sound probe reached end of file
+686.2344 	EXP 	window1: recordFrameIntervals = False
+686.2535 	EXP 	text_2: autoDraw = True
+686.2546 	EXP 	window1: recordFrameIntervals = True
+687.9404 	DATA 	Keypress: space
+688.1967 	EXP 	text_2: autoDraw = False
+688.1967 	EXP 	text_2: autoDraw = False
+688.1967 	EXP 	break_txt: autoDraw = True
+689.1648 	EXP 	New trial (rep=16, index=0): None
+690.3991 	DATA 	Keypress: space
+690.4151 	EXP 	break_txt: autoDraw = False
+690.4151 	EXP 	text: height = 0.05
+690.4151 	EXP 	text: height = 0.05
+690.4151 	EXP 	text: text = 'RHYTHM\n\nPITCH'
+690.4151 	EXP 	text: autoDraw = True
+691.4259 	EXP 	Created sequence: sequential, trialTypes=1, nReps=14, seed=None
+691.4261 	EXP 	New trial (rep=0, index=0): None
+691.4272 	EXP 	Sound probe started
+691.4535 	EXP 	text: autoDraw = False
+691.4535 	EXP 	text: autoDraw = False
+691.6419 	EXP 	Sound probe reached end of file
+691.6424 	EXP 	window1: recordFrameIntervals = False
+691.6739 	EXP 	text_2: autoDraw = True
+691.6751 	EXP 	window1: recordFrameIntervals = True
+694.1306 	EXP 	New trial (rep=1, index=0): None
+694.1337 	EXP 	Sound probe started
+694.1527 	EXP 	text_2: autoDraw = False
+694.1527 	EXP 	text_2: autoDraw = False
+694.3593 	EXP 	Sound probe reached end of file
+694.3609 	EXP 	window1: recordFrameIntervals = False
+694.3843 	EXP 	text_2: autoDraw = True
+694.3855 	EXP 	window1: recordFrameIntervals = True
+696.8475 	EXP 	New trial (rep=2, index=0): None
+696.8507 	EXP 	Sound probe started
+696.8705 	EXP 	text_2: autoDraw = False
+696.8705 	EXP 	text_2: autoDraw = False
+697.0618 	EXP 	Sound probe reached end of file
+697.0624 	EXP 	window1: recordFrameIntervals = False
+697.0832 	EXP 	text_2: autoDraw = True
+697.0843 	EXP 	window1: recordFrameIntervals = True
+699.3170 	DATA 	Keypress: space
+699.5487 	EXP 	New trial (rep=3, index=0): None
+699.5521 	EXP 	Sound probe started
+699.5731 	EXP 	text_2: autoDraw = False
+699.5731 	EXP 	text_2: autoDraw = False
+699.7619 	EXP 	Sound probe reached end of file
+699.7625 	EXP 	window1: recordFrameIntervals = False
+699.7832 	EXP 	text_2: autoDraw = True
+699.7844 	EXP 	window1: recordFrameIntervals = True
+702.0167 	DATA 	Keypress: space
+702.2479 	EXP 	New trial (rep=4, index=0): None
+702.2489 	EXP 	Sound probe started
+702.2756 	EXP 	text_2: autoDraw = False
+702.2756 	EXP 	text_2: autoDraw = False
+702.4620 	EXP 	Sound probe reached end of file
+702.4634 	EXP 	window1: recordFrameIntervals = False
+702.4837 	EXP 	text_2: autoDraw = True
+702.4849 	EXP 	window1: recordFrameIntervals = True
+704.7184 	DATA 	Keypress: space
+704.9555 	EXP 	New trial (rep=5, index=0): None
+704.9567 	EXP 	Sound probe started
+704.9754 	EXP 	text_2: autoDraw = False
+704.9754 	EXP 	text_2: autoDraw = False
+705.1796 	EXP 	Sound probe reached end of file
+705.1801 	EXP 	window1: recordFrameIntervals = False
+705.2117 	EXP 	text_2: autoDraw = True
+705.2130 	EXP 	window1: recordFrameIntervals = True
+707.6687 	EXP 	New trial (rep=6, index=0): None
+707.6698 	EXP 	Sound probe started
+707.6900 	EXP 	text_2: autoDraw = False
+707.6900 	EXP 	text_2: autoDraw = False
+707.8939 	EXP 	Sound probe reached end of file
+707.8943 	EXP 	window1: recordFrameIntervals = False
+707.9215 	EXP 	text_2: autoDraw = True
+707.9227 	EXP 	window1: recordFrameIntervals = True
+710.1478 	DATA 	Keypress: space
+710.3821 	EXP 	New trial (rep=7, index=0): None
+710.3844 	EXP 	Sound probe started
+710.4045 	EXP 	text_2: autoDraw = False
+710.4045 	EXP 	text_2: autoDraw = False
+710.6075 	EXP 	Sound probe reached end of file
+710.6080 	EXP 	window1: recordFrameIntervals = False
+710.6392 	EXP 	text_2: autoDraw = True
+710.6404 	EXP 	window1: recordFrameIntervals = True
+712.8618 	DATA 	Keypress: space
+713.0935 	EXP 	New trial (rep=8, index=0): None
+713.0944 	EXP 	Sound probe started
+713.1203 	EXP 	text_2: autoDraw = False
+713.1203 	EXP 	text_2: autoDraw = False
+713.3097 	EXP 	Sound probe reached end of file
+713.3102 	EXP 	window1: recordFrameIntervals = False
+713.3312 	EXP 	text_2: autoDraw = True
+713.3325 	EXP 	window1: recordFrameIntervals = True
+715.7941 	EXP 	New trial (rep=9, index=0): None
+715.7951 	EXP 	Sound probe started
+715.8226 	EXP 	text_2: autoDraw = False
+715.8226 	EXP 	text_2: autoDraw = False
+716.0099 	EXP 	Sound probe reached end of file
+716.0104 	EXP 	window1: recordFrameIntervals = False
+716.0363 	EXP 	text_2: autoDraw = True
+716.0374 	EXP 	window1: recordFrameIntervals = True
+718.5047 	EXP 	New trial (rep=10, index=0): None
+718.5059 	EXP 	Sound probe started
+718.5254 	EXP 	text_2: autoDraw = False
+718.5254 	EXP 	text_2: autoDraw = False
+718.7219 	EXP 	Sound probe reached end of file
+718.7240 	EXP 	window1: recordFrameIntervals = False
+718.7482 	EXP 	text_2: autoDraw = True
+718.7496 	EXP 	window1: recordFrameIntervals = True
+721.2125 	EXP 	New trial (rep=11, index=0): None
+721.2137 	EXP 	Sound probe started
+721.2333 	EXP 	text_2: autoDraw = False
+721.2333 	EXP 	text_2: autoDraw = False
+721.4350 	EXP 	Sound probe reached end of file
+721.4354 	EXP 	window1: recordFrameIntervals = False
+721.4639 	EXP 	text_2: autoDraw = True
+721.4650 	EXP 	window1: recordFrameIntervals = True
+723.9274 	EXP 	New trial (rep=12, index=0): None
+723.9287 	EXP 	Sound probe started
+723.9472 	EXP 	text_2: autoDraw = False
+723.9472 	EXP 	text_2: autoDraw = False
+724.1422 	EXP 	Sound probe reached end of file
+724.1439 	EXP 	window1: recordFrameIntervals = False
+724.1653 	EXP 	text_2: autoDraw = True
+724.1666 	EXP 	window1: recordFrameIntervals = True
+726.6353 	EXP 	New trial (rep=13, index=0): None
+726.6364 	EXP 	Sound probe started
+726.6576 	EXP 	text_2: autoDraw = False
+726.6576 	EXP 	text_2: autoDraw = False
+726.8497 	EXP 	Sound probe reached end of file
+726.8517 	EXP 	window1: recordFrameIntervals = False
+726.8729 	EXP 	text_2: autoDraw = True
+726.8742 	EXP 	window1: recordFrameIntervals = True
+729.1060 	DATA 	Keypress: space
+729.3620 	EXP 	text_2: autoDraw = False
+729.3620 	EXP 	text_2: autoDraw = False
+729.3620 	EXP 	break_txt: autoDraw = True
+730.1445 	EXP 	New trial (rep=17, index=0): None
+734.9264 	DATA 	Keypress: space
+734.9424 	EXP 	break_txt: autoDraw = False
+734.9424 	EXP 	text: height = 0.05
+734.9424 	EXP 	text: height = 0.05
+734.9424 	EXP 	text: text = 'X'
+734.9424 	EXP 	text: autoDraw = True
+735.1772 	DATA 	Keypress: space
+735.9469 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+735.9471 	EXP 	New trial (rep=0, index=0): None
+735.9483 	EXP 	Sound probe started
+735.9806 	EXP 	text: autoDraw = False
+735.9806 	EXP 	text: autoDraw = False
+736.1581 	EXP 	Sound probe reached end of file
+736.1601 	EXP 	window1: recordFrameIntervals = False
+736.1852 	EXP 	text_2: autoDraw = True
+736.1866 	EXP 	window1: recordFrameIntervals = True
+737.6783 	EXP 	New trial (rep=1, index=0): None
+737.6798 	EXP 	Sound probe started
+737.6991 	EXP 	text_2: autoDraw = False
+737.6991 	EXP 	text_2: autoDraw = False
+737.9088 	EXP 	Sound probe reached end of file
+737.9093 	EXP 	window1: recordFrameIntervals = False
+737.9372 	EXP 	text_2: autoDraw = True
+737.9384 	EXP 	window1: recordFrameIntervals = True
+738.9472 	EXP 	New trial (rep=2, index=0): None
+738.9483 	EXP 	Sound probe started
+738.9674 	EXP 	text_2: autoDraw = False
+738.9674 	EXP 	text_2: autoDraw = False
+739.1578 	EXP 	Sound probe reached end of file
+739.1593 	EXP 	window1: recordFrameIntervals = False
+739.1817 	EXP 	text_2: autoDraw = True
+739.1831 	EXP 	window1: recordFrameIntervals = True
+742.1201 	EXP 	New trial (rep=3, index=0): None
+742.1213 	EXP 	Sound probe started
+742.1425 	EXP 	text_2: autoDraw = False
+742.1425 	EXP 	text_2: autoDraw = False
+742.3379 	EXP 	Sound probe reached end of file
+742.3391 	EXP 	window1: recordFrameIntervals = False
+742.3605 	EXP 	text_2: autoDraw = True
+742.3619 	EXP 	window1: recordFrameIntervals = True
+744.8540 	DATA 	Keypress: space
+745.0888 	EXP 	New trial (rep=4, index=0): None
+745.0900 	EXP 	Sound probe started
+745.1099 	EXP 	text_2: autoDraw = False
+745.1099 	EXP 	text_2: autoDraw = False
+745.3158 	EXP 	Sound probe reached end of file
+745.3163 	EXP 	window1: recordFrameIntervals = False
+745.3434 	EXP 	text_2: autoDraw = True
+745.3445 	EXP 	window1: recordFrameIntervals = True
+748.0086 	DATA 	Keypress: space
+748.2442 	EXP 	New trial (rep=5, index=0): None
+748.2452 	EXP 	Sound probe started
+748.2659 	EXP 	text_2: autoDraw = False
+748.2659 	EXP 	text_2: autoDraw = False
+748.4580 	EXP 	Sound probe reached end of file
+748.4590 	EXP 	window1: recordFrameIntervals = False
+748.4798 	EXP 	text_2: autoDraw = True
+748.4812 	EXP 	window1: recordFrameIntervals = True
+751.0370 	DATA 	Keypress: space
+751.2683 	EXP 	New trial (rep=6, index=0): None
+751.2710 	EXP 	Sound probe started
+751.2942 	EXP 	text_2: autoDraw = False
+751.2942 	EXP 	text_2: autoDraw = False
+751.4779 	EXP 	Sound probe stopped
+751.4800 	EXP 	window1: recordFrameIntervals = False
+751.5031 	EXP 	text_2: autoDraw = True
+751.5043 	EXP 	window1: recordFrameIntervals = True
+753.6028 	DATA 	Keypress: space
+753.8433 	EXP 	New trial (rep=7, index=0): None
+753.8446 	EXP 	Sound probe started
+753.8626 	EXP 	text_2: autoDraw = False
+753.8626 	EXP 	text_2: autoDraw = False
+754.0576 	EXP 	Sound probe reached end of file
+754.0582 	EXP 	window1: recordFrameIntervals = False
+754.0787 	EXP 	text_2: autoDraw = True
+754.0800 	EXP 	window1: recordFrameIntervals = True
+756.9680 	EXP 	New trial (rep=8, index=0): None
+756.9692 	EXP 	Sound probe started
+756.9902 	EXP 	text_2: autoDraw = False
+756.9902 	EXP 	text_2: autoDraw = False
+757.1929 	EXP 	Sound probe reached end of file
+757.1934 	EXP 	window1: recordFrameIntervals = False
+757.2218 	EXP 	text_2: autoDraw = True
+757.2229 	EXP 	window1: recordFrameIntervals = True
+759.9884 	EXP 	New trial (rep=9, index=0): None
+759.9895 	EXP 	Sound probe started
+760.0097 	EXP 	text_2: autoDraw = False
+760.0097 	EXP 	text_2: autoDraw = False
+760.1979 	EXP 	Sound probe stopped
+760.1999 	EXP 	window1: recordFrameIntervals = False
+760.2243 	EXP 	text_2: autoDraw = True
+760.2256 	EXP 	window1: recordFrameIntervals = True
+760.9842 	DATA 	Keypress: space
+761.2424 	EXP 	text_2: autoDraw = False
+761.2424 	EXP 	text_2: autoDraw = False
+761.2424 	EXP 	break_txt: autoDraw = True
+788.4154 	EXP 	New trial (rep=18, index=0): None
+790.4226 	DATA 	Keypress: space
+790.4390 	EXP 	break_txt: autoDraw = False
+790.4390 	EXP 	text: height = 0.05
+790.4390 	EXP 	text: height = 0.05
+790.4390 	EXP 	text: text = 'RHYTHM\n\nPITCH'
+790.4390 	EXP 	text: autoDraw = True
+791.4305 	EXP 	Created sequence: sequential, trialTypes=1, nReps=8, seed=None
+791.4307 	EXP 	New trial (rep=0, index=0): None
+791.4318 	EXP 	Sound probe started
+791.4599 	EXP 	text: autoDraw = False
+791.4599 	EXP 	text: autoDraw = False
+791.6458 	EXP 	Sound probe reached end of file
+791.6477 	EXP 	window1: recordFrameIntervals = False
+791.6737 	EXP 	text_2: autoDraw = True
+791.6751 	EXP 	window1: recordFrameIntervals = True
+794.0739 	EXP 	New trial (rep=1, index=0): None
+794.0749 	EXP 	Sound probe started
+794.0945 	EXP 	text_2: autoDraw = False
+794.0945 	EXP 	text_2: autoDraw = False
+794.2980 	EXP 	Sound probe reached end of file
+794.2984 	EXP 	window1: recordFrameIntervals = False
+794.3267 	EXP 	text_2: autoDraw = True
+794.3279 	EXP 	window1: recordFrameIntervals = True
+796.7263 	EXP 	New trial (rep=2, index=0): None
+796.7275 	EXP 	Sound probe started
+796.7477 	EXP 	text_2: autoDraw = False
+796.7477 	EXP 	text_2: autoDraw = False
+796.9488 	EXP 	Sound probe reached end of file
+796.9493 	EXP 	window1: recordFrameIntervals = False
+796.9794 	EXP 	text_2: autoDraw = True
+796.9806 	EXP 	window1: recordFrameIntervals = True
+799.3756 	EXP 	New trial (rep=3, index=0): None
+799.3780 	EXP 	Sound probe started
+799.3970 	EXP 	text_2: autoDraw = False
+799.3970 	EXP 	text_2: autoDraw = False
+799.5939 	EXP 	Sound probe reached end of file
+799.5959 	EXP 	window1: recordFrameIntervals = False
+799.6168 	EXP 	text_2: autoDraw = True
+799.6182 	EXP 	window1: recordFrameIntervals = True
+802.0228 	EXP 	New trial (rep=4, index=0): None
+802.0238 	EXP 	Sound probe started
+802.0428 	EXP 	text_2: autoDraw = False
+802.0428 	EXP 	text_2: autoDraw = False
+802.2337 	EXP 	Sound probe reached end of file
+802.2341 	EXP 	window1: recordFrameIntervals = False
+802.2352 	DATA 	Keypress: space
+802.2547 	EXP 	text_2: autoDraw = True
+802.2568 	EXP 	window1: recordFrameIntervals = True
+804.6606 	EXP 	New trial (rep=5, index=0): None
+804.6620 	EXP 	Sound probe started
+804.6816 	EXP 	text_2: autoDraw = False
+804.6816 	EXP 	text_2: autoDraw = False
+804.8737 	EXP 	Sound probe stopped
+804.8742 	EXP 	window1: recordFrameIntervals = False
+804.8956 	EXP 	text_2: autoDraw = True
+804.8968 	EXP 	window1: recordFrameIntervals = True
+807.0619 	DATA 	Keypress: space
+807.2977 	EXP 	New trial (rep=6, index=0): None
+807.3009 	EXP 	Sound probe started
+807.3224 	EXP 	text_2: autoDraw = False
+807.3224 	EXP 	text_2: autoDraw = False
+807.5137 	EXP 	Sound probe reached end of file
+807.5155 	EXP 	window1: recordFrameIntervals = False
+807.5365 	EXP 	text_2: autoDraw = True
+807.5378 	EXP 	window1: recordFrameIntervals = True
+809.9421 	EXP 	New trial (rep=7, index=0): None
+809.9433 	EXP 	Sound probe started
+809.9637 	EXP 	text_2: autoDraw = False
+809.9637 	EXP 	text_2: autoDraw = False
+810.1673 	EXP 	Sound probe reached end of file
+810.1677 	EXP 	window1: recordFrameIntervals = False
+810.1951 	EXP 	text_2: autoDraw = True
+810.1961 	EXP 	window1: recordFrameIntervals = True
+812.3562 	DATA 	Keypress: space
+812.6130 	EXP 	text_2: autoDraw = False
+812.6130 	EXP 	text_2: autoDraw = False
+812.6130 	EXP 	break_txt: autoDraw = True
+816.7578 	EXP 	New trial (rep=19, index=0): None
+820.0557 	DATA 	Keypress: space
+820.0558 	DATA 	Keypress: space
+820.0716 	EXP 	break_txt: autoDraw = False
+820.0716 	EXP 	text: text = 'RHYTHM\n\nPITCH'
+820.0716 	EXP 	text: autoDraw = True
+821.0744 	EXP 	Created sequence: sequential, trialTypes=1, nReps=11, seed=None
+821.0745 	EXP 	New trial (rep=0, index=0): None
+821.0778 	EXP 	Sound probe started
+821.1054 	EXP 	text: autoDraw = False
+821.1054 	EXP 	text: autoDraw = False
+821.2937 	EXP 	Sound probe reached end of file
+821.2941 	EXP 	window1: recordFrameIntervals = False
+821.3260 	EXP 	text_2: autoDraw = True
+821.3277 	EXP 	window1: recordFrameIntervals = True
+823.0017 	DATA 	Keypress: space
+823.2388 	EXP 	New trial (rep=1, index=0): None
+823.2399 	EXP 	Sound probe started
+823.2604 	EXP 	text_2: autoDraw = False
+823.2604 	EXP 	text_2: autoDraw = False
+823.4538 	EXP 	Sound probe reached end of file
+823.4548 	EXP 	window1: recordFrameIntervals = False
+823.4759 	EXP 	text_2: autoDraw = True
+823.4773 	EXP 	window1: recordFrameIntervals = True
+825.3993 	EXP 	New trial (rep=2, index=0): None
+825.4029 	EXP 	Sound probe started
+825.4235 	EXP 	text_2: autoDraw = False
+825.4235 	EXP 	text_2: autoDraw = False
+825.6137 	EXP 	Sound probe stopped
+825.6153 	EXP 	window1: recordFrameIntervals = False
+825.6402 	EXP 	text_2: autoDraw = True
+825.6416 	EXP 	window1: recordFrameIntervals = True
+827.3231 	DATA 	Keypress: space
+827.5600 	EXP 	New trial (rep=3, index=0): None
+827.5614 	EXP 	Sound probe started
+827.5822 	EXP 	text_2: autoDraw = False
+827.5822 	EXP 	text_2: autoDraw = False
+827.7738 	EXP 	Sound probe reached end of file
+827.7742 	EXP 	window1: recordFrameIntervals = False
+827.7931 	EXP 	text_2: autoDraw = True
+827.7943 	EXP 	window1: recordFrameIntervals = True
+829.7220 	EXP 	New trial (rep=4, index=0): None
+829.7233 	EXP 	Sound probe started
+829.7416 	EXP 	text_2: autoDraw = False
+829.7416 	EXP 	text_2: autoDraw = False
+829.9298 	EXP 	Sound probe stopped
+829.9302 	EXP 	window1: recordFrameIntervals = False
+829.9502 	EXP 	text_2: autoDraw = True
+829.9522 	EXP 	window1: recordFrameIntervals = True
+831.8761 	EXP 	New trial (rep=5, index=0): None
+831.8787 	EXP 	Sound probe started
+831.8978 	EXP 	text_2: autoDraw = False
+831.8978 	EXP 	text_2: autoDraw = False
+832.0898 	EXP 	Sound probe reached end of file
+832.0921 	EXP 	window1: recordFrameIntervals = False
+832.1166 	EXP 	text_2: autoDraw = True
+832.1178 	EXP 	window1: recordFrameIntervals = True
+833.8002 	DATA 	Keypress: space
+834.0373 	EXP 	New trial (rep=6, index=0): None
+834.0385 	EXP 	Sound probe started
+834.0593 	EXP 	text_2: autoDraw = False
+834.0593 	EXP 	text_2: autoDraw = False
+834.2499 	EXP 	Sound probe reached end of file
+834.2504 	EXP 	window1: recordFrameIntervals = False
+834.2708 	EXP 	text_2: autoDraw = True
+834.2721 	EXP 	window1: recordFrameIntervals = True
+835.9587 	DATA 	Keypress: space
+836.1956 	EXP 	New trial (rep=7, index=0): None
+836.1992 	EXP 	Sound probe started
+836.2189 	EXP 	text_2: autoDraw = False
+836.2189 	EXP 	text_2: autoDraw = False
+836.4100 	EXP 	Sound probe reached end of file
+836.4118 	EXP 	window1: recordFrameIntervals = False
+836.4381 	EXP 	text_2: autoDraw = True
+836.4393 	EXP 	window1: recordFrameIntervals = True
+838.1198 	DATA 	Keypress: space
+838.3572 	EXP 	New trial (rep=8, index=0): None
+838.3582 	EXP 	Sound probe started
+838.3783 	EXP 	text_2: autoDraw = False
+838.3783 	EXP 	text_2: autoDraw = False
+838.5699 	EXP 	Sound probe reached end of file
+838.5720 	EXP 	window1: recordFrameIntervals = False
+838.5936 	EXP 	text_2: autoDraw = True
+838.5974 	EXP 	window1: recordFrameIntervals = True
+840.5157 	EXP 	New trial (rep=9, index=0): None
+840.5186 	EXP 	Sound probe started
+840.5392 	EXP 	text_2: autoDraw = False
+840.5392 	EXP 	text_2: autoDraw = False
+840.7300 	EXP 	Sound probe reached end of file
+840.7319 	EXP 	window1: recordFrameIntervals = False
+840.7598 	EXP 	text_2: autoDraw = True
+840.7609 	EXP 	window1: recordFrameIntervals = True
+842.6756 	EXP 	New trial (rep=10, index=0): None
+842.6768 	EXP 	Sound probe started
+842.6967 	EXP 	text_2: autoDraw = False
+842.6967 	EXP 	text_2: autoDraw = False
+842.8897 	EXP 	Sound probe reached end of file
+842.9125 	EXP 	window1: recordFrameIntervals = False
+842.9397 	EXP 	text_2: autoDraw = True
+842.9409 	EXP 	window1: recordFrameIntervals = True
+844.6193 	DATA 	Keypress: space
+844.8778 	EXP 	text_2: autoDraw = False
+844.8778 	EXP 	text_2: autoDraw = False
+844.8778 	EXP 	break_txt: autoDraw = True
+847.4274 	EXP 	New trial (rep=20, index=0): None
+851.3037 	DATA 	Keypress: space
+851.3196 	EXP 	break_txt: autoDraw = False
+851.3196 	EXP 	text: text = 'RHYTHM\n\nPITCH'
+851.3196 	EXP 	text: autoDraw = True
+852.3211 	EXP 	Created sequence: sequential, trialTypes=1, nReps=9, seed=None
+852.3215 	EXP 	New trial (rep=0, index=0): None
+852.3229 	EXP 	Sound probe started
+852.3547 	EXP 	text: autoDraw = False
+852.3547 	EXP 	text: autoDraw = False
+852.5450 	EXP 	Sound probe reached end of file
+852.5454 	EXP 	window1: recordFrameIntervals = False
+852.5726 	EXP 	text_2: autoDraw = True
+852.5736 	EXP 	window1: recordFrameIntervals = True
+855.0049 	DATA 	Keypress: space
+855.2425 	EXP 	New trial (rep=1, index=0): None
+855.2436 	EXP 	Sound probe started
+855.2637 	EXP 	text_2: autoDraw = False
+855.2637 	EXP 	text_2: autoDraw = False
+855.4577 	EXP 	Sound probe reached end of file
+855.4581 	EXP 	window1: recordFrameIntervals = False
+855.4784 	EXP 	text_2: autoDraw = True
+855.4794 	EXP 	window1: recordFrameIntervals = True
+857.9187 	DATA 	Keypress: space
+858.1566 	EXP 	New trial (rep=2, index=0): None
+858.1576 	EXP 	Sound probe started
+858.1770 	EXP 	text_2: autoDraw = False
+858.1770 	EXP 	text_2: autoDraw = False
+858.3697 	EXP 	Sound probe stopped
+858.3717 	EXP 	window1: recordFrameIntervals = False
+858.3950 	EXP 	text_2: autoDraw = True
+858.3963 	EXP 	window1: recordFrameIntervals = True
+860.8324 	DATA 	Keypress: space
+861.0722 	EXP 	New trial (rep=3, index=0): None
+861.0735 	EXP 	Sound probe started
+861.0917 	EXP 	text_2: autoDraw = False
+861.0917 	EXP 	text_2: autoDraw = False
+861.2779 	EXP 	Sound probe stopped
+861.2783 	EXP 	window1: recordFrameIntervals = False
+861.3090 	EXP 	text_2: autoDraw = True
+861.3110 	EXP 	window1: recordFrameIntervals = True
+863.7385 	DATA 	Keypress: space
+863.9742 	EXP 	New trial (rep=4, index=0): None
+863.9777 	EXP 	Sound probe started
+863.9971 	EXP 	text_2: autoDraw = False
+863.9971 	EXP 	text_2: autoDraw = False
+864.1898 	EXP 	Sound probe reached end of file
+864.1914 	EXP 	window1: recordFrameIntervals = False
+864.2127 	EXP 	text_2: autoDraw = True
+864.2140 	EXP 	window1: recordFrameIntervals = True
+866.6519 	DATA 	Keypress: space
+866.8897 	EXP 	New trial (rep=5, index=0): None
+866.8910 	EXP 	Sound probe started
+866.9105 	EXP 	text_2: autoDraw = False
+866.9105 	EXP 	text_2: autoDraw = False
+867.1149 	EXP 	Sound probe reached end of file
+867.1153 	EXP 	window1: recordFrameIntervals = False
+867.1441 	EXP 	text_2: autoDraw = True
+867.1452 	EXP 	window1: recordFrameIntervals = True
+869.5752 	DATA 	Keypress: space
+869.8152 	EXP 	New trial (rep=6, index=0): None
+869.8164 	EXP 	Sound probe started
+869.8352 	EXP 	text_2: autoDraw = False
+869.8352 	EXP 	text_2: autoDraw = False
+870.0295 	EXP 	Sound probe reached end of file
+870.0312 	EXP 	window1: recordFrameIntervals = False
+870.0497 	EXP 	text_2: autoDraw = True
+870.0509 	EXP 	window1: recordFrameIntervals = True
+872.4913 	DATA 	Keypress: space
+872.7292 	EXP 	New trial (rep=7, index=0): None
+872.7304 	EXP 	Sound probe started
+872.7501 	EXP 	text_2: autoDraw = False
+872.7501 	EXP 	text_2: autoDraw = False
+872.9377 	EXP 	Sound probe stopped
+872.9382 	EXP 	window1: recordFrameIntervals = False
+872.9581 	EXP 	text_2: autoDraw = True
+872.9593 	EXP 	window1: recordFrameIntervals = True
+875.3989 	DATA 	Keypress: space
+875.6359 	EXP 	New trial (rep=8, index=0): None
+875.6388 	EXP 	Sound probe started
+875.6596 	EXP 	text_2: autoDraw = False
+875.6596 	EXP 	text_2: autoDraw = False
+875.8497 	EXP 	Sound probe stopped
+875.8502 	EXP 	window1: recordFrameIntervals = False
+875.8706 	EXP 	text_2: autoDraw = True
+875.8718 	EXP 	window1: recordFrameIntervals = True
+878.3103 	DATA 	Keypress: space
+878.5682 	EXP 	text_2: autoDraw = False
+878.5682 	EXP 	text_2: autoDraw = False
+878.5682 	EXP 	break_txt: autoDraw = True
+879.5871 	EXP 	New trial (rep=21, index=0): None
+881.4958 	DATA 	Keypress: space
+881.5117 	EXP 	break_txt: autoDraw = False
+881.5117 	EXP 	text: height = 0.05
+881.5117 	EXP 	text: height = 0.05
+881.5117 	EXP 	text: text = 'PITCH'
+881.5117 	EXP 	text: autoDraw = True
+882.5215 	EXP 	Created sequence: sequential, trialTypes=1, nReps=15, seed=None
+882.5220 	EXP 	New trial (rep=0, index=0): None
+882.5264 	EXP 	Sound probe started
+882.5465 	EXP 	text: autoDraw = False
+882.5465 	EXP 	text: autoDraw = False
+882.7377 	EXP 	Sound probe stopped
+882.7397 	EXP 	window1: recordFrameIntervals = False
+882.7612 	EXP 	text_2: autoDraw = True
+882.7626 	EXP 	window1: recordFrameIntervals = True
+885.6697 	EXP 	New trial (rep=1, index=0): None
+885.6708 	EXP 	Sound probe started
+885.6909 	EXP 	text_2: autoDraw = False
+885.6909 	EXP 	text_2: autoDraw = False
+885.8856 	EXP 	Sound probe reached end of file
+885.8872 	EXP 	window1: recordFrameIntervals = False
+885.9076 	EXP 	text_2: autoDraw = True
+885.9088 	EXP 	window1: recordFrameIntervals = True
+887.4271 	DATA 	Keypress: space
+887.6695 	EXP 	New trial (rep=2, index=0): None
+887.6707 	EXP 	Sound probe started
+887.6883 	EXP 	text_2: autoDraw = False
+887.6883 	EXP 	text_2: autoDraw = False
+887.8778 	EXP 	Sound probe stopped
+887.8800 	EXP 	window1: recordFrameIntervals = False
+887.9028 	EXP 	text_2: autoDraw = True
+887.9042 	EXP 	window1: recordFrameIntervals = True
+889.1334 	EXP 	New trial (rep=3, index=0): None
+889.1346 	EXP 	Sound probe started
+889.1540 	EXP 	text_2: autoDraw = False
+889.1540 	EXP 	text_2: autoDraw = False
+889.3459 	EXP 	Sound probe reached end of file
+889.3477 	EXP 	window1: recordFrameIntervals = False
+889.3677 	EXP 	text_2: autoDraw = True
+889.3694 	EXP 	window1: recordFrameIntervals = True
+891.1374 	DATA 	Keypress: space
+891.3759 	EXP 	New trial (rep=4, index=0): None
+891.3769 	EXP 	Sound probe started
+891.3973 	EXP 	text_2: autoDraw = False
+891.3973 	EXP 	text_2: autoDraw = False
+891.5859 	EXP 	Sound probe reached end of file
+891.5882 	EXP 	window1: recordFrameIntervals = False
+891.6163 	EXP 	text_2: autoDraw = True
+891.6175 	EXP 	window1: recordFrameIntervals = True
+893.4459 	EXP 	New trial (rep=5, index=0): None
+893.4471 	EXP 	Sound probe started
+893.4673 	EXP 	text_2: autoDraw = False
+893.4673 	EXP 	text_2: autoDraw = False
+893.6577 	EXP 	Sound probe stopped
+893.6596 	EXP 	window1: recordFrameIntervals = False
+893.6819 	EXP 	text_2: autoDraw = True
+893.6831 	EXP 	window1: recordFrameIntervals = True
+895.9501 	EXP 	New trial (rep=6, index=0): None
+895.9513 	EXP 	Sound probe started
+895.9715 	EXP 	text_2: autoDraw = False
+895.9715 	EXP 	text_2: autoDraw = False
+896.1655 	EXP 	Sound probe reached end of file
+896.1660 	EXP 	window1: recordFrameIntervals = False
+896.1866 	EXP 	text_2: autoDraw = True
+896.1887 	EXP 	window1: recordFrameIntervals = True
+897.7630 	EXP 	New trial (rep=7, index=0): None
+897.7651 	EXP 	Sound probe started
+897.7847 	EXP 	text_2: autoDraw = False
+897.7847 	EXP 	text_2: autoDraw = False
+897.9777 	EXP 	Sound probe reached end of file
+897.9797 	EXP 	window1: recordFrameIntervals = False
+898.0035 	EXP 	text_2: autoDraw = True
+898.0047 	EXP 	window1: recordFrameIntervals = True
+898.9398 	DATA 	Keypress: space
+899.1769 	EXP 	New trial (rep=8, index=0): None
+899.1806 	EXP 	Sound probe started
+899.2010 	EXP 	text_2: autoDraw = False
+899.2010 	EXP 	text_2: autoDraw = False
+899.3977 	EXP 	Sound probe reached end of file
+899.3998 	EXP 	window1: recordFrameIntervals = False
+899.4224 	EXP 	text_2: autoDraw = True
+899.4236 	EXP 	window1: recordFrameIntervals = True
+901.2611 	EXP 	New trial (rep=9, index=0): None
+901.2623 	EXP 	Sound probe started
+901.2817 	EXP 	text_2: autoDraw = False
+901.2817 	EXP 	text_2: autoDraw = False
+901.4839 	EXP 	Sound probe reached end of file
+901.4843 	EXP 	window1: recordFrameIntervals = False
+901.5138 	EXP 	text_2: autoDraw = True
+901.5150 	EXP 	window1: recordFrameIntervals = True
+904.4518 	EXP 	New trial (rep=10, index=0): None
+904.4530 	EXP 	Sound probe started
+904.4714 	EXP 	text_2: autoDraw = False
+904.4714 	EXP 	text_2: autoDraw = False
+904.6657 	EXP 	Sound probe reached end of file
+904.6677 	EXP 	window1: recordFrameIntervals = False
+904.6886 	EXP 	text_2: autoDraw = True
+904.6898 	EXP 	window1: recordFrameIntervals = True
+905.6965 	DATA 	Keypress: space
+905.9376 	EXP 	New trial (rep=11, index=0): None
+905.9389 	EXP 	Sound probe started
+905.9568 	EXP 	text_2: autoDraw = False
+905.9568 	EXP 	text_2: autoDraw = False
+906.1456 	EXP 	Sound probe stopped
+906.1460 	EXP 	window1: recordFrameIntervals = False
+906.1667 	EXP 	text_2: autoDraw = True
+906.1679 	EXP 	window1: recordFrameIntervals = True
+908.6505 	EXP 	New trial (rep=12, index=0): None
+908.6519 	EXP 	Sound probe started
+908.6712 	EXP 	text_2: autoDraw = False
+908.6712 	EXP 	text_2: autoDraw = False
+908.8656 	EXP 	Sound probe reached end of file
+908.8677 	EXP 	window1: recordFrameIntervals = False
+908.8917 	EXP 	text_2: autoDraw = True
+908.8930 	EXP 	window1: recordFrameIntervals = True
+911.4264 	DATA 	Keypress: space
+911.6661 	EXP 	New trial (rep=13, index=0): None
+911.6673 	EXP 	Sound probe started
+911.6876 	EXP 	text_2: autoDraw = False
+911.6876 	EXP 	text_2: autoDraw = False
+911.8738 	EXP 	Sound probe stopped
+911.8757 	EXP 	window1: recordFrameIntervals = False
+911.9010 	EXP 	text_2: autoDraw = True
+911.9023 	EXP 	window1: recordFrameIntervals = True
+913.6399 	EXP 	New trial (rep=14, index=0): None
+913.6411 	EXP 	Sound probe started
+913.6614 	EXP 	text_2: autoDraw = False
+913.6614 	EXP 	text_2: autoDraw = False
+913.8536 	EXP 	Sound probe reached end of file
+913.8541 	EXP 	window1: recordFrameIntervals = False
+913.8740 	EXP 	text_2: autoDraw = True
+913.8752 	EXP 	window1: recordFrameIntervals = True
+915.4423 	EXP 	text_2: autoDraw = False
+915.4423 	EXP 	text_2: autoDraw = False
+915.4423 	EXP 	break_txt: autoDraw = True
+916.4505 	EXP 	New trial (rep=22, index=0): None
+919.7140 	DATA 	Keypress: space
+919.7299 	EXP 	break_txt: autoDraw = False
+919.7299 	EXP 	text: text = 'PITCH'
+919.7299 	EXP 	text: autoDraw = True
+920.7321 	EXP 	Created sequence: sequential, trialTypes=1, nReps=11, seed=None
+920.7323 	EXP 	New trial (rep=0, index=0): None
+920.7336 	EXP 	Sound probe started
+920.7605 	EXP 	text: autoDraw = False
+920.7605 	EXP 	text: autoDraw = False
+920.9567 	EXP 	Sound probe reached end of file
+920.9571 	EXP 	window1: recordFrameIntervals = False
+920.9891 	EXP 	text_2: autoDraw = True
+920.9935 	EXP 	window1: recordFrameIntervals = True
+923.8307 	EXP 	New trial (rep=1, index=0): None
+923.8319 	EXP 	Sound probe started
+923.8518 	EXP 	text_2: autoDraw = False
+923.8518 	EXP 	text_2: autoDraw = False
+924.0457 	EXP 	Sound probe reached end of file
+924.0475 	EXP 	window1: recordFrameIntervals = False
+924.0731 	EXP 	text_2: autoDraw = True
+924.0744 	EXP 	window1: recordFrameIntervals = True
+926.2985 	DATA 	Keypress: space
+926.4626 	EXP 	New trial (rep=2, index=0): None
+926.4638 	EXP 	Sound probe started
+926.4833 	EXP 	text_2: autoDraw = False
+926.4833 	EXP 	text_2: autoDraw = False
+926.6736 	EXP 	Sound probe reached end of file
+926.6760 	EXP 	window1: recordFrameIntervals = False
+926.7013 	EXP 	text_2: autoDraw = True
+926.7025 	EXP 	window1: recordFrameIntervals = True
+928.9257 	EXP 	New trial (rep=3, index=0): None
+928.9294 	EXP 	Sound probe started
+928.9492 	EXP 	text_2: autoDraw = False
+928.9492 	EXP 	text_2: autoDraw = False
+929.1455 	EXP 	Sound probe reached end of file
+929.1472 	EXP 	window1: recordFrameIntervals = False
+929.1663 	EXP 	text_2: autoDraw = True
+929.1676 	EXP 	window1: recordFrameIntervals = True
+931.1227 	EXP 	New trial (rep=4, index=0): None
+931.1240 	EXP 	Sound probe started
+931.1406 	EXP 	text_2: autoDraw = False
+931.1406 	EXP 	text_2: autoDraw = False
+931.3419 	EXP 	Sound probe reached end of file
+931.3438 	EXP 	window1: recordFrameIntervals = False
+931.3724 	EXP 	text_2: autoDraw = True
+931.3751 	EXP 	window1: recordFrameIntervals = True
+932.6630 	DATA 	Keypress: space
+932.9024 	EXP 	New trial (rep=5, index=0): None
+932.9035 	EXP 	Sound probe started
+932.9234 	EXP 	text_2: autoDraw = False
+932.9234 	EXP 	text_2: autoDraw = False
+933.1137 	EXP 	Sound probe stopped
+933.1159 	EXP 	window1: recordFrameIntervals = False
+933.1396 	EXP 	text_2: autoDraw = True
+933.1409 	EXP 	window1: recordFrameIntervals = True
+934.4461 	EXP 	New trial (rep=6, index=0): None
+934.4473 	EXP 	Sound probe started
+934.4670 	EXP 	text_2: autoDraw = False
+934.4670 	EXP 	text_2: autoDraw = False
+934.6617 	EXP 	Sound probe reached end of file
+934.6632 	EXP 	window1: recordFrameIntervals = False
+934.6801 	EXP 	text_2: autoDraw = True
+934.6814 	EXP 	window1: recordFrameIntervals = True
+937.2131 	EXP 	New trial (rep=7, index=0): None
+937.2144 	EXP 	Sound probe started
+937.2340 	EXP 	text_2: autoDraw = False
+937.2340 	EXP 	text_2: autoDraw = False
+937.4217 	EXP 	Sound probe stopped
+937.4221 	EXP 	window1: recordFrameIntervals = False
+937.4527 	EXP 	text_2: autoDraw = True
+937.4540 	EXP 	window1: recordFrameIntervals = True
+940.2759 	EXP 	New trial (rep=8, index=0): None
+940.2770 	EXP 	Sound probe started
+940.2961 	EXP 	text_2: autoDraw = False
+940.2961 	EXP 	text_2: autoDraw = False
+940.4817 	EXP 	Sound probe stopped
+940.4821 	EXP 	window1: recordFrameIntervals = False
+940.5107 	EXP 	text_2: autoDraw = True
+940.5118 	EXP 	window1: recordFrameIntervals = True
+941.7877 	DATA 	Keypress: space
+942.0369 	EXP 	New trial (rep=9, index=0): None
+942.0382 	EXP 	Sound probe started
+942.0574 	EXP 	text_2: autoDraw = False
+942.0574 	EXP 	text_2: autoDraw = False
+942.2535 	EXP 	Sound probe reached end of file
+942.2552 	EXP 	window1: recordFrameIntervals = False
+942.2786 	EXP 	text_2: autoDraw = True
+942.2798 	EXP 	window1: recordFrameIntervals = True
+945.1375 	EXP 	New trial (rep=10, index=0): None
+945.1385 	EXP 	Sound probe started
+945.1584 	EXP 	text_2: autoDraw = False
+945.1584 	EXP 	text_2: autoDraw = False
+945.3536 	EXP 	Sound probe reached end of file
+945.3540 	EXP 	window1: recordFrameIntervals = False
+945.3738 	EXP 	text_2: autoDraw = True
+945.3748 	EXP 	window1: recordFrameIntervals = True
+947.0603 	EXP 	text_2: autoDraw = False
+947.0603 	EXP 	text_2: autoDraw = False
+947.0603 	EXP 	break_txt: autoDraw = True
+947.8779 	EXP 	New trial (rep=23, index=0): None
+952.1243 	DATA 	Keypress: space
+952.1244 	DATA 	Keypress: space
+952.1407 	EXP 	break_txt: autoDraw = False
+952.1407 	EXP 	text: height = 0.05
+952.1407 	EXP 	text: height = 0.05
+952.1407 	EXP 	text: text = 'RHYTHM\n\nPITCH'
+952.1407 	EXP 	text: autoDraw = True
+952.7957 	DATA 	Keypress: space
+953.1324 	EXP 	Created sequence: sequential, trialTypes=1, nReps=15, seed=None
+953.1325 	EXP 	New trial (rep=0, index=0): None
+953.1338 	EXP 	Sound probe started
+953.1652 	EXP 	text: autoDraw = False
+953.1652 	EXP 	text: autoDraw = False
+953.3587 	EXP 	Sound probe reached end of file
+953.3591 	EXP 	window1: recordFrameIntervals = False
+953.3904 	EXP 	text_2: autoDraw = True
+953.3916 	EXP 	window1: recordFrameIntervals = True
+954.7928 	EXP 	New trial (rep=1, index=0): None
+954.7940 	EXP 	Sound probe started
+954.8135 	EXP 	text_2: autoDraw = False
+954.8135 	EXP 	text_2: autoDraw = False
+955.0018 	EXP 	Sound probe stopped
+955.0038 	EXP 	window1: recordFrameIntervals = False
+955.0294 	EXP 	text_2: autoDraw = True
+955.0307 	EXP 	window1: recordFrameIntervals = True
+956.1976 	DATA 	Keypress: space
+956.4379 	EXP 	New trial (rep=2, index=0): None
+956.4392 	EXP 	Sound probe started
+956.4580 	EXP 	text_2: autoDraw = False
+956.4580 	EXP 	text_2: autoDraw = False
+956.6498 	EXP 	Sound probe reached end of file
+956.6519 	EXP 	window1: recordFrameIntervals = False
+956.6734 	EXP 	text_2: autoDraw = True
+956.6748 	EXP 	window1: recordFrameIntervals = True
+957.8447 	DATA 	Keypress: space
+958.0853 	EXP 	New trial (rep=3, index=0): None
+958.0866 	EXP 	Sound probe started
+958.1061 	EXP 	text_2: autoDraw = False
+958.1061 	EXP 	text_2: autoDraw = False
+958.3013 	EXP 	Sound probe reached end of file
+958.3018 	EXP 	window1: recordFrameIntervals = False
+958.3218 	EXP 	text_2: autoDraw = True
+958.3229 	EXP 	window1: recordFrameIntervals = True
+959.4946 	DATA 	Keypress: space
+959.7364 	EXP 	New trial (rep=4, index=0): None
+959.7376 	EXP 	Sound probe started
+959.7579 	EXP 	text_2: autoDraw = False
+959.7579 	EXP 	text_2: autoDraw = False
+959.9496 	EXP 	Sound probe reached end of file
+959.9517 	EXP 	window1: recordFrameIntervals = False
+959.9754 	EXP 	text_2: autoDraw = True
+959.9766 	EXP 	window1: recordFrameIntervals = True
+961.1452 	DATA 	Keypress: space
+961.3856 	EXP 	New trial (rep=5, index=0): None
+961.3868 	EXP 	Sound probe started
+961.4070 	EXP 	text_2: autoDraw = False
+961.4070 	EXP 	text_2: autoDraw = False
+961.5897 	EXP 	Sound probe stopped
+961.5910 	EXP 	window1: recordFrameIntervals = False
+961.6217 	EXP 	text_2: autoDraw = True
+961.6234 	EXP 	window1: recordFrameIntervals = True
+962.7857 	DATA 	Keypress: space
+963.0298 	EXP 	New trial (rep=6, index=0): None
+963.0314 	EXP 	Sound probe started
+963.0511 	EXP 	text_2: autoDraw = False
+963.0511 	EXP 	text_2: autoDraw = False
+963.2498 	EXP 	Sound probe reached end of file
+963.2519 	EXP 	window1: recordFrameIntervals = False
+963.2755 	EXP 	text_2: autoDraw = True
+963.2766 	EXP 	window1: recordFrameIntervals = True
+964.4447 	DATA 	Keypress: space
+964.6872 	EXP 	New trial (rep=7, index=0): None
+964.6884 	EXP 	Sound probe started
+964.7095 	EXP 	text_2: autoDraw = False
+964.7095 	EXP 	text_2: autoDraw = False
+964.9015 	EXP 	Sound probe reached end of file
+964.9019 	EXP 	window1: recordFrameIntervals = False
+964.9296 	EXP 	text_2: autoDraw = True
+964.9309 	EXP 	window1: recordFrameIntervals = True
+966.0954 	DATA 	Keypress: space
+966.3387 	EXP 	New trial (rep=8, index=0): None
+966.3399 	EXP 	Sound probe started
+966.3607 	EXP 	text_2: autoDraw = False
+966.3607 	EXP 	text_2: autoDraw = False
+966.5497 	EXP 	Sound probe reached end of file
+966.5520 	EXP 	window1: recordFrameIntervals = False
+966.5769 	EXP 	text_2: autoDraw = True
+966.5783 	EXP 	window1: recordFrameIntervals = True
+967.7447 	DATA 	Keypress: space
+967.9897 	EXP 	New trial (rep=9, index=0): None
+967.9909 	EXP 	Sound probe started
+968.0115 	EXP 	text_2: autoDraw = False
+968.0115 	EXP 	text_2: autoDraw = False
+968.2096 	EXP 	Sound probe reached end of file
+968.2101 	EXP 	window1: recordFrameIntervals = False
+968.2316 	EXP 	text_2: autoDraw = True
+968.2329 	EXP 	window1: recordFrameIntervals = True
+969.4037 	DATA 	Keypress: space
+969.6513 	EXP 	New trial (rep=10, index=0): None
+969.6529 	EXP 	Sound probe started
+969.6745 	EXP 	text_2: autoDraw = False
+969.6745 	EXP 	text_2: autoDraw = False
+969.8497 	EXP 	Sound probe stopped
+969.8517 	EXP 	window1: recordFrameIntervals = False
+969.8828 	EXP 	text_2: autoDraw = True
+969.8841 	EXP 	window1: recordFrameIntervals = True
+971.0455 	DATA 	Keypress: space
+971.2859 	EXP 	New trial (rep=11, index=0): None
+971.2873 	EXP 	Sound probe started
+971.3069 	EXP 	text_2: autoDraw = False
+971.3069 	EXP 	text_2: autoDraw = False
+971.5018 	EXP 	Sound probe reached end of file
+971.5037 	EXP 	window1: recordFrameIntervals = False
+971.5265 	EXP 	text_2: autoDraw = True
+971.5278 	EXP 	window1: recordFrameIntervals = True
+972.9377 	EXP 	New trial (rep=12, index=0): None
+972.9390 	EXP 	Sound probe started
+972.9579 	EXP 	text_2: autoDraw = False
+972.9579 	EXP 	text_2: autoDraw = False
+973.1497 	EXP 	Sound probe reached end of file
+973.1501 	EXP 	window1: recordFrameIntervals = False
+973.1704 	EXP 	text_2: autoDraw = True
+973.1715 	EXP 	window1: recordFrameIntervals = True
+974.3447 	DATA 	Keypress: space
+974.5871 	EXP 	New trial (rep=13, index=0): None
+974.5884 	EXP 	Sound probe started
+974.6084 	EXP 	text_2: autoDraw = False
+974.6084 	EXP 	text_2: autoDraw = False
+974.8017 	EXP 	Sound probe reached end of file
+974.8036 	EXP 	window1: recordFrameIntervals = False
+974.8202 	EXP 	text_2: autoDraw = True
+974.8214 	EXP 	window1: recordFrameIntervals = True
+975.9976 	DATA 	Keypress: space
+976.2398 	EXP 	New trial (rep=14, index=0): None
+976.2411 	EXP 	Sound probe started
+976.2602 	EXP 	text_2: autoDraw = False
+976.2602 	EXP 	text_2: autoDraw = False
+976.4495 	EXP 	Sound probe reached end of file
+976.4500 	EXP 	window1: recordFrameIntervals = False
+976.4706 	EXP 	text_2: autoDraw = True
+976.4718 	EXP 	window1: recordFrameIntervals = True
+977.6429 	DATA 	Keypress: space
+977.9055 	EXP 	text_2: autoDraw = False
+977.9055 	EXP 	text_2: autoDraw = False
+977.9055 	EXP 	break_txt: autoDraw = True
+978.9200 	DATA 	Keypress: space
+978.9507 	EXP 	break_txt: autoDraw = False
+978.9507 	EXP 	blank_text: autoDraw = True
+979.9733 	EXP 	blank_text: autoDraw = False
+979.9733 	EXP 	end_txt: autoDraw = True
+984.6667 	DATA 	Keypress: space
+984.6956 	EXP 	end_txt: autoDraw = False
+984.8550 	EXP 	window1: mouseVisible = True

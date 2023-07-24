@@ -1,0 +1,520 @@
+26.2888 	WARNING 	User requested fullscreen with size [2560 1440], but screen is actually [3840, 2160]. Using actual size
+29.1661 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+29.1672 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001B426D26B20>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001B427A06130>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([3840, 2160]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+29.1679 	EXP 	window1: mouseVisible = True
+29.1679 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+29.1680 	EXP 	window1: recordFrameIntervals = False
+29.3397 	EXP 	window1: recordFrameIntervals = True
+29.3718 	WARNING 	t of last frame was 21.82ms (=1/45)
+29.4401 	WARNING 	t of last frame was 28.87ms (=1/34)
+29.4729 	WARNING 	t of last frame was 21.70ms (=1/46)
+29.5400 	WARNING 	t of last frame was 28.04ms (=1/35)
+29.5714 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+31.0521 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+33.1677 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+33.1695 	EXP 	Created blank_txt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='blank_txt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+33.2625 	EXP 	Sound tProbe set volume 1.000
+33.2638 	EXP 	Created you_done_goofed = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='you_done_goofed', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+33.5713 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+33.5771 	EXP 	Created blank_txt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='blank_txt', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+33.6022 	EXP 	Sound probe set volume 1.000
+33.6134 	EXP 	Created goodbye_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='goodbye_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+33.6175 	EXP 	Created fixation_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_cross', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.15, 0.15]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+33.6313 	EXP 	text: autoDraw = True
+200.3589 	DATA 	Keypress: n
+200.3791 	EXP 	text: autoDraw = False
+200.3791 	EXP 	blank_txt: autoDraw = True
+201.3728 	EXP 	Created sequence: random, trialTypes=1, nReps=3, seed=None
+201.3732 	EXP 	New trial (rep=0, index=0): None
+201.3892 	EXP 	blank_txt: autoDraw = False
+202.3860 	EXP 	Sound tProbe started
+202.5990 	EXP 	Sound tProbe reached end of file
+203.1563 	DATA 	Keypress: space
+204.4469 	EXP 	you_done_goofed: height = 0.05
+204.4469 	EXP 	you_done_goofed: height = 0.05
+204.4469 	EXP 	you_done_goofed: text = "C'est très bien! \n            \n\nAppuyez sur n'importe quelle touche pour poursuivre."
+204.4469 	EXP 	you_done_goofed: autoDraw = True
+207.2241 	EXP 	New trial (rep=1, index=0): None
+207.2257 	DATA 	Keypress: n
+207.2449 	EXP 	you_done_goofed: autoDraw = False
+208.2250 	EXP 	Sound tProbe started
+208.4388 	EXP 	Sound tProbe reached end of file
+208.7515 	DATA 	Keypress: space
+210.2902 	EXP 	you_done_goofed: text = "C'est très bien! \n            \n\nAppuyez sur n'importe quelle touche pour poursuivre."
+210.2902 	EXP 	you_done_goofed: autoDraw = True
+211.5003 	EXP 	New trial (rep=2, index=0): None
+211.5019 	DATA 	Keypress: n
+211.5277 	EXP 	you_done_goofed: autoDraw = False
+212.4964 	EXP 	Sound tProbe started
+212.7106 	EXP 	Sound tProbe reached end of file
+213.2646 	DATA 	Keypress: space
+214.5857 	EXP 	you_done_goofed: text = "C'est très bien! \n            \n\nAppuyez sur n'importe quelle touche pour poursuivre."
+214.5857 	EXP 	you_done_goofed: autoDraw = True
+218.6310 	EXP 	Created fixation_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fixation_cross', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.15, 0.15]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+218.6459 	DATA 	Keypress: n
+218.6573 	EXP 	you_done_goofed: autoDraw = False
+218.6573 	EXP 	text_2: height = 0.05
+218.6573 	EXP 	text_2: height = 0.05
+218.6573 	EXP 	text_2: text = "Appuyez sur la barre d'espace dès que vous entendez un son. \n\n Les réponses enregistrées plus d'une seconde après le son ne seront pas comptabilisées. \n\n\n Appuyez sur n'importe quelle touche pour démarrer."
+218.6573 	EXP 	text_2: autoDraw = True
+223.8433 	DATA 	Keypress: n
+223.8620 	EXP 	text_2: autoDraw = False
+223.8620 	EXP 	blank_txt: autoDraw = True
+224.8493 	EXP 	Created sequence: random, trialTypes=1, nReps=999, seed=None
+224.8528 	EXP 	New trial (rep=0, index=0): None
+224.9286 	EXP 	Sound probe started
+224.9367 	EXP 	blank_txt: autoDraw = False
+225.1467 	EXP 	Sound probe reached end of file
+225.4482 	DATA 	Keypress: space
+228.6198 	EXP 	New trial (rep=1, index=0): None
+228.6912 	EXP 	Sound probe started
+228.9069 	EXP 	Sound probe reached end of file
+229.4151 	DATA 	Keypress: space
+232.6021 	EXP 	New trial (rep=2, index=0): None
+232.6751 	EXP 	Sound probe started
+232.8868 	EXP 	Sound probe reached end of file
+233.3824 	DATA 	Keypress: space
+235.0050 	EXP 	New trial (rep=3, index=0): None
+235.0722 	EXP 	Sound probe started
+235.2868 	EXP 	Sound probe reached end of file
+238.4378 	EXP 	New trial (rep=4, index=0): None
+238.5116 	EXP 	Sound probe started
+238.7267 	EXP 	Sound probe reached end of file
+239.2255 	DATA 	Keypress: space
+242.1765 	EXP 	New trial (rep=5, index=0): None
+242.2518 	EXP 	Sound probe started
+242.4670 	EXP 	Sound probe reached end of file
+245.1460 	EXP 	New trial (rep=6, index=0): None
+245.2216 	EXP 	Sound probe started
+245.4348 	EXP 	Sound probe reached end of file
+246.3662 	DATA 	Keypress: space
+247.7874 	EXP 	New trial (rep=7, index=0): None
+247.8568 	EXP 	Sound probe started
+248.0749 	EXP 	Sound probe reached end of file
+248.5936 	DATA 	Keypress: space
+249.9722 	EXP 	New trial (rep=8, index=0): None
+250.0561 	EXP 	Sound probe started
+250.2665 	EXP 	Sound probe stopped
+250.6926 	DATA 	Keypress: space
+252.4565 	EXP 	New trial (rep=9, index=0): None
+252.4580 	EXP 	Sound probe started
+252.6746 	EXP 	Sound probe reached end of file
+255.0796 	EXP 	New trial (rep=10, index=0): None
+255.1461 	EXP 	Sound probe started
+255.3548 	EXP 	Sound probe reached end of file
+258.8939 	EXP 	New trial (rep=11, index=0): None
+258.9689 	EXP 	Sound probe started
+259.1868 	EXP 	Sound probe reached end of file
+261.2532 	EXP 	New trial (rep=12, index=0): None
+261.3217 	EXP 	Sound probe started
+261.5349 	EXP 	Sound probe reached end of file
+262.0382 	DATA 	Keypress: space
+263.7523 	EXP 	New trial (rep=13, index=0): None
+263.7567 	EXP 	Sound probe started
+263.9749 	EXP 	Sound probe reached end of file
+267.5896 	EXP 	New trial (rep=14, index=0): None
+267.6750 	EXP 	Sound probe started
+267.8949 	EXP 	Sound probe reached end of file
+271.6271 	EXP 	New trial (rep=15, index=0): None
+271.7001 	EXP 	Sound probe started
+271.9227 	EXP 	Sound probe reached end of file
+272.3235 	DATA 	Keypress: space
+274.1129 	EXP 	New trial (rep=16, index=0): None
+274.1846 	EXP 	Sound probe started
+274.3947 	EXP 	Sound probe stopped
+276.5938 	EXP 	New trial (rep=17, index=0): None
+276.6625 	EXP 	Sound probe started
+276.8835 	EXP 	Sound probe reached end of file
+280.1744 	EXP 	New trial (rep=18, index=0): None
+280.2472 	EXP 	Sound probe started
+280.4627 	EXP 	Sound probe reached end of file
+281.7941 	DATA 	Keypress: space
+282.8380 	EXP 	New trial (rep=19, index=0): None
+282.8424 	EXP 	Sound probe started
+283.0545 	EXP 	Sound probe reached end of file
+285.0194 	EXP 	New trial (rep=20, index=0): None
+285.0854 	EXP 	Sound probe started
+285.3028 	EXP 	Sound probe reached end of file
+287.2607 	DATA 	Keypress: space
+288.9148 	EXP 	New trial (rep=21, index=0): None
+288.9843 	EXP 	Sound probe started
+289.2027 	EXP 	Sound probe reached end of file
+289.9130 	DATA 	Keypress: space
+291.9111 	EXP 	New trial (rep=22, index=0): None
+291.9870 	EXP 	Sound probe started
+292.1910 	EXP 	Sound probe stopped
+294.6182 	EXP 	New trial (rep=23, index=0): None
+294.6246 	EXP 	Sound probe started
+294.8427 	EXP 	Sound probe reached end of file
+297.5631 	EXP 	New trial (rep=24, index=0): None
+297.6308 	EXP 	Sound probe started
+297.8507 	EXP 	Sound probe reached end of file
+298.2277 	DATA 	Keypress: space
+301.3016 	EXP 	New trial (rep=25, index=0): None
+301.4450 	EXP 	Sound probe started
+301.6629 	EXP 	Sound probe reached end of file
+305.3678 	EXP 	New trial (rep=26, index=0): None
+305.4469 	EXP 	Sound probe started
+305.6625 	EXP 	Sound probe reached end of file
+307.9693 	EXP 	New trial (rep=27, index=0): None
+308.0485 	EXP 	Sound probe started
+308.2629 	EXP 	Sound probe reached end of file
+309.0786 	DATA 	Keypress: space
+310.8540 	EXP 	New trial (rep=28, index=0): None
+310.9331 	EXP 	Sound probe started
+311.1308 	EXP 	Sound probe stopped
+311.9064 	DATA 	Keypress: space
+313.5648 	EXP 	New trial (rep=29, index=0): None
+313.5662 	EXP 	Sound probe started
+313.7826 	EXP 	Sound probe reached end of file
+315.6572 	EXP 	New trial (rep=30, index=0): None
+315.7243 	EXP 	Sound probe started
+315.9427 	EXP 	Sound probe reached end of file
+316.4952 	DATA 	Keypress: space
+319.2706 	EXP 	New trial (rep=31, index=0): None
+319.3417 	EXP 	Sound probe started
+319.5641 	EXP 	Sound probe reached end of file
+320.1234 	DATA 	Keypress: space
+321.5727 	EXP 	New trial (rep=32, index=0): None
+321.6438 	EXP 	Sound probe started
+321.8586 	EXP 	Sound probe reached end of file
+324.4092 	EXP 	New trial (rep=33, index=0): None
+324.4106 	EXP 	Sound probe started
+324.6307 	EXP 	Sound probe reached end of file
+327.8548 	EXP 	New trial (rep=34, index=0): None
+327.9271 	EXP 	Sound probe started
+328.1385 	EXP 	Sound probe reached end of file
+328.5756 	DATA 	Keypress: space
+331.8508 	EXP 	New trial (rep=35, index=0): None
+331.9225 	EXP 	Sound probe started
+332.1384 	EXP 	Sound probe reached end of file
+335.5119 	EXP 	New trial (rep=36, index=0): None
+336.7235 	EXP 	Sound probe started
+336.9307 	EXP 	Sound probe stopped
+337.3849 	DATA 	Keypress: space
+340.1706 	EXP 	New trial (rep=37, index=0): None
+341.5698 	EXP 	Sound probe started
+341.7786 	EXP 	Sound probe reached end of file
+342.2138 	DATA 	Keypress: space
+345.4776 	EXP 	New trial (rep=38, index=0): None
+346.8455 	EXP 	Sound probe started
+347.0586 	EXP 	Sound probe reached end of file
+347.5865 	DATA 	Keypress: space
+350.8838 	EXP 	New trial (rep=39, index=0): None
+350.8861 	EXP 	Sound probe started
+351.0988 	EXP 	Sound probe reached end of file
+354.6493 	EXP 	New trial (rep=40, index=0): None
+356.3915 	EXP 	Sound probe started
+356.6068 	EXP 	Sound probe reached end of file
+357.1695 	DATA 	Keypress: space
+359.6335 	EXP 	New trial (rep=41, index=0): None
+361.2001 	EXP 	Sound probe started
+361.4184 	EXP 	Sound probe reached end of file
+365.1277 	EXP 	New trial (rep=42, index=0): None
+366.9110 	EXP 	Sound probe started
+367.1267 	EXP 	Sound probe reached end of file
+368.1520 	DATA 	Keypress: space
+370.1115 	EXP 	New trial (rep=43, index=0): None
+371.8633 	EXP 	Sound probe started
+372.0743 	EXP 	Sound probe reached end of file
+372.6515 	DATA 	Keypress: space
+375.8935 	EXP 	New trial (rep=44, index=0): None
+375.8946 	EXP 	Sound probe started
+376.0946 	EXP 	Sound probe stopped
+379.9129 	EXP 	New trial (rep=45, index=0): None
+381.8648 	EXP 	Sound probe started
+382.0745 	EXP 	Sound probe reached end of file
+382.7965 	DATA 	Keypress: space
+385.1258 	EXP 	New trial (rep=46, index=0): None
+386.8567 	EXP 	Sound probe started
+387.0746 	EXP 	Sound probe reached end of file
+388.1131 	DATA 	Keypress: space
+389.3525 	EXP 	New trial (rep=47, index=0): None
+391.1101 	EXP 	Sound probe started
+391.3264 	EXP 	Sound probe reached end of file
+391.8185 	DATA 	Keypress: space
+393.3257 	EXP 	New trial (rep=48, index=0): None
+395.1405 	EXP 	Sound probe started
+395.3547 	EXP 	Sound probe reached end of file
+396.3426 	DATA 	Keypress: space
+397.3760 	EXP 	New trial (rep=49, index=0): None
+399.4009 	EXP 	Sound probe started
+399.6145 	EXP 	Sound probe reached end of file
+400.6515 	DATA 	Keypress: space
+402.8006 	EXP 	New trial (rep=50, index=0): None
+402.8046 	EXP 	Sound probe started
+403.0226 	EXP 	Sound probe reached end of file
+405.9972 	EXP 	New trial (rep=51, index=0): None
+408.3250 	EXP 	Sound probe started
+408.5427 	EXP 	Sound probe reached end of file
+408.9667 	DATA 	Keypress: space
+412.2418 	EXP 	New trial (rep=52, index=0): None
+414.5514 	EXP 	Sound probe started
+414.7643 	EXP 	Sound probe reached end of file
+415.2005 	DATA 	Keypress: space
+416.6911 	EXP 	New trial (rep=53, index=0): None
+419.1035 	EXP 	Sound probe started
+419.3105 	EXP 	Sound probe stopped
+419.9035 	DATA 	Keypress: space
+422.7179 	EXP 	New trial (rep=54, index=0): None
+422.7210 	EXP 	Sound probe started
+422.9377 	EXP 	Sound probe reached end of file
+426.3920 	EXP 	New trial (rep=55, index=0): None
+428.4694 	EXP 	Sound probe started
+428.6826 	EXP 	Sound probe reached end of file
+431.6985 	EXP 	New trial (rep=56, index=0): None
+433.8983 	EXP 	Sound probe started
+434.1105 	EXP 	Sound probe reached end of file
+437.6850 	EXP 	New trial (rep=57, index=0): None
+439.9637 	EXP 	Sound probe started
+440.1704 	EXP 	Sound probe stopped
+440.6947 	DATA 	Keypress: space
+442.2759 	EXP 	New trial (rep=58, index=0): None
+442.2801 	EXP 	Sound probe started
+442.4903 	EXP 	Sound probe reached end of file
+444.7106 	EXP 	New trial (rep=59, index=0): None
+446.8712 	EXP 	Sound probe started
+447.0906 	EXP 	Sound probe reached end of file
+450.0609 	EXP 	New trial (rep=60, index=0): None
+452.2239 	EXP 	Sound probe started
+452.4385 	EXP 	Sound probe reached end of file
+452.9019 	DATA 	Keypress: space
+455.4889 	EXP 	New trial (rep=61, index=0): None
+457.8085 	EXP 	Sound probe started
+458.0186 	EXP 	Sound probe reached end of file
+458.5370 	DATA 	Keypress: space
+461.4566 	EXP 	New trial (rep=62, index=0): None
+461.4601 	EXP 	Sound probe started
+461.6784 	EXP 	Sound probe reached end of file
+464.9953 	EXP 	New trial (rep=63, index=0): None
+467.0664 	EXP 	Sound probe started
+467.2806 	EXP 	Sound probe reached end of file
+469.3335 	EXP 	New trial (rep=64, index=0): None
+471.4712 	EXP 	Sound probe started
+471.6910 	EXP 	Sound probe reached end of file
+472.1940 	DATA 	Keypress: space
+473.6419 	EXP 	New trial (rep=65, index=0): None
+476.5003 	EXP 	Sound probe started
+476.7065 	EXP 	Sound probe stopped
+479.2112 	EXP 	New trial (rep=66, index=0): None
+479.2123 	EXP 	Sound probe started
+479.4266 	EXP 	Sound probe reached end of file
+482.7496 	EXP 	New trial (rep=67, index=0): None
+485.0113 	EXP 	Sound probe started
+485.2263 	EXP 	Sound probe reached end of file
+485.7354 	DATA 	Keypress: space
+488.8594 	EXP 	New trial (rep=68, index=0): None
+491.0462 	EXP 	Sound probe started
+491.2591 	EXP 	Sound probe reached end of file
+493.6611 	EXP 	New trial (rep=69, index=0): None
+495.9081 	EXP 	Sound probe started
+496.1264 	EXP 	Sound probe reached end of file
+499.8048 	EXP 	New trial (rep=70, index=0): None
+502.1920 	EXP 	Sound probe started
+502.4067 	EXP 	Sound probe reached end of file
+503.1907 	DATA 	Keypress: space
+505.5031 	EXP 	New trial (rep=71, index=0): None
+507.8615 	EXP 	Sound probe started
+508.0743 	EXP 	Sound probe reached end of file
+508.9304 	DATA 	Keypress: space
+510.9190 	EXP 	New trial (rep=72, index=0): None
+513.3219 	EXP 	Sound probe started
+513.5342 	EXP 	Sound probe reached end of file
+514.0395 	DATA 	Keypress: space
+516.4273 	EXP 	New trial (rep=73, index=0): None
+518.8530 	EXP 	Sound probe started
+519.0663 	EXP 	Sound probe reached end of file
+519.5780 	DATA 	Keypress: space
+522.5505 	EXP 	New trial (rep=74, index=0): None
+522.5515 	EXP 	Sound probe started
+522.7626 	EXP 	Sound probe reached end of file
+525.4480 	EXP 	New trial (rep=75, index=0): None
+527.8880 	EXP 	Sound probe started
+528.1026 	EXP 	Sound probe reached end of file
+530.5674 	EXP 	New trial (rep=76, index=0): None
+533.1985 	EXP 	Sound probe started
+533.4145 	EXP 	Sound probe reached end of file
+536.2175 	EXP 	New trial (rep=77, index=0): None
+538.8110 	EXP 	Sound probe started
+539.0224 	EXP 	Sound probe reached end of file
+539.5374 	DATA 	Keypress: space
+542.4346 	EXP 	New trial (rep=78, index=0): None
+542.4385 	EXP 	Sound probe started
+542.6610 	EXP 	Sound probe reached end of file
+544.7730 	EXP 	New trial (rep=79, index=0): None
+547.4711 	EXP 	Sound probe started
+547.6824 	EXP 	Sound probe stopped
+548.0680 	DATA 	Keypress: space
+550.9957 	EXP 	New trial (rep=80, index=0): None
+553.5584 	EXP 	Sound probe started
+553.7706 	EXP 	Sound probe reached end of file
+554.4058 	DATA 	Keypress: space
+556.6966 	EXP 	New trial (rep=81, index=0): None
+559.2809 	EXP 	Sound probe started
+559.4903 	EXP 	Sound probe reached end of file
+560.1450 	DATA 	Keypress: space
+561.9214 	EXP 	New trial (rep=82, index=0): None
+561.9225 	EXP 	Sound probe started
+562.1424 	EXP 	Sound probe reached end of file
+565.2225 	EXP 	New trial (rep=83, index=0): None
+567.7833 	EXP 	Sound probe started
+567.9902 	EXP 	Sound probe stopped
+568.4369 	DATA 	Keypress: space
+570.6933 	EXP 	New trial (rep=84, index=0): None
+573.5483 	EXP 	Sound probe started
+573.7589 	EXP 	Sound probe reached end of file
+574.2966 	DATA 	Keypress: space
+577.5249 	EXP 	New trial (rep=85, index=0): None
+580.1811 	EXP 	Sound probe started
+580.3784 	EXP 	Sound probe stopped
+581.3261 	DATA 	Keypress: space
+582.7718 	EXP 	New trial (rep=86, index=0): None
+585.3878 	EXP 	Sound probe started
+585.5903 	EXP 	Sound probe stopped
+586.0375 	DATA 	Keypress: space
+589.3017 	EXP 	New trial (rep=87, index=0): None
+591.9441 	EXP 	Sound probe started
+592.1582 	EXP 	Sound probe reached end of file
+592.9011 	DATA 	Keypress: space
+595.0206 	EXP 	New trial (rep=88, index=0): None
+598.7633 	EXP 	Sound probe started
+598.9782 	EXP 	Sound probe reached end of file
+600.1384 	DATA 	Keypress: space
+602.3987 	EXP 	New trial (rep=89, index=0): None
+602.4017 	EXP 	Sound probe started
+602.6183 	EXP 	Sound probe reached end of file
+605.7348 	EXP 	New trial (rep=90, index=0): None
+608.8171 	EXP 	Sound probe started
+609.0263 	EXP 	Sound probe reached end of file
+609.5716 	DATA 	Keypress: space
+611.6072 	EXP 	New trial (rep=91, index=0): None
+614.7750 	EXP 	Sound probe started
+614.9924 	EXP 	Sound probe reached end of file
+615.5620 	DATA 	Keypress: space
+617.3522 	EXP 	New trial (rep=92, index=0): None
+620.4691 	EXP 	Sound probe started
+620.6862 	EXP 	Sound probe reached end of file
+622.4344 	DATA 	Keypress: space
+622.7877 	EXP 	New trial (rep=93, index=0): None
+622.7887 	EXP 	Sound probe started
+623.0063 	EXP 	Sound probe reached end of file
+625.7236 	EXP 	New trial (rep=94, index=0): None
+628.8601 	EXP 	Sound probe started
+628.8608 	DATA 	Keypress: space
+629.0743 	EXP 	Sound probe reached end of file
+629.8434 	DATA 	Keypress: space
+632.4282 	EXP 	New trial (rep=95, index=0): None
+635.7423 	EXP 	Sound probe started
+635.7430 	DATA 	Keypress: space
+635.9543 	EXP 	Sound probe reached end of file
+639.4729 	EXP 	New trial (rep=96, index=0): None
+642.7881 	EXP 	Sound probe started
+643.0064 	EXP 	Sound probe reached end of file
+643.6556 	DATA 	Keypress: space
+646.3789 	EXP 	New trial (rep=97, index=0): None
+646.3817 	EXP 	Sound probe started
+646.5943 	EXP 	Sound probe reached end of file
+648.9814 	EXP 	New trial (rep=98, index=0): None
+652.3890 	EXP 	Sound probe started
+652.6023 	EXP 	Sound probe reached end of file
+653.1115 	DATA 	Keypress: space
+656.3258 	EXP 	New trial (rep=99, index=0): None
+660.9918 	EXP 	Sound probe started
+661.2026 	EXP 	Sound probe reached end of file
+661.8076 	DATA 	Keypress: space
+664.2595 	EXP 	New trial (rep=100, index=0): None
+669.4553 	EXP 	Sound probe started
+669.6623 	EXP 	Sound probe stopped
+673.1051 	EXP 	New trial (rep=101, index=0): None
+676.6003 	EXP 	Sound probe started
+676.8024 	EXP 	Sound probe stopped
+677.3907 	DATA 	Keypress: space
+680.2761 	EXP 	New trial (rep=102, index=0): None
+680.2792 	EXP 	Sound probe started
+680.4904 	EXP 	Sound probe reached end of file
+683.7435 	EXP 	New trial (rep=103, index=0): None
+687.4567 	EXP 	Sound probe started
+687.6702 	EXP 	Sound probe reached end of file
+688.1663 	DATA 	Keypress: space
+689.9031 	EXP 	New trial (rep=104, index=0): None
+693.9074 	EXP 	Sound probe started
+694.1223 	EXP 	Sound probe reached end of file
+694.6074 	DATA 	Keypress: space
+696.4814 	EXP 	New trial (rep=105, index=0): None
+700.7717 	EXP 	Sound probe started
+700.9901 	EXP 	Sound probe reached end of file
+701.4194 	DATA 	Keypress: space
+703.0958 	EXP 	New trial (rep=106, index=0): None
+706.7060 	EXP 	Sound probe started
+706.9188 	EXP 	Sound probe reached end of file
+709.1016 	EXP 	New trial (rep=107, index=0): None
+711.9812 	EXP 	Sound probe started
+712.0197 	DATA 	Keypress: space
+712.1982 	EXP 	Sound probe reached end of file
+715.0067 	EXP 	New trial (rep=108, index=0): None
+715.0108 	EXP 	Sound probe started
+715.2308 	EXP 	Sound probe reached end of file
+718.2920 	EXP 	New trial (rep=109, index=0): None
+722.5957 	EXP 	Sound probe started
+722.8101 	EXP 	Sound probe reached end of file
+723.4732 	DATA 	Keypress: space
+724.7902 	EXP 	New trial (rep=110, index=0): None
+728.4127 	EXP 	Sound probe started
+728.6264 	EXP 	Sound probe reached end of file
+730.0155 	DATA 	Keypress: space
+731.7372 	EXP 	New trial (rep=111, index=0): None
+736.4929 	EXP 	Sound probe started
+736.7063 	EXP 	Sound probe reached end of file
+737.2467 	DATA 	Keypress: space
+739.3524 	EXP 	New trial (rep=112, index=0): None
+739.3535 	EXP 	Sound probe started
+739.5660 	EXP 	Sound probe reached end of file
+741.5365 	EXP 	New trial (rep=113, index=0): None
+746.5077 	EXP 	Sound probe started
+746.7320 	EXP 	Sound probe reached end of file
+749.6152 	EXP 	New trial (rep=114, index=0): None
+753.7551 	EXP 	Sound probe started
+753.7854 	DATA 	Keypress: space
+753.9661 	EXP 	Sound probe stopped
+756.0667 	EXP 	New trial (rep=115, index=0): None
+759.3960 	EXP 	Sound probe started
+759.5940 	EXP 	Sound probe stopped
+760.2325 	DATA 	Keypress: space
+762.8619 	EXP 	New trial (rep=116, index=0): None
+766.0389 	EXP 	Sound probe started
+766.2541 	EXP 	Sound probe reached end of file
+769.7695 	EXP 	New trial (rep=117, index=0): None
+772.7527 	EXP 	Sound probe started
+772.9660 	EXP 	Sound probe reached end of file
+776.7455 	EXP 	New trial (rep=118, index=0): None
+779.7608 	EXP 	Sound probe started
+779.9742 	EXP 	Sound probe reached end of file
+783.3743 	EXP 	New trial (rep=119, index=0): None
+786.5371 	EXP 	Sound probe started
+786.7539 	EXP 	Sound probe reached end of file
+787.2756 	DATA 	Keypress: space
+789.5554 	EXP 	New trial (rep=120, index=0): None
+789.5585 	EXP 	Sound probe started
+789.7738 	EXP 	Sound probe reached end of file
+792.1138 	EXP 	New trial (rep=121, index=0): None
+795.8179 	EXP 	Sound probe started
+796.0225 	EXP 	Sound probe stopped
+798.1661 	EXP 	New trial (rep=122, index=0): None
+801.9554 	EXP 	Sound probe started
+802.1623 	EXP 	Sound probe stopped
+805.9338 	EXP 	New trial (rep=123, index=0): None
+809.3784 	EXP 	Sound probe started
+809.5902 	EXP 	Sound probe reached end of file
+810.0576 	DATA 	Keypress: space
+812.9134 	EXP 	New trial (rep=124, index=0): None
+812.9227 	EXP 	Sound probe stopped
+812.9486 	EXP 	goodbye_text: autoDraw = True
+815.8872 	DATA 	Keypress: h
+815.8953 	EXP 	goodbye_text: autoDraw = False
+815.9941 	EXP 	window1: mouseVisible = True
