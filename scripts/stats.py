@@ -9,8 +9,6 @@ class StatsParams:
 
 class StatsFormatter:
 
-    #TODO: check mult_comp: pvalues don't seem to change?
-
     @staticmethod
     def fix0(pval):
         return "<0.001" if pval < 0.001 else f"{pval:.{StatsParams.pval_precision}f}"
