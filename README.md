@@ -36,9 +36,9 @@ The project is organized as Jupyter notebooks, which contain the steps and outpu
 
 Notebooks are meant to be run in increasing order (1_, 2_, etc), starting with preprocessing and then analysis. Each notebook contains detailed comments about what each section of code is doing.
 
-The `preprocessing` and `analysis` directories contain subdirectories named `funcs`, which contain Python scripts for various functions that the notebooks call.
+The [`preprocessing`](scripts%2Fpreprocessing) and [`analysis`](scripts%2Fanalysis) directories contain subdirectories named `funcs`, which contain Python scripts for various functions that the notebooks call.
 
-Note that you need an extra python script `API_access.py` which contains private access codes for the automated pure-tone audiometry API to recreate some of the dataframes in `data` > `dataframes`.
+Note: you need an extra python script `API_access.py` with private access codes for the automated pure-tone audiometry API to recreate some of the dataframes in [`data`/`dataframes`](data%2Fdataframes).
 
 ---
 
@@ -46,64 +46,77 @@ Note that you need an extra python script `API_access.py` which contains private
     
 #### Preprocessing
 
+- Compute audiograms for the 3-AFC task: [1_3AFC_thresholds.ipynb](scripts%2Fpreprocessing%2F1_3AFC_thresholds.ipynb)
+- Fix responses in the Continuous task: [2_fix_continuous_responses.ipynb](scripts%2Fpreprocessing%2F2_fix_continuous_responses.ipynb)
+- Resample audiograms: [3_resample_audiograms.ipynb](scripts%2Fpreprocessing%2F3_resample_audiograms.ipynb)
+
 #### Analysis
+
+- Compare average thresholds: [1_threshold_analysis.ipynb](scripts%2Fanalysis%2F1_threshold_analysis.ipynb)
+- Compute the global random audiogram: [2_global_random_audiogram.ipynb](scripts%2Fanalysis%2F2_global_random_audiogram.ipynb)
+- Plot example data to visually explain p50 method: [3_fig2C_p50_example_data.ipynb](scripts%2Fanalysis%2F3_fig2C_p50_example_data.ipynb)
+- Compare average p50 values: [4_p50_analysis.ipynb](scripts%2Fanalysis%2F4_p50_analysis.ipynb)
+- Check performance correlation across conditions: [5_performance_correlation.ipynb](scripts%2Fanalysis%2F5_performance_correlation.ipynb)
+- Cluster paradigms based on performance [6_clustering_paradigms.ipynb](scripts%2Fanalysis%2F6_clustering_paradigms.ipynb)
+- Compute false alarm rates [7_catch_trials.ipynb](scripts%2Fanalysis%2F7_catch_trials.ipynb)
+- Correlate performance with false alarm rate, musical sophistication & age: [8_linear_models.ipynb](scripts%2Fanalysis%2F8_linear_models.ipynb)
 
 ---
 
 ### Repository structure:
 
-```bash
+```
 .
-├── [data](./data)
-│   ├── [audiograms](./data/audiograms)
-│   ├── [dataframes](./data/dataframes)
-│   └── [raw_data](./data/raw_data)
+├── data
+│   ├── audiograms
+│   ├── dataframes
+│   └── raw_data
 │       └── one folder/participant
 │           ├── Bayesian
 │           ├── Continuous
 │           ├── Cluster
 │           └── 3AFC
 │
-├── [figures](./figures)
+├── figures
 │
-└── [scripts](./scripts)
+└── scripts
     ├── __init__.py
-    ├── [figure_params.py](./scripts/figure_params.py)
-    ├── [stats.py](./scripts/stats.py)
-    ├── [utils.py](./scripts/utils.py)
-    ├── API_access.py *PRIVATE*
+    ├── figure_params.py
+    ├── stats.py
+    ├── utils.py
+    ├── API_access.py **** PRIVATE ****
     │
-    ├── [preprocessing](./scripts/preprocessing)
+    ├── preprocessing
     │   ├── __init__.py
     │   │
-    │   ├── [funcs](./scripts/preprocessing/funcs)
+    │   ├── funcs
     │   │   ├── __init__.py
-    │   │   ├── [fix_continuous_responses.py](./scripts/preprocessing/funcs/fix_continuous_responses.py)
-    │   │   └── [resample_audiograms.py](./scripts/preprocessing/funcs/resample_audiograms.py)
+    │   │   ├── fix_continuous_responses.py
+    │   │   └── resample_audiograms.py
     │   │
-    │   ├── [1_3AFC_thresholds.ipynb](./scripts/preprocessing/1_3AFC_thresholds.ipynb)
-    │   ├── [2_fix_continuous_responses.ipynb](./scripts/preprocessing/2_fix_continuous_responses.ipynb)
-    │   └── [3_resample_audiograms.ipynb](./scripts/preprocessing/3_resample_audiograms.ipynb)
+    │   ├── 1_3AFC_thresholds.ipynb
+    │   ├── 2_fix_continuous_responses.ipynb
+    │   └── 3_resample_audiograms.ipynb
     │
-    └── [analysis](./scripts/analysis)
+    └── analysis](./scripts/analysis)
         ├── __init__.py
         │
-        ├── [funcs](./scripts/analysis/funcs)
+        ├── funcs
         │   ├── __init__.py
-        │   ├── [global_random_audiogram.py](./scripts/analysis/funcs/global_random_audiogram.py)
-        │   ├── [linear_models.py](./scripts/analysis/funcs/linear_models.py)
-        │   ├── [p50_analysis.py](./scripts/analysis/funcs/p50_analysis.py)
-        │   ├── [performance_correlation.py](./scripts/analysis/funcs/performance_correlation.py)
-        │   ├── [plots.py](./scripts/analysis/funcs/plots.py)
-        │   └── [threshold_analysis.py](./scripts/analysis/funcs/threshold_analysis.py)
+        │   ├── global_random_audiogram.py
+        │   ├── linear_models.py
+        │   ├── p50_analysis.py
+        │   ├── performance_correlation.py
+        │   ├── plots.py
+        │   └── threshold_analysis.py
         │
-        ├── [1_threshold_analysis.ipynb](./scripts/analysis/1_threshold_analysis.ipynb)
-        ├── [2_global_random_audiogram.ipynb](./scripts/analysis/2_global_random_audiogram.ipynb)
-        ├── [3_fig2C_p50_example_data.ipynb](./scripts/analysis/3_fig2C_p50_example_data.ipynb)
-        ├── [4_p50_analysis.ipynb](./scripts/analysis/4_p50_analysis.ipynb)
-        ├── [5_performance_correlation.ipynb](./scripts/analysis/5_performance_correlation.ipynb)
-        ├── [6_clustering_paradigms.ipynb](./scripts/analysis/6_clustering_paradigms.ipynb)
-        ├── [7_catch_trials.ipynb](./scripts/analysis/7_catch_trials.ipynb)
-        ├── [8_linear_models.ipynb](./scripts/analysis/8_linear_models.ipynb)
-        └── [SupplFig_example_data.ipynb](./scripts/analysis/SupplFig_example_data.ipynb)
+        ├── 1_threshold_analysis.ipynb
+        ├── 2_global_random_audiogram.ipynb
+        ├── 3_fig2C_p50_example_data.ipynb
+        ├── 4_p50_analysis.ipynb
+        ├── 5_performance_correlation.ipynb
+        ├── 6_clustering_paradigms.ipynb
+        ├── 7_catch_trials.ipynb
+        ├── 8_linear_models.ipynb
+        └── SupplFig_example_data.ipynb
 ```
