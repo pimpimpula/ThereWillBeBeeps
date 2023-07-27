@@ -6,7 +6,7 @@
 
 #####  Nadège Marin<sup>1,2</sup>, Grégory Gérenton<sup>1</sup>, Hadrien Jean<sup>3</sup>, Nihaad Paraouty<sup>3</sup>, Nicolas Wallaert<sup>3</sup>, Diane S. Lazard<sup>1,4</sup>, Luc H. Arnal<sup>1*</sup>, Keith B. Doelling<sup>1*</sup>
 
-1.	Institut Pasteur, Université Paris Cité, Inserm UA06, Institut de l’Audition, F-75012 Paris, France
+ 1.	Institut Pasteur, Université Paris Cité, Inserm UA06, Institut de l’Audition, F-75012 Paris, France
 2.	Aix-Marseille University, Marseille, France
 3.	My Medical Assistant SAS, Reims, France
 4.	Institut Arthur Vernes, ENT department, F-75006 Paris, France
@@ -46,20 +46,20 @@ Note: you need an extra python script `API_access.py` with private access codes 
     
 #### Preprocessing
 
-- Compute audiograms for the 3-AFC task: [1_3AFC_thresholds.ipynb](scripts%2Fpreprocessing%2F1_3AFC_thresholds.ipynb)
-- Fix responses in the Continuous task: [2_fix_continuous_responses.ipynb](scripts%2Fpreprocessing%2F2_fix_continuous_responses.ipynb)
-- Resample audiograms: [3_resample_audiograms.ipynb](scripts%2Fpreprocessing%2F3_resample_audiograms.ipynb)
+- Compute audiograms for the 3-AFC task  ──  [ 1_3AFC_thresholds](scripts%2Fpreprocessing%2F1_3AFC_thresholds.ipynb)
+- Fix responses in the Continuous task ── [2_fix_continuous_responses](scripts%2Fpreprocessing%2F2_fix_continuous_responses.ipynb)
+- Resample audiograms ── [3_resample_audiograms](scripts%2Fpreprocessing%2F3_resample_audiograms.ipynb)
 
 #### Analysis
 
-- Compare average thresholds: [1_threshold_analysis.ipynb](scripts%2Fanalysis%2F1_threshold_analysis.ipynb)
-- Compute the global random audiogram: [2_global_random_audiogram.ipynb](scripts%2Fanalysis%2F2_global_random_audiogram.ipynb)
-- Plot example data to visually explain p50 method: [3_fig2C_p50_example_data.ipynb](scripts%2Fanalysis%2F3_fig2C_p50_example_data.ipynb)
-- Compare average p50 values: [4_p50_analysis.ipynb](scripts%2Fanalysis%2F4_p50_analysis.ipynb)
-- Check performance correlation across conditions: [5_performance_correlation.ipynb](scripts%2Fanalysis%2F5_performance_correlation.ipynb)
-- Cluster paradigms based on performance [6_clustering_paradigms.ipynb](scripts%2Fanalysis%2F6_clustering_paradigms.ipynb)
-- Compute false alarm rates [7_catch_trials.ipynb](scripts%2Fanalysis%2F7_catch_trials.ipynb)
-- Correlate performance with false alarm rate, musical sophistication & age: [8_linear_models.ipynb](scripts%2Fanalysis%2F8_linear_models.ipynb)
+- Compare average thresholds ── [1_threshold_analysis](scripts%2Fanalysis%2F1_threshold_analysis.ipynb)
+- Compute the global random audiogram ── [2_global_random_audiogram](scripts%2Fanalysis%2F2_global_random_audiogram.ipynb)
+- Plot example data to visually explain p50 method ── [3_fig2C_p50_example_data](scripts%2Fanalysis%2F3_fig2C_p50_example_data.ipynb)
+- Compare average p50 values ── [4_p50_analysis](scripts%2Fanalysis%2F4_p50_analysis.ipynb)
+- Check performance correlation across conditions ── [5_performance_correlation](scripts%2Fanalysis%2F5_performance_correlation.ipynb)
+- Cluster paradigms based on performance ── [6_clustering_paradigms](scripts%2Fanalysis%2F6_clustering_paradigms.ipynb)
+- Compute false alarm rates ── [7_catch_trials](scripts%2Fanalysis%2F7_catch_trials.ipynb)
+- Correlate performance with false alarm rate, musical sophistication & age ── [8_linear_models](scripts%2Fanalysis%2F8_linear_models.ipynb)
 
 ---
 
