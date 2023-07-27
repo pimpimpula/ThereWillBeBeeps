@@ -9,7 +9,7 @@ class StatsParams:
 
 class StatsFormatter:
 
-    #TODO: check mult_comp: pvalues don't seem to change
+    #TODO: check mult_comp: pvalues don't seem to change?
 
     @staticmethod
     def fix0(pval):
@@ -59,6 +59,6 @@ class StatsFormatter:
         for _, row in pairwise_results.iterrows():
             significance = '     *' if row['p-corr'] < StatsParams.alpha else ""
             print(
-                f"{row['Contrast']} / {row['A']} vs {row['B']}: T({int(row['dof'])}) = {row['T']:.2f}, p = {self.fix0(row['p-unc'])} ({StatsParams.mult_comp}: {self.fix0(row['p-unc'])}){significance}")
+                f"{row['Contrast']} / {row['A']} vs {row['B']}: T({int(row['dof'])}) = {row['T']:.2f}, p = {self.fix0(row['p-unc'])} ({StatsParams.mult_comp}: {self.fix0(row['p-corr'])}){significance}")
 
         print("")

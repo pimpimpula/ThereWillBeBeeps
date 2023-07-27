@@ -478,6 +478,7 @@ class Fig4p50:
 
     @staticmethod
     def p50_barplot(var, paradigms_data, continuous_data, cluster_data):
+
         fig = plt.figure(figsize=(8, 5.33))
 
         # Define the grid
@@ -587,5 +588,113 @@ class Fig4p50:
         self.plot_correlation_subplot(fig, axs[1], corr_p50, p_values_p50, "distance_p50")
 
         fig.tight_layout()
+
+        return fig
+
+
+    @staticmethod
+    def plot_bar(mean, error, color, x):
+        plt.bar(x, mean, color=color)
+        plt.errorbar(x, mean, error,  color='black', elinewidth=3)
+
+    @staticmethod
+    def get_mean_FAR_and_error(catch_trials_data):
+        mean = catch_trials_data.false_alarm_rate.mean()
+        error = catch_trials_data.false_alarm_rate.sem()
+        return mean, error
+
+    def catch_trials_barplot(self, catch_trials_data):
+
+        update_plot_params()
+
+        fig = plt.figure(figsize=[7, 5.33])
+
+        # Bayesian
+        mean, error = self.get_mean_FAR_and_error(catch_trials_data.loc[catch_trials_data.paradigm == 'Bayesian'])
+        self.plot_bar(mean, error, paradigms_palette('Bayesian'), -2)
+
+        # Cluster and Continuous
+        for n, (paradigm, paradigm_data) in enumerate(zip(['Continuous', 'Cluster'],
+                                                          [catch_trials_data.loc[catch_trials_data.paradigm == 'Continuous'],
+                                                           catch_trials_data.loc[catch_trials_data.paradigm == 'Cluster']])):
+
+            for m, pred in enumerate(['none', 'time', 'frequency', 'both']):
+                mean, error = self.get_mean_FAR_and_error(paradigm_data.loc[paradigm_data.pred == pred])
+                self.plot_bar(mean, error, pred_palette(pred), 5 * n + m)
+
+        plt.ylim([0, .4])
+        plt.xlim([-3.5, 9])
+        plt.yticks([0, .1, .2, .3, .4], ['.00', '.01', '.02', '.03', '.04'])
+        plt.xticks([-2, 1.5, 6.5], ['Randomized', 'Continuous', 'Cluster'])
+        plt.ylabel('False alarm rate')
+        plt.tight_layout()
+
+        return fig
+
+    def plot_linear_regression(self, data, xvar, yvar, r_values, labels=None):
+
+        if labels == None:
+            labels = xvar, yvar
+
+        if len(data.pred.unique()) == 4:
+            preds = ['none', 'time', 'frequency', 'both']
+            x_inset = [0, 1, 2, 3]
+        else:
+            preds = ['time', 'frequency', 'both']
+            x_inset = [0, 1, 2]
+
+
+        update_plot_params()
+
+        fig, axs = plt.subplots(nrows=1, ncols=2, figsize=[10, 5.33], sharex='all')
+
+        for idx, paradigm in enumerate(['Continuous', 'Cluster']):
+
+            mainax = plt.sca(axs[idx])
+
+            for pred_idx, pred in enumerate(preds):
+
+                pred_data = data.loc[(data.paradigm == paradigm) & (data.pred == pred)]
+
+                x = pred_data[xvar].to_numpy()
+                y = pred_data[yvar].to_numpy()
+
+
+                a, b = np.polyfit(x, y, 1)
+                plt.plot(x, a * x + b, lw=1.5, color=pred_palette(pred), zorder=5)  # alpha=.95,
+                plt.scatter(x, y, s=30, facecolors=pred_palette(pred), edgecolors='None', alpha=.65)
+
+            plt.xticks()
+            plt.yticks()
+            # plt.legend(fontsize='small')
+            plt.ylabel(labels[1])
+            plt.xlabel(labels[0])
+            plt.ylim([20, data[yvar].min() - 1])  # , p50_Clus_Cont.max() + 1])
+            # plt.xlim([-0.02, 0.72])
+            plt.title(f'{paradigm}')
+
+
+            # ADD INSET AX
+            insetax = plt.gca().inset_axes([0.7, 0.115, .25, .25])
+            # plot R bars
+            insetax.bar(x_inset,
+                        [r_values.loc[(r_values.paradigm == paradigm) & (r_values.pred == p), 'R2'].iloc[0] for p in preds],
+                        color=[pred_palette(p) for p in preds])
+
+            # plot significance stars
+            for i, p in enumerate(preds):
+                r2_val = r_values.loc[(r_values.paradigm == paradigm) & (r_values.pred == p), 'R2'].iloc[0]
+                p_val = r_values.loc[(r_values.paradigm == paradigm) & (r_values.pred == p), 'p_value'].iloc[0]
+                if p_val <= 0.05:
+                    insetax.scatter(i, r2_val + 0.15, marker="$*$", c='k', s=100)
+
+            insetax.set_xticks(x_inset, [translate_conditions(pred) for pred in preds], fontsize='small')
+            insetax.set_yticks([0, .5, 1], [0, 0.5, 1], fontsize='small')
+            insetax.set_title("R$^2$",
+                              fontsize='medium')
+            # weight='bold')
+            insetax.patch.set_alpha(.2)
+
+        plt.tight_layout()
 
         return fig

@@ -1,9 +1,19 @@
+import glob
 import os
 import numpy as np
+import pandas as pd
 from pathlib import Path
 
 
-def get_path(folder_name):
+def get_path(folder_name: str):
+    """
+    Args:
+        folder_name: "data", "figures", "raw_data", "audiograms" or "dataframes"
+
+    Returns:
+        path: path to the requested folder
+    """
+
     # Get the current directory (i.e., the directory the script is running in)
     current_dir = Path(os.getcwd())
 
@@ -19,6 +29,16 @@ def get_path(folder_name):
 
 
 def translate_conditions(pred):
+    """
+    Translate pred to labels used in the article.
+
+    Args:
+        pred: 'both', 'time', 'frequency' or 'none'
+
+    Returns:
+        translated pred ('FT', 'T', 'F' or 'R')
+
+    """
     dictionary = {"both": "FT",
                   "frequency": "F",
                   "time": "T",
@@ -27,7 +47,7 @@ def translate_conditions(pred):
     return dictionary[pred]
 
 
-def exclude_participants():
+def exclude_participants(participants):
     """
     Exclude participants:
 
@@ -38,10 +58,127 @@ def exclude_participants():
     - `tyrfqt`, `ikieoz`, `gtyzck` and `ttuwra` did a former version of the 3-AFC task
     """
 
-    return ['tvzljm', 'lkbxgs', 'wquuex', 'bihhjl', 'tyrfqt', 'ikieoz', 'gtyzck', 'ttuwra', '.DS_Store']
+    exclude_participants = ['tvzljm', 'lkbxgs', 'wquuex', 'bihhjl', 'tyrfqt', 'ikieoz', 'gtyzck', 'ttuwra', '.DS_Store']
+
+    return [participant for participant in participants if participant not in exclude_participants]
+
+
+def filter_files_by_suffix(participant, paradigm, suffix):
+    path = os.path.join(get_path('raw_data'), participant, paradigm)
+    csv_files = list(filter(os.path.isfile, glob.glob(os.path.join(path, suffix))))
+
+    # sort by most recent (by reverse alphabetical order based on date in filename)
+    csv_files.sort(key=lambda x: x, reverse=True)
+
+    return csv_files
+
+
+def fetch_paradigm_raw_data(participant, paradigm):
+    """
+    Gets raw data for one participant, for a chosen task.
+
+    Args:
+        participant (str): Participant's identifier.
+        paradigm  (str):
+
+
+    Returns:
+        DataFrame: The participant's data compiled from all CSV files.
+    """
+
+    csv_files = filter_files_by_suffix(participant, paradigm,
+                                       "*.csv" if paradigm == 'Bayesian' else "*_1.csv")
+
+    participant_data = pd.DataFrame()
+
+    for file in csv_files:
+
+        print(file.split('/')[-1])
+
+        data = pd.read_csv(file)
+
+        # Make sure all experiments use the same labels
+        data.rename(columns={'Volume': 'Level',
+                             'Catch trial': 'isCatchTrial',
+                             'feedback.keys': 'responses',
+                             'expName': 'paradigm',
+                             'Prediction': 'pred'
+                             }, inplace=True)
+
+        first_file = False
+        if paradigm != 'Bayesian':
+            # Sometimes the Continuous exp crashed for some unknown reason, and had to be restarted.
+            # This also happened once for the Cluster task (participant 'eqdcwr'
+            # If that's the case, 'Resume previous experiment' == 1 for this file
+            # Find whether the current file was the first one of the experiment, if so, don't look
+            # at the following files. If it was a restarted experiment, check out the next files
+            # until finding the first one.
+            first_file = True if data['Resume previous experiment'].unique()[0] == 0 else False
+
+            print('New exp file\n' if first_file else "Resumed exp file\n")
+
+        try:
+            if paradigm in 'Continuous':
+                data = data[['sweeps.thisN', 'trials.thisN', 'pred', 'Frequency', 'Level',
+                             'isCatchTrial', 'responses', 'feedback.rt',
+                             'participant', 'Resume previous experiment', 'paradigm']]
+            elif paradigm == 'Cluster':
+                data = data[['trials.thisN', 'pred', 'Frequency', 'Level',
+                             'isCatchTrial', 'responses', 'feedback.rt',
+                             'participant', 'Resume previous experiment', 'paradigm']]
+            elif paradigm == 'Bayesian':
+                data = data[['trials.thisN', 'Frequency', 'Level',
+                             'isCatchTrial', 'responses', 'feedback.rt',
+                             'participant', 'paradigm']]
+            else:
+                print("Paradigm not recognized:", paradigm)
+
+        except KeyError:
+            print(KeyError, participant, "- one file with wrong columns discarded:", file)
+            print(data.columns)
+            continue
+
+        participant_data = pd.concat([participant_data, data])
+
+        # If this was the first file for a session, stop looking at the rest of the files
+        # THIS IS DIFFERENT FROM WHAT WAS DONE PREVIOUSLY, WHERE I USED ALL OF THE AVAILABLE DATA
+        if first_file or paradigm == 'Bayesian':
+            break
+
+    return participant_data
+
+
+def load_goldMSI_results():
+    df = pd.read_excel(os.path.join(get_path('dataframes'), "gms_scoring.xlsx"),
+                       usecols="AR,BF", header=0)  # "AR,BA:BF" for all components
+    df = df.loc[df['ID'] != 0]
+    df.rename(columns={'ID': 'participant', 'FG (General Sophistication)': 'gmsi'}, inplace=True)
+    # df['Participant No'] = df['Participant No'].astype(int)
+    return df
+
+
+def load_age_info():
+    df = pd.read_excel(os.path.join(get_path('dataframes'), "participant_handler.xlsx"),
+                       usecols="C,D", header=0)
+    df = df.loc[~df['ID'].isna()]
+    df.rename(columns={'ID': 'participant', 'Age': 'age'}, inplace=True)
+    # df['Participant No'] = df['Participant No'].astype(int)
+    return df
 
 
 def interp(x, x_axis, y_values):
+    """
+    Performs linear interpolation
+
+    Args:
+        x:
+        x_axis:
+        y_values:
+
+    Returns:
+        y
+
+    """
 
     xdist = np.array(x_axis) - x
 

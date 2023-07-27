@@ -1,12 +1,8 @@
-import os
-import glob
 import copy
 import pickle
 
-import pandas as pd
-import numpy as np
-
 from scripts.API_access import *
+from scripts.utils import *
 
 
 def fetch_initialization_data(participant, dataFolder):
@@ -20,66 +16,17 @@ def fetch_initialization_data(participant, dataFolder):
     Returns:
         dict: The initialization data for the participant. None if no data is found.
     """
-    os.chdir(f'./{participant}/Bayesian')
-    bayes_init = list(filter(os.path.isfile, glob.glob("*_init.pkl")))
-    bayes_init.sort(key=lambda x: os.path.getmtime(x))  # sort by modified time
-    if bayes_init:
-        with (open(bayes_init[-1], "rb")) as f_init:
+
+    init_files = filter_files_by_suffix(participant, 'Bayesian', "*_init.pkl")
+
+    if init_files:
+        with (open(init_files[-1], "rb")) as f_init:
             init_data = pickle.load(f_init)
     else:
         print(f"No initialization data found for participant {participant}...")
         init_data = None
     os.chdir(dataFolder)
     return init_data
-
-
-def process_csv_files(participant, dataFolder):
-    """
-    Process CSV files for a participant.
-
-    Args:
-        participant (str): Participant's identifier.
-        dataFolder (str): Directory where the participant's data is stored.
-
-    Returns:
-        DataFrame: The participant's data compiled from all CSV files.
-    """
-
-    os.chdir(f'./{participant}/Continuous')
-    csv_files = list(filter(os.path.isfile, glob.glob("*_1.csv")))
-    # csv_files.sort(key=lambda x: os.path.getmtime(x))  # sort by modified time of files, unreliable
-    csv_files.sort(key=lambda x: x, reverse=True)  # sort by modified time (by reverse alphabetical order based on date in filename)
-    participant_data = pd.DataFrame()
-    for idx, file in enumerate(csv_files):
-        # print(file)
-        data = pd.read_csv(file)
-
-        # Sometimes this experiment crashed for some unknown reason, and had to be restarted.
-        # If that's the case, 'Resume previous experiment' == 1 for this file
-        first_file = True if data['Resume previous experiment'].unique()[0] == 0 else False
-
-        print(file)
-        print('New exp file\n' if first_file else "Resumed exp file\n")
-
-        try:
-            data = data[['sweeps.thisN', 'trials.thisN', 'Prediction', 'Frequency', 'Volume',
-                         'isCatchTrial', 'feedback.keys', 'participant', 'Resume previous experiment', 'expName',
-                         'probe.started', 'probe.stopped',
-                         'feedback.rt', 'feedback.started', 'feedback.stopped',
-                         'ISI.started', 'ISI.stopped', 'Delay']]
-        except KeyError:
-            print(KeyError, participant, "- one file with wrong columns discarded:", file)
-            continue
-
-        participant_data = pd.concat([participant_data, data])
-
-        # If this was the first file for a session, stop looking at the rest of the files
-        # THIS IS DIFFERENT FROM WHAT WAS DONE PREVIOUSLY, WHERE I USED ALL THE AVAILABLE DATA
-        if first_file:
-            break
-
-    os.chdir(dataFolder)
-    return participant_data
 
 
 def check_false_alarm_rates(participant_data, shifted_responses=False):
@@ -136,11 +83,10 @@ def correct_data(participant_data, participant):
         old_FAR = check_false_alarm_rates(participant_data, shifted_responses=False)
 
         # Shift all answers to the previous trial
-        for trial in range(len(participant_data) - 1):
-            participant_data.loc[trial, 'shifted_answers'] = participant_data['feedback.keys'].iloc[trial + 1]
+        participant_data['shifted_answers'] = participant_data['feedback.keys'].shift(-1)
 
         # Remove last trial
-        participant_data = participant_data.iloc[:-1]
+        participant_data = participant_data.drop(participant_data.index[-1])
 
         # Check false alarm rate after shifting
         new_FAR = check_false_alarm_rates(participant_data, shifted_responses=True)
@@ -197,7 +143,7 @@ def recompute_audiogram(participant, pred, pred_group, init_data, API_calls, url
 
     # Format the corrected data (minus the first two tones in a sweep) to the one requested by the API
     for idx, row in pred_group.iterrows():
-        API_calls[participant][pred]['x'].append([row['Frequency'], row['Volume']])
+        API_calls[participant][pred]['x'].append([row['Frequency'], row['Level']])
         API_calls[participant][pred]['y'].append([1] if row['shifted_answers'] != "None" else [-1])
     API_calls[participant][pred]['is_init_phase'] = False
 
@@ -231,7 +177,7 @@ def save_audiogram(data_folder, participant, pred, API_answer):
     f.close()
 
 
-# Main function to process all participants
+'''
 def process_participants(data_folder, ignore_participants, overwrite=False):
     """
     Preprocess the Continuous raw data for all participants.
@@ -261,41 +207,38 @@ def process_participants(data_folder, ignore_participants, overwrite=False):
     are_FARs_looking_better = []
     are_DRs_looking_better = []
 
-    # overwrite = overwrite_existing()
+    # Get the list of participants
+    participants = exclude_participants(os.listdir(get_path('raw_data')))
 
-    for participant in os.listdir():
-        if participant not in ignore_participants:
-            API_calls[participant] = {}
-            API_answer[participant] = {}
-            os.chdir(f'./{participant}/Continuous')
+    for participant in participants:
+        API_calls[participant] = {}
+        API_answer[participant] = {}
 
-            recomputed_files = list(filter(os.path.isfile, glob.glob("*_fixed.pkl")))
+        recomputed_files = filter_csv_files(participant, 'Continuous', "*_fixed.pkl")
 
-            os.chdir(data_folder)
+        if len(recomputed_files) == 4 and not overwrite:  #TODO: improve this?
+            pass
+        else:
+            print("\n--------------------", participant, "--------------------")
 
-            if len(recomputed_files) == 4 and not overwrite:
-                pass
-            else:
-                print("\n--------------------", participant, "--------------------")
+            init_data[participant] = fetch_initialization_data(participant, data_folder)
 
-                init_data[participant] = fetch_initialization_data(participant, data_folder)
+            participant_data = process_csv_files(participant)
 
-                participant_data = process_csv_files(participant, data_folder)
+            participant_data, effect_on_FAR, effect_on_DR = correct_data(participant_data, participant)
 
-                participant_data, effect_on_FAR, effect_on_DR = correct_data(participant_data, participant)
+            are_FARs_looking_better.append(effect_on_FAR)
+            are_DRs_looking_better.append(effect_on_DR)
 
-                are_FARs_looking_better.append(effect_on_FAR)
-                are_DRs_looking_better.append(effect_on_DR)
+            for pred, pred_group in participant_data.groupby('Prediction'):
 
-                for pred, pred_group in participant_data.groupby('Prediction'):
+                API_answer[participant][pred] = recompute_audiogram(participant, pred, pred_group,
+                                                                    init_data[participant], API_calls,
+                                                                    url_api, headers)
 
-                    API_answer[participant][pred] = recompute_audiogram(participant, pred, pred_group,
-                                                                        init_data[participant], API_calls,
-                                                                        url_api, headers)
+                save_audiogram(data_folder, participant, pred, API_answer[participant][pred])
 
-                    save_audiogram(data_folder, participant, pred, API_answer[participant][pred])
-
-                print("-------------------------------------------------")
+            print("-------------------------------------------------")
 
     # See if we've improved FARs and detection rations with the corrections made
     print("")
@@ -304,4 +247,4 @@ def process_participants(data_folder, ignore_participants, overwrite=False):
     print("")
     print(f"Improved (increased) detection ratios for {np.sum(np.array(are_DRs_looking_better) > 0)} participants")
     print(f"Mean improvement: {np.round(np.mean(are_DRs_looking_better) * 100)} %")
-    print("")
+    print("")'''
