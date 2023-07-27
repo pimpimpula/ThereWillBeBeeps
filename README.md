@@ -40,52 +40,70 @@ The `preprocessing` and `analysis` directories contain subdirectories named `fun
 
 Note that you need an extra python script `API_access.py` which contains private access codes for the automated pure-tone audiometry API to recreate some of the dataframes in `data` > `dataframes`.
 
-#### Repository structure
+---
 
-```
+### Pipeline
+    
+#### Preprocessing
+
+#### Analysis
+
+---
+
+### Repository structure:
+
+```bash
 .
-├── data
-│   ├── audiograms
-│   ├── dataframes
-│   └── raw_data
+├── [data](./data)
+│   ├── [audiograms](./data/audiograms)
+│   ├── [dataframes](./data/dataframes)
+│   └── [raw_data](./data/raw_data)
 │       └── one folder/participant
 │           ├── Bayesian
 │           ├── Continuous
 │           ├── Cluster
 │           └── 3AFC
-├── figures
-└── scripts
+│
+├── [figures](./figures)
+│
+└── [scripts](./scripts)
     ├── __init__.py
-    ├── figure_params.py
-    ├── stats.py
-    ├── utils.py
+    ├── [figure_params.py](./scripts/figure_params.py)
+    ├── [stats.py](./scripts/stats.py)
+    ├── [utils.py](./scripts/utils.py)
+    ├── API_access.py *PRIVATE*
     │
-    ├── preprocessing
-    │   ├── funcs
-    │   │   ├── __init__.py
-    │   │   ├── fix_continuous_responses.py
-    │   │   └── resample_audiograms.py
+    ├── [preprocessing](./scripts/preprocessing)
     │   ├── __init__.py
-    │   ├── 1_3AFC_thresholds.ipynb
-    │   ├── 2_fix_continuous_responses.ipynb
-    │   ├── 3_resample_audiograms.ipynb
-    │   └── 4_get_catch_trials_data.ipynb
+    │   │
+    │   ├── [funcs](./scripts/preprocessing/funcs)
+    │   │   ├── __init__.py
+    │   │   ├── [fix_continuous_responses.py](./scripts/preprocessing/funcs/fix_continuous_responses.py)
+    │   │   └── [resample_audiograms.py](./scripts/preprocessing/funcs/resample_audiograms.py)
+    │   │
+    │   ├── [1_3AFC_thresholds.ipynb](./scripts/preprocessing/1_3AFC_thresholds.ipynb)
+    │   ├── [2_fix_continuous_responses.ipynb](./scripts/preprocessing/2_fix_continuous_responses.ipynb)
+    │   └── [3_resample_audiograms.ipynb](./scripts/preprocessing/3_resample_audiograms.ipynb)
     │
-    └── analysis
-        ├── funcs
-        │   ├── __init__.py
-        │   ├── global_random_audiogram.py
-        │   ├── p50_analysis.py
-        │   ├── performance_correlation.py
-        │   └── plots.py
+    └── [analysis](./scripts/analysis)
         ├── __init__.py
-        ├── 1_threshold_analysis.ipynb
-        ├── 2_global_random_audiogram.ipynb
-        ├── 3_fig2C_p50_example_data.ipynb
-        ├── 4_p50_analysis.ipynb
-        ├── 5_performance_correlation.ipynb
-        ├── clustering_paradigms.py
-        └── suppl_fig_example_data.ipynb
-
+        │
+        ├── [funcs](./scripts/analysis/funcs)
+        │   ├── __init__.py
+        │   ├── [global_random_audiogram.py](./scripts/analysis/funcs/global_random_audiogram.py)
+        │   ├── [linear_models.py](./scripts/analysis/funcs/linear_models.py)
+        │   ├── [p50_analysis.py](./scripts/analysis/funcs/p50_analysis.py)
+        │   ├── [performance_correlation.py](./scripts/analysis/funcs/performance_correlation.py)
+        │   ├── [plots.py](./scripts/analysis/funcs/plots.py)
+        │   └── [threshold_analysis.py](./scripts/analysis/funcs/threshold_analysis.py)
+        │
+        ├── [1_threshold_analysis.ipynb](./scripts/analysis/1_threshold_analysis.ipynb)
+        ├── [2_global_random_audiogram.ipynb](./scripts/analysis/2_global_random_audiogram.ipynb)
+        ├── [3_fig2C_p50_example_data.ipynb](./scripts/analysis/3_fig2C_p50_example_data.ipynb)
+        ├── [4_p50_analysis.ipynb](./scripts/analysis/4_p50_analysis.ipynb)
+        ├── [5_performance_correlation.ipynb](./scripts/analysis/5_performance_correlation.ipynb)
+        ├── [6_clustering_paradigms.ipynb](./scripts/analysis/6_clustering_paradigms.ipynb)
+        ├── [7_catch_trials.ipynb](./scripts/analysis/7_catch_trials.ipynb)
+        ├── [8_linear_models.ipynb](./scripts/analysis/8_linear_models.ipynb)
+        └── [SupplFig_example_data.ipynb](./scripts/analysis/SupplFig_example_data.ipynb)
 ```
-
