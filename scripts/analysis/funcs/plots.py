@@ -834,7 +834,7 @@ class ClusterPlotter:
             if any(line[:2] == 0):
                 lines_to_color = pd.concat([lines_to_color, pd.DataFrame(line).T])
             else:
-                plt.plot(xcoords, ycoords, 'k')
+                plt.plot(xcoords, ycoords, '#B4B8BF', lw=2)
 
         return lines_to_color
 
@@ -842,7 +842,7 @@ class ClusterPlotter:
 
         update_plot_params()
 
-        fig = plt.figure(figsize=(6, 5.33))
+        fig = plt.figure(figsize=(4.5, 5.33))
 
         # Plot skeleton and find lines corresponding to the labels
         lines = self.plot_skeleton_find_lines(dendrogram)
@@ -861,13 +861,13 @@ class ClusterPlotter:
 
         labels = [f"{' ':<3}{label.split(', ')[0]}" if label.split(', ')[0] in ['3AFC', 'Randomized'] else f"   {translate_conditions(label.split(', ')[1]):<4} |   " + label.split(', ')[0] for label in labels]
 
+        ax = plt.gca()
         plt.xlim([max(clusters[:, 2]), 0])
         plt.xlabel('Cosine distance')
         plt.yticks(lines['y1'], labels)
-        plt.gca().yaxis.tick_right()
+        ax.yaxis.tick_right()
         plt.tick_params(axis='y', length=0) # set y-tick length to 0
 
-        ax = plt.gca() # get the current axes
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
         ax.spines['left'].set_visible(False)
