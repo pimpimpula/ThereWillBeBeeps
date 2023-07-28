@@ -1,10 +1,14 @@
 import math
+from itertools import combinations
 
 import numpy as np
 from matplotlib import gridspec
+from matplotlib.legend_handler import HandlerTuple
+from matplotlib.lines import Line2D
 from pandas import DataFrame
 
 import matplotlib.patches as mpatches
+from scipy.spatial import ConvexHull
 
 from scripts.figure_params import *
 from scripts.stats import StatsParams
@@ -696,5 +700,173 @@ class Fig4p50:
             insetax.patch.set_alpha(.2)
 
         plt.tight_layout()
+
+        return fig
+
+
+class ClusterPlotter:
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def custom_legend(fig, paradigms, n_pcs):
+
+        preds = ['none', 'time', 'frequency', 'both']
+        pred_labels = [translate_conditions(pred) + "   " for pred in preds]
+
+        # Creating the legend manually for paradigms
+        patches = [mpatches.Patch(facecolor=paradigms_palette(paradigm), alpha=0.4) for paradigm in paradigms]
+        markers = [Line2D([0], [0], marker='o', color=paradigms_palette(paradigm), linestyle='None') for paradigm in paradigms]
+        legend_elements = [(marker, patch) for marker, patch in zip(markers, patches)]
+
+        # Creating the legend manually for preds
+        pred_markers = [Line2D([0], [0], marker='o', color=pred_palette(pred), linestyle='None') for pred in preds]
+        legend_elements.extend(pred_markers)
+
+        # Add the legend to the figure
+        fig.legend(legend_elements, list(paradigms) + pred_labels,
+                   handler_map={tuple: HandlerTuple(ndivide=None, pad=0)},
+                   loc='lower left', bbox_to_anchor=(1/(n_pcs+2), 1/(n_pcs-2)), ncol=2)
+                   # columnspacing=0.5)
+
+        # for x, y in zip([0, .195, .39, .59], [.655, .463, .265, .07]):
+        #     fig.legend(legend_elements, list(paradigms) + pred_labels,
+        #                handler_map={tuple: HandlerTuple(ndivide=None, pad=0)},
+        #                loc='lower left', bbox_to_anchor=(x, y), ncol=2, columnspacing=0.5)
+
+    def plot_pcs(self, table, pca, pcs, n_pcs):
+
+        update_plot_params()
+
+        # Create the subplots
+        fig, axs = plt.subplots(n_pcs-1, n_pcs-1, figsize=(3 * (n_pcs-1), 3 * (n_pcs-1)))
+
+        # Create a new column for paradigm and pred
+        table['paradigm'] = table.index.str.split(',').str[0]
+        table['pred'] = table.index.str.split(',').str[-1]
+
+        paradigms = table['paradigm'].unique()
+
+        self.custom_legend(fig, paradigms, n_pcs)
+
+        # Get all combinations of PCs
+        combs = list(combinations(range(n_pcs), 2))
+
+        # Calculate the number of subplots needed
+        n_subplots = len(combs)
+
+        for subplot_idx in range(n_subplots):
+            pc1, pc2 = combs[subplot_idx]
+
+            ax = axs[pc1, pc2 - 1]
+            var_exp = np.round((pca.explained_variance_ratio_[pc1] + pca.explained_variance_ratio_[pc2]) * 100, 1)
+
+            for paradigm in paradigms:
+
+                # Subset the data
+                paradigm_data = pcs[table['paradigm'] == paradigm]
+                paradigm_data_subset = paradigm_data[:, [pc1, pc2]]
+
+                unique_preds = table.loc[table['paradigm'] == paradigm, 'pred'].unique()
+
+                # Differentiate color by paradigm and pred
+                if paradigm in ['Randomized', '3AFC']:
+                    color = paradigms_palette(paradigm)
+                elif paradigm in ['Continuous', 'Cluster']:
+                    color = [pred_palette(pred.strip()) for pred in unique_preds]
+
+                ax.scatter(paradigm_data_subset[:, 0], paradigm_data_subset[:, 1],
+                           facecolors=color, edgecolors='w', lw=.75,
+                           s=75, label=None)
+
+                # Check if the number of unique points is >= 3 for the convex hull to make sense
+                if len(np.unique(paradigm_data_subset, axis=0)) >= 3:
+                    # Compute the convex hull for the current paradigm
+                    hull = ConvexHull(paradigm_data_subset)
+
+                    # Get the hull points
+                    hull_points = paradigm_data_subset[hull.vertices]
+
+                    # Fill the hull with a color
+                    ax.fill(hull_points[:, 0], hull_points[:, 1], facecolor=paradigms_palette(paradigm), alpha=var_exp/100, zorder=0)
+
+                elif len(np.unique(paradigm_data_subset, axis=0)) == 1:
+                    ax.scatter(paradigm_data_subset[:, 0], paradigm_data_subset[:, 1],
+                               facecolors=paradigms_palette(paradigm), edgecolors=None, lw=0,
+                               s=400, alpha=var_exp/100, zorder=0)
+
+            ax.set_xlabel(f'PC{pc1+1}')
+            ax.set_ylabel(f'PC{pc2+1}')
+            ax.set_title(f'PC{pc1+1} vs PC{pc2+1} ({var_exp}%)')
+
+        # Remove unused subplots in the lower left triangle
+        for i in range(n_pcs - 1):
+            for j in range(i):
+                axs[i, j].axis('off')
+
+        plt.tight_layout()
+        return fig
+
+    @staticmethod
+    def plot_skeleton_find_lines(dendrogram):
+
+        xpairs, ypairs = [], []
+        for xcoords, ycoords in zip(dendrogram['dcoord'], dendrogram['icoord']):
+
+            # Find x coordinates
+            xsublist_pairs = [(xcoords[i], xcoords[i + 1]) for i in range(len(xcoords) - 1)]
+            xpairs += xsublist_pairs
+
+            # Find y coordinates
+            ysublist_pairs = [(ycoords[i], ycoords[i + 1]) for i in range(len(ycoords) - 1)]
+            ypairs += ysublist_pairs
+
+        # Create DataFrame with coordinates for all lines in the dendrogram
+        line_coords = pd.DataFrame(np.concatenate([np.array(xpairs), np.array(ypairs)], axis=1), columns=['x1', 'x2', 'y1', 'y2'])
+
+        # Plot lines of the skeleton and find lines to color
+        lines_to_color = pd.DataFrame()
+        for idx, line in line_coords.iterrows():
+            xcoords = line[:2]
+            ycoords = line[2:]
+
+            if any(line[:2] == 0):
+                lines_to_color = pd.concat([lines_to_color, pd.DataFrame(line).T])
+            else:
+                plt.plot(xcoords, ycoords, 'k')
+
+        return lines_to_color
+
+    def plot_dendrogram(self, clusters, dendrogram, table):
+        fig = plt.figure(figsize=(10, 7))
+
+        # Plot skeleton and find lines corresponding to the labels
+        lines = self.plot_skeleton_find_lines(dendrogram)
+        lines.sort_values(by='y1', inplace=True)
+
+        # Find the labels
+        labels = [table.index[idx] for idx in dendrogram['leaves']]
+        for (_, line), label in zip(lines.iterrows(), labels):
+
+            paradigm = label.split(', ')[0]
+            pred = label.split(', ')[-1]
+
+            color = paradigms_palette(paradigm) if paradigm in ['3AFC', 'Randomized'] else pred_palette(pred)
+
+            plt.plot(line[:2], line[2:], color=color, lw=5)
+
+        labels = [f"{' ':<3}{label.split(', ')[0]}" if label.split(', ')[0] in ['3AFC', 'Randomized'] else f"   {translate_conditions(label.split(', ')[1]):<4} |   " + label.split(', ')[0] for label in labels]
+
+        plt.xlim([max(clusters[:, 2]), 0])
+        plt.xlabel('Cosine distance')
+        plt.yticks(lines['y1'], labels)
+        plt.gca().yaxis.tick_right()
+        plt.tick_params(axis='y', length=0) # set y-tick length to 0
+
+        ax = plt.gca() # get the current axes
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['left'].set_visible(False)
 
         return fig

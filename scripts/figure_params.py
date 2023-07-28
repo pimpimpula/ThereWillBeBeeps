@@ -40,6 +40,7 @@ def fig_params():
 
 def paradigms_palette(paradigm):
     palette = {'Bayesian': '#4A5666',
+               'Randomized': '#4A5666',
                'Cluster': '#bb8694',
                'Continuous': '#5E586A',
                '3AFC': '#ED5153'
