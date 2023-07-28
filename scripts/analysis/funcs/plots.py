@@ -806,6 +806,10 @@ class ClusterPlotter:
                 axs[i, j].axis('off')
 
         plt.tight_layout()
+
+        # remove the added columns no longer useful
+        table = table.drop(['paradigm', 'pred'], axis=1)
+
         return fig
 
     @staticmethod
