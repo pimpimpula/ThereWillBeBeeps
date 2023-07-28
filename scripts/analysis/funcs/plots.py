@@ -839,7 +839,10 @@ class ClusterPlotter:
         return lines_to_color
 
     def plot_dendrogram(self, clusters, dendrogram, table):
-        fig = plt.figure(figsize=(10, 7))
+
+        update_plot_params()
+
+        fig = plt.figure(figsize=(6, 5.33))
 
         # Plot skeleton and find lines corresponding to the labels
         lines = self.plot_skeleton_find_lines(dendrogram)
