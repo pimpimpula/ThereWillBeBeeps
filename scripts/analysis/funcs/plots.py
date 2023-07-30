@@ -481,53 +481,116 @@ class Fig4p50:
         pass
 
     @staticmethod
-    def p50_barplot(var, paradigms_data, continuous_data, cluster_data):
+    def plot_paradigm_comparison(ax, paradigms_data, paradigms_posthoc, var, show_ns=False):
+        ax.hlines(0, -0.5, 3.5, 'grey')
 
-        fig = plt.figure(figsize=(8, 5.33))
+        # Define positions
+        pos_dict = {"Bayesian": 0, "Continuous": 1, "Cluster": 2, "3AFC": 3}
 
-        # Define the grid
-        gs = gridspec.GridSpec(1, 2, width_ratios=[1, 1.5])
-        ylims = [2, -12 if var == 'distance_p50' else -8]
+        for n, paradigm in enumerate(pos_dict.keys()):
+            mean_val = paradigms_data.loc[paradigms_data.paradigm == paradigm, var].mean()
+            sem_val = paradigms_data.loc[paradigms_data.paradigm == paradigm, var].sem()
 
-        # Plot paradigm comparison
-        ax1 = plt.subplot(gs[0])
-        ax1.hlines(0, -0.5, 3.5, 'grey')
-        for n, paradigm in enumerate(['Bayesian', 'Continuous', 'Cluster', '3AFC']):
-            ax1.bar(n, paradigms_data.loc[paradigms_data.paradigm == paradigm, var].mean(), width=.5,
-                    color=get_color(paradigm, 'none' if paradigm in ['Cluster', 'Continuous'] else None))
-            ax1.errorbar(n, paradigms_data.loc[paradigms_data.paradigm == paradigm, var].mean(),
-                         paradigms_data.loc[paradigms_data.paradigm == paradigm, var].sem(),
-                         color='black', elinewidth=3)
-        ax1.set_ylim(ylims)
-        ax1.set_xlim([-0.5, 3.5])
-        ax1.set_ylabel('p50 threshold distance' if var == 'distance_p50' else 'Mean threshold')
-        ax1.set_xticks([-0.25, 0.75, 1.75, 2.75])
-        ax1.set_xticklabels(['Random', 'Continuous', 'Cluster', '3AFC'], rotation=25)
-        ax1.tick_params(axis='x', which='both', length=0)
+            ax.bar(n, mean_val, width=.5, color=get_color(paradigm, 'none' if paradigm in ['Cluster', 'Continuous'] else None))
+            ax.errorbar(n, mean_val, sem_val, color='black', elinewidth=3)
+
+            # Plot significance
+        for _, row in paradigms_posthoc.iterrows():
+            A, B, p_corr = row['A'], row['B'], row['p-corr']
+
+            # Skip non-significant results unless show_ns is True
+            if p_corr > 0.05 and not show_ns:
+                continue
+
+            y_max = min(paradigms_data.loc[paradigms_data.paradigm == A, var].mean(),
+                        paradigms_data.loc[paradigms_data.paradigm == B, var].mean())
+            y_pos = y_max - 3.2 + pos_dict[B]
+
+            # Draw a horizontal line between A and B
+            ax.hlines(y_pos, pos_dict[A], pos_dict[B], 'black')
+            ax.vlines([pos_dict[A], pos_dict[B]],
+                       y_pos + .25, y_pos, 'black')
+
+            # Draw an asterisk or "n.s." above the line
+            if p_corr < 0.05:
+                ax.text((pos_dict[A] + pos_dict[B]) / 2, y_pos - .03,
+                         '*', ha='center', va='bottom')
+            else:
+                ax.text((pos_dict[A] + pos_dict[B]) / 2, y_pos - .03,
+                         'n.s.', ha='center', va='bottom', fontsize=10)
+
+        ax.set_ylim([2, -12 if var == 'distance_p50' else -8])
+        ax.set_xlim([-0.5, 3.5])
+        ax.set_ylabel('p50 threshold distance' if var == 'distance_p50' else 'Mean threshold')
+        ax.set_xticks([-0.25, 0.75, 1.75, 2.75])
+        ax.set_xticklabels(['Random', 'Continuous', 'Cluster', '3AFC'], rotation=25)
+        ax.tick_params(axis='x', which='both', length=0)
 
 
-        # Plot pred comparison
-        ax2 = plt.subplot(gs[1])
-        ylims = [2, -12] if var == 'distance_p50' else [1, -4]
+    @staticmethod
+    def plot_pred_comparison(ax, continuous_data, cluster_data, continuous_posthoc, cluster_posthoc, var, show_ns=False):
+        ax.hlines(0, -1, 9, 'grey')
 
-        ax2.hlines(0, -1, 9, 'grey')
-        for n, (paradigm, paradigm_data) in enumerate(zip(['Continuous', 'Cluster'], [continuous_data, cluster_data])):
+        # Define positions
+        pred_dict = {'R': 0, 'T': 1, 'F': 2, 'FT': 3}
+
+        for n, (paradigm, paradigm_data, comparisons) in enumerate(zip(['Continuous', 'Cluster'],
+                                                                       [continuous_data, cluster_data],
+                                                                       [continuous_posthoc, cluster_posthoc])):
 
             for m, pred in enumerate(['none', 'time', 'frequency', 'both']):
-                ax2.bar(m + 5 * n,
+                ax.bar(m + 5 * n,
                         paradigm_data.loc[(paradigm_data.pred == pred), var].mean(),
                         color=pred_palette(pred))
-                ax2.errorbar(m + 5 * n, paradigm_data.loc[(paradigm_data.pred == pred), var].mean(),
+                ax.errorbar(m + 5 * n, paradigm_data.loc[(paradigm_data.pred == pred), var].mean(),
                              paradigm_data.loc[paradigm_data.pred == pred, var].sem(),
                              color='black', elinewidth=3)
-        ax2.set_ylim(ylims)
-        ax2.set_xlim([-1, 9])
-        ax2.set_xticks([1.5, 6.5])
-        ax2.set_xticklabels(['Continuous', 'Cluster'])
+
+            # Plot significance
+            for _, row in comparisons.iterrows():
+                A, B, p_corr = row['A'], row['B'], row['p-corr']
+
+                # Skip non-significant results unless show_ns is True
+                if p_corr > 0.05 and not show_ns:
+                    continue
+
+                # Calculate y position for the line and asterisk/n.s.
+                y_pos = - 1.5 * (pred_dict[A] + pred_dict[B]) - 3.5
+
+                # Draw a horizontal line between A and B
+                ax.hlines(y_pos, pred_dict[A] + 5 * n, pred_dict[B] + 5 * n, 'black')
+                ax.vlines([pred_dict[A] + 5 * n, pred_dict[B] + 5 * n],
+                           y_pos + .25, y_pos, 'black')
+
+                # Draw an asterisk or "n.s." above the line
+                if p_corr < 0.05:
+                    ax.text((pred_dict[A] + pred_dict[B]) / 2 + 5 * n, y_pos - .03,
+                             '*', ha='center', va='bottom')
+                else:
+                    ax.text((pred_dict[A] + pred_dict[B]) / 2 + 5 * n, y_pos - .03,
+                             'n.s.', ha='center', va='bottom', fontsize=10)
+
+        ax.set_ylim([2, -12] if var == 'distance_p50' else [1, -4])
+        ax.set_xlim([-1, 9])
+        ax.set_xticks([1.5, 6.5])
+        ax.set_xticklabels(['Continuous', 'Cluster'])
+
+    def p50_barplot(self, var, paradigms_data, continuous_data, cluster_data,
+                    paradigms_posthoc, continuous_posthoc, cluster_posthoc, show_ns=False):
+
+        fig = plt.figure(figsize=(8, 5.33))
+        gs = gridspec.GridSpec(1, 2, width_ratios=[1, 1.5])
+
+        ax1 = plt.subplot(gs[0])
+        ax2 = plt.subplot(gs[1])
+
+        # Break down your plotting to these two main components
+        self.plot_paradigm_comparison(ax1, paradigms_data, paradigms_posthoc, var, show_ns)
+        self.plot_pred_comparison(ax2, continuous_data, cluster_data, continuous_posthoc, cluster_posthoc, var, show_ns)
 
         plt.tight_layout()
-
         return fig
+
 
 
     @staticmethod
@@ -866,7 +929,7 @@ class ClusterPlotter:
         labels = [f"{' ':<3}{label.split(', ')[0]}" if label.split(', ')[0] in ['3AFC', 'Randomized'] else f"   {translate_conditions(label.split(', ')[1]):<4} |   " + label.split(', ')[0] for label in labels]
 
         ax = plt.gca()
-        plt.xlim([max(clusters[:, 2]), 0])
+        plt.xlim([1.5, 0])
         plt.xlabel('Cosine distance')
         plt.yticks(lines['y1'], labels)
         ax.yaxis.tick_right()
@@ -877,3 +940,34 @@ class ClusterPlotter:
         ax.spines['left'].set_visible(False)
 
         return fig
+
+
+class SupplPlots:
+    def lmm_assumptions(data):
+        """
+        Check assumptions.
+
+        Plots: Linearity, normality and homoscedasticity checks
+
+        """
+
+        import seaborn as sns
+
+        fig, axs = plt.subplots(1, 3, figsize=(15,5))
+
+        # Linearity: Plotting predicted values vs residuals
+        sns.regplot(x='predicted', y='residuals', data=data, ax=axs[0], scatter_kws={'alpha':0.5})
+        axs[0].set_title('Residuals vs. Predicted values')
+
+        # Normality: Histogram of residuals
+        sns.histplot(data['residuals'], kde=True, ax=axs[1])
+        axs[1].set_title('Histogram of residuals')
+
+        # Homoscedasticity: Scale-Location plot
+        sns.regplot(x='predicted', y=abs(data['residuals']), data=data, scatter_kws={'alpha': 0.5}, ax=axs[2])
+        axs[2].set_title('Scale-Location')
+
+        # Show the plot
+        plt.tight_layout()
+        plt.show()
+

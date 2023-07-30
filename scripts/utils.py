@@ -73,13 +73,15 @@ def filter_files_by_suffix(participant, paradigm, suffix):
     return csv_files
 
 
-def fetch_paradigm_raw_data(participant, paradigm):
+def fetch_paradigm_raw_data(participant, paradigm, correct_continuous=False, use_all_available_data=False):
     """
     Gets raw data for one participant, for a chosen task.
 
     Args:
         participant (str): Participant's identifier.
         paradigm  (str):
+        correct_continuous (bool): Decide whether to correct responses from the Continuous task (shift by 1 trial, filter RTs < 1sec)
+        use_all_available_data (bool): Decide whether to include data from first attempts at tasks if applicable
 
 
     Returns:
@@ -120,7 +122,7 @@ def fetch_paradigm_raw_data(participant, paradigm):
         try:
             if paradigm in 'Continuous':
                 data = data[['sweeps.thisN', 'trials.thisN', 'pred', 'Frequency', 'Level',
-                             'isCatchTrial', 'responses', 'feedback.rt',
+                             'isCatchTrial', 'responses', 'feedback.started', 'feedback.rt',
                              'participant', 'Resume previous experiment', 'paradigm']]
             elif paradigm == 'Cluster':
                 data = data[['trials.thisN', 'pred', 'Frequency', 'Level',
@@ -134,18 +136,34 @@ def fetch_paradigm_raw_data(participant, paradigm):
                 print("Paradigm not recognized:", paradigm)
 
         except KeyError:
-            print(KeyError, participant, "- one file with wrong columns discarded:", file)
-            print(data.columns)
-            continue
+
+            # Fix case of 'ofgjwt' where there no 'feedback.rt' column was created in the first file of Continuous
+            # (because they didn't detect any of the tones presented)
+            if participant == 'ofgjwt' and paradigm == 'Continuous':
+                data = data[['sweeps.thisN', 'trials.thisN', 'pred', 'Frequency', 'Level',
+                             'isCatchTrial', 'responses', 'feedback.started',
+                             'participant', 'Resume previous experiment', 'paradigm']]
+                data.loc['feedback.rt'] = "[]"
+            else:
+                print('\x1b[0;31;40m' + f"{KeyError}: {participant.upper()}, - one file with wrong columns discarded:" + '\x1b[0m', file)
+                print(data.columns)
+                continue
+
+        # Correct Continuous responses for this file
+        if correct_continuous:
+            from scripts.preprocessing.funcs.fix_continuous_responses import correct_data
+            data = correct_data(data, participant)
 
         participant_data = pd.concat([participant_data, data])
 
         # If this was the first file for a session, stop looking at the rest of the files
         # THIS IS DIFFERENT FROM WHAT WAS DONE PREVIOUSLY, WHERE I USED ALL OF THE AVAILABLE DATA
-        if first_file or paradigm == 'Bayesian':
+        if (first_file or paradigm == 'Bayesian') and not use_all_available_data:
             break
 
+
     return participant_data
+
 
 
 def load_goldMSI_results():

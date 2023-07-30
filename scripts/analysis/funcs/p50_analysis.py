@@ -79,11 +79,12 @@ class P50DataAnalyzer:
         StatsFormatter.print_paired_ttest_posthocs(StatsFormatter, pairwise_results)
 
         if conditions == ['Continuous', 'Cluster']:
-            aov_results = pg.rm_anova(data=filtered_data, dv=var,
+            aov2_results = pg.rm_anova(data=filtered_data, dv=var,
                                       within=[filter_on, factor], subject='participant')  # , detailed=True)
 
-            StatsFormatter.print_2way_anova(StatsFormatter, aov_results,
+            StatsFormatter.print_2way_anova(StatsFormatter, aov2_results,
                                             var='p50s' if var == 'distance_p50' else '',  #TODO: fix if reused
                                             factors=[filter_on, factor])
-
-        return filtered_data
+            return filtered_data, aov_results, aov2_results, pairwise_results
+        else:
+            return filtered_data, aov_results, pairwise_results
