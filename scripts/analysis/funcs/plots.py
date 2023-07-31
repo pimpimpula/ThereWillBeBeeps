@@ -494,7 +494,7 @@ class Fig4p50:
             ax.bar(n, mean_val, width=.5, color=get_color(paradigm, 'none' if paradigm in ['Cluster', 'Continuous'] else None))
             ax.errorbar(n, mean_val, sem_val, color='black', elinewidth=3)
 
-            # Plot significance
+        # Plot significance
         for _, row in paradigms_posthoc.iterrows():
             A, B, p_corr = row['A'], row['B'], row['p-corr']
 
@@ -528,7 +528,10 @@ class Fig4p50:
 
 
     @staticmethod
-    def plot_pred_comparison(ax, continuous_data, cluster_data, continuous_posthoc, cluster_posthoc, var, show_ns=False):
+    def plot_pred_comparison(ax, continuous_data, cluster_data,
+                             continuous_posthoc, cluster_posthoc,
+                             var, show_ns=False):
+
         ax.hlines(0, -1, 9, 'grey')
 
         # Define positions
@@ -538,7 +541,7 @@ class Fig4p50:
                                                                        [continuous_data, cluster_data],
                                                                        [continuous_posthoc, cluster_posthoc])):
 
-            for m, pred in enumerate(['none', 'time', 'frequency', 'both']):
+            for pred, m in pred_dict.items():
                 ax.bar(m + 5 * n,
                         paradigm_data.loc[(paradigm_data.pred == pred), var].mean(),
                         color=pred_palette(pred))
@@ -555,9 +558,12 @@ class Fig4p50:
                     continue
 
                 # Calculate y position for the line and asterisk/n.s.
-                y_pos = - 1.5 * (pred_dict[A] + pred_dict[B]) - 3.5
+                if var == 'distance_p50':
+                    y_pos = - 1.5 * (pred_dict[A] + pred_dict[B]) - 3.5
+                else:
+                    y_pos = -.5 * (pred_dict[A] + pred_dict[B]) - 2
 
-                # Draw a horizontal line between A and B
+                    # Draw a horizontal line between A and B
                 ax.hlines(y_pos, pred_dict[A] + 5 * n, pred_dict[B] + 5 * n, 'black')
                 ax.vlines([pred_dict[A] + 5 * n, pred_dict[B] + 5 * n],
                            y_pos + .25, y_pos, 'black')
@@ -620,8 +626,6 @@ class Fig4p50:
         # Add a colorbar
         cbar = fig.colorbar(mappable, ax=ax, fraction=0.046, pad=0.04)
         cbar.ax.set_yticks([-cbar_max, 0, cbar_max])
-
-        # ax = plt.gca()
 
         # Loop through each cell in the correlation matrix
         for i in range(corr.shape[0]):

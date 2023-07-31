@@ -9,7 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from scripts.API_access import *
 from scripts.figure_params import *
 
-from scripts.preprocessing.funcs.resample_audiograms import resample_audiogram
+from scripts.preprocessing.funcs.resample_audiograms import PreprocMain
 from scripts.analysis.funcs.plots import VisualChecksP50
 
 
@@ -182,7 +182,7 @@ class DataProcessor:
             random_audiograms (pd.DataFrame): Contains the resampled audiograms for each participant.
         """
 
-        api_access = get_API_access()
+        preproc = PreprocMain()
 
         random_audiograms = pd.DataFrame()
         for participant, participant_data in random_data.groupby('participant'):
@@ -194,10 +194,11 @@ class DataProcessor:
             freqs_without_init, levels_without_init, responses_without_init, ntones = [], [], [], []
 
             for paradigm, paradigm_data in participant_data.groupby('paradigm'):
-                # Determine slicing index based on paradigm
+
+                # Keep initialization phase data ONLY for Randomized
                 index = 0 if paradigm == 'Bayesian' else len_init
 
-                # Fetch data and append to lists
+                # Fetch tested tones data and responses
                 freqs = paradigm_data.tested_frequencies.iloc[index:].tolist()
                 levels = paradigm_data.tested_levels.iloc[index:].tolist()
                 responses = paradigm_data.responses.iloc[index:].tolist()
@@ -211,10 +212,10 @@ class DataProcessor:
             # make API request with selected tones info
             x_data = np.array([freqs_without_init, levels_without_init]).T.tolist()
             y_data = [[1] if resp == 1 else [-1] for resp in responses_without_init]
-            api_results = make_api_request(x_data, y_data, *api_access)
+            api_results = make_api_request(x_data, y_data, *preproc.API_access)
 
             # resample audiograms to 100 datapoints
-            resampled_results = resample_audiogram(api_results, resampling_frequencies)
+            resampled_results = preproc.resample_audiogram(api_results, resampling_frequencies)
 
             # format data for df
             random_audiogram = pd.DataFrame(

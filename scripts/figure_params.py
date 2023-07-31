@@ -52,7 +52,11 @@ def pred_palette(pred):
     palette = {'none': '#292F36',
                'time': '#52BFB6',
                'frequency': '#E3BC59',
-               'both': '#E03639'
+               'both': '#E03639',
+               'R': '#292F36',
+               'T': '#52BFB6',
+               'F': '#E3BC59',
+               'FT': '#E03639'
                }
     return palette[pred]
 

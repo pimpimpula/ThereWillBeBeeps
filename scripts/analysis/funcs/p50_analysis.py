@@ -53,6 +53,10 @@ class P50DataAnalyzer:
         # filter data & remove problematic participants for this analysis
         filtered_data = self.remove_problematic_participants(filter_on, conditions)
 
+        if factor == 'pred':
+            # Translate predictability to article labels
+            filtered_data['pred'] = filtered_data['pred'].apply(translate_conditions)
+
         # Print descriptive stats
         self.print_descriptive_stats(filtered_data)
 
@@ -69,11 +73,12 @@ class P50DataAnalyzer:
                                              subject='participant',
                                              alternative='two-sided',
                                              padjust=StatsParams.mult_comp)
-
+        '''
         if factor == 'pred':
             # Translate predictability to article labels
             pairwise_results['A'] = pairwise_results['A'].apply(translate_conditions)
             pairwise_results['B'] = pairwise_results['B'].apply(translate_conditions)
+        '''
 
         # Display post-hoc results
         StatsFormatter.print_paired_ttest_posthocs(StatsFormatter, pairwise_results)

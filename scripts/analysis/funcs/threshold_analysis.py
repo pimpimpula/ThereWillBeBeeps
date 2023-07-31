@@ -1,13 +1,8 @@
-import os
-import glob
 
-import numpy as np
-
-from scripts.figure_params import *
-from scripts.utils import interp
+from scripts.utils import *
 
 
-def audiograms_to_df(paradigm, audiograms_path, xfreqs, pred="Bayesian"):
+def audiograms_to_df(paradigm, audiograms_path, xfreqs, pred="Bayesian", no_init=False):
     # Filter PKL preprocessed audiogram files matching the paradigm and pred condition selected
     file_tag = f"*{'' if pred == 'Bayesian' else f'_{pred}'}_resampled.pkl"
     file_list = glob.glob(os.path.join(audiograms_path, paradigm, file_tag))
@@ -37,7 +32,7 @@ def audiograms_to_df(paradigm, audiograms_path, xfreqs, pred="Bayesian"):
                                         paradigm == 'Bayesian' and participant != 'eqdcwr')
                              else paradigm_dict[participant]['y'])]
                            for _ in range(nrows)],
-             'len_init': [len(paradigm_dict[participant]['init']['x']) if pred == "Bayesian" else None] * nrows,
+             'len_init': [len(paradigm_dict[participant]['init']['x']) if pred == "Bayesian" and not no_init else None] * nrows,
              'thresholds': paradigm_dict[participant]['audiogram']['estimation'],
              'frequencies': xfreqs,
              'mean_threshold': [np.mean(paradigm_dict[participant]['audiogram']['estimation'])] * nrows

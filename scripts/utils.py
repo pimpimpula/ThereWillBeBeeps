@@ -1,5 +1,7 @@
 import glob
 import os
+import pickle
+
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -42,8 +44,14 @@ def translate_conditions(pred):
     dictionary = {"both": "FT",
                   "frequency": "F",
                   "time": "T",
-                  "none": "R"
+                  "none": "R",
+                  # Bit ugly but quick fix
+                  "FT": "FT",
+                  "F": "F",
+                  "T": "T",
+                  "R": "R"
                   }
+
     return dictionary[pred]
 
 
@@ -56,11 +64,13 @@ def exclude_participants(participants):
     - `wquuex` had > 20 dB HL
     - `bihhjl` is the HL participant
     - `tyrfqt`, `ikieoz`, `gtyzck` and `ttuwra` did a former version of the 3-AFC task
+
     """
 
-    exclude_participants = ['tvzljm', 'lkbxgs', 'wquuex', 'bihhjl', 'tyrfqt', 'ikieoz', 'gtyzck', 'ttuwra', '.DS_Store']
+    ignore_participants = ['tvzljm', 'lkbxgs', 'wquuex', 'bihhjl', 'tyrfqt', 'ikieoz', 'gtyzck', 'ttuwra', '.DS_Store']
 
-    return [participant for participant in participants if participant not in exclude_participants]
+    return [participant for participant in participants if participant not in ignore_participants]
+
 
 
 def filter_files_by_suffix(participant, paradigm, suffix):
@@ -73,14 +83,16 @@ def filter_files_by_suffix(participant, paradigm, suffix):
     return csv_files
 
 
-def fetch_paradigm_raw_data(participant, paradigm, correct_continuous=False, use_all_available_data=False):
+def fetch_paradigm_raw_data(participant, paradigm,
+                            correct_continuous=False, filter_rts=False, use_all_available_data=False):
     """
     Gets raw data for one participant, for a chosen task.
 
     Args:
-        participant (str): Participant's identifier.
-        paradigm  (str):
-        correct_continuous (bool): Decide whether to correct responses from the Continuous task (shift by 1 trial, filter RTs < 1sec)
+        participant (str): Participant ID.
+        paradigm  (str): Task name
+        correct_continuous (bool): Decide whether to correct responses from the Continuous task
+            (shift by 1 trial, filter RTs < 1sec)
         use_all_available_data (bool): Decide whether to include data from first attempts at tasks if applicable
 
 
@@ -95,7 +107,7 @@ def fetch_paradigm_raw_data(participant, paradigm, correct_continuous=False, use
 
     for file in csv_files:
 
-        print(file.split('/')[-1])
+        print("\n  -  Processing:", file.split('/')[-1])
 
         data = pd.read_csv(file)
 
@@ -117,8 +129,10 @@ def fetch_paradigm_raw_data(participant, paradigm, correct_continuous=False, use
             # until finding the first one.
             first_file = True if data['Resume previous experiment'].unique()[0] == 0 else False
 
-            print('New exp file\n' if first_file else "Resumed exp file\n")
+            print('   *** New exp file ***' if first_file else "   *** Resumed exp file***")
+            print('-----')
 
+        # Check the columns in the csv file
         try:
             if paradigm in 'Continuous':
                 data = data[['sweeps.thisN', 'trials.thisN', 'pred', 'Frequency', 'Level',
@@ -136,23 +150,24 @@ def fetch_paradigm_raw_data(participant, paradigm, correct_continuous=False, use
                 print("Paradigm not recognized:", paradigm)
 
         except KeyError:
-
-            # Fix case of 'ofgjwt' where there no 'feedback.rt' column was created in the first file of Continuous
+            # Fix case of 'ofgjwt' 'ddmfvc' and 'nfsmrp' where there no 'feedback.rt' column was created in the first file
             # (because they didn't detect any of the tones presented)
-            if participant == 'ofgjwt' and paradigm == 'Continuous':
+            if participant in ['ofgjwt', 'ddmfvc', 'nfsmrp'] and paradigm == 'Continuous':
                 data = data[['sweeps.thisN', 'trials.thisN', 'pred', 'Frequency', 'Level',
                              'isCatchTrial', 'responses', 'feedback.started',
                              'participant', 'Resume previous experiment', 'paradigm']]
-                data.loc['feedback.rt'] = "[]"
+                data.insert(9, 'feedback.rt', "[]")
             else:
-                print('\x1b[0;31;40m' + f"{KeyError}: {participant.upper()}, - one file with wrong columns discarded:" + '\x1b[0m', file)
+                print(
+                    '\x1b[0;31;40m' + f"{KeyError}: {participant.upper()}, - one file with wrong columns discarded:" + '\x1b[0m',
+                    file)
                 print(data.columns)
                 continue
 
         # Correct Continuous responses for this file
         if correct_continuous:
             from scripts.preprocessing.funcs.fix_continuous_responses import correct_data
-            data = correct_data(data, participant)
+            data = correct_data(data, participant, filter_rts)
 
         participant_data = pd.concat([participant_data, data])
 
@@ -161,12 +176,82 @@ def fetch_paradigm_raw_data(participant, paradigm, correct_continuous=False, use
         if (first_file or paradigm == 'Bayesian') and not use_all_available_data:
             break
 
+    return participant_data
+
+
+def fetch_initialization_data(participant):
+    """
+    Fetch the initialization phase data for a participant.
+
+    Args:
+        participant (str): Participant ID.
+
+    Returns:
+        dict: The initialization data for the participant. None if no data is found.
+    """
+
+    init_files = filter_files_by_suffix(participant, 'Bayesian', "*_init.pkl")
+
+    if init_files:
+        with (open(init_files[-1], "rb")) as f_init:
+            init_data = pickle.load(f_init)
+    else:
+        print(f"No initialization data found for participant {participant}...")
+        init_data = None
+
+    return init_data
+
+
+def fetch_audiogram_data(participant, paradigm, pred=None, init=False):
+    """
+    Fetch the most recent audiogram data for a participant.
+
+    Args:
+        participant (str): Participant's identifier.
+
+    Returns:
+        dict: The audiogram data for the participant. None if no data is found.
+    """
+
+    # Filter based on the paradigm
+    if paradigm == 'Bayesian':
+        tag = "*_init.pkl" if init else "*_audiogram.pkl"
+    elif paradigm == 'Continuous':
+        tag = f"*{pred}_fixed.pkl"
+    elif paradigm == 'Cluster':
+        tag = f"*{pred}_audiogram.pkl"
+    else:
+        raise ValueError(f"Paradigm {paradigm} not recognized.")
+
+    pkl_files = filter_files_by_suffix(participant, paradigm, tag)
+
+    if pkl_files:
+        # print(f"Opening audiogram for {participant}: ({paradigm if pred is None else f'{paradigm}/{pred}'})...")
+        # print(pkl_files[-1])
+
+        with open(pkl_files[-1], "rb") as f:
+            participant_data = pickle.load(f)
+
+            # Remove extra response in Bayesian paradigm?
+            if paradigm == 'Bayesian' and init is None:
+                participant_data['y'] = participant_data['y'][:-1]
+    else:
+        print(
+            f"No audiogram found for participant {participant} ({paradigm if pred is None else f'{paradigm}/{pred}'})...")
+        participant_data = None
 
     return participant_data
 
 
+def set_audiograms_directory(aud_path, paradigm):
+    aud_dir = os.path.join(aud_path, paradigm)
+    if not os.path.exists(aud_dir):
+        print(f"Created folder {aud_dir}")
+        os.makedirs(aud_dir)
+    return aud_dir
 
-def load_goldMSI_results():
+
+def load_gmsi_results():
     df = pd.read_excel(os.path.join(get_path('dataframes'), "gms_scoring.xlsx"),
                        usecols="AR,BF", header=0)  # "AR,BA:BF" for all components
     df = df.loc[df['ID'] != 0]
@@ -187,15 +272,6 @@ def load_age_info():
 def interp(x, x_axis, y_values):
     """
     Performs linear interpolation
-
-    Args:
-        x:
-        x_axis:
-        y_values:
-
-    Returns:
-        y
-
     """
 
     xdist = np.array(x_axis) - x
