@@ -30,7 +30,8 @@
 
 ### This repo
 
-The project is organized as Jupyter notebooks, which contain the steps and output of the analysis. These notebooks call functions located in separate Python files.
+The project is organized as Jupyter notebooks, which contain the steps and output of the analysis. 
+These notebooks call functions located in separate Python files.
 
 #### Usage
 
@@ -39,6 +40,13 @@ Notebooks are meant to be run in increasing order (1_, 2_, etc), starting with p
 The [`preprocessing`](scripts%2Fpreprocessing) and [`analysis`](scripts%2Fanalysis) directories contain subdirectories named `funcs`, which contain Python scripts for various functions that the notebooks call.
 
 Note: you need an extra python script `API_access.py` with private access codes for the automated pure-tone audiometry API to run some of the code (preprocessing 2-3, analysis 2).
+
+#### Requirements
+
+This repo relies on commonly used python packages for data analysis and visualization,
+as well as the 'requests' module for communication with the pure-tone audiometry API.
+
+See [`requirements.txt`](requirements.txt) for the detailed short list.
 
 ---
 
@@ -123,11 +131,3 @@ Note: you need an extra python script `API_access.py` with private access codes 
         ├── 8_linear_models.ipynb
         └── SupplFig_example_data.ipynb  - in construction
 ```
-
-
-### Requirements
-
-This repo relies on commonly used python packages for data analysis and visualization, 
-as well as the 'requests' module for communication with the pure-tone audiometry API.
-
-See [`requirements.txt`](requirements.txt) for the detailed short list.
