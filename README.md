@@ -41,6 +41,33 @@ The [`preprocessing`](scripts%2Fpreprocessing) and [`analysis`](scripts%2Fanalys
 
 Note: you need an extra python script `API_access.py` with private access codes for the automated pure-tone audiometry API to run some of the code (preprocessing 2-3, analysis 2).
 
+The free-est way to run these notebooks is with jupyter notebook.
+Here is one way to load this repo to run smoothly
+
+**Clone code and move into folder**
+```
+git clone git@github:pimpimpula/ThereWillBeBeeps.git
+cd ThereWillBeBeeps
+```
+**Create conda environment and install necessary packages**
+```
+conda create -n beepbeep python=3.10
+conda activate beepbeep
+pip install -r requirements.txt
+conda install jupyter
+```
+**Include project directory as path in conda env and deactivate environment to go do something else.**
+```
+conda develop .
+conda deactivate
+```
+
+Then when you are ready to run your notebooks just do the following while in the project directory:
+```
+conda activate beepbeep
+jupyter notebook
+```
+
 #### Requirements
 
 This repo relies on commonly used python packages for data analysis and visualization,
