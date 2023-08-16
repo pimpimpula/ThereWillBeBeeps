@@ -1,4 +1,5 @@
 import pandas as pd
+from scripts.utils import translate_conditions
 
 
 class StatsParams:
@@ -12,6 +13,27 @@ class StatsFormatter:
     @staticmethod
     def fix0(pval):
         return "<0.001" if pval < 0.001 else f"{pval:.{StatsParams.pval_precision}f}"
+
+    @staticmethod
+    def print_descriptive_stats(df, variable):
+
+        precision = StatsParams.pval_precision
+
+        for paradigm, paradigm_data in df.groupby('paradigm'):
+
+            for pred, pred_group in paradigm_data.groupby('pred'):
+
+                prediction = pred if paradigm == pred else translate_conditions(pred)
+
+                print(f"------------------------ {paradigm if paradigm == pred else paradigm + '/' + prediction} ------------------------")
+                print("Mean:", round(paradigm_data.loc[paradigm_data['pred'] == pred][variable].mean(), precision),
+                      "dB  |  SD:", round(paradigm_data.loc[paradigm_data['pred'] == pred][variable].std(), precision),
+                      "dB  |  SEM:", round(paradigm_data.loc[paradigm_data['pred'] == pred][variable].sem(), precision),
+                      "dB")
+
+            if len(df.paradigm.unique()) == 2:
+                print("")
+        print("")
 
     @staticmethod
     def print_1way_anova(self, aov_results: pd.DataFrame, var: str, factor: str):

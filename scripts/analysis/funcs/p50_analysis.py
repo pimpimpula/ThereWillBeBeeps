@@ -27,27 +27,6 @@ class P50DataAnalyzer:
 
         return filtered_data
 
-    @staticmethod
-    def print_descriptive_stats(df):
-
-        precision = StatsParams.pval_precision
-
-        for paradigm, paradigm_data in df.groupby('paradigm'):
-
-            for pred, pred_group in paradigm_data.groupby('pred'):
-
-                prediction = pred if paradigm == pred else translate_conditions(pred)
-
-                print(f"------------------------ {paradigm if paradigm == pred else paradigm + '/' + prediction} ------------------------")
-                print("Mean:", round(paradigm_data.loc[paradigm_data['pred'] == pred].distance_p50.mean(), precision),
-                      "dB  |  SD:", round(paradigm_data.loc[paradigm_data['pred'] == pred].distance_p50.std(), precision),
-                      "dB  |  SEM:", round(paradigm_data.loc[paradigm_data['pred'] == pred].distance_p50.sem(), precision),
-                      "dB")
-
-            if len(df.paradigm.unique()) == 2:
-                print("")
-        print("")
-
     def p50_stats_pipeline(self, var: str, factor: str, filter_on=False, conditions: list = None):
 
         # filter data & remove problematic participants for this analysis
@@ -64,7 +43,7 @@ class P50DataAnalyzer:
         aov_results = pg.rm_anova(data=filtered_data, dv=var,
                                   within=factor, subject='participant')  # , detailed=True)
 
-        StatsFormatter.print_1way_anova(StatsFormatter, aov_results, var=var, factor=factor)
+        StatsFormatter().print_1way_anova(aov_results, var=var, factor=factor)
 
         # post-hoc paired T-tests
         pairwise_results = pg.pairwise_tests(data=filtered_data,
@@ -81,7 +60,7 @@ class P50DataAnalyzer:
         '''
 
         # Display post-hoc results
-        StatsFormatter.print_paired_ttest_posthocs(StatsFormatter, pairwise_results)
+        StatsFormatter().print_paired_ttest_posthocs(pairwise_results)
 
         if conditions == ['Continuous', 'Cluster']:
             aov2_results = pg.rm_anova(data=filtered_data, dv=var,

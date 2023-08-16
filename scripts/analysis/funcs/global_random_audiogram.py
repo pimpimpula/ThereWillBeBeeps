@@ -236,7 +236,7 @@ class DataProcessor:
         return random_audiograms
 
     @staticmethod
-    def checks_and_p50_computation(sigmoid: np.ndarray, xsigmoid: np.ndarray,
+    def checks_and_p50_computation(p50: float, sigmoid: np.ndarray, xsigmoid: np.ndarray,
                                    participant_trials: pd.DataFrame,
                                    problematic_participants: Dict[str, List[str]],
                                    subplot_counters, axs_inverted, axs_p50):
@@ -250,6 +250,8 @@ class DataProcessor:
 
         Parameters
         ----------
+        p50: float
+            The center of the sigmoid.
         sigmoid : np.ndarray
             The predicted sigmoid curve values.
         xsigmoid : np.ndarray
@@ -281,8 +283,9 @@ class DataProcessor:
 
         inverted_sigmoid = True if sigmoid[-1] - sigmoid[0] < 0 else False
 
-        p50 = np.interp(.5, sigmoid[::-1] if inverted_sigmoid else sigmoid,
-                        xsigmoid[::-1] if inverted_sigmoid else xsigmoid)
+        # Old code where I interpolated the p50 value
+        # p50 = np.interp(.5, sigmoid[::-1] if inverted_sigmoid else sigmoid,
+        #                 xsigmoid[::-1] if inverted_sigmoid else xsigmoid)
 
         p50_outside_range = False if participant_trials.random_distance.min() <= p50 < participant_trials.random_distance.max() else True
 
@@ -301,15 +304,15 @@ class DataProcessor:
             VisualChecksP50.plot_problematic_p50s(ax, sigmoid, xsigmoid, p50, participant_trials, anomaly_type, problematic_participants[anomaly_type])
 
             # Set p50 to NaN and add participant to list of problematic participants
-            p50 = np.nan
+            # p50 = np.nan
             if participant not in problematic_participants[anomaly_type]:
                 problematic_participants[anomaly_type].append(participant)
-            print(f"p50 set to NaN and {participant} {'added to' if participant not in problematic_participants[anomaly_type] else 'already in'} list of problematic participants.\n")
+            print(f"{participant} {'added to' if participant not in problematic_participants[anomaly_type] else 'already in'} list of problematic participants.\n")
 
-        return p50, problematic_participants, subplot_counters
+        return problematic_participants, subplot_counters
 
     def get_sigmoid_and_p50(self, paradigm_group: pd.DataFrame, paradigm: str, problematic_participants: Dict[str, List[str]],
-                            subplot_counters, axs_inverted, axs_p50):
+                            subplot_counters, axs_inverted, axs_p50, constrain_sigmoid_fit):
         """
         Analyze data for each participant in the paradigm group.
 
@@ -334,16 +337,19 @@ class DataProcessor:
 
         for pred, pred_group in paradigm_group.groupby('pred'):
             for participant, participant_group in pred_group.groupby('participant'):
+
                 logreg = LogisticRegression()
                 logreg.fit(participant_group.random_distance.values.reshape(-1, 1), participant_group.responses)
 
                 sigmoid = logreg.predict_proba(xsigmoid.reshape(-1, 1))[:, 1]
+                p50 = float(-logreg.intercept_ / logreg.coef_)
 
-                p50, problematic_participants, subplot_counter = self.checks_and_p50_computation(
-                    sigmoid, xsigmoid, participant_group, problematic_participants,
+                problematic_participants, subplot_counter = self.checks_and_p50_computation(
+                    p50, sigmoid, xsigmoid, participant_group, problematic_participants,
                     subplot_counters, axs_inverted, axs_p50)
 
                 this_curve = DataFormatter.sigmoid_to_df(paradigm, pred, participant, xsigmoid, sigmoid, p50, problematic_participants)
                 pseudo_psychometric_curves = pd.concat([pseudo_psychometric_curves, this_curve])
 
         return pseudo_psychometric_curves, problematic_participants, subplot_counters
+

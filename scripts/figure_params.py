@@ -32,7 +32,6 @@ def print_rc_params():
 def fig_params():
     params = pd.Series({'page_width': 16 / 2.54,
                         'title_font': 'Arial',
-                        '2C_dims': [9, 5],
                         })
 
     return params
@@ -59,6 +58,24 @@ def pred_palette(pred):
                'FT': '#E03639'
                }
     return palette[pred]
+
+
+def palette(condition):
+    palette = {'none': '#292F36',
+               'time': '#52BFB6',
+               'frequency': '#E3BC59',
+               'both': '#E03639',
+               'R': '#292F36',
+               'T': '#52BFB6',
+               'F': '#E3BC59',
+               'FT': '#E03639',
+               'Bayesian': '#4A5666',
+               'Randomized': '#4A5666',
+               'Cluster': '#bb8694',
+               'Continuous': '#5E586A',
+               '3AFC': '#ED5153'
+               }
+    return palette[condition]
 
 
 def get_color(paradigm, pred=None):

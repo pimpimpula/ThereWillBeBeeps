@@ -98,6 +98,7 @@ class RSquared:
 
         paradigms = ['Continuous', 'Cluster']
         list_of_dicts = []
+
         for paradigm in paradigms:
             print("\n---" + paradigm.upper() + "---")
             r_values = self.compute_r_squared(paradigm, data, xvar, yvar)

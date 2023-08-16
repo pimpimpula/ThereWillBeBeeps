@@ -107,15 +107,64 @@ class Fig3Thresholds:
 
 class Fig2CMethods:
 
+    FIG_SIZE = (9, 5)
+    LEGEND_SIZE = 0
+
     def __init__(self, audiogram_data: DataFrame, sigmoid_data: DataFrame, trials_data: DataFrame,
                  chosen_paradigm: str, chosen_pred: str):
 
         self.random_audiogram = audiogram_data
         self.sigmoid_data = sigmoid_data
         self.trials_data = trials_data
+        # self.random_trials_data =
+        # self.trials_data =
         self.paradigm = chosen_paradigm
         self.chosen_pred = chosen_pred
         self.pred = translate_conditions(chosen_pred) if chosen_paradigm in ['Continuous', 'Cluster'] else chosen_pred
+
+        update_plot_params()
+        plt.rcParams.update(
+            {'font.size': 20,
+             'axes.titlesize': 20,
+             'axes.labelsize': 18,
+             'xtick.labelsize': 18,
+             'ytick.labelsize': 18,
+             'legend.fontsize': 16,
+             }
+        )
+
+    def sort_trials(self):
+
+        tested_freqs = self.random_audiogram.random_tested_frequencies[0]
+        tested_levels = self.random_audiogram.random_tested_levels[0]
+        responses = self.random_audiogram.random_responses[0]
+
+        order = ['Bayesian', 'Continuous', 'Cluster']
+
+        ntones = self.random_audiogram.random_ntones[0]
+
+        zipped_trials = list(zip(tested_freqs, tested_levels, responses))
+
+        # Map the paradigm to its start and end index in the data
+        mapping = {}
+        start_index = 0
+        for paradigm, count in ntones:
+            mapping[paradigm] = (start_index, start_index + count)
+            start_index += count
+
+        ntones = sorted(ntones, key=lambda x: order.index(x[0]))
+
+        sorted_trials = []
+        colors = []
+        for paradigm, _ in ntones:
+            paradigm_trials = zipped_trials[mapping[paradigm][0]:mapping[paradigm][1]]
+            sorted_trials.extend(paradigm_trials)
+            colors.extend(['#1E2023' if paradigm == 'Bayesian' else get_color(paradigm)] * len(paradigm_trials))
+
+        # Unpack sorted data
+        sorted_tested_freqs, sorted_tested_levels, sorted_responses = zip(*sorted_trials)
+
+        return ntones, mapping, sorted_tested_freqs, sorted_tested_levels, sorted_responses, colors
 
     def plot_example_global_random_audiogram(self):
         """
@@ -125,24 +174,11 @@ class Fig2CMethods:
             fig (matplotlib.figure.Figure): The output figure.
         """
 
-        update_plot_params()
-
         audiogram_thresholds = self.random_audiogram.random_thresholds[0]
         audiogram_freqs = self.random_audiogram.frequencies[0]
 
-        tested_freqs = self.random_audiogram.random_tested_frequencies[0]
-        tested_levels = self.random_audiogram.random_tested_levels[0]
-        responses = self.random_audiogram.random_responses[0]
-
-        # for positive detections as green checkmarks & misses as red crosses
-        # color_map = ['green' if resp == 1 else 'red' for resp in responses]
-
         # for trials color-coded by paradigms
-        ntones = self.random_audiogram.random_ntones[0]
-        paradigms, ns = np.array(ntones).T
-        colors = [get_color(paradigm) for paradigm in paradigms]
-        colors[0] = '#1E2023'  # darken Randomized color to improve contrast for this plot
-        color_map = [color for color, n in zip(colors, ns) for _ in range(int(n))]
+        ntones, mapping, tested_freqs, tested_levels, responses, colors = self.sort_trials()
 
         # markers
         marker_map = {1: u'$\u2713$', 0: 'X'}
@@ -152,16 +188,24 @@ class Fig2CMethods:
         #    Create figure    #
         #######################
 
-        fig = plt.figure(figsize=[9, 4.5])
+        fig = plt.figure(figsize=self.FIG_SIZE)
 
         # plot random audiogram
         plt.plot(audiogram_freqs, audiogram_thresholds,
-                 c='k', lw=2.5, zorder=0,
+                 c='k', lw=2.5, zorder=3,
                  label='random audiogram')
 
         # plot individual trials
-        for x, y, resp, color in zip(tested_freqs, tested_levels, responses, color_map):
-            plt.scatter(x, y, marker=marker_map[resp], c=color, s=size_map[resp], edgecolors='white', lw=.5, alpha=1)
+        for ix, (x, y, resp, color) in enumerate(zip(tested_freqs, tested_levels, responses, colors)):
+            if ix < mapping['Bayesian'][1]:
+                zorder=0
+            elif ix < mapping['Cluster'][1]:
+                zorder=2
+            else:
+                zorder=1
+
+            plt.scatter(x, y, marker=marker_map[resp], c=color, s=size_map[resp],
+                        edgecolors='white', lw=.5, alpha=1, zorder=zorder)
 
         # aesthetics
         plt.xscale('log')
@@ -170,15 +214,26 @@ class Fig2CMethods:
         ax = plt.gca()
         ax.invert_yaxis()
 
-        # Create custom legend elements, bit ugly
-        # legend_elements = []
-        # for paradigm, color in zip(paradigms, colors):
-        #     legend_label = paradigm + "\n" + u'$\u2713$' + ": Detected\n" + 'X' + ": Missed"
-        #     legend_elements.append(Patch(facecolor=color, edgecolor=color, label=legend_label))
-        # plt.legend(handles=legend_elements)
+        # Legend
+        legend_elements = []
+        paradigm_list = ['Randomized', '\nContinuous (R)', '\nCluster (R)']
+        colors = ['#1E2023' if paradigm == 'Bayesian' else get_color(paradigm) for paradigm in ['Bayesian', 'Continuous', 'Cluster']]
 
-        plt.legend(loc='lower left')
+        for paradigm, color in zip(paradigm_list, colors):
+            legend_elements.append(mpatches.Patch(facecolor='none', edgecolor='none', label=paradigm))
+            legend_elements.append(Line2D([0], [0], marker=u'$\u2713$', color=color, label='detected tone',
+                                          markerfacecolor=color, markersize=18, linestyle='None', lw=1))
+            legend_elements.append(Line2D([0], [0], marker='X', color=color, label='missed tone',
+                                          markerfacecolor=color, markeredgecolor='white', lw=1,
+                                          markersize=15, linestyle='None'))
+        legend_elements.append(mpatches.Patch(facecolor='none', edgecolor='none', label='                         '))
+        legend_elements.append(Line2D([0], [0], color='k', lw=2.5, label='random\naudiogram'))
 
+        plt.legend(handles=legend_elements, handlelength=1, handleheight=1,
+                   labelspacing=0.5, loc='center left',  bbox_to_anchor=(1, 0.5),
+                   ncol=1)
+
+        plt.ylim([22, -17])
         plt.xlabel('Frequency (in Hz)')
         plt.ylabel('Level (in dB HL)')
         plt.title('Global random audiogram')
@@ -187,51 +242,77 @@ class Fig2CMethods:
 
         return fig
 
-    def plot_example_distances(self):
+    def plot_example_distances(self, plot_init=True, ylims=[]):
         """
         Plots the audiogram data for a specific participant along with trials for a specific paradigm and pred condition.
 
+        Args:
+            plot_init (bool): plots the data from the initialization phase if True (defaults to True)
+            ylims (list): if plotting initialization data and you wish to plot tones limited to a specific dB range
+
+
         Returns:
             fig (matplotlib.figure.Figure): The output figure.
-        """
-        update_plot_params()
 
-        fig = plt.figure(figsize=fig_params()['2C_dims'])
+        """
+
+        fig = plt.figure(figsize=self.FIG_SIZE)
 
         # Plot the global random audiogram
         audiogram_thresholds = self.random_audiogram.random_thresholds[0]
         audiogram_freqs = self.random_audiogram.frequencies[0]
-        plt.plot(audiogram_freqs, audiogram_thresholds, c='k', lw=2.5, zorder=5, label='random audiogram')
+        plt.plot(audiogram_freqs, audiogram_thresholds, c='k', lw=2.5, zorder=5, label='random\naudiogram')
 
         # Create the color and marker maps
         color_map = ['green' if resp == 1 else 'red' for resp in self.trials_data.responses]
         marker_map = {1: u'$\u2713$', 0: 'X'}
-        size_map = {1: 400, 0: 100}  # adjust sizes here
+        size_map = {1: 400, 0: 100}
+
+        print(self.trials_data.len_init.iloc[0])
 
         # Plot the trials
         for idx, (freq, level, resp, random_threshold) in enumerate(zip(self.trials_data.tested_frequencies,
                                                                         self.trials_data.tested_levels,
                                                                         self.trials_data.responses,
                                                                         self.trials_data.random_threshold)):
+
+            if idx < self.trials_data.len_init.iloc[0] and not plot_init:
+                continue
+
+            if plot_init and len(ylims) == 2:
+                if level < ylims[0] or level > ylims[1]:
+                    continue
+
             plt.scatter(freq, level,
                         c=color_map[idx], marker=marker_map[resp], s=size_map[resp],
                         edgecolors='white', lw=.5, alpha=1)
             plt.vlines(x=freq, ymin=level, ymax=random_threshold,
                        # color=color_map[idx], linestyles=':',
-                       color='grey',
+                       color='.7', lw=2,
                        alpha=0.7, zorder=0)
+
+        legend_elements = []
+        # legend_elements.append(mpatches.Patch(facecolor='none', edgecolor='none', label='Tested tones'))
+        legend_elements.append(Line2D([0], [0], marker=u'$\u2713$', color='green', label='detected tone',
+                                      markerfacecolor='green', markersize=15, linestyle='None', lw=.5))
+        legend_elements.append(Line2D([0], [0], marker='X', color='red', label='missed tone',
+                                      markerfacecolor='red', markeredgecolor='white', lw=.5,
+                                      markersize=11, linestyle='None'))
+        legend_elements.append(mpatches.Patch(facecolor='none', edgecolor='none', label='              '))
+        legend_elements.append(Line2D([0], [0], color='k', lw=2.5, label='random\naudiogram'))
+        legend_elements.append(mpatches.Patch(facecolor='none', edgecolor='none', label='                         '))
+        legend_elements.append(Line2D([0, 0], [0, 1], color='.7', alpha=.7, lw=2, label='distance from\nthreshold'))
 
         # Aesthetics
         plt.xscale('log')
         plt.xticks([125, 1000, 8000], [125, 1000, 8000])
-        plt.ylim([20, -20])
+        # plt.ylim([42, -16])
         plt.minorticks_off()
-        # ax = plt.gca()
-        # ax.invert_yaxis()
-        plt.legend(loc='lower left')
+        plt.gca().invert_yaxis()
+        plt.legend(handles=legend_elements, loc='center left',  bbox_to_anchor=(1, 0.5))
         plt.xlabel('Frequency (in Hz)')
         plt.ylabel('Level (in dB HL)')
-        plt.title(f"Tone distance from threshold (example data from {self.paradigm}{'' if self.paradigm in ['3AFC', 'Bayesian'] else f'/{self.pred}'})")
+        plt.title(f"Tone distance from threshold")  # (example data from {self.paradigm}{'' if self.paradigm in ['3AFC', 'Bayesian'] else f'/{self.pred}'})")
 
         plt.tight_layout()
 
@@ -239,37 +320,60 @@ class Fig2CMethods:
 
     def plot_example_sigmoid(self):
 
-        update_plot_params()
+        ylims = [0, 1]
 
         color_map = ['green' if resp == 1 else 'red' for resp in self.trials_data.responses]
         # markers
         marker_map = [u'$\u2713$' if resp == 1 else 'X' for resp in self.trials_data.responses]
-        size_map = self.trials_data['responses'].replace({1: 400, 0: 100})
+        size_map = self.trials_data['responses'].replace({1: 350, 0: 100})
 
-        fig = plt.figure(figsize=fig_params()['2C_dims'])
+        fig = plt.figure(figsize=self.FIG_SIZE)
 
+        plt.vlines(0, *ylims, colors='.7', linestyles=':', zorder=1)
+        # plt.vlines(0, 0.48, 0.52, colors='k', zorder=1.5, lw=2)
+        plt.vlines(self.sigmoid_data.distance_p50.unique()[0], *ylims, colors='.7', lw=2, zorder=1)
         plt.hlines(.5, self.sigmoid_data.random_distance.min(), self.sigmoid_data.random_distance.max(),
-                   colors='grey', zorder=1)
+                   colors='.7', linestyles=':', zorder=1)
+
+
         plt.plot(self.sigmoid_data.random_distance, self.sigmoid_data.sigmoid_probas, c='k', zorder=3)
         plt.scatter(self.sigmoid_data.distance_p50.unique()[0], .5, s=50, c='k', zorder=4, label='p50')
 
         # Plot each point individually with its own marker
-        for i, (x, y, m, s, c) in enumerate(zip(self.trials_data.random_distance,
+        for i, (dist, resp, m, s, c) in enumerate(zip(self.trials_data.random_distance,
                                                 self.trials_data.responses,
                                                 marker_map,
                                                 size_map,
                                                 color_map)):
-            plt.scatter(x, y, marker=m, s=s, facecolors=c, edgecolors='white', lw=.75, alpha=1)
+            plt.scatter(dist, resp, marker=m, s=s, facecolors=c, edgecolors='white', lw=.75, alpha=1, zorder=5)
+
+        ax = plt.gca()
+        ax.annotate('', xy=(self.sigmoid_data.distance_p50.unique()[0], 0.5), xytext=(0, 0.5),
+                           arrowprops=dict(facecolor='k', edgecolor='k', arrowstyle='->', lw=3, zorder=10))
 
 
         plt.yticks([0, .5, 1], ["0", "0.5", "1"])
-        xlim_min = 5 * math.floor(self.trials_data.random_distance.min() / 5)
+        plt.xticks([-15, -10, -5, 0, 5, 10, 15, 20])
+        xlim_min = 2 * math.floor(self.trials_data.random_distance.min() / 2)
         xlim_max = 5 * math.ceil(self.trials_data.random_distance.max() / 5)
-        plt.xlim([xlim_min, xlim_max])
+        # plt.xlim([xlim_min, -xlim_min])
+        plt.xlim([-16, 21])
+        plt.ylim(ylims[0] - .05, ylims[1] + .05)
 
-        plt.legend()
+        legend_elements = []
+        # legend_elements.append(mpatches.Patch(facecolor='none', edgecolor='none', label='Tested tones'))
+        legend_elements.append(Line2D([0], [0], marker=u'$\u2713$', color='green', label='detected tone',
+                                      markerfacecolor='green', markersize=15, linestyle='None', lw=.5))
+        legend_elements.append(Line2D([0], [0], marker='X', color='red', label='missed tone',
+                                      markerfacecolor='red', markeredgecolor='white', lw=.5,
+                                      markersize=11, linestyle='None'))
+        legend_elements.append(mpatches.Patch(facecolor='none', edgecolor='none', label='              '))
+        legend_elements.append(Line2D([0], [0], color='k', marker='o', markersize=7, linestyle='None', label='p50'))
 
-        plt.title(f"p50 (example data from {self.paradigm}{'' if self.paradigm in ['3AFC', 'Bayesian'] else f'/{self.pred}'})")
+
+        plt.legend(handles=legend_elements, loc='center left',  bbox_to_anchor=(1, 0.5))
+
+        plt.title(f"p50")  # (example data from {self.paradigm}{'' if self.paradigm in ['3AFC', 'Bayesian'] else f'/{self.pred}'})")
         plt.xlabel("Distance from random threshold (dB HL)")
         plt.ylabel("Proportion detected")
 
@@ -292,9 +396,9 @@ class VisualChecksP50:
 
         ax.fill_betweenx([-0.1, 1.1],
                          participant_group.random_distance.min(), participant_group.random_distance.max(),
-                         facecolors='r' if anomaly_type == 'p50 outside range' else 'grey', alpha=.1, zorder=0)
+                         facecolors='r' if anomaly_type == 'p50 outside range' else '.7', alpha=.1, zorder=0)
         ax.hlines(.5, min(xsigmoid), max(xsigmoid),
-                  colors='grey', zorder=1)
+                  colors='.7', zorder=1)
         ax.scatter(participant_group.random_distance, participant_group.responses,
                    s=20, c='k', alpha=.3)
         ax.plot(xsigmoid, sigmoid, c='r' if anomaly_type == 'Inverted sigmoid' else 'k', zorder=3)
@@ -359,7 +463,7 @@ class VisualChecksP50:
                 # plt.scatter(pred_group.loc[pred_group.outlier == False, distance],
                 #             pred_group.loc[pred_group.outlier == False, 'yi'] + np.random.uniform(-0.05, 0.05, len(
                 #                 pred_group.loc[pred_group.outlier == False])),
-                #             edgecolors='grey', facecolors='None', alpha=.1, s=2,
+                #             edgecolors='.7', facecolors='None', alpha=.1, s=2,
                 #             label="Actual data", zorder=2)
 
                 # Plot the mean p50 value for the current prediction condition (across participants)
@@ -482,7 +586,7 @@ class Fig4p50:
 
     @staticmethod
     def plot_paradigm_comparison(ax, paradigms_data, paradigms_posthoc, var, show_ns=False):
-        ax.hlines(0, -0.5, 3.5, 'grey')
+        ax.hlines(0, -0.5, 3.5, '.7')
 
         # Define positions
         pos_dict = {"Bayesian": 0, "Continuous": 1, "Cluster": 2, "3AFC": 3}
@@ -504,7 +608,9 @@ class Fig4p50:
 
             y_max = min(paradigms_data.loc[paradigms_data.paradigm == A, var].mean(),
                         paradigms_data.loc[paradigms_data.paradigm == B, var].mean())
-            y_pos = y_max - 3.2 + pos_dict[B]
+
+            # y_pos = y_max - 3.2 + pos_dict[B]
+            y_pos = (y_max + min([pos_dict[A], pos_dict[B]])) - 3.5
 
             # Draw a horizontal line between A and B
             ax.hlines(y_pos, pos_dict[A], pos_dict[B], 'black')
@@ -513,11 +619,11 @@ class Fig4p50:
 
             # Draw an asterisk or "n.s." above the line
             if p_corr < 0.05:
-                ax.text((pos_dict[A] + pos_dict[B]) / 2, y_pos - .03,
-                         '*', ha='center', va='bottom')
+                ax.text((pos_dict[A] + pos_dict[B]) / 2, y_pos - .1,
+                         '*', ha='center', va='center')
             else:
-                ax.text((pos_dict[A] + pos_dict[B]) / 2, y_pos - .03,
-                         'n.s.', ha='center', va='bottom', fontsize=10)
+                ax.text((pos_dict[A] + pos_dict[B]) / 2, y_pos - .5,
+                         'n.s.', ha='center', va='top', fontsize=10)
 
         ax.set_ylim([2, -12 if var == 'distance_p50' else -8])
         ax.set_xlim([-0.5, 3.5])
@@ -532,7 +638,7 @@ class Fig4p50:
                              continuous_posthoc, cluster_posthoc,
                              var, show_ns=False):
 
-        ax.hlines(0, -1, 9, 'grey')
+        ax.hlines(0, -1, 9, '.7')
 
         # Define positions
         pred_dict = {'R': 0, 'T': 1, 'F': 2, 'FT': 3}
@@ -558,12 +664,9 @@ class Fig4p50:
                     continue
 
                 # Calculate y position for the line and asterisk/n.s.
-                if var == 'distance_p50':
-                    y_pos = - 1.5 * (pred_dict[A] + pred_dict[B]) - 3.5
-                else:
-                    y_pos = -.5 * (pred_dict[A] + pred_dict[B]) - 2
+                y_pos = -.7 * (pred_dict[A] + pred_dict[B]) - 2.5
 
-                    # Draw a horizontal line between A and B
+                # Draw a horizontal line between A and B
                 ax.hlines(y_pos, pred_dict[A] + 5 * n, pred_dict[B] + 5 * n, 'black')
                 ax.vlines([pred_dict[A] + 5 * n, pred_dict[B] + 5 * n],
                            y_pos + .25, y_pos, 'black')
@@ -576,7 +679,7 @@ class Fig4p50:
                     ax.text((pred_dict[A] + pred_dict[B]) / 2 + 5 * n, y_pos - .03,
                              'n.s.', ha='center', va='bottom', fontsize=10)
 
-        ax.set_ylim([2, -12] if var == 'distance_p50' else [1, -4])
+        ax.set_ylim([1, -6])
         ax.set_xlim([-1, 9])
         ax.set_xticks([1.5, 6.5])
         ax.set_xticklabels(['Continuous', 'Cluster'])
@@ -695,7 +798,7 @@ class Fig4p50:
 
         plt.ylim([0, .4])
         plt.xlim([-3.5, 9])
-        plt.yticks([0, .1, .2, .3, .4], ['.00', '.01', '.02', '.03', '.04'])
+        plt.yticks([0, .1, .2, .3, .4], ['.0', '.1', '.2', '.3', '.4'])
         plt.xticks([-2, 1.5, 6.5], ['Randomized', 'Continuous', 'Cluster'])
         plt.ylabel('False alarm rate')
         plt.tight_layout()
@@ -730,7 +833,6 @@ class Fig4p50:
                 x = pred_data[xvar].to_numpy()
                 y = pred_data[yvar].to_numpy()
 
-
                 a, b = np.polyfit(x, y, 1)
                 plt.plot(x, a * x + b, lw=1.5, color=pred_palette(pred), zorder=5)  # alpha=.95,
                 plt.scatter(x, y, s=30, facecolors=pred_palette(pred), edgecolors='None', alpha=.65)
@@ -740,7 +842,7 @@ class Fig4p50:
             # plt.legend(fontsize='small')
             plt.ylabel(labels[1])
             plt.xlabel(labels[0])
-            plt.ylim([20, data[yvar].min() - 1])  # , p50_Clus_Cont.max() + 1])
+            plt.ylim([data[yvar].max() + 1 if data[yvar].max() > 9 else 10, data[yvar].min() - 1])  # , p50_Clus_Cont.max() + 1])
             # plt.xlim([-0.02, 0.72])
             plt.title(f'{paradigm}')
 
@@ -759,10 +861,9 @@ class Fig4p50:
                 if p_val <= 0.05:
                     insetax.scatter(i, r2_val + 0.15, marker="$*$", c='k', s=100)
 
-            insetax.set_xticks(x_inset, [translate_conditions(pred) for pred in preds], fontsize='small')
-            insetax.set_yticks([0, .5, 1], [0, 0.5, 1], fontsize='small')
-            insetax.set_title("R$^2$",
-                              fontsize='medium')
+            insetax.set_xticks(x_inset, [translate_conditions(pred) for pred in preds])
+            insetax.set_yticks([0, .5, 1], [0, 0.5, 1])
+            insetax.set_title("R$^2$")
             # weight='bold')
             insetax.patch.set_alpha(.2)
 
@@ -947,6 +1048,8 @@ class ClusterPlotter:
 
 
 class SupplPlots:
+
+    @staticmethod
     def lmm_assumptions(data):
         """
         Check assumptions.
@@ -975,3 +1078,61 @@ class SupplPlots:
         plt.tight_layout()
         plt.show()
 
+    @staticmethod
+    def example_staircase(data_3AFC, threshold, reversal_indices, reversal_levels, chosen_freq):
+
+        # Find the index of the first tone
+        # min_idx = data_3AFC.n_tone.min()
+
+        # Plot a horizontal line for the corresponding threshold
+        plt.hlines(y=threshold,
+                   xmin=0, xmax=data_3AFC.n_tone.max(),
+                   colors='.7', lw=2, zorder=1)
+
+        # Plot the line of tested level ~ freq
+        plt.plot(data_3AFC.n_tone[:-1], data_3AFC.tested_levels[:-1], 'k:', lw=1, zorder=0)
+
+        # Show the reversals used for threshold computation
+        plt.scatter(reversal_indices, reversal_levels, marker='o', s=225, edgecolors='.7', facecolors='white', lw=2, zorder=3)
+
+        marker_map = {1: u'$\u2713$', 0: 'X'}
+
+        # Loop over the rows in the DataFrame
+        for index, row in data_3AFC.iterrows():
+            if index == len(data_3AFC) - 1:
+                continue
+            positive_detection = row.responses
+            if positive_detection:
+                plt.scatter(row['n_tone'], row['tested_levels'],
+                         marker=marker_map[row.responses], s=150, facecolors='g', zorder=4)  # , edgecolors='white', lw=.0001)
+            else:
+                plt.scatter(row['n_tone'], row['tested_levels'],
+                         marker=marker_map[row.responses], s=75, facecolors='r', edgecolors='white', lw=.01, zorder=4)
+
+        # Add text in the top-right corner with the selected frequency
+        plt.annotate(f'{chosen_freq} Hz', xy=(1, 1), xytext=(-10, -10),
+                     xycoords='axes fraction', textcoords='offset points',
+                     horizontalalignment='right', verticalalignment='top',
+                     fontweight='bold')
+
+        # Add labels to the axes
+        plt.xlabel('Tone number')
+        plt.ylabel('Tested level')
+        plt.title('3-AFC staircase example data')
+
+    @staticmethod
+    def example_3afc_audiogram(audiogram_3AFC, participant):
+
+        plt.hlines([-20, -10, 0, 10, 20], 0, 12000, colors='.7', alpha=0.5)
+        plt.plot(audiogram_3AFC.sort_values('frequencies').frequencies,
+                 audiogram_3AFC.sort_values('frequencies').thresholds,
+                 label=participant, color='red')
+        plt.scatter(audiogram_3AFC.frequencies, audiogram_3AFC.thresholds,
+                    label=None, edgecolors='red', facecolors="white", zorder=3)
+        plt.xscale('log')
+        plt.ylim([30, -30])
+        plt.xticks([125, 250, 500, 1000, 2000, 4000, 8000], [125, 250, 500, 1000, 2000, 4000, 8000])
+        plt.xlim([100,10000])
+        plt.ylabel("Threshold (dB HL)")
+        plt.xlabel('Frequency (Hz)')
+        plt.title('3-AFC example individual results')

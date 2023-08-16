@@ -1,4 +1,4 @@
-
+from scripts.stats import StatsParams
 from scripts.utils import *
 
 
@@ -80,3 +80,22 @@ def downsample_to_3AFC(data_3AFC, data_continuous, frequencies_3AFC, frequencies
         data_3AFC = pd.concat([data_3AFC, audiogram_df])
 
     return data_3AFC
+
+
+def compute_db_gain(df, variable):
+
+    precision = StatsParams.pval_precision
+
+    # Group by participant and paradigm, then calculate the mean threshold
+    avg_thresholds = df.groupby(['participant', 'paradigm'])[variable].mean().reset_index()
+
+    # Pivot table to have paradigms as columns
+    pivoted_df = avg_thresholds.pivot(index='participant', columns='paradigm', values='thresholds')
+
+    # Compute the difference
+    pivoted_df['diff'] = pivoted_df['Bayesian'] - pivoted_df['3AFC']
+
+    print("Mean:", round(pivoted_df['diff'].mean(), precision),
+          "dB  |  SD:", round(pivoted_df['diff'].std(), precision),
+          "dB  |  SEM:", round(pivoted_df['diff'].sem(), precision),
+          "dB")

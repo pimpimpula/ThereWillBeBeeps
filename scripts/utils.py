@@ -72,7 +72,6 @@ def exclude_participants(participants):
     return [participant for participant in participants if participant not in ignore_participants]
 
 
-
 def filter_files_by_suffix(participant, paradigm, suffix):
     path = os.path.join(get_path('raw_data'), participant, paradigm)
     csv_files = list(filter(os.path.isfile, glob.glob(os.path.join(path, suffix))))
@@ -262,7 +261,7 @@ def load_gmsi_results():
 
 def load_age_info():
     df = pd.read_excel(os.path.join(get_path('dataframes'), "participant_handler.xlsx"),
-                       usecols="C,D", header=0)
+                       usecols="C,D", header=0, skiprows=[38, 39, 40, 41, 42])
     df = df.loc[~df['ID'].isna()]
     df.rename(columns={'ID': 'participant', 'Age': 'age'}, inplace=True)
     # df['Participant No'] = df['Participant No'].astype(int)
