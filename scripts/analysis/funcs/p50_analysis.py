@@ -37,13 +37,13 @@ class P50DataAnalyzer:
             filtered_data['pred'] = filtered_data['pred'].apply(translate_conditions)
 
         # Print descriptive stats
-        self.print_descriptive_stats(filtered_data)
+        StatsFormatter().print_descriptive_stats(filtered_data, 'distance_p50')
 
         # run one-way ANOVA
         aov_results = pg.rm_anova(data=filtered_data, dv=var,
                                   within=factor, subject='participant')  # , detailed=True)
 
-        StatsFormatter().print_1way_anova(aov_results, var=var, factor=factor)
+        StatsFormatter().print_1way_anova(StatsFormatter, aov_results, var=var, factor=factor)
 
         # post-hoc paired T-tests
         pairwise_results = pg.pairwise_tests(data=filtered_data,

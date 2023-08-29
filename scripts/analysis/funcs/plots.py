@@ -842,7 +842,8 @@ class Fig4p50:
             # plt.legend(fontsize='small')
             plt.ylabel(labels[1])
             plt.xlabel(labels[0])
-            plt.ylim([data[yvar].max() + 1 if data[yvar].max() > 9 else 10, data[yvar].min() - 1])  # , p50_Clus_Cont.max() + 1])
+            plt.ylim([8, -8])
+            plt.ylim([data[yvar].max() + 1 if data[yvar].max() > 6 else 7, data[yvar].min() - 1])  # , p50_Clus_Cont.max() + 1])
             # plt.xlim([-0.02, 0.72])
             plt.title(f'{paradigm}')
 
