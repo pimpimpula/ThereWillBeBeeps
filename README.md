@@ -2,29 +2,26 @@
 
 ---
 
-## Predictable sequential structure enhances auditory sensitivity in clinical audiograms
+## Predictable sequential structure augments auditory sensitivity at threshold
 
-#####  Nadège Marin<sup>1,2</sup>, Grégory Gérenton<sup>1</sup>, Hadrien Jean<sup>3</sup>, Nihaad Paraouty<sup>3</sup>, Nicolas Wallaert<sup>3</sup>, Diane S. Lazard<sup>1,4</sup>, Luc H. Arnal<sup>1*</sup>, Keith B. Doelling<sup>1*</sup>
 
- 1.	Institut Pasteur, Université Paris Cité, Inserm UA06, Institut de l’Audition, F-75012 Paris, France
-2.	Aix-Marseille University, Marseille, France
-3.	My Medical Assistant SAS, Reims, France
-4.	Institut Arthur Vernes, ENT department, F-75006 Paris, France
+#####  Nadège Marin<sup>1</sup>, Grégory Gérenton<sup>1</sup>, Hadrien Jean<sup>2</sup>, Nihaad Paraouty<sup>2</sup>, Nicolas Wallaert<sup>2</sup>, Diane S. Lazard<sup>1,3</sup>, Keith B. Doelling<sup>1*</sup>, Luc H. Arnal<sup>1*</sup>
+
+1.	Université Paris Cité, Institut Pasteur, AP-HP, Inserm, Fondation Pour l'Audition, Institut de l’Audition, IHU reConnect, F-75012 Paris, France
+2.	My Medical Assistant SAS, Reims, F-51100, France
+3.	 Princess Grace Hospital, ENT & Maxillo-facial Surgery Department, Monaco
+
+<sup>*</sup>	These authors jointly supervised this work
+
 
 ### Abstract
 
-> Human hearing is highly sensitive and allows us to detect acoustic events at low levels and at great distances. 
-> However, sensitivity is not only a function of the integrity of cochlear mechanisms, but also constrained by central 
-> processes such as attention and expectation. While the effects of distraction and attentional orienting are generally 
-> acknowledged, the extent to which probabilistic expectations influence sensitivity is not clear. 
-> 
-> Classical audiological assessment, commonly used to assess hearing sensitivity, does not distinguish between bottom-up
-> sensitivity and top-down gain/filtering. In this study, we aim to decipher the influence of various types of 
-> expectations on hearing sensitivity and how this information can be used to improve the assessment of sensitivity 
-> to sound. 
-> 
-> Our results raise important critiques regarding common practices in the assessment of sound sensitivity, 
-> both in fundamental research and in audiological clinical assessment.
+> Human hearing is highly sensitive and allows us to detect acoustic events at low levels.
+> However, sensitivity is not only a function of the integrity of cochlear transduction mechanisms, but also constrained by central processes such as attention and expectation.
+> While the effects of distraction and attentional orienting are generally acknowledged, the extent to which probabilistic expectations influence sensitivity at threshold is not clear.
+> Classical audiometric tests, commonly used to assess hearing thresholds, do not distinguish between bottom-up sensitivity and top-down processes.
+> In this study, we aim to decipher the influence of various types of expectations on hearing thresholds and how this information can be used to improve the assessment of hearing sensitivity. Our results raise important questions regarding the conventional assessment of hearing thresholds, both in fundamental research and in audiological clinical assessment.
+
 
 ---
 
